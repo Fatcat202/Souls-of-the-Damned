@@ -11,7 +11,7 @@ Fix DOT affect
 Create healing script
 	-Overheal test
 	
-Armor mechanic
+
 
 
 Non-lethal mechanic
@@ -19,13 +19,15 @@ Non-lethal mechanic
 
 ** HIGH PRIORITY**
 
+fix armor mechanic to have stats, work with enemies, and automatically regenerate over time after a delay
+
 Fix healing to heal other people
 
 Create 2 more characters
 	- Xan Peppo
 		-Base shooting ability
 		-Fly speed boost
-		-Cripple shot
+		-Powerful shot, stagger enemies and shoot through multiple
 		-Shoot several enemies in the area
 
 	- Gary/Rager
@@ -36,6 +38,9 @@ Create 2 more characters
 		
 		
 Collisions
+	-Fix bug with getting stuck on other obj
+	-Allow for collisions with walls and work with all character objects
+	-Have projectiles destroy when hitting any walls, characters, other projectiles?
 
 
 
@@ -44,31 +49,37 @@ Collisions
 	**LOW PRIORITY**
 	
 	
-Save Game
-
-
-Load Game
+Save / Load Game
+	-Manual
+	-Autosave
 
 
 Create ESC menu
 	-Settings
-		-Resolution
-		-Graphics
+		-Resolution scaling
+		-Graphics options
 		-Accessibility
-		-FPS
+			-Controller
+			-Color blindness
+		-FPS scaling
 	-Keybindings
-	-Save
+	-Save / Load (start of "quest" or )
 
 
-Create combat pause function
+Create combat pause function (tactical mode)
 	-Can still view the battlefield, everything frozen
 	-Can select characters and schedule movements
 	-Can tell characters to do simple commands, like attack those enemies or use an ability when it is available
+	-Pathing system to tell characters to move to different positions
+		-Click to assign location
+		-Drag to assign path
+	-Can move camera slightly around characters, allowing some extra visibility
 
 
 Add leveling system
 	-More attacks unlocked
 	-Percentage bonus to stats
+	-New character passive abilities / mechanics
 	
 	
 Add mythic system
@@ -84,7 +95,7 @@ Add enemy spawning system
 
 Update death
 	-Resurrection system
-	-Unconsious mechanic
+	-Unconsious mechanic (down but not out)
 	-Character can no longer be selected and swaps to a sprite, player auto swaps to another character on death
 
 Add ability to choose between attacks
@@ -123,7 +134,10 @@ Fully build arena map
 	
 	**Optimisation**
 
+Improving inheritance throughout objects and scripts
 
-Deactivating objects not visible from the camera
-N(o)
+Deactivating objects not visible by the camera
+
+Big O consiterations
+
 Further improving database systems
