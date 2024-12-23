@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_heal_enemy",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_heal_enemy",
+  "parent":{
+    "name":"Healing",
+    "path":"folders/Scripts/Effects/Healing.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"WAV_Kitten_Meow_1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.25,
+  "name":"WAV_Kitten_Meow_1",
+  "parent":{
+    "name":"Cats",
+    "path":"folders/Sounds/Animal/Cats.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"WAV_Kitten_Meow_1.wav",
+  "type":0,
+  "volume":1.0,
+}

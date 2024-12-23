@@ -1,0 +1,43 @@
+
+
+
+**LOW LEVEL**
+ 
+ 
+Cacodaemon:
+-Tracks player and attempts to melee
+
+Venedaemon:
+-Shoots missiles at range, attacks with melee if close
+
+Vulnadaemon:
+-Attacks fast, does more damage from behind, bleed
+
+Humanoid:
+-
+
+
+
+**MEDIUM LEVEL**
+
+
+Humanoid:
+-
+
+Meladaemon
+-
+
+
+
+**HIGH LEVEL**
+
+
+Humanoid:
+-
+
+Olethrodaemon
+-
+
+
+
+

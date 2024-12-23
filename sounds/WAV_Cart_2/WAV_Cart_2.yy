@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"WAV_Cart_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":10.0,
+  "name":"WAV_Cart_2",
+  "parent":{
+    "name":"Medieval",
+    "path":"folders/Sounds/Medieval.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"WAV_Cart_2.wav",
+  "type":0,
+  "volume":1.0,
+}

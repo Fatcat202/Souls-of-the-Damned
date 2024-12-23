@@ -1,0 +1,129 @@
+
+** COMPLETE **
+Fix the stats database
+
+Create function to swap between characters
+
+Transfer NPCs to npc_parent as a child of obj_characters
+
+Fix DOT affect
+
+Create healing script
+	-Overheal test
+	
+Armor mechanic
+
+
+Non-lethal mechanic
+
+
+** HIGH PRIORITY**
+
+Fix healing to heal other people
+
+Create 2 more characters
+	- Xan Peppo
+		-Base shooting ability
+		-Fly speed boost
+		-Cripple shot
+		-Shoot several enemies in the area
+
+	- Gary/Rager
+		-Basic attack
+		-Block
+		-Throw rager
+		-
+		
+		
+Collisions
+
+
+
+
+	
+	**LOW PRIORITY**
+	
+	
+Save Game
+
+
+Load Game
+
+
+Create ESC menu
+	-Settings
+		-Resolution
+		-Graphics
+		-Accessibility
+		-FPS
+	-Keybindings
+	-Save
+
+
+Create combat pause function
+	-Can still view the battlefield, everything frozen
+	-Can select characters and schedule movements
+	-Can tell characters to do simple commands, like attack those enemies or use an ability when it is available
+
+
+Add leveling system
+	-More attacks unlocked
+	-Percentage bonus to stats
+	
+	
+Add mythic system
+	-"Ultimate" ability
+	-Limited uses, gain more through progression
+	-Mythic enemy varients
+
+
+Add enemy spawning system
+	-Add random spawning system
+	-Add set spawning system
+
+
+Update death
+	-Resurrection system
+	-Unconsious mechanic
+	-Character can no longer be selected and swaps to a sprite, player auto swaps to another character on death
+
+Add ability to choose between attacks
+
+
+Add loot/rewards
+
+
+Add inventory
+
+
+Add arena shop
+
+
+Create GUI
+	-Player healthbar
+	-Overheal
+	-Armor
+	-Player abilities
+	-Swappable characters
+	-Visual confirmation of combat pause
+	-Combat round
+	-Character level
+	-Minimap?
+	
+	
+Create main menu
+	-Arena vs Story
+	-Select Characters
+	-Load game
+	
+	
+Fully build arena map
+	
+	
+	
+	**Optimisation**
+
+
+Deactivating objects not visible from the camera
+N(o)
+Further improving database systems

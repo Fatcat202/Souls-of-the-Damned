@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"WAV_Footsteps_Stone",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":10.0,
+  "name":"WAV_Footsteps_Stone",
+  "parent":{
+    "name":"Medieval",
+    "path":"folders/Sounds/Medieval.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"WAV_Footsteps_Stone.wav",
+  "type":0,
+  "volume":1.0,
+}

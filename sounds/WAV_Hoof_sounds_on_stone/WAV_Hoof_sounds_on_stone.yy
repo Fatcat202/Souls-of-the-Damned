@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"WAV_Hoof_sounds_on_stone",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":10.0,
+  "name":"WAV_Hoof_sounds_on_stone",
+  "parent":{
+    "name":"Animal",
+    "path":"folders/Sounds/Animal.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"WAV_Hoof_sounds_on_stone.wav",
+  "type":0,
+  "volume":1.0,
+}

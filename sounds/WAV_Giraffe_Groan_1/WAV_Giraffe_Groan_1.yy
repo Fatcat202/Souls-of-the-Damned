@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"WAV_Giraffe_Groan_1",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":7.25,
+  "name":"WAV_Giraffe_Groan_1",
+  "parent":{
+    "name":"Giraffe",
+    "path":"folders/Sounds/Animal/Giraffe.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"WAV_Giraffe_Groan_1.wav",
+  "type":0,
+  "volume":1.0,
+}

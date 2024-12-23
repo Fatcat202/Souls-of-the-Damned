@@ -1,0 +1,32 @@
+		**PLAYERS**
+		
+Alok:
+
+-Healing, Melee attack, buffing
+
+Seki:
+
+-Ranged attacks, ranged burst, teleporting
+
+Gary/Rager:
+
+-Melee attack, Defending
+
+Xan:
+
+-Ranged attack, debuff, flying
+
+Dogan:
+
+-Damage over time, melee attack, ranged burst
+
+Darien:
+
+-Melee attack, shield, healing
+
+Nyx:
+
+-Melee attack, form change, dragon shit
+
+Bronwin
+-Ranged, magic, fiendish?
