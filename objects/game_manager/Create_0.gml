@@ -37,14 +37,17 @@
 			// Assign players to array
 			global.arr_players[1] = obj_player_Alok;
 			global.arr_players[2] = obj_player_Seki;
+			global.arr_players[3] = obj_player_Xan;
 
 			//	Assign npcs to array
 			global.arr_npc[1] = obj_npc_Alok;
 			global.arr_npc[2] = obj_npc_Seki;
+			global.arr_npc[3] = obj_npc_Xan;
 			
 			// Assign combat pause objects to array
 			global.arr_combat_pause[1] = obj_combat_pause_Alok;
 			global.arr_combat_pause[2] = obj_combat_pause_Seki;
+			global.arr_combat_pause[3] = obj_combat_pause_Xan;
 			
 		#endregion Swapping Characters
 	
@@ -144,8 +147,10 @@ function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_at
 }
 
 // Create player_stats struct array
+// **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 
 // Assign all values from CSV file into stats database structs
 for(var i = 0; i < global.player_index_length; i++)

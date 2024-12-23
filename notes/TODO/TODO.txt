@@ -14,14 +14,12 @@ Create healing script
 
 
 
-Non-lethal mechanic
-
-
 ** HIGH PRIORITY**
+
 
 fix armor mechanic to have stats, work with enemies, and automatically regenerate over time after a delay
 
-Fix healing to heal other people
+Fix healing to heal other people and non-lethal
 
 Create 2 more characters
 	- Xan Peppo
@@ -95,7 +93,10 @@ Add enemy spawning system
 
 Update death
 	-Resurrection system
+		-Abilities
+		-Consumables
 	-Unconsious mechanic (down but not out)
+		-Wake up when healed enough or after non-lethal
 	-Character can no longer be selected and swaps to a sprite, player auto swaps to another character on death
 
 Add ability to choose between attacks

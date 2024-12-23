@@ -183,6 +183,7 @@
     {"id":{"name":"obj_combat_pause_Alok","path":"objects/obj_combat_pause_Alok/obj_combat_pause_Alok.yy",},},
     {"id":{"name":"obj_combat_pause_parent","path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",},},
     {"id":{"name":"obj_combat_pause_Seki","path":"objects/obj_combat_pause_Seki/obj_combat_pause_Seki.yy",},},
+    {"id":{"name":"obj_combat_pause_Xan","path":"objects/obj_combat_pause_Xan/obj_combat_pause_Xan.yy",},},
     {"id":{"name":"obj_enemy_Cacodaemon","path":"objects/obj_enemy_Cacodaemon/obj_enemy_Cacodaemon.yy",},},
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},},

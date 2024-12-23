@@ -1,3 +1,4 @@
-Name,HP,Armor,Movement Speed,Main Attack Damage,Main Attack Speed,Knockback Percentage,
-Alok,100,0,4,0,0,0,0
-Seki,80,0,4,0,0,0,0
+Name,HP,Armor,Movement Speed,Main Attack Damage,Main Attack Speed,Knockback Percentage
+Alok,100,50,4,15,0,0
+Seki,60,20,4,5,0,0
+Xan,80,35,4,10,0,0
