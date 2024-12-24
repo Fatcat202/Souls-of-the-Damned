@@ -6,7 +6,7 @@
 draw_self()
 
 
-#region **HEALTHBAR**
+#region HP Healthbar
 
 var health_percent = (active_health/global.enemy_stats[enemy_index].hp) * 100;
 

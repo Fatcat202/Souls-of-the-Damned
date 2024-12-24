@@ -1,7 +1,10 @@
-
+// Behavior
 
 // NPCs are affected by Damage Over Time
 scr_take_dot();
+
+// Players can automatically regain armor over time
+scr_regain_armor();
 
 
 // Follow player if further than 175

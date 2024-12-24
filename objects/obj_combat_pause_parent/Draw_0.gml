@@ -6,7 +6,7 @@
 draw_self()
 
 
-#region Health Healthbar
+#region HP Healthbar
 
 var health_percent = (active_health / max_hp) * 100;
 

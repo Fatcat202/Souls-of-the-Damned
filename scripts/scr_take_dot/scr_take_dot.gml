@@ -17,11 +17,13 @@ function scr_take_dot()
 		{
 			var _dmg = _debuff[dot_data.dmg];
 			
-			// Check if dot will kill. If it will, set hp to 1
+			// Check if dot will kill. If it cannot, set hp to 1
 			if(active_health - _dmg <= 0 && _can_kill == 0)
 			{
 				active_health = 1;
-			}else scr_damage(_dmg);
+				
+			// Check if there is armor. If there is, do not apply
+			}else if(active_armor <= 0) scr_damage(_dmg);
 		}
 		
 		// Continue loop for as long as defined with duration

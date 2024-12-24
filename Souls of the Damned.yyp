@@ -349,6 +349,7 @@
     {"id":{"name":"scr_non_lethal","path":"scripts/scr_non_lethal/scr_non_lethal.yy",},},
     {"id":{"name":"scr_Nyx_basic_attack","path":"scripts/scr_Nyx_basic_attack/scr_Nyx_basic_attack.yy",},},
     {"id":{"name":"scr_part_systems_set_auto_update","path":"scripts/scr_part_systems_set_auto_update/scr_part_systems_set_auto_update.yy",},},
+    {"id":{"name":"scr_regain_armor","path":"scripts/scr_regain_armor/scr_regain_armor.yy",},},
     {"id":{"name":"scr_Seki_basic_attack","path":"scripts/scr_Seki_basic_attack/scr_Seki_basic_attack.yy",},},
     {"id":{"name":"scr_Seki_fireball","path":"scripts/scr_Seki_fireball/scr_Seki_fireball.yy",},},
     {"id":{"name":"scr_Seki_lightning","path":"scripts/scr_Seki_lightning/scr_Seki_lightning.yy",},},

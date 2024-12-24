@@ -76,9 +76,14 @@
 	global.player_level = 1;
 	
 	// Sets default if a cutscene is active to false
-	global.cutscene_active = false
-	
+	global.cutscene_active = false;
 
+	// Sets time it takes to start regaining armor in seconds
+	global.regain_armor_timer = 6;
+	
+	// Sets speed at which armor regains, divided with fps
+	global.regain_armor_speed = 20
+		
 	
 	#endregion Variables
 

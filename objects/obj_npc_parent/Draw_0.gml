@@ -7,7 +7,7 @@ draw_self()
 
 
 
-#region Health Healthbar
+#region HP Healthbar
 
 var health_percent = (active_health/global.player_stats[npc_index].hp) * 100;
 

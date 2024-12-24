@@ -11,13 +11,13 @@ Fix DOT affect
 Create healing script
 	-Overheal test
 	
-
+Built armor mechanic, regenerates over time and not affected by DOT. 
+	-Armor "shatters" when destroyed, taking longer to regenerate, but blocks remainder of damage
 
 
 ** HIGH PRIORITY**
 
 
-fix armor mechanic to have stats, work with enemies, and automatically regenerate over time after a delay
 
 Fix healing to heal other people and non-lethal
 

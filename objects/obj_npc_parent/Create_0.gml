@@ -32,7 +32,8 @@ for(var i = 1; i <= global.player_index_length; i++)
 // Assign active health that can be removed and added to
 active_health = global.player_stats[npc_index].hp;
 max_hp = active_health;
-active_armor = global.player_stats[npc_index].armor;
+max_armor = global.player_stats[global.selected_char].armor;
+active_armor  = max_armor;
 
 
 #endregion

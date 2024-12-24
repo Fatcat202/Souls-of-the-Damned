@@ -25,8 +25,11 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 max_hp = global.player_stats[global.selected_char].hp;
 active_health = max_hp;
+
 player_index = global.selected_char;
-active_armor = global.player_stats[global.selected_char].armor;
+
+max_armor = global.player_stats[global.selected_char].armor;
+active_armor = max_armor;
 
 
 
