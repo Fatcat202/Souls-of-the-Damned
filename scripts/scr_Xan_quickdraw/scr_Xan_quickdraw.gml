@@ -1,5 +1,8 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function scr_Xan_quickdraw(){
+
+	// Draw revolver and fire 6 shots, targeting enemies in the area.
+	// Hitscan
+
 
 }

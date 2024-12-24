@@ -61,6 +61,7 @@
     {"$GMFolder":"","%Name":"Effects","folderPath":"folders/Scripts/Effects.yy","name":"Effects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Damage Over Time","folderPath":"folders/Scripts/Effects/Damage Over Time.yy","name":"Damage Over Time","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Healing","folderPath":"folders/Scripts/Effects/Healing.yy","name":"Healing","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Mythic","folderPath":"folders/Scripts/Mythic.yy","name":"Mythic","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Pause","folderPath":"folders/Scripts/Pause.yy","name":"Pause","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Combat Pause","folderPath":"folders/Scripts/Pause/Combat Pause.yy","name":"Combat Pause","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sequences","folderPath":"folders/Sequences.yy","name":"Sequences","resourceType":"GMFolder","resourceVersion":"2.0",},

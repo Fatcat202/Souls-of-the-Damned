@@ -4,14 +4,17 @@
 **LOW LEVEL**
  
  
-Cacodaemon:
+Cacodaemon: IMPLEMENTED
 -Tracks player and attempts to melee
 
-Venedaemon:
+Venedaemon: IMPLEMENTED
 -Shoots missiles at range, attacks with melee if close
 
-Vulnadaemon:
+Vulnadaemon: IMPLEMENTED
 -Attacks fast, does more damage from behind, bleed
+
+Lacridaemon
+-DOT, can stagger character in area (only one lacridaemon at a time)
 
 Humanoid:
 -
@@ -25,8 +28,13 @@ Humanoid:
 -
 
 Meladaemon
--
+- Non-lethal aura, damage over time, non-lethal damage
 
+Sepsidaemon
+-Take DOT if hurt in aura, lingering ground effect in trail, teleporting
+
+Leukodaemon
+- Ranged attacks, breath attack
 
 
 **HIGH LEVEL**
@@ -36,8 +44,41 @@ Humanoid:
 -
 
 Olethrodaemon
+-Swallow whole while sucking life, breath weapon, special bonuses depending on horseman they follow
+
+Purrodaemon
+- Magic, massive attacks
+
+Obcisidaemon
+- Massive attacks, cloak of souls buffs
+
+
+**Bosses**
+
+Alexi
 -
 
+Dogan
+-
 
+Alexi(upgraded)
+-
 
+Alarasis
+-
+
+Apollyon
+-
+
+Charon
+-
+
+Szuriel
+-
+
+Trelmarixian
+-
+
+The Oinodaemon
+-
 
