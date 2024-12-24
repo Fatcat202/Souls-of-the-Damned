@@ -1,23 +1,16 @@
-/// @description Drawing Sprite
-// You can write your code in this editor
-
-
-// Draws object sprite
-draw_self()
+/// @description Insert description here
 
 
 #region HP Healthbar
 
-var health_percent = (active_health / max_hp) * 100;
+var health_percent = (global.player_stats[global.arr_player_index_num[global.selected_char]].active_health / global.player_stats[global.arr_player_index_num[global.selected_char]].hp) * 100;
+var xx1 = display_get_gui_width() / 2;
 
-// Only show healthbar if damage has been taken
-if(health_percent != 100)
-{
 	draw_healthbar(
-	x - 25,  	//The x coordinate of the left of the healthbar
-	y - 40,	// The y coordinate of the top of the healthbar
-	x + 25,	//The x coordinate of the right of the healthbar
-	y - 35,	//The y coordinate of the bottom of the healthbar
+	xx1 - 25,  	//The x coordinate of the left of the healthbar
+	40,	// The y coordinate of the top of the healthbar
+	xx1 + 25,	//The x coordinate of the right of the healthbar
+	35,	//The y coordinate of the bottom of the healthbar
 	health_percent,		//The variable which defines total health (between 0 and 100)
 	c_black, //The colour of the background for the bar
 	c_red,	 //The colour of the bar when at no health (0)
@@ -26,23 +19,21 @@ if(health_percent != 100)
 	true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
 	true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
 	);
-}
+
 	
 #endregion
 
 
 #region Armor Healthbar
 
-var armor_percent = (active_armor / max_armor * 100);
+var armor_percent = (global.player_stats[global.arr_player_index_num[global.selected_char]].active_armor / global.player_stats[global.arr_player_index_num[global.selected_char]] * 100);
+var xx2 = display_get_gui_width() / 2;
 
-// Only show healthbar if damage has been taken
-if(armor_percent != 100 && armor_percent > 0)
-{
 	draw_healthbar(
-	x - 25,  	//The x coordinate of the left of the healthbar
-	y - 45,	// The y coordinate of the top of the healthbar
-	x + 25,	//The x coordinate of the right of the healthbar
-	y - 40,	//The y coordinate of the bottom of the healthbar
+	xx2 - 25,  	//The x coordinate of the left of the healthbar
+	45,	// The y coordinate of the top of the healthbar
+	xx2 + 25,	//The x coordinate of the right of the healthbar
+	40,	//The y coordinate of the bottom of the healthbar
 	armor_percent,		//The variable which defines total health (between 0 and 100)
 	c_black, //The colour of the background for the bar
 	c_blue,	 //The colour of the bar when at no health (0)
@@ -51,7 +42,6 @@ if(armor_percent != 100 && armor_percent > 0)
 	true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
 	true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
 	);
-}
+
 	
 #endregion
-

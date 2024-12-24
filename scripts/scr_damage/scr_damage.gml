@@ -5,6 +5,7 @@ function scr_damage(dmg)
 	// Script will check if enemy has armor, if they do then deal damage to armor
 	// If armor is destroyed then deal remaining damage to HP
 	
+	
 	// Check if the enemy has armor
 	if (other.active_armor > 0)
 	{
@@ -12,7 +13,7 @@ function scr_damage(dmg)
 		other.active_armor = other.active_armor - dmg;
 		
 		// Check if armor remains to determine how long it takes to start regaining armor
-		if(active_armor > 0)
+		if(other.active_armor > 0)
 		{
 			// Delay armor regeneration by armor regeneration time
 			other.can_regain_armor = false;

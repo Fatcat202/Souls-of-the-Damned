@@ -12,6 +12,8 @@ function scr_track_player(range){
 		direction = point_direction(x, y, obj_player_parent.x, obj_player_parent.y);
 		scr_sprite_direction(direction);
 		
+		scr_non_player_collision(speed);
+		
 		// Defines that a player is being tracked for melee
 		melee_player_tracked = true;
 	} else if(npc_within_range != noone)
@@ -20,6 +22,7 @@ function scr_track_player(range){
 		speed = global.enemy_stats[enemy_index].move_spd;
 		direction = point_direction(x, y, obj_npc_parent.x, obj_npc_parent.y);
 		scr_sprite_direction(direction);
+		scr_non_player_collision(speed);
 		
 		// Defines that a player is being tracked for melee
 		melee_player_tracked = true;

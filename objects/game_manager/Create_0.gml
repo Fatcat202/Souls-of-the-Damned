@@ -83,6 +83,10 @@
 	
 	// Sets speed at which armor regains, divided with fps
 	global.regain_armor_speed = 20
+	
+	// Sets how many pixel away objects must be from another object to collide 
+	// (x2 if both move towards each other)
+	global.collision_distance = 1;
 		
 	
 	#endregion Variables

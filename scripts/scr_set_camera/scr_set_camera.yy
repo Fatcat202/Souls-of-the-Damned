@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_track_player",
+  "%Name":"scr_set_camera",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_track_player",
+  "name":"scr_set_camera",
   "parent":{
-    "name":"Movement",
-    "path":"folders/Scripts/Movement.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

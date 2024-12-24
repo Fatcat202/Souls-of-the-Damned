@@ -14,12 +14,13 @@ Create healing script
 Built armor mechanic, regenerates over time and not affected by DOT. 
 	-Armor "shatters" when destroyed, taking longer to regenerate, but blocks remainder of damage
 
+Fix healing to heal other people and non-lethal
 
 ** HIGH PRIORITY**
 
 
 
-Fix healing to heal other people and non-lethal
+
 
 Create 2 more characters
 	- Xan Peppo
@@ -33,7 +34,6 @@ Create 2 more characters
 		-Block
 		-Throw rager
 		-
-		
 		
 Collisions
 	-Fix bug with getting stuck on other obj

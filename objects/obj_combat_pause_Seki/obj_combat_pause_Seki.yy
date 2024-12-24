@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Seki Goldcoat",
-    "path":"folders/Objects/Characters/Players/Seki Goldcoat.yy",
+    "path":"folders/Objects/Characters/Players/Implemented/Seki Goldcoat.yy",
   },
   "parentObjectId":{
     "name":"obj_combat_pause_parent",

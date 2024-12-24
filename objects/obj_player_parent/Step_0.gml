@@ -11,13 +11,22 @@ scr_regain_armor();
 
 #region Movement
 
+// Assign input variable defaults
+var _left = 0;
+var _right = 0;
+var _up = 0;
+var _down = 0;
 
+// Determine movement direction based on key presses, prevent self from touching solid objects
+if(place_free (x - collision_speed, y)) _left = keyboard_check(ord(global.cont_left));
 
-// Determine movement direction based on key presses
-var _left = keyboard_check(ord(global.cont_left))
-var _right = keyboard_check(ord(global.cont_right))
-var _up = keyboard_check(ord(global.cont_up))
-var _down = keyboard_check(ord(global.cont_down))
+if(place_free (x + collision_speed, y)) _right = keyboard_check(ord(global.cont_right))
+
+if(place_free (x, y - collision_speed)) _up = keyboard_check(ord(global.cont_up))
+
+if(place_free (x, y + collision_speed)) _down = keyboard_check(ord(global.cont_down))
+
+// Calculate overall directional being moved in
 var _hspd = _right - _left;
 var _vspd = _down - _up;
 
@@ -25,27 +34,26 @@ var _vspd = _down - _up;
 if(can_control == true)
 {
 	
-	/*
-	// Collisions
+	// Assign input variable defaults
+	var _left = 0;
+	var _right = 0;
+	var _up = 0;
+	var _down = 0;
+
+	// Determine movement direction based on key presses, prevent self from touching solid objects
+	if(place_free (x - collision_speed, y)) _left = keyboard_check(ord(global.cont_left));
+
+	if(place_free (x + collision_speed, y)) _right = keyboard_check(ord(global.cont_right))
+
+	if(place_free (x, y - collision_speed)) _up = keyboard_check(ord(global.cont_up))
+
+	if(place_free (x, y + collision_speed)) _down = keyboard_check(ord(global.cont_down))
+
+	// Calculate overall directional being moved in
+	var _hspd = _right - _left;
+	var _vspd = _down - _up;
 	
-	//var collision_speed = global.player_stats[global.selected_char].move_spd + 40;
-	if place_meeting(x + _hspd, y, obj_wall)
-	{
-		while !place_meeting(x + sign(_hspd), y, obj_wall)
-		{
-			x += sign(_hspd);
-		}
-    _hspd = 0;
-	}
-	if place_meeting(x, y + _vspd, obj_wall) 
-	{
-		while !place_meeting(x , y + sign(_vspd), obj_wall) {
-		  x += sign(_vspd);
-	 }
-    _vspd = 0;
-	}	*/
-	
-	// Normalize vectors to maintain consistant speed
+	// Normalise direction to avoid speed boost when moving diagonally
 	if (_hspd != 0 && _vspd != 0)
 	{
 		var len = sqrt(_hspd * _hspd + _vspd * _vspd);
@@ -70,11 +78,24 @@ if(can_control == true)
 			image_xscale = -1;
 		}else image_xscale = 1;
 	}
+	
+	
+	// Collisions with other solid objects
+/*
+	if (!place_free(x + 1, y + 1))
+	{
+		x = xprevious;
+		y = yprevious;
+	}else if(!place_free(x - 1, y - 1))
+	{
+		x = xprevious;
+		y = yprevious;
+	}
+	*/
 }
-{
 
 
-}
+
 
 #endregion Movement
 
@@ -102,7 +123,9 @@ if(keyboard_check(ord(global.cont_power_4)))
 #endregion Change Attacks
 
 
-#region Change Character
+// TODO rebuild to track the player and npc objects in the room before assigning binds
+//		add
+#region Change Character 
 var i = 1;
 if(keyboard_check(ord(global.cont_char_1)))
 {

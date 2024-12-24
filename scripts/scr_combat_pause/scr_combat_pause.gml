@@ -5,6 +5,7 @@ function scr_combat_pause()
 	
 	// States that the game is now combat paused
 	global.game_combat_paused = true;
+	global.combat_pause = true;
 	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps)
@@ -14,6 +15,8 @@ function scr_combat_pause()
 	
 	// Pauses all particle systems
 	scr_part_systems_set_auto_update();
+	
+	
 	
 	for(var n = 0; n < global.player_index_length; n++)
 	{
@@ -52,9 +55,15 @@ function scr_combat_pause()
 		
 
 	}
+	
 		
 		instance_deactivate_object(all);
 		instance_activate_object(obj_combat_pause_parent);
+		
+		
+		
+		
+		
 		
 		
 	// TODO display new surface

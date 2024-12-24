@@ -1,17 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_npc_Darius",
-  "eventList":[],
+  "%Name":"obj_player_Darien",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_npc_Darius",
+  "name":"obj_player_Darien",
   "overriddenProperties":[],
   "parent":{
     "name":"Darien",
-    "path":"folders/Objects/Characters/Players/Darien.yy",
+    "path":"folders/Objects/Characters/Players/Unimplemented/Darien.yy",
   },
   "parentObjectId":{
-    "name":"obj_npc_parent",
-    "path":"objects/obj_npc_parent/obj_npc_parent.yy",
+    "name":"obj_player_parent",
+    "path":"objects/obj_player_parent/obj_player_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

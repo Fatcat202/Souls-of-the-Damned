@@ -1,7 +1,7 @@
 /// @description Initial Creation
 
 
-#region Assigning Character and stats
+#region Assigning Character
 
 // Read name of object and assigns it to object_name
 var object_name = object_get_name(object_index);
@@ -17,7 +17,7 @@ for(var i = 1; i <= global.player_index_length; i++)
 		}
 }
 
-#endregion Assigning Character and Stats
+#endregion Assigning Character
 
 
 
@@ -31,6 +31,7 @@ player_index = global.selected_char;
 max_armor = global.player_stats[global.selected_char].armor;
 active_armor = max_armor;
 
+collision_speed = global.player_stats[global.selected_char].move_spd + global.collision_distance;
 
 
 #endregion

@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_Xan",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":44,
   "bbox_left":8,
   "bbox_right":51,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_Xan",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Players",
     "path":"folders/Sprites/Characters/Players.yy",
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":32,
-    "yorigin":32,
+    "xorigin":30,
+    "yorigin":26,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

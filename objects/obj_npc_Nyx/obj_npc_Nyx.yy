@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Nyx",
-    "path":"folders/Objects/Characters/Players/Nyx.yy",
+    "path":"folders/Objects/Characters/Players/Unimplemented/Nyx.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",

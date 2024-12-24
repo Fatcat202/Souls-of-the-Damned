@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_heal",
   "parent":{
-    "name":"Healing",
-    "path":"folders/Scripts/Effects/Healing.yy",
+    "name":"Effects",
+    "path":"folders/Scripts/Effects.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

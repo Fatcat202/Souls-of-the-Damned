@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_track_player",
+  "%Name":"scr_non_player_collision",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_track_player",
+  "name":"scr_non_player_collision",
   "parent":{
     "name":"Movement",
     "path":"folders/Scripts/Movement.yy",
