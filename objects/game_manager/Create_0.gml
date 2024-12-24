@@ -243,9 +243,8 @@ for(var i = 0; i < global.enemy_index_length; i++)
 	global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	//global.enemy_stats[yy].is_flyer = real(ds_grid_get(ds_enemy_stats_csv, xx, yy));
-	
-}
 
+}
 
 // Assign data to enemy index arrays
 for(var p = 0; p < global.enemy_index_length; p++)
@@ -255,20 +254,7 @@ for(var p = 0; p < global.enemy_index_length; p++)
 	global.arr_enemy_index_name[n] = ds_grid_get(ds_enemy_stats_csv, 0, n);
 	// Sets 2nd place in array as index
 	global.arr_enemy_index_num[n] = n;
-	
-	// Debug messages
-	/*
-	show_debug_message("p: " + string(p));
-	show_debug_message("xx: " + string(xx));
-	show_debug_message("yy: " + string(yy));
-	show_debug_message("arr_enemy_index_name: " + string(global.arr_enemy_index_name[n]));
-	show_debug_message("arr_enemy_index_num: " + string(global.arr_enemy_index_num[n]));
-	*/
 }
-
-
-// Debug messages
-//show_debug_message("arr_enemy_index_length: " + string(global.enemy_index_length));
 
 #endregion Enemy Stats
 
