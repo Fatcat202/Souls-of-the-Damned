@@ -185,6 +185,7 @@
     {"id":{"name":"obj_Alok_melee","path":"objects/obj_Alok_melee/obj_Alok_melee.yy",},},
     {"id":{"name":"obj_characters","path":"objects/obj_characters/obj_characters.yy",},},
     {"id":{"name":"obj_combat_pause_Alok","path":"objects/obj_combat_pause_Alok/obj_combat_pause_Alok.yy",},},
+    {"id":{"name":"obj_combat_pause_Dogan","path":"objects/obj_combat_pause_Dogan/obj_combat_pause_Dogan.yy",},},
     {"id":{"name":"obj_combat_pause_Garyrager","path":"objects/obj_combat_pause_Garyrager/obj_combat_pause_Garyrager.yy",},},
     {"id":{"name":"obj_combat_pause_parent","path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",},},
     {"id":{"name":"obj_combat_pause_Seki","path":"objects/obj_combat_pause_Seki/obj_combat_pause_Seki.yy",},},

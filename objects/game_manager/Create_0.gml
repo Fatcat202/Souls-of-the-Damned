@@ -39,18 +39,21 @@
 			global.arr_players[2] = obj_player_Seki;
 			global.arr_players[3] = obj_player_Xan;
 			global.arr_players[4] = obj_player_Garyrager
+			global.arr_players[5] = obj_player_Dogan
 
 			//	Assign npcs to array
 			global.arr_npc[1] = obj_npc_Alok;
 			global.arr_npc[2] = obj_npc_Seki;
 			global.arr_npc[3] = obj_npc_Xan;
 			global.arr_npc[4] = obj_npc_Garyrager;
+			global.arr_npc[5] = obj_npc_Dogan;
 			
 			// Assign combat pause objects to array
 			global.arr_combat_pause[1] = obj_combat_pause_Alok;
 			global.arr_combat_pause[2] = obj_combat_pause_Seki;
 			global.arr_combat_pause[3] = obj_combat_pause_Xan;
 			global.arr_combat_pause[4] = obj_combat_pause_Garyrager;
+			global.arr_combat_pause[5] = obj_combat_pause_Dogan;
 			
 		#endregion Swapping Characters
 	
@@ -162,6 +165,7 @@ function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_at
 // **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 
