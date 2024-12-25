@@ -16,10 +16,11 @@ Built armor mechanic, regenerates over time and not affected by DOT.
 
 Fix healing to heal other people and non-lethal
 
+Collisions
+	-Allow for collisions with walls and work with all character objects
+	-Have projectiles destroy when hitting any walls, characters, other projectiles
+
 ** HIGH PRIORITY**
-
-
-
 
 
 Create 2 more characters
@@ -35,15 +36,7 @@ Create 2 more characters
 		-Throw rager
 		-
 		
-Collisions
-	-Fix bug with getting stuck on other obj
-	-Allow for collisions with walls and work with all character objects
-	-Have projectiles destroy when hitting any walls, characters, other projectiles?
-
-
-
-
-	
+		
 	**LOW PRIORITY**
 	
 	

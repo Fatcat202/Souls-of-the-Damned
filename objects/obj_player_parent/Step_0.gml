@@ -78,22 +78,7 @@ if(can_control == true)
 			image_xscale = -1;
 		}else image_xscale = 1;
 	}
-	
-	
-	// Collisions with other solid objects
-/*
-	if (!place_free(x + 1, y + 1))
-	{
-		x = xprevious;
-		y = yprevious;
-	}else if(!place_free(x - 1, y - 1))
-	{
-		x = xprevious;
-		y = yprevious;
-	}
-	*/
 }
-
 
 
 
@@ -137,11 +122,11 @@ if(keyboard_check(ord(global.cont_char_2)))
 }
 if(keyboard_check(ord(global.cont_char_3)))
 {
-	//if(global.player_index_length > i) scr_change_char(3); i++
+	if(global.player_index_length > i) scr_change_char(3); i++
 }
 if(keyboard_check(ord(global.cont_char_4)))
 {
-	//if(global.player_index_length > i) scr_change_char(4); i++
+	if(global.player_index_length > i) scr_change_char(4); i++
 }
 
 

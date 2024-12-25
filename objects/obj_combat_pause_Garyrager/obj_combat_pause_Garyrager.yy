@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_pause_Seki",
+  "%Name":"obj_combat_pause_Garyrager",
   "eventList":[],
   "managed":true,
-  "name":"obj_combat_pause_Seki",
+  "name":"obj_combat_pause_Garyrager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Seki Goldcoat",
-    "path":"folders/Objects/Characters/Players/Implemented/Seki Goldcoat.yy",
+    "name":"Gary and Rager",
+    "path":"folders/Objects/Characters/Players/Implemented/Gary and Rager.yy",
   },
   "parentObjectId":{
     "name":"obj_combat_pause_parent",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Seki",
-    "path":"sprites/spr_Seki/spr_Seki.yy",
+    "name":"spr_Garyrager",
+    "path":"sprites/spr_Garyrager/spr_Garyrager.yy",
   },
   "spriteMaskId":null,
   "visible":true,
