@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Seki Goldcoat",
-    "path":"folders/Objects/Characters/Players/Seki Goldcoat.yy",
+    "path":"folders/Objects/Characters/Players/Implemented/Seki Goldcoat.yy",
   },
   "parentObjectId":{
     "name":"obj_combat_pause_parent",
@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_Seki",
     "path":"sprites/spr_Seki/spr_Seki.yy",

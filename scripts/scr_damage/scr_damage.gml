@@ -1,41 +1,34 @@
 
-function scr_damage(dmg){
-	/* TODO Needs to be fixed, add armor regen, bug when hit
+function scr_damage(dmg)
+{
+
+	// Script will check if enemy has armor, if they do then deal damage to armor
+	// If armor is destroyed then deal remaining damage to HP
 	
 	
 	// Check if the enemy has armor
-	if(active_armor <= 0)
-	{
-		// Apply damage if no armor
-		other.active_health = other.active_health - dmg;
-		// Tint sprite red for 6 frames when damaged
-		other.image_blend = c_red;
-		other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
-	}else
+	if (other.active_armor > 0)
 	{
 		// If there is armor, deal damage to armor
 		other.active_armor = other.active_armor - dmg;
 		
-		// If armor hits 0, deal remaining damage to health
-		var left_over = other.active_armor % dmg;
-		other.active_health = other.active_health - left_over
-		
-		// Tint sprite red for 6 frames if health is subtracted
-		if(left_over > 0)
+		// Check if armor remains to determine how long it takes to start regaining armor
+		if(other.active_armor > 0)
 		{
-			// Tint sprite red for 6 frames when damaged
-			other.image_blend = c_red;
-			other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
+			// Delay armor regeneration by armor regeneration time
+			other.can_regain_armor = false;
+			other.alarm[6] = game_get_speed(gamespeed_fps) * global.regain_armor_timer;
+		}else
+		{
+			// Delay armor regeneration by 150% armor regeneration time
+			other.can_regain_armor = false;
+			other.alarm[6] = game_get_speed(gamespeed_fps) * global.regain_armor_timer * 1.5;
 		}
+	}else if(other.active_armor <= 0) // Apply damage if no armor
+	{
+		other.active_health = other.active_health - dmg;
+		// Tint sprite red for 6 frames when damaged
+		other.image_blend = c_red;
+		other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
 	}
-	*/
-	
-	
-	other.active_health = other.active_health - dmg;
-
-	// Tint sprite red for 6 frames when damaged
-	other.image_blend = c_red;
-	other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
-	
-	
 }

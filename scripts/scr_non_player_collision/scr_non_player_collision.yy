@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_heal_player",
+  "%Name":"scr_non_player_collision",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_heal_player",
+  "name":"scr_non_player_collision",
   "parent":{
-    "name":"Healing",
-    "path":"folders/Scripts/Effects/Healing.yy",
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

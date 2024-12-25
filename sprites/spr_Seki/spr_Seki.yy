@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_Seki",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":44,
   "bbox_left":16,
   "bbox_right":49,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_Seki",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Players",
     "path":"folders/Sprites/Characters/Players.yy",
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":32,
-    "yorigin":32,
+    "xorigin":34,
+    "yorigin":28,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

@@ -38,16 +38,22 @@
 			global.arr_players[1] = obj_player_Alok;
 			global.arr_players[2] = obj_player_Seki;
 			global.arr_players[3] = obj_player_Xan;
+			global.arr_players[4] = obj_player_Garyrager
+			global.arr_players[5] = obj_player_Dogan
 
 			//	Assign npcs to array
 			global.arr_npc[1] = obj_npc_Alok;
 			global.arr_npc[2] = obj_npc_Seki;
 			global.arr_npc[3] = obj_npc_Xan;
+			global.arr_npc[4] = obj_npc_Garyrager;
+			global.arr_npc[5] = obj_npc_Dogan;
 			
 			// Assign combat pause objects to array
 			global.arr_combat_pause[1] = obj_combat_pause_Alok;
 			global.arr_combat_pause[2] = obj_combat_pause_Seki;
 			global.arr_combat_pause[3] = obj_combat_pause_Xan;
+			global.arr_combat_pause[4] = obj_combat_pause_Garyrager;
+			global.arr_combat_pause[5] = obj_combat_pause_Dogan;
 			
 		#endregion Swapping Characters
 	
@@ -76,9 +82,18 @@
 	global.player_level = 1;
 	
 	// Sets default if a cutscene is active to false
-	global.cutscene_active = false
-	
+	global.cutscene_active = false;
 
+	// Sets time it takes to start regaining armor in seconds
+	global.regain_armor_timer = 6;
+	
+	// Sets speed at which armor regains, divided with fps
+	global.regain_armor_speed = 20
+	
+	// Sets how many pixel away objects must be from another object to collide 
+	// (x2 if both move towards each other)
+	global.collision_distance = 1;
+		
 	
 	#endregion Variables
 
@@ -150,6 +165,8 @@ function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_at
 // **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 
 // Assign all values from CSV file into stats database structs
@@ -238,9 +255,8 @@ for(var i = 0; i < global.enemy_index_length; i++)
 	global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	//global.enemy_stats[yy].is_flyer = real(ds_grid_get(ds_enemy_stats_csv, xx, yy));
-	
-}
 
+}
 
 // Assign data to enemy index arrays
 for(var p = 0; p < global.enemy_index_length; p++)
@@ -250,20 +266,7 @@ for(var p = 0; p < global.enemy_index_length; p++)
 	global.arr_enemy_index_name[n] = ds_grid_get(ds_enemy_stats_csv, 0, n);
 	// Sets 2nd place in array as index
 	global.arr_enemy_index_num[n] = n;
-	
-	// Debug messages
-	/*
-	show_debug_message("p: " + string(p));
-	show_debug_message("xx: " + string(xx));
-	show_debug_message("yy: " + string(yy));
-	show_debug_message("arr_enemy_index_name: " + string(global.arr_enemy_index_name[n]));
-	show_debug_message("arr_enemy_index_num: " + string(global.arr_enemy_index_num[n]));
-	*/
 }
-
-
-// Debug messages
-//show_debug_message("arr_enemy_index_length: " + string(global.enemy_index_length));
 
 #endregion Enemy Stats
 

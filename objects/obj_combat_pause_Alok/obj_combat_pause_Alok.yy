@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Alok Silvore",
-    "path":"folders/Objects/Characters/Players/Alok Silvore.yy",
+    "path":"folders/Objects/Characters/Players/Implemented/Alok Silvore.yy",
   },
   "parentObjectId":{
     "name":"obj_combat_pause_parent",
@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
     "name":"spr_Alok",
     "path":"sprites/spr_Alok/spr_Alok.yy",

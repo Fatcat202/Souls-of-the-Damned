@@ -6,7 +6,7 @@
 draw_self()
 
 
-#region Health Healthbar
+#region HP Healthbar
 
 var health_percent = (active_health / max_hp) * 100;
 
@@ -30,10 +30,10 @@ if(health_percent != 100)
 	
 #endregion
 
-/*
+
 #region Armor Healthbar
 
-var armor_percent = (active_armor / global.arr_combat_pause[combat_pause_index].player_stats.armor * 100);
+var armor_percent = (active_armor / max_armor * 100);
 
 // Only show healthbar if damage has been taken
 if(armor_percent != 100 && armor_percent > 0)
@@ -45,7 +45,7 @@ if(armor_percent != 100 && armor_percent > 0)
 	y - 40,	//The y coordinate of the bottom of the healthbar
 	armor_percent,		//The variable which defines total health (between 0 and 100)
 	c_black, //The colour of the background for the bar
-	c_red,	 //The colour of the bar when at no health (0)
+	c_blue,	 //The colour of the bar when at no health (0)
 	c_blue,	//The colour of the bar when at full health (100)
 	0,		//Where the bar is "anchored" (0 = left, 1 = right, 2 = top, 3 = bottom)
 	true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
@@ -55,4 +55,3 @@ if(armor_percent != 100 && armor_percent > 0)
 	
 #endregion
 
-*/

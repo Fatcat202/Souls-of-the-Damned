@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_Alok",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":55,
   "bbox_left":9,
   "bbox_right":51,
@@ -42,7 +42,7 @@
     ],
     "top":0,
   },
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Players",
     "path":"folders/Sprites/Characters/Players.yy",
@@ -94,7 +94,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":32,
+    "xorigin":31,
     "yorigin":32,
   },
   "swatchColours":null,

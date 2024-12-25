@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_vulna_attack",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":50,
   "bbox_left":14,
   "bbox_right":40,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_vulna_attack",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Vulna",
     "path":"folders/Sprites/Characters/Enemies/Vulna.yy",
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":32,
-    "yorigin":32,
+    "xorigin":28,
+    "yorigin":34,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_track_player",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

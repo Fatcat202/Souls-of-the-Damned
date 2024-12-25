@@ -11,15 +11,17 @@ Fix DOT affect
 Create healing script
 	-Overheal test
 	
+Built armor mechanic, regenerates over time and not affected by DOT. 
+	-Armor "shatters" when destroyed, taking longer to regenerate, but blocks remainder of damage
 
+Fix healing to heal other people and non-lethal
 
+Collisions
+	-Allow for collisions with walls and work with all character objects
+	-Have projectiles destroy when hitting any walls, characters, other projectiles
 
 ** HIGH PRIORITY**
 
-
-fix armor mechanic to have stats, work with enemies, and automatically regenerate over time after a delay
-
-Fix healing to heal other people and non-lethal
 
 Create 2 more characters
 	- Xan Peppo
@@ -35,15 +37,6 @@ Create 2 more characters
 		-
 		
 		
-Collisions
-	-Fix bug with getting stuck on other obj
-	-Allow for collisions with walls and work with all character objects
-	-Have projectiles destroy when hitting any walls, characters, other projectiles?
-
-
-
-
-	
 	**LOW PRIORITY**
 	
 	

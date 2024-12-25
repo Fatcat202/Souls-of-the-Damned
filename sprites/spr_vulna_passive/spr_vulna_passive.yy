@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_vulna_passive",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":50,
   "bbox_left":22,
   "bbox_right":40,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_vulna_passive",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Vulna",
     "path":"folders/Sprites/Characters/Enemies/Vulna.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":32,
-    "yorigin":32,
+    "yorigin":34,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

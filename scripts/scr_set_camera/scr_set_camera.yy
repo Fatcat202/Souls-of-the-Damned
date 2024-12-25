@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_heal_enemy",
+  "%Name":"scr_set_camera",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_heal_enemy",
+  "name":"scr_set_camera",
   "parent":{
-    "name":"Healing",
-    "path":"folders/Scripts/Effects/Healing.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
