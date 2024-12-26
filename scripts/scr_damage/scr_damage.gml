@@ -12,6 +12,10 @@ function scr_damage(dmg)
 		// If there is armor, deal damage to armor
 		other.active_armor = other.active_armor - dmg;
 		
+		// Tint sprite blue for 6 frames when damaged
+		other.image_blend = c_blue;
+		other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
+		
 		// Check if armor remains to determine how long it takes to start regaining armor
 		if(other.active_armor > 0)
 		{
