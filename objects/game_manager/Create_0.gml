@@ -38,11 +38,11 @@
 			global.arr_players[1] = obj_player_Alok;
 			global.arr_players[2] = obj_player_Seki;
 			global.arr_players[3] = obj_player_Xan;
-			global.arr_players[4] = obj_player_Garyrager
-			global.arr_players[5] = obj_player_Dogan
-			global.arr_players[6] = obj_player_Darien
-			global.arr_players[7] = obj_player_Bronwin
-			global.arr_players[8] = obj_player_Nyx
+			global.arr_players[4] = obj_player_Garyrager;
+			global.arr_players[5] = obj_player_Dogan;
+			global.arr_players[6] = obj_player_Darien;
+			global.arr_players[7] = obj_player_Bronwin;
+			global.arr_players[8] = obj_player_Nyx;
 
 			//	Assign npcs to array
 			global.arr_npc[1] = obj_npc_Alok;
@@ -98,7 +98,7 @@
 	global.regain_armor_timer = 6;
 	
 	// Sets speed at which armor regains, divided with fps
-	global.regain_armor_speed = 20
+	global.regain_armor_speed = 20;
 	
 	// Sets how many pixel away objects must be from another object to collide 
 	// (x2 if both move towards each other)
@@ -217,9 +217,6 @@ for(var p = 0; p < global.player_index_length; p++)
 	show_debug_message("arr_player_index_num: " + string(global.arr_player_index_num[n]));
 }
 
-
-// Debug messages
-show_debug_message("arr_player_index_length: " + string(global.player_index_length));
 
 #endregion Player Stats
 

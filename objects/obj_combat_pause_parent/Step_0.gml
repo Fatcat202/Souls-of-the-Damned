@@ -39,11 +39,11 @@
 	}	
 	if(keyboard_check(ord(global.cont_char_3)))
 	{
-		//if(global.player_index_length > i) global.selected_char = i; i++
+		if(global.player_index_length > i) global.selected_char = i; i++
 	}
 	if(keyboard_check(ord(global.cont_char_4)))
 	{
-		//if(global.player_index_length > i) global.selected_char = i;
+		if(global.player_index_length > i) global.selected_char = i;
 	}
 
 

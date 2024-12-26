@@ -18,7 +18,7 @@ for(var i = 1; i <= global.player_index_length; i++)
 }
 
 
-show_debug_message("Player: "  + string(global.arr_player_index_name[global.selected_char]))
+show_debug_message("Selected Player: "  + string(global.arr_player_index_name[global.selected_char]))
 show_debug_message("global.selected_char" + string(global.selected_char))
 show_debug_message("Stats" + string(global.player_stats[global.selected_char]))
 
