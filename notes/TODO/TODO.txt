@@ -39,6 +39,8 @@ Create 2 more characters
 Add functionality for detecting players/npcs in the game
 	-Assigning then to an array for scr_change_char amongst other purposes
 	-Creating index of how many players/npcs are in the game
+	
+Make attacks compatable with all attack slots when consitering timers
 		
 		
 	**LOW PRIORITY**
@@ -58,7 +60,7 @@ Create ESC menu
 			-Color blindness
 		-FPS scaling
 	-Keybindings
-	-Save / Load (start of "quest" or )
+	-Save / Load (start of "quest" or whenever)
 
 
 Create combat pause function (tactical mode)
@@ -109,11 +111,16 @@ Add arena shop
 
 
 Create GUI
+	-Name
 	-Player healthbar
 	-Overheal
 	-Armor
 	-Player abilities
 	-Swappable characters
+		-Health
+		-Armor
+		-Cooldowns
+		-Name
 	-Visual confirmation of combat pause
 	-Combat round
 	-Character level
@@ -139,3 +146,5 @@ Deactivating objects not visible by the camera
 Big O consiterations
 
 Further improving database systems
+
+Removing redundancies
