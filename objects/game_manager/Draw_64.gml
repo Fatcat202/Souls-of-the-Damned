@@ -19,10 +19,13 @@ var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
 		
 #endregion Combat Round
 
+
+	
+#region Not Combat Paused
+
 // Check if combat paused
 if(!global.game_combat_paused)
 {
-#region Not Combat Paused
 
 	#region HP Healthbar
 		var health_percent = (obj_player_parent.active_health / obj_player_parent.max_hp) * 100;
@@ -35,7 +38,7 @@ if(!global.game_combat_paused)
 		health_percent,		//The variable which defines total health (between 0 and 100)
 		c_black, //The colour of the background for the bar
 		c_red,	 //The colour of the bar when at no health (0)
-		c_lime,	//The colour of the bar when at full health (100)
+		c_green,	//The colour of the bar when at full health (100)
 		0,		//Where the bar is "anchored" (0 = left, 1 = right, 2 = top, 3 = bottom)
 		true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
 		true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
@@ -90,12 +93,14 @@ if(!global.game_combat_paused)
 	#endregion Player Name Text
 
 #endregion Not Combat Paused
+
+
+#region Combat Paused
+
 	// Display if combat paused
 } else if(global.game_combat_paused == true)
 {
 	
-#region Combat Paused
-
 	#region HP Healthbar
 		var health_percent = (global.arr_combat_pause[global.selected_char].active_health / global.arr_combat_pause[global.selected_char].max_hp) * 100;
 
@@ -107,7 +112,7 @@ if(!global.game_combat_paused)
 		health_percent,		//The variable which defines total health (between 0 and 100)
 		c_black, //The colour of the background for the bar
 		c_red,	 //The colour of the bar when at no health (0)
-		c_lime,	//The colour of the bar when at full health (100)
+		c_green,	//The colour of the bar when at full health (100)
 		0,		//Where the bar is "anchored" (0 = left, 1 = right, 2 = top, 3 = bottom)
 		true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
 		true	//Whether the bar's elements have a 1px wide black border (true) or not (false).

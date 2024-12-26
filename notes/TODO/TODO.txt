@@ -20,6 +20,8 @@ Collisions
 	-Allow for collisions with walls and work with all character objects
 	-Have projectiles destroy when hitting any walls, characters, other projectiles
 	
+Make attacks compatable with all attack slots when consitering timers and allowing players to select attacks
+	
 
 
 ** HIGH PRIORITY**
@@ -42,7 +44,7 @@ Add functionality for detecting players/npcs in the game
 	-Assigning them to an array for scr_change_char amongst other purposes
 	-Creating index of how many players/npcs are in the game
 	
-Make attacks compatable with all attack slots when consitering timers and allowing players to select attacks
+
 		
 		
 	**LOW PRIORITY**

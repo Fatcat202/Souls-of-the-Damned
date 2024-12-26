@@ -10,7 +10,6 @@ if(self.can_attack == true)
 		// Set up attack cooldown
 		cooldown_1 = false;
 		cooldown_time_1 = cooldown;
-
 	
 	}else if(active_power = 2 && cooldown_2 == true) // ****
 	{

@@ -12,6 +12,9 @@ function scr_damage(dmg)
 		// If there is armor, deal damage to armor
 		other.active_armor = other.active_armor - dmg;
 		
+		// Set armor to 0 if brought below 0
+		if(other.active_armor < 0) other.active_armor = 0;
+		
 		// Tint sprite blue for 6 frames when damaged
 		other.image_blend = c_blue;
 		other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
