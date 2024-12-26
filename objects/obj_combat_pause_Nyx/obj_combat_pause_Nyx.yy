@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_npc_Dogan",
+  "%Name":"obj_combat_pause_Nyx",
   "eventList":[],
   "managed":true,
-  "name":"obj_npc_Dogan",
+  "name":"obj_combat_pause_Nyx",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dogan Darkwater",
-    "path":"folders/Objects/Characters/Players/Implemented/Dogan Darkwater.yy",
+    "name":"Nyx",
+    "path":"folders/Objects/Characters/Players/Unimplemented/Nyx.yy",
   },
-  "parentObjectId":{
-    "name":"obj_npc_parent",
-    "path":"objects/obj_npc_parent/obj_npc_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,13 +27,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_Dogan",
-    "path":"sprites/spr_Dogan/spr_Dogan.yy",
-  },
-  "spriteMaskId":{
-    "name":"spr_Dogan",
-    "path":"sprites/spr_Dogan/spr_Dogan.yy",
-  },
+  "spriteId":null,
+  "spriteMaskId":null,
   "visible":true,
 }

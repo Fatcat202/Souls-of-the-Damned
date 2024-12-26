@@ -40,6 +40,9 @@
 			global.arr_players[3] = obj_player_Xan;
 			global.arr_players[4] = obj_player_Garyrager
 			global.arr_players[5] = obj_player_Dogan
+			global.arr_players[6] = obj_player_Darien
+			global.arr_players[7] = obj_player_Bronwin
+			global.arr_players[8] = obj_player_Nyx
 
 			//	Assign npcs to array
 			global.arr_npc[1] = obj_npc_Alok;
@@ -47,6 +50,9 @@
 			global.arr_npc[3] = obj_npc_Xan;
 			global.arr_npc[4] = obj_npc_Garyrager;
 			global.arr_npc[5] = obj_npc_Dogan;
+			global.arr_npc[6] = obj_npc_Darien;
+			global.arr_npc[7] = obj_npc_Bronwin;
+			global.arr_npc[8] = obj_npc_Nyx;
 			
 			// Assign combat pause objects to array
 			global.arr_combat_pause[1] = obj_combat_pause_Alok;
@@ -54,6 +60,10 @@
 			global.arr_combat_pause[3] = obj_combat_pause_Xan;
 			global.arr_combat_pause[4] = obj_combat_pause_Garyrager;
 			global.arr_combat_pause[5] = obj_combat_pause_Dogan;
+			global.arr_combat_pause[6] = obj_combat_pause_Darien;
+			global.arr_combat_pause[7] = obj_combat_pause_Bronwin;
+			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
+			
 			
 		#endregion Swapping Characters
 	

@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_npc_Dogan",
+  "%Name":"obj_combat_pause_Darien",
   "eventList":[],
   "managed":true,
-  "name":"obj_npc_Dogan",
+  "name":"obj_combat_pause_Darien",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dogan Darkwater",
-    "path":"folders/Objects/Characters/Players/Implemented/Dogan Darkwater.yy",
+    "name":"Darien",
+    "path":"folders/Objects/Characters/Players/Implemented/Darien.yy",
   },
   "parentObjectId":{
-    "name":"obj_npc_parent",
-    "path":"objects/obj_npc_parent/obj_npc_parent.yy",
+    "name":"obj_combat_pause_parent",
+    "path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -29,14 +29,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
-    "name":"spr_Dogan",
-    "path":"sprites/spr_Dogan/spr_Dogan.yy",
+    "name":"spr_Darien",
+    "path":"sprites/spr_Darien/spr_Darien.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_Dogan",
-    "path":"sprites/spr_Dogan/spr_Dogan.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
