@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_standard_pmelee",
+  "%Name":"scr_atk_cooldown",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_standard_pmelee",
+  "name":"scr_atk_cooldown",
   "parent":{
     "name":"Effects",
     "path":"folders/Scripts/Effects.yy",

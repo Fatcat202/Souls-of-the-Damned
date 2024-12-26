@@ -18,10 +18,6 @@ for(var i = 1; i <= global.player_index_length; i++)
 }
 
 
-show_debug_message("Selected Player: "  + string(global.arr_player_index_name[global.selected_char]))
-show_debug_message("global.selected_char" + string(global.selected_char))
-show_debug_message("Stats" + string(global.player_stats[global.selected_char]))
-
 
 #endregion Assigning Character
 
@@ -29,16 +25,20 @@ show_debug_message("Stats" + string(global.player_stats[global.selected_char]))
 
 #region Loading instance stats
 
-max_hp = global.player_stats[global.selected_char].hp;
+index = global.selected_char;
+
+max_hp = global.player_stats[index].hp;
 active_health = max_hp;
 
-player_index = global.selected_char;
-
-max_armor = global.player_stats[global.selected_char].armor;
+max_armor = global.player_stats[index].armor;
 active_armor = max_armor;
 
-collision_speed = global.player_stats[global.selected_char].move_spd + global.collision_distance;
+collision_speed = global.player_stats[index].move_spd + global.collision_distance;
 
 
 #endregion
 
+
+show_debug_message("Selected Player: "  + string(global.arr_player_index_name[index]))
+show_debug_message("index" + string(index))
+show_debug_message("Stats" + string(global.player_stats[index]))

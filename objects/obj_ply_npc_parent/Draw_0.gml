@@ -33,7 +33,7 @@ if(health_percent != 100)
 
 #region Armor Healthbar
 
-var armor_percent = (active_armor / max_armor * 100);
+var armor_percent = (active_armor / max_armor) * 100;
 
 // Only show healthbar if damage has been taken
 if(armor_percent != 100 && armor_percent > 0)

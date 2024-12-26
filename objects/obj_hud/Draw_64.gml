@@ -2,7 +2,6 @@
 
 
 #region HP Healthbar
-
 var health_percent = (obj_player_parent.active_health / obj_player_parent.max_hp) * 100;
 var xx1 = display_get_gui_width() / 2;
 
@@ -19,13 +18,10 @@ var xx1 = display_get_gui_width() / 2;
 	true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
 	true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
 	);
-
-	
-#endregion
+#endregion HP Healthbar
 
 
 #region Armor Healthbar
-
 var armor_percent = (obj_player_parent.active_armor / obj_player_parent.max_armor * 100);
 var xx2 = display_get_gui_width() / 2;
 
@@ -42,6 +38,14 @@ var xx2 = display_get_gui_width() / 2;
 	true,	//Whether the bar's background is drawn (true) or not (false). If false, the backcol argument is disregarded.
 	true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
 	);
+#endregion Armor Healthbar
 
-	
-#endregion
+
+#region Attacks
+
+
+
+
+#endregion Attacks
+
+

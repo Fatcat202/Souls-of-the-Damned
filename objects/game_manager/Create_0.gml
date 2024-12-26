@@ -114,12 +114,12 @@
 		global.cont_left = "A";
 		global.cont_down = "S";
 		global.cont_right = "D";
-		// Powers
-		global.cont_power_1 = "1";
-		global.cont_power_2 = "2";
-		global.cont_power_3 = "3";
-		global.cont_power_4 = "4";
-		global.cont_use_power = "Mouse Button 1"; // Find actual name
+		// Attacks
+		global.cont_attack_1 = "1";
+		global.cont_attack_2 = "2";
+		global.cont_attack_3 = "3";
+		global.cont_attack_4 = "4";
+		global.cont_use_attack = mouse_check_button_pressed(mb_left);
 		// Characters
 		global.cont_char_1 = "5";
 		global.cont_char_2 = "6";
