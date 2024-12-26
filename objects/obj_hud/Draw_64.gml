@@ -1,16 +1,16 @@
-/// @description Insert description here
+/// @description HUD GUI
 
 
 #region HP Healthbar
 
-var health_percent = (global.player_stats[global.arr_player_index_num[global.selected_char]].active_health / global.player_stats[global.arr_player_index_num[global.selected_char]].hp) * 100;
+var health_percent = (obj_player_parent.active_health / obj_player_parent.max_hp) * 100;
 var xx1 = display_get_gui_width() / 2;
 
 	draw_healthbar(
-	0, //xx1 - 25,  	//The x coordinate of the left of the healthbar
-	0, //40,	// The y coordinate of the top of the healthbar
-	0, //xx1 + 25,	//The x coordinate of the right of the healthbar
-	0, //35,	//The y coordinate of the bottom of the healthbar
+	xx1 - 100,  	//The x coordinate of the left of the healthbar
+	655,	// The y coordinate of the top of the healthbar
+	xx1 + 100,	//The x coordinate of the right of the healthbar
+	645,	//The y coordinate of the bottom of the healthbar
 	health_percent,		//The variable which defines total health (between 0 and 100)
 	c_black, //The colour of the background for the bar
 	c_red,	 //The colour of the bar when at no health (0)
@@ -26,14 +26,14 @@ var xx1 = display_get_gui_width() / 2;
 
 #region Armor Healthbar
 
-var armor_percent = (global.player_stats[global.arr_player_index_num[global.selected_char]].active_armor / global.player_stats[global.arr_player_index_num[global.selected_char]] * 100);
+var armor_percent = (obj_player_parent.active_armor / obj_player_parent.max_armor * 100);
 var xx2 = display_get_gui_width() / 2;
 
 	draw_healthbar(
-	xx2 - 25,  	//The x coordinate of the left of the healthbar
-	45,	// The y coordinate of the top of the healthbar
-	xx2 + 25,	//The x coordinate of the right of the healthbar
-	40,	//The y coordinate of the bottom of the healthbar
+	xx2 - 100,  	//The x coordinate of the left of the healthbar
+	640,	// The y coordinate of the top of the healthbar
+	xx2 + 100,	//The x coordinate of the right of the healthbar
+	630,	//The y coordinate of the bottom of the healthbar
 	armor_percent,		//The variable which defines total health (between 0 and 100)
 	c_black, //The colour of the background for the bar
 	c_blue,	 //The colour of the bar when at no health (0)

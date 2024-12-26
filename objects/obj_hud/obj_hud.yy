@@ -1,18 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_npc_Darien",
-  "eventList":[],
+  "%Name":"obj_hud",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":64,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_npc_Darien",
+  "name":"obj_hud",
   "overriddenProperties":[],
   "parent":{
-    "name":"Darien",
-    "path":"folders/Objects/Characters/Players/Implemented/Darien.yy",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
-  "parentObjectId":{
-    "name":"obj_npc_parent",
-    "path":"objects/obj_npc_parent/obj_npc_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,11 +28,8 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":{
-    "name":"spr_Darien",
-    "path":"sprites/spr_Darien/spr_Darien.yy",
-  },
+  "solid":false,
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
