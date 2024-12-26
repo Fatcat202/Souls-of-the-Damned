@@ -33,9 +33,58 @@ if(active_health < 0 || active_health = 0)
 
 // Timers for attacks 1-4 cooldowns
 
-if(cooldown_1 = false) cooldown_timer_1++;
-if(cooldown_2 = false) cooldown_timer_2++;
-if(cooldown_3 = false) cooldown_timer_3++;
-if(cooldown_4 = false) cooldown_timer_4++;
+// Check if cooldown ticking
+if(cooldown_1 == false)
+{
+	// Increment cooldown each frame
+	cooldown_timer_1++;
+	if(cooldown_timer_1 >= cooldown_time_1) 
+	{
+		// Reset cooldown once time has been reached
+		cooldown_1 = true;
+		cooldown_timer_1 = 0;
+	}
+}
+
+// Check if cooldown ticking
+if(cooldown_2 == false)
+{
+	// Increment cooldown each frame
+	cooldown_timer_2++;
+	if(cooldown_timer_2 >= cooldown_time_2) 
+	{
+		// Reset cooldown once time has been reached
+		cooldown_2 = true;
+		cooldown_timer_2 = 0;
+		// Temporary hardcoded fix for blocking abilities
+		can_damage = true;
+	}
+}
+
+// Check if cooldown ticking
+if(cooldown_3 == false)
+{
+	// Increment cooldown each frame
+	cooldown_timer_3++;
+	if(cooldown_timer_3 >= cooldown_time_3) 
+	{
+		// Reset cooldown once time has been reached
+		cooldown_3 = true;
+		cooldown_timer_3 = 0;
+	}
+}
+
+// Check if cooldown ticking
+if(cooldown_4 == false)
+{
+	// Increment cooldown each frame
+	cooldown_timer_4++;
+	if(cooldown_timer_4 >= cooldown_time_4) 
+	{
+		// Reset cooldown once time has been reached
+		cooldown_4 = true;
+		cooldown_timer_4 = 0;
+	}
+}
 
 #endregion Timers

@@ -65,6 +65,28 @@
 			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
 			
 			
+			/* Attempt at reading players and npcs in Players layer and assigning them to an array
+			var num_pcs = layer_get_all_elements("Players");
+			show_debug_message("Player Count: " + string(num_pcs));
+			global.active_pcs = ds_list_create();
+			
+			for(var i = 0; i < array_length(num_pcs); i++)
+			{
+				if(layer_get_element_type(num_pcs[i] == layerelementtype_instance))
+				{
+					with(asset_object)
+					{ 
+						if(asset_has_tags(object_index, "player", asset_object)) ds_list_add(global.active_pcs, id)
+				
+					}else if(asset_has_tags(object_index, "npc", asset_object)) ds_list_add(global.active_pcs, id)
+
+				}
+			}
+			
+			show_debug_message("active_pcs: " + string(global.active_pcs))
+			*/
+			
+			
 		#endregion Swapping Characters
 	
 	#endregion Databse
@@ -203,10 +225,7 @@ for(var i = 0; i < global.player_index_length; i++)
 	global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
-	
-	// Debug tests
-	show_debug_message("xx: " + string(xx));
-	show_debug_message("yy: " + string(yy));
+
 }
 
 
@@ -218,11 +237,7 @@ for(var p = 0; p < global.player_index_length; p++)
 	global.arr_player_index_name[n] = ds_grid_get(ds_player_stats_csv, 0, n);
 	// Sets 2nd place in array as index
 	global.arr_player_index_num[n] = n
-	
-	// Debug messages
-	show_debug_message("p: " + string(p));
-	show_debug_message("arr_player_index_name: " + string(global.arr_player_index_name[n]));
-	show_debug_message("arr_player_index_num: " + string(global.arr_player_index_num[n]));
+
 }
 
 

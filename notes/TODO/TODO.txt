@@ -19,6 +19,8 @@ Fix healing to heal other people and non-lethal
 Collisions
 	-Allow for collisions with walls and work with all character objects
 	-Have projectiles destroy when hitting any walls, characters, other projectiles
+	
+
 
 ** HIGH PRIORITY**
 
@@ -27,7 +29,7 @@ Create 2 more characters
 	- Xan Peppo
 		-Base shooting ability
 		-Fly speed boost
-		-Powerful shot, stagger enemies and shoot through multiple
+		-Powerful shot, stagger enemies and shoot through multiple at a time
 		-Shoot several enemies in the area
 
 	- Gary/Rager
@@ -37,10 +39,10 @@ Create 2 more characters
 		-
 		
 Add functionality for detecting players/npcs in the game
-	-Assigning then to an array for scr_change_char amongst other purposes
+	-Assigning them to an array for scr_change_char amongst other purposes
 	-Creating index of how many players/npcs are in the game
 	
-Make attacks compatable with all attack slots when consitering timers
+Make attacks compatable with all attack slots when consitering timers and allowing players to select attacks
 		
 		
 	**LOW PRIORITY**
@@ -70,7 +72,7 @@ Create combat pause function (tactical mode)
 	-Pathing system to tell characters to move to different positions
 		-Click to assign location
 		-Drag to assign path
-	-Can move camera slightly around characters, allowing some extra visibility
+	-Can move camera slightly around characters allowing some extra visibility
 
 
 Add leveling system
@@ -98,7 +100,7 @@ Update death
 		-Wake up when healed enough or after non-lethal
 	-Character can no longer be selected and swaps to a sprite, player auto swaps to another character on death
 
-Add ability to choose between attacks
+Add ability to choose between attacks in menu
 
 
 Add loot/rewards
@@ -111,19 +113,20 @@ Add arena shop
 
 
 Create GUI
-	-Name
-	-Player healthbar
+	-Name DONE
+	-Player healthbar DONE
+	-Combat round DONE
+	-Armor DONE
+	-Character level DONE
+	-Visual confirmation of combat pause DONE
 	-Overheal
-	-Armor
 	-Player abilities
 	-Swappable characters
 		-Health
 		-Armor
 		-Cooldowns
 		-Name
-	-Visual confirmation of combat pause
-	-Combat round
-	-Character level
+	
 	-Minimap?
 	
 	

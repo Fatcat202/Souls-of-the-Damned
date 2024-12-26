@@ -19,10 +19,11 @@ var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
 		
 #endregion Combat Round
 
-// Display if not combat paused
-if(global.game_combat_paused == false)
+// Check if combat paused
+if(!global.game_combat_paused)
 {
-	
+#region Not Combat Paused
+
 	#region HP Healthbar
 		var health_percent = (obj_player_parent.active_health / obj_player_parent.max_hp) * 100;
 
@@ -66,7 +67,7 @@ if(global.game_combat_paused == false)
 		);
 		
 		// Displaying armor over healthbar
-		draw_text(xx, armor_healthbar_y_top - (healthbar_thickness / 2), "HP: " + string(obj_player_parent.active_armor) + " / " + string(obj_player_parent.max_armor))
+		draw_text(xx, armor_healthbar_y_top - (healthbar_thickness / 2), "Armor: " + string(obj_player_parent.active_armor) + " / " + string(obj_player_parent.max_armor))
 		draw_set_halign(fa_center);
 		
 	#endregion Armor Healthbar
@@ -83,16 +84,18 @@ if(global.game_combat_paused == false)
 	#region Player Name Text
 	
 		// Displays text stating player name
-		draw_text(xx, armor_healthbar_y_top - 20, global.arr_players[global.selected_char].player_name)
+		draw_text(xx, armor_healthbar_y_top - 20, global.arr_players[global.selected_char].player_name + "    Level: " + string(global.player_level))
 		draw_set_halign(fa_center);
 		
 	#endregion Player Name Text
 
-
+#endregion Not Combat Paused
 	// Display if combat paused
 } else if(global.game_combat_paused == true)
 {
 	
+#region Combat Paused
+
 	#region HP Healthbar
 		var health_percent = (global.arr_combat_pause[global.selected_char].active_health / global.arr_combat_pause[global.selected_char].max_hp) * 100;
 
@@ -135,7 +138,7 @@ if(global.game_combat_paused == false)
 		);
 		
 		// Displaying armor over healthbar
-		draw_text(xx, armor_healthbar_y_top - (healthbar_thickness / 2), "HP: " + string(global.arr_combat_pause[global.selected_char].active_armor) + " / " + string(global.arr_combat_pause[global.selected_char].max_armor))
+		draw_text(xx, armor_healthbar_y_top - (healthbar_thickness / 2), "Armor: " + string(global.arr_combat_pause[global.selected_char].active_armor) + " / " + string(global.arr_combat_pause[global.selected_char].max_armor))
 		draw_set_halign(fa_center);
 		
 	#endregion Armor Healthbar
@@ -151,7 +154,7 @@ if(global.game_combat_paused == false)
 	#region Player Name text
 	
 		// Displays text stating player name
-		draw_text(xx, armor_healthbar_y_top - 20, global.arr_combat_pause[global.selected_char].player_name);
+		draw_text(xx, armor_healthbar_y_top - 20, global.arr_combat_pause[global.selected_char].player_name + "    Level: " + string(global.player_level));
 		draw_set_halign(fa_center);
 			
 	#endregion Player Name Text
@@ -164,8 +167,8 @@ if(global.game_combat_paused == false)
 		draw_set_halign(fa_center);
 			
 	#endregion Combat Paused Text
-	
-	
-	
-	
+
 }
+
+#endregion Not Combat Paused
+

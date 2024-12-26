@@ -14,13 +14,10 @@ index = 0
 // Determine starting character
 for(var i = 1; i <= global.player_index_length; i++)
 {
-	show_debug_message("npc i: " + string(i));
-	show_debug_message(string(global.arr_player_index_name[i]));
-		if (npc_name == string(global.arr_player_index_name[i]))
-		{
-			index = i;
-		}
-		show_debug_message("selected_char: " + string(index));
+	if (npc_name == string(global.arr_player_index_name[i]))
+	{
+		index = i;
+	}
 }
 
 #endregion Assigning Character

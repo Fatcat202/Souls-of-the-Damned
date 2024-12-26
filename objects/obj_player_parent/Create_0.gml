@@ -17,8 +17,6 @@ for(var i = 1; i <= global.player_index_length; i++)
 		}
 }
 
-
-
 #endregion Assigning Character
 
 
@@ -37,8 +35,3 @@ collision_speed = global.player_stats[index].move_spd + global.collision_distanc
 
 
 #endregion
-
-
-show_debug_message("Selected Player: "  + string(global.arr_player_index_name[index]))
-show_debug_message("index: " + string(index))
-show_debug_message("Stats: " + string(global.player_stats[index]))

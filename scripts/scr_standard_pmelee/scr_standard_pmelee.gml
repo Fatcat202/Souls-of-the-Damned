@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function scr_standard_pmelee(){
 	
 	// Assign sprite
@@ -17,6 +16,5 @@ function scr_standard_pmelee(){
 		if(melee_atk.image_xscale < 0) melee_atk.x = melee_atk.x - 40;
 
 		// Cooldown
-		cooldown_1 = false;
-		alarm[1] = game_get_speed(gamespeed_fps) * global.player_stats[global.selected_char].main_atk_spd;
+		cooldown = game_get_speed(gamespeed_fps) * global.player_stats[global.selected_char].main_atk_spd;
 }
