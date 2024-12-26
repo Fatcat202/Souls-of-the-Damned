@@ -84,6 +84,9 @@
 			// Sets default of if a pause can occor to false
 			global.can_combat_pause = false;
 			
+			// Creates combat_pause_surf
+			global.combat_pause_surf = -1;
+			
 			
 	#endregion Pausing
 	
@@ -103,6 +106,11 @@
 	// Sets how many pixel away objects must be from another object to collide 
 	// (x2 if both move towards each other)
 	global.collision_distance = 1;
+	
+	// Sets starting combat round for arena
+	global.combat_round = 1;
+	
+	
 		
 	
 	#endregion Variables
@@ -128,7 +136,7 @@
 		// Misc
 		global.cont_menu = "ESC"; // Find actual name
 		global.cont_combat_pause = "SPACE"; // Find actual name
-		global.cont_quick_save = "F2";
+		global.cont_quick_save = "F2"; // Find actual name
 	
 	#endregion Controls
 

@@ -8,7 +8,7 @@ draw_self()
 
 #region HP Healthbar
 
-var health_percent = (active_health/global.enemy_stats[enemy_index].hp) * 100;
+var health_percent = (active_health / max_hp) * 100;
 
 // Only show healthbar if damage has been taken
 if(health_percent != 100 )

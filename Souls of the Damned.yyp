@@ -196,7 +196,6 @@
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},},
     {"id":{"name":"obj_enemy_Vulnadaemon","path":"objects/obj_enemy_Vulnadaemon/obj_enemy_Vulnadaemon.yy",},},
-    {"id":{"name":"obj_hud","path":"objects/obj_hud/obj_hud.yy",},},
     {"id":{"name":"obj_npc_Alok","path":"objects/obj_npc_Alok/obj_npc_Alok.yy",},},
     {"id":{"name":"obj_npc_Bronwin","path":"objects/obj_npc_Bronwin/obj_npc_Bronwin.yy",},},
     {"id":{"name":"obj_npc_Darien","path":"objects/obj_npc_Darien/obj_npc_Darien.yy",},},

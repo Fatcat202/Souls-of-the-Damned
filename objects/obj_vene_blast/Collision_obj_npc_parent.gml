@@ -1,4 +1,4 @@
-/// @description Hitting Player
+/// @description Hitting NPC
 // You can write your code in this editor
 
 

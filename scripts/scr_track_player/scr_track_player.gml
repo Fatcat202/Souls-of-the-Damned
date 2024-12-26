@@ -8,7 +8,7 @@ function scr_track_player(range){
 	if(player_within_range != noone)
 	{
 		// Move towards player 
-		speed = global.enemy_stats[enemy_index].move_spd;
+		speed = global.enemy_stats[index].move_spd;
 		direction = point_direction(x, y, obj_player_parent.x, obj_player_parent.y);
 		scr_sprite_direction(direction);
 		
@@ -19,7 +19,7 @@ function scr_track_player(range){
 	} else if(npc_within_range != noone)
 	{
 		// Move towards npc
-		speed = global.enemy_stats[enemy_index].move_spd;
+		speed = global.enemy_stats[index].move_spd;
 		direction = point_direction(x, y, obj_npc_parent.x, obj_npc_parent.y);
 		scr_sprite_direction(direction);
 		scr_non_player_collision(speed);
