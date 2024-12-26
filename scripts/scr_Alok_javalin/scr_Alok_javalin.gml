@@ -9,8 +9,7 @@ function scr_Alok_javalin(){
 	alok_javelin.image_angle = alok_javelin.direction;
 		
 	// Cooldown
-	cooldown_3 = false;
-	alarm[3] = game_get_speed(gamespeed_fps) * 1.5;
+	cooldown = game_get_speed(gamespeed_fps) * 1.5;
 		
 		
 }

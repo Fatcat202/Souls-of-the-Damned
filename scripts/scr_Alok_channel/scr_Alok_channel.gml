@@ -21,7 +21,6 @@ if(within_range != noone)
 		scr_heal(30, 0);
 	}
 	// Cooldown
-	cooldown_4 = false;
-	alarm[4] = game_get_speed(gamespeed_fps) * 6;
+	cooldown = game_get_speed(gamespeed_fps) * 6;
 }
 }

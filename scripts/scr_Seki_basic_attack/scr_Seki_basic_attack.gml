@@ -8,7 +8,6 @@ function scr_Seki_basic_attack()
 	seki_missile.image_angle = seki_missile.direction + 90;
 		
 	// Cooldown
-	cooldown_1 = false;
-	alarm[1] = game_get_speed(gamespeed_fps) / 4;
+	cooldown = game_get_speed(gamespeed_fps) / 4;
 
 }

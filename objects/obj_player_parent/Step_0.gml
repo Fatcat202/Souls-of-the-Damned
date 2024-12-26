@@ -64,7 +64,7 @@ if(can_control == true)
 	// Move player
 	if(_hspd !=0 || _vspd != 0)
 	{
-		var _spd = global.player_stats[global.selected_char].move_spd;
+		var _spd = global.player_stats[index].move_spd;
 		var _dir = point_direction(0, 0, _hspd, _vspd);
 		var _xadd = lengthdir_x(_spd, _dir);
 		var _yadd = lengthdir_y(_spd, _dir);
@@ -87,19 +87,19 @@ if(can_control == true)
 
 #region Change Attacks
 
-if(keyboard_check(ord(global.cont_power_1)))
+if(keyboard_check(ord(global.cont_attack_1)))
 {
 	active_power = 1;
 }
-if(keyboard_check(ord(global.cont_power_2)))
+if(keyboard_check(ord(global.cont_attack_2)))
 {
 	active_power = 2;
 }
-if(keyboard_check(ord(global.cont_power_3)))
+if(keyboard_check(ord(global.cont_attack_3)))
 {
 	active_power = 3;
 }
-if(keyboard_check(ord(global.cont_power_4)))
+if(keyboard_check(ord(global.cont_attack_4)))
 {
 	active_power = 4;
 }

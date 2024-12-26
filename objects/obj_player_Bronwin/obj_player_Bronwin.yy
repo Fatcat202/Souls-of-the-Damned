@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_player_Bronwin",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_player_Bronwin",
   "overriddenProperties":[],
@@ -29,8 +31,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
-  "spriteId":null,
+  "solid":true,
+  "spriteId":{
+    "name":"spr_Bronwin",
+    "path":"sprites/spr_Bronwin/spr_Bronwin.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

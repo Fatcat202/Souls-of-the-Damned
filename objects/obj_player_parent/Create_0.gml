@@ -4,9 +4,9 @@
 #region Assigning Character
 
 // Read name of object and assigns it to object_name
-var object_name = object_get_name(object_index);
+object_name = object_get_name(object_index);
 // Isolates the character name from object_name
-var player_name = string_delete(object_name, 0, 11);
+player_name = string_delete(object_name, 0, 11);
 
 // Determine starting character
 for(var i = 1; i <= global.player_index_length; i++)
@@ -23,16 +23,15 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 #region Loading instance stats
 
-max_hp = global.player_stats[global.selected_char].hp;
+index = global.selected_char;
+
+max_hp = global.player_stats[index].hp;
 active_health = max_hp;
 
-player_index = global.selected_char;
-
-max_armor = global.player_stats[global.selected_char].armor;
+max_armor = global.player_stats[index].armor;
 active_armor = max_armor;
 
-collision_speed = global.player_stats[global.selected_char].move_spd + global.collision_distance;
+collision_speed = global.player_stats[index].move_spd + global.collision_distance;
 
 
 #endregion
-

@@ -9,7 +9,6 @@ seki_fireball.direction = point_direction(x, y, mouse_x, mouse_y);
 seki_fireball.image_angle = seki_fireball.direction;
 		
 // Cooldown
-cooldown_2 = false;
-alarm[2] = game_get_speed(gamespeed_fps) * 3;
+cooldown = game_get_speed(gamespeed_fps) * 3;
 
 }

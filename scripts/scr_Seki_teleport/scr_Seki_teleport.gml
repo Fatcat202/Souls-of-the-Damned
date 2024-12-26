@@ -9,7 +9,6 @@ function scr_Seki_teleport(){
 		y = mouse_y;
 		
 		// Cooldown
-		cooldown_4 = false;
-		alarm[4] = game_get_speed(gamespeed_fps) * 6;
+		cooldown = game_get_speed(gamespeed_fps) * 6;
 	}
 }

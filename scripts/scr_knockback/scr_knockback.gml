@@ -16,9 +16,4 @@ function scr_knockback(length)
 		// Duration
 		other.alarm[5] = game_get_speed(gamespeed_fps) * length;
 	}
-	if(!place_free(x - global.collision_distance, y) || !place_free(x + global.collision_distance, y) ||
-		!place_free(x, y - global.collision_distance) || !place_free(x, y + global.collision_distance))
-	{
-		speed = 0;	
-	}
 }

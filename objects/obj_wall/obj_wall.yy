@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"collision_block",
-    "path":"sprites/collision_block/collision_block.yy",
+    "name":"spr_collision_block",
+    "path":"sprites/spr_collision_block/spr_collision_block.yy",
   },
   "spriteMaskId":null,
   "visible":false,

@@ -10,8 +10,7 @@ function scr_Seki_lightning(){
 		seki_lightning.image_angle = seki_lightning.direction;
 		
 		// Cooldown
-		cooldown_3 = false;
-		alarm[3] = game_get_speed(gamespeed_fps) * 1.5;
+		cooldown = game_get_speed(gamespeed_fps) * 1.5;
 
 
 }

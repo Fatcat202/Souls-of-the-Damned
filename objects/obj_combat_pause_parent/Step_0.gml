@@ -5,19 +5,19 @@
 
 #region Change Attacks
 
-	if(keyboard_check(ord(global.cont_power_1)))
+	if(keyboard_check(ord(global.cont_attack_1)))
 	{
 		active_power = 1;
 	}
-	if(keyboard_check(ord(global.cont_power_2)))
+	if(keyboard_check(ord(global.cont_attack_2)))
 	{
 		active_power = 2;
 	}
-	if(keyboard_check(ord(global.cont_power_3)))
+	if(keyboard_check(ord(global.cont_attack_3)))
 	{
 		active_power = 3;
 	}
-	if(keyboard_check(ord(global.cont_power_4)))
+	if(keyboard_check(ord(global.cont_attack_4)))
 	{
 		active_power = 4;
 	}
@@ -39,11 +39,11 @@
 	}	
 	if(keyboard_check(ord(global.cont_char_3)))
 	{
-		//if(global.player_index_length > i) global.selected_char = i; i++
+		if(global.player_index_length > i) global.selected_char = i; i++
 	}
 	if(keyboard_check(ord(global.cont_char_4)))
 	{
-		//if(global.player_index_length > i) global.selected_char = i;
+		if(global.player_index_length > i) global.selected_char = i;
 	}
 
 

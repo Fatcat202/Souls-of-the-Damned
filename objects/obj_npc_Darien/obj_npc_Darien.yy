@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Darien",
-    "path":"folders/Objects/Characters/Players/Unimplemented/Darien.yy",
+    "path":"folders/Objects/Characters/Players/Implemented/Darien.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",
@@ -29,10 +29,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
+  "solid":true,
   "spriteId":{
-    "name":"spr_Darius",
-    "path":"sprites/spr_Darius/spr_Darius.yy",
+    "name":"spr_Darien",
+    "path":"sprites/spr_Darien/spr_Darien.yy",
   },
   "spriteMaskId":null,
   "visible":true,

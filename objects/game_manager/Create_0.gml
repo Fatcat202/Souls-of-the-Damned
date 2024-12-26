@@ -38,8 +38,11 @@
 			global.arr_players[1] = obj_player_Alok;
 			global.arr_players[2] = obj_player_Seki;
 			global.arr_players[3] = obj_player_Xan;
-			global.arr_players[4] = obj_player_Garyrager
-			global.arr_players[5] = obj_player_Dogan
+			global.arr_players[4] = obj_player_Garyrager;
+			global.arr_players[5] = obj_player_Dogan;
+			global.arr_players[6] = obj_player_Darien;
+			global.arr_players[7] = obj_player_Bronwin;
+			global.arr_players[8] = obj_player_Nyx;
 
 			//	Assign npcs to array
 			global.arr_npc[1] = obj_npc_Alok;
@@ -47,6 +50,9 @@
 			global.arr_npc[3] = obj_npc_Xan;
 			global.arr_npc[4] = obj_npc_Garyrager;
 			global.arr_npc[5] = obj_npc_Dogan;
+			global.arr_npc[6] = obj_npc_Darien;
+			global.arr_npc[7] = obj_npc_Bronwin;
+			global.arr_npc[8] = obj_npc_Nyx;
 			
 			// Assign combat pause objects to array
 			global.arr_combat_pause[1] = obj_combat_pause_Alok;
@@ -54,6 +60,32 @@
 			global.arr_combat_pause[3] = obj_combat_pause_Xan;
 			global.arr_combat_pause[4] = obj_combat_pause_Garyrager;
 			global.arr_combat_pause[5] = obj_combat_pause_Dogan;
+			global.arr_combat_pause[6] = obj_combat_pause_Darien;
+			global.arr_combat_pause[7] = obj_combat_pause_Bronwin;
+			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
+			
+			
+			/* Attempt at reading players and npcs in Players layer and assigning them to an array
+			var num_pcs = layer_get_all_elements("Players");
+			show_debug_message("Player Count: " + string(num_pcs));
+			global.active_pcs = ds_list_create();
+			
+			for(var i = 0; i < array_length(num_pcs); i++)
+			{
+				if(layer_get_element_type(num_pcs[i] == layerelementtype_instance))
+				{
+					with(asset_object)
+					{ 
+						if(asset_has_tags(object_index, "player", asset_object)) ds_list_add(global.active_pcs, id)
+				
+					}else if(asset_has_tags(object_index, "npc", asset_object)) ds_list_add(global.active_pcs, id)
+
+				}
+			}
+			
+			show_debug_message("active_pcs: " + string(global.active_pcs))
+			*/
+			
 			
 		#endregion Swapping Characters
 	
@@ -74,6 +106,9 @@
 			// Sets default of if a pause can occor to false
 			global.can_combat_pause = false;
 			
+			// Creates combat_pause_surf
+			global.combat_pause_surf = -1;
+			
 			
 	#endregion Pausing
 	
@@ -88,11 +123,16 @@
 	global.regain_armor_timer = 6;
 	
 	// Sets speed at which armor regains, divided with fps
-	global.regain_armor_speed = 20
+	global.regain_armor_speed = 20;
 	
 	// Sets how many pixel away objects must be from another object to collide 
 	// (x2 if both move towards each other)
-	global.collision_distance = 1;
+	global.collision_distance = 5;
+	
+	// Sets starting combat round for arena
+	global.combat_round = 1;
+	
+	
 		
 	
 	#endregion Variables
@@ -104,12 +144,12 @@
 		global.cont_left = "A";
 		global.cont_down = "S";
 		global.cont_right = "D";
-		// Powers
-		global.cont_power_1 = "1";
-		global.cont_power_2 = "2";
-		global.cont_power_3 = "3";
-		global.cont_power_4 = "4";
-		global.cont_use_power = "Mouse Button 1"; // Find actual name
+		// Attacks
+		global.cont_attack_1 = "1";
+		global.cont_attack_2 = "2";
+		global.cont_attack_3 = "3";
+		global.cont_attack_4 = "4";
+		global.cont_use_attack = mouse_check_button_pressed(mb_left);
 		// Characters
 		global.cont_char_1 = "5";
 		global.cont_char_2 = "6";
@@ -118,7 +158,7 @@
 		// Misc
 		global.cont_menu = "ESC"; // Find actual name
 		global.cont_combat_pause = "SPACE"; // Find actual name
-		global.cont_quick_save = "F2";
+		global.cont_quick_save = "F2"; // Find actual name
 	
 	#endregion Controls
 
@@ -163,6 +203,10 @@ function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_at
 
 // Create player_stats struct array
 // **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
+
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
@@ -179,12 +223,9 @@ for(var i = 0; i < global.player_index_length; i++)
 	global.player_stats[yy].armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].move_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].main_atk_speed = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+	global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
-	
-	// Debug tests
-	show_debug_message("xx: " + string(xx));
-	show_debug_message("yy: " + string(yy));
+
 }
 
 
@@ -196,16 +237,9 @@ for(var p = 0; p < global.player_index_length; p++)
 	global.arr_player_index_name[n] = ds_grid_get(ds_player_stats_csv, 0, n);
 	// Sets 2nd place in array as index
 	global.arr_player_index_num[n] = n
-	
-	// Debug messages
-	show_debug_message("p: " + string(p));
-	show_debug_message("arr_player_index_name: " + string(global.arr_player_index_name[n]));
-	show_debug_message("arr_player_index_num: " + string(global.arr_player_index_num[n]));
+
 }
 
-
-// Debug messages
-show_debug_message("arr_player_index_length: " + string(global.player_index_length));
 
 #endregion Player Stats
 
