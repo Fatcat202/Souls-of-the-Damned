@@ -26,8 +26,11 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":false,
-  "spriteId":null,
+  "solid":true,
+  "spriteId":{
+    "name":"spr_Nyx",
+    "path":"sprites/spr_Nyx/spr_Nyx.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

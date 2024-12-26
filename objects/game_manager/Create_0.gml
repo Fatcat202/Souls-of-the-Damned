@@ -173,6 +173,10 @@ function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_at
 
 // Create player_stats struct array
 // **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
+
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
