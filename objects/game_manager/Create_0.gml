@@ -193,7 +193,7 @@ for(var i = 0; i < global.player_index_length; i++)
 	global.player_stats[yy].armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].move_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].main_atk_speed = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+	global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
 	
 	// Debug tests

@@ -5,7 +5,7 @@ if(self.can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true) // ****
 	{
-
+		scr_Darien_basic_attack();
 	
 	}else if(active_power = 2 && cooldown_2 == true) // ****
 	{

@@ -7,10 +7,10 @@ var health_percent = (global.player_stats[global.arr_player_index_num[global.sel
 var xx1 = display_get_gui_width() / 2;
 
 	draw_healthbar(
-	xx1 - 25,  	//The x coordinate of the left of the healthbar
-	40,	// The y coordinate of the top of the healthbar
-	xx1 + 25,	//The x coordinate of the right of the healthbar
-	35,	//The y coordinate of the bottom of the healthbar
+	0, //xx1 - 25,  	//The x coordinate of the left of the healthbar
+	0, //40,	// The y coordinate of the top of the healthbar
+	0, //xx1 + 25,	//The x coordinate of the right of the healthbar
+	0, //35,	//The y coordinate of the bottom of the healthbar
 	health_percent,		//The variable which defines total health (between 0 and 100)
 	c_black, //The colour of the background for the bar
 	c_red,	 //The colour of the bar when at no health (0)

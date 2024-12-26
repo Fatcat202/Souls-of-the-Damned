@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_melee_parent",
+  "%Name":"obj_pmelee_parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_melee_parent",
+  "name":"obj_pmelee_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Melee",

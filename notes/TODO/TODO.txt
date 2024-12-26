@@ -36,6 +36,10 @@ Create 2 more characters
 		-Throw rager
 		-
 		
+Add functionality for detecting players/npcs in the game
+	-Assigning then to an array for scr_change_char amongst other purposes
+	-Creating index of how many players/npcs are in the game
+		
 		
 	**LOW PRIORITY**
 	

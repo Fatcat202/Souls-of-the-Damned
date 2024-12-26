@@ -1,9 +1,9 @@
 Name,HP,Armor,Movement Speed,Main Attack Damage,Main Attack Speed,Knockback Percentage
-Alok,100,80,4,20,0,0.45
-Seki,60,20,4,5,0,0.45
-Xan,80,35,4,10,0,0.45
-Garyrager,110,50,4,15,0,0.45
-Dogan,90,30,4,10,0,0.45
-Darien,130,100,4,20,0,0.45
-Bronwin,70,35,4,10,0,0.45
-Nyx,100,40,4,15,0,0.45
+Alok,100,80,4,20,0.25,0.45
+Seki,60,20,4,5,0.25,0.45
+Xan,80,35,4,10,0.25,0.45
+Garyrager,110,50,4,15,0.25,0.45
+Dogan,90,30,4,10,0.25,0.45
+Darien,130,100,4,20,0.25,0.45
+Bronwin,70,35,4,10,0.25,0.45
+Nyx,100,40,4,15,0.25,0.45
