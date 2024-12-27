@@ -14,6 +14,9 @@ function scr_standard_pmelee(){
 
 		// Swing in direction sprite is facing
 		if(melee_atk.image_xscale < 0) melee_atk.x = melee_atk.x - 40;
+		
+		// Send index to attack sprite for stats
+		melee_atk.index = index;
 
 		// Cooldown
 		cooldown = game_get_speed(gamespeed_fps) * global.player_stats[global.selected_char].main_atk_spd;

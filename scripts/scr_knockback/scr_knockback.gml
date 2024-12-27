@@ -1,5 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function scr_knockback(length)
 {
 	
@@ -12,8 +11,10 @@ function scr_knockback(length)
 		
 		// I Frames Set
 		other.can_damage = false;
-	
-		// Duration
-		other.alarm[5] = game_get_speed(gamespeed_fps) * length;
+		
+		// Knockback timer initialising
+		other.knocked_back = true;
+		other.knockback_cooldown_time = game_get_speed(gamespeed_fps) * length;
+		other.knockback_cooldown_timer = 0;
 	}
 }

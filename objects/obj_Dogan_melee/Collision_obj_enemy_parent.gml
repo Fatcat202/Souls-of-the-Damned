@@ -5,5 +5,5 @@ scr_damage(global.player_stats[index].main_atk_dmg);
 
 if(poison_debuff == true)
 {
-	scr_apply_dot(3, 30, 2);
+	scr_apply_dot(3, 30, 2, 0);
 }

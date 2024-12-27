@@ -1,5 +1,6 @@
 /// @description Death and Timers
 
+event_inherited()
 
 #region Non-Lethal
 var non_lethal_tick_rate = 30
@@ -86,7 +87,7 @@ if(cooldown_4 == false)
 	}
 }
 
-// Xan_fly reset
+// Blocking timer to make sure it stays on when holding mouse down, but turns off immediatly after
 if(blocking == true)
 {
 	// Increment cooldown each frame

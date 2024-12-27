@@ -5,7 +5,7 @@ if(self.can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true) // ****
 	{
-		
+		scr_Dogan_basic_attack()
 		
 		// Set up attack cooldown
 		cooldown_1 = false;
@@ -13,7 +13,7 @@ if(self.can_attack == true)
 	
 	}else if(active_power = 2 && cooldown_2 == true) // ****
 	{
-		
+		scr_Dogan_poison();
 		
 		// Set up attack cooldown
 		cooldown_2 = false;
@@ -21,7 +21,7 @@ if(self.can_attack == true)
 	
 	}else if(active_power = 3 && cooldown_3 == true) // ****
 	{
-		
+		scr_Dogan_bomb();
 		
 		// Set up attack cooldown
 		cooldown_3 = false;

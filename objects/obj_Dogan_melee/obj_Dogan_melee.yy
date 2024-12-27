@@ -32,10 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
-  "spriteMaskId":{
+  "spriteId":{
     "name":"spr_melee_attack",
     "path":"sprites/spr_melee_attack/spr_melee_attack.yy",
   },
+  "spriteMaskId":null,
   "visible":true,
 }

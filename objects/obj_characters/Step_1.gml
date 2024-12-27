@@ -3,6 +3,9 @@
 
 
 
+// Characters are affected by Damage Over Time
+scr_take_dot();
+
 // Check character is stunned
 if(stunned == true)
 {
@@ -31,3 +34,24 @@ if(poison_debuff == true)
 		poison_debuff_time = 0;
 	}
 }
+
+// Check character is stunned
+if(knocked_back == true)
+{
+	// Increment cooldown each frame
+	knockback_cooldown_timer++;
+	if(knockback_cooldown_timer >= knockback_cooldown_time) 
+	{
+		// Reset changed conditions
+		can_control = true;
+		can_damage = true;
+		speed = 0;
+		direction = 0;
+		knocked_back = false;
+		knockback_cooldown_timer = 0;
+	}
+}
+
+
+
+
