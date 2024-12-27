@@ -3,7 +3,7 @@
 
 
 
-// Check if cooldown ticking
+// Check character is stunned
 if(stunned == true)
 {
 	// Increment cooldown each frame
@@ -16,5 +16,18 @@ if(stunned == true)
 		can_attack = true;
 		stunned = false;
 		stun_cooldown_time = 0;
+	}
+}
+
+// Check if cooldown ticking
+if(poison_debuff == true)
+{
+	// Increment cooldown each frame
+	poison_debuff_timer++;
+	if(poison_debuff_timer >= poison_debuff_time) 
+	{
+		// Reset changed conditions
+		poison_debuff = false;
+		poison_debuff_time = 0;
 	}
 }
