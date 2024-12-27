@@ -19,11 +19,8 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 // Assigning object name to active pcs array
 var i = array_length(global.arr_active_pcs)
-if(i < 4) global.arr_active_pcs[i] = object_name;
+if(i < global.max_pcs) global.arr_active_pcs[i] = object_name;
 
-
-
-show_debug_message("global.arr_active_pcs :" + global.arr_active_pcs[i])
 
 #endregion Assigning Character
 
@@ -32,8 +29,6 @@ show_debug_message("global.arr_active_pcs :" + global.arr_active_pcs[i])
 #region Loading instance stats
 
 index = global.selected_char;
-
-
 
 max_hp = global.player_stats[index].hp;
 active_health = max_hp;

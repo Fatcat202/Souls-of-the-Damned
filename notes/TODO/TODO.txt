@@ -26,7 +26,8 @@ Xan Peppo
 	Powerful shot, stagger enemies and shoot through multiple at a time
 	
 Make attacks compatable with all attack slots when consitering timers and allowing players to select attacks
-	
+
+Add functionality for detecting players/npcs in the game
 
 
 ** HIGH PRIORITY**
@@ -40,17 +41,7 @@ Gary/Rager
 	-Block
 	-Throw rager
 		-
-		
-		
-Add functionality for detecting players/npcs in the game
-	-Assigning them to an array for scr_change_char amongst other purposes
-	-Creating index of how many players/npcs are in the game
-	
-	
-Figure out hitscan
-	
-
-		
+			
 		
 	**LOW PRIORITY**
 	

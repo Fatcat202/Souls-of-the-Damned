@@ -65,7 +65,9 @@
 			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
 			
 			// Array for holding active players and npcs
-			global.arr_active_pcs = array_create(0)			
+			global.arr_active_pcs = array_create(0)		
+			// Maxiumum number of playable characters allowed at once
+			global.max_pcs = 4;
 			
 		#endregion Swapping Characters
 	
