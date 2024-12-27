@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"Particle_Shapes",
-    "path":"folders/Sprites/Assets/Particle_Shapes.yy",
+    "path":"folders/Sprites/Packs/Assets/Particle_Shapes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

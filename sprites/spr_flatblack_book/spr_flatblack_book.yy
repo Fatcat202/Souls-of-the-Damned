@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Books",
-    "path":"folders/Sprites/Assets/Flat Black/Books.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat Black/Books.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

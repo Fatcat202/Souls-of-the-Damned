@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Treasure",
-    "path":"folders/Sprites/Assets/Full Colour with Stroke/Treasure.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour with Stroke/Treasure.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

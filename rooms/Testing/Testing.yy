@@ -94,7 +94,6 @@
     {"name":"inst_11CCC9C7","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_2F49E07C","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_F74022","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_75DF04C6","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_248FFF99","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_721F7C32","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_6A3E160F","path":"rooms/Testing/Testing.yy",},
@@ -128,7 +127,7 @@
     {"name":"inst_7DB233BC","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_1CD96898","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_2BB45C36","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_1D69FA0A","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_30A98EF0","path":"rooms/Testing/Testing.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -138,8 +137,7 @@
     {"$GMRInstanceLayer":"","%Name":"Projectiles","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Projectiles","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Combat_Paused","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Combat_Paused","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_75DF04C6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75DF04C6","objectId":{"name":"obj_player_Alok","path":"objects/obj_player_Alok/obj_player_Alok.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":1056.0,},
-        {"$GMRInstance":"v1","%Name":"inst_1D69FA0A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1D69FA0A","objectId":{"name":"obj_npc_Seki","path":"objects/obj_npc_Seki/obj_npc_Seki.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":1056.0,},
+        {"$GMRInstance":"v1","%Name":"inst_30A98EF0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30A98EF0","objectId":{"name":"obj_player_Xan","path":"objects/obj_player_Xan/obj_player_Xan.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":992.0,},
       ],"layers":[],"name":"Players","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_578A48B4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_578A48B4","objectId":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":448.0,},

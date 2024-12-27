@@ -34,15 +34,20 @@ Create 2 more characters
 		-Powerful shot, stagger enemies and shoot through multiple at a time
 		-Shoot several enemies in the area
 
+
 	- Gary/Rager
 		-Basic attack
 		-Block
 		-Throw rager
 		-
 		
+		
 Add functionality for detecting players/npcs in the game
 	-Assigning them to an array for scr_change_char amongst other purposes
 	-Creating index of how many players/npcs are in the game
+	
+	
+Figure out hitscan
 	
 
 		

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Gadgets",
-    "path":"folders/Sprites/Assets/Full Colour/Gadgets.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour/Gadgets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

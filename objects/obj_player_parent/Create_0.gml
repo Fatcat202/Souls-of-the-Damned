@@ -25,13 +25,16 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 index = global.selected_char;
 
+
+
 max_hp = global.player_stats[index].hp;
 active_health = max_hp;
 
 max_armor = global.player_stats[index].armor;
 active_armor = max_armor;
 
-collision_speed = global.player_stats[index].move_spd + global.collision_distance;
+move_spd = global.player_stats[index].move_spd;
+collision_speed = move_spd + global.collision_distance;
 
 
 #endregion

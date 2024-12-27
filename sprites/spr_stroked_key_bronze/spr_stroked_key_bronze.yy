@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Locks and Keys",
-    "path":"folders/Sprites/Assets/Full Colour with Stroke/Locks and Keys.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour with Stroke/Locks and Keys.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

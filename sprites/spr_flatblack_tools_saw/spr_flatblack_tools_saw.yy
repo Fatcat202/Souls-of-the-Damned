@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tools",
-    "path":"folders/Sprites/Assets/Flat Black/Tools.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat Black/Tools.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

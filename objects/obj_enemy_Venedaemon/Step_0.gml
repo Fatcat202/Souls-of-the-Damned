@@ -1,6 +1,7 @@
 /// @description Behavior
 
-
+if(can_move)
+{
 var within_blast_range = collision_circle(x, y, 300, obj_player_parent, true, true);
 
 // If within 120, move towards player and attack
@@ -33,4 +34,6 @@ if(within_blast_range != noone)
 		direction = point_direction(x, y, obj_player_parent.x, obj_player_parent.y);
 		scr_sprite_direction(direction);
 	}
+} else speed = 0;
+
 } else speed = 0;

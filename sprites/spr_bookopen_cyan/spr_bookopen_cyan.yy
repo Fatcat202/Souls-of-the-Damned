@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Books",
-    "path":"folders/Sprites/Assets/Full Colour/Books.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour/Books.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

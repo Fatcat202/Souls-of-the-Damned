@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Containers",
-    "path":"folders/Sprites/Assets/Full Colour/Containers.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour/Containers.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
