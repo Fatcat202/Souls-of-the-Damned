@@ -19,6 +19,11 @@ Fix healing to heal other people and non-lethal
 Collisions
 	-Allow for collisions with walls and work with all character objects
 	-Have projectiles destroy when hitting any walls, characters, other projectiles
+
+Xan Peppo
+	Base shooting ability
+	Fly speed boost
+	Powerful shot, stagger enemies and shoot through multiple at a time
 	
 Make attacks compatable with all attack slots when consitering timers and allowing players to select attacks
 	
@@ -27,18 +32,13 @@ Make attacks compatable with all attack slots when consitering timers and allowi
 ** HIGH PRIORITY**
 
 
-Create 2 more characters
-	- Xan Peppo
-		-Base shooting ability
-		-Fly speed boost
-		-Powerful shot, stagger enemies and shoot through multiple at a time
-		-Shoot several enemies in the area
+Fix Xan Peppo's Quickdraw abilty. Does not fire at enemies
 
 
-	- Gary/Rager
-		-Basic attack
-		-Block
-		-Throw rager
+Gary/Rager
+	-Basic attack
+	-Block
+	-Throw rager
 		-
 		
 		

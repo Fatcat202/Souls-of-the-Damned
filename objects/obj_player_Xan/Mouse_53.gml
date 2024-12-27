@@ -19,7 +19,7 @@ if(self.can_attack == true)
 		cooldown_2 = false;
 		cooldown_time_2 = cooldown;
 	
-	}else if(active_power = 3 && cooldown_3 == true) // ****
+	}else if(active_power = 3 && cooldown_3 == true) // **Not Functional**
 	{
 		scr_Xan_quickdraw();
 		
