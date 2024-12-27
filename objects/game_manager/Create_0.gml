@@ -64,28 +64,8 @@
 			global.arr_combat_pause[7] = obj_combat_pause_Bronwin;
 			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
 			
-			
-			/* Attempt at reading players and npcs in Players layer and assigning them to an array
-			var num_pcs = layer_get_all_elements("Players");
-			show_debug_message("Player Count: " + string(num_pcs));
-			global.active_pcs = ds_list_create();
-			
-			for(var i = 0; i < array_length(num_pcs); i++)
-			{
-				if(layer_get_element_type(num_pcs[i] == layerelementtype_instance))
-				{
-					with(asset_object)
-					{ 
-						if(asset_has_tags(object_index, "player", asset_object)) ds_list_add(global.active_pcs, id)
-				
-					}else if(asset_has_tags(object_index, "npc", asset_object)) ds_list_add(global.active_pcs, id)
-
-				}
-			}
-			
-			show_debug_message("active_pcs: " + string(global.active_pcs))
-			*/
-			
+			// Array for holding active players and npcs
+			global.arr_active_pcs = array_create(0)			
 			
 		#endregion Swapping Characters
 	

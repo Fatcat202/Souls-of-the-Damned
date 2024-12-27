@@ -1,4 +1,4 @@
-/// @description Combat Pause Surface
+/// @description Combat Pause Surface Testing
 // You can write your code in this editor
 /*
 if global.game_combat_paused == true

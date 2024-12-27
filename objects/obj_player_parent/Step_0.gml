@@ -11,25 +11,6 @@ scr_regain_armor();
 
 #region Movement
 
-// Assign input variable defaults
-var _left = 0;
-var _right = 0;
-var _up = 0;
-var _down = 0;
-
-// Determine movement direction based on key presses, prevent self from touching solid objects
-if(place_free (x - collision_speed, y)) _left = keyboard_check(ord(global.cont_left));
-
-if(place_free (x + collision_speed, y)) _right = keyboard_check(ord(global.cont_right))
-
-if(place_free (x, y - collision_speed)) _up = keyboard_check(ord(global.cont_up))
-
-if(place_free (x, y + collision_speed)) _down = keyboard_check(ord(global.cont_down))
-
-// Calculate overall directional being moved in
-var _hspd = _right - _left;
-var _vspd = _down - _up;
-
 // Checks if the player is moveable
 if(can_control == true)
 {

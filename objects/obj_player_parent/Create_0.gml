@@ -11,11 +11,19 @@ player_name = string_delete(object_name, 0, 11);
 // Determine starting character
 for(var i = 1; i <= global.player_index_length; i++)
 {
-		if (player_name == string(global.arr_player_index_name[i]))
-		{
-			global.selected_char = i;
-		}
+	if (player_name == string(global.arr_player_index_name[i]))
+	{
+		global.selected_char = i;
+	}
 }
+
+// Assigning object name to active pcs array
+var i = array_length(global.arr_active_pcs)
+if(i < 4) global.arr_active_pcs[i] = object_name;
+
+
+
+show_debug_message("global.arr_active_pcs :" + global.arr_active_pcs[i])
 
 #endregion Assigning Character
 

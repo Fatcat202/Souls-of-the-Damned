@@ -2,6 +2,17 @@
 function scr_Xan_quickdraw()
 {
 	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/* First attempt
 	// Draw revolver and fire 6 shots, targeting enemies in the area.
 	var within_range = collision_circle(x, y, 100, obj_enemy_parent, 1, 1);
 	var shots = 6;
@@ -30,4 +41,7 @@ function scr_Xan_quickdraw()
 	{ scr_test()
 		cooldown = game_get_speed(gamespeed_fps) * 6;
 	} else cooldown = 0;
+	
+	
+	*/
 }
