@@ -87,7 +87,7 @@ if(!global.game_combat_paused)
 	#region Player Name Text
 	
 		// Displays text stating player name
-		draw_text(xx, armor_healthbar_y_top - 20, global.arr_players[global.selected_char].player_name + "    Level: " + string(global.player_level))
+		draw_text(xx, armor_healthbar_y_top - 20, global.arr_players[global.char_index].player_name + "    Level: " + string(global.player_level))
 		draw_set_halign(fa_center);
 		
 	#endregion Player Name Text

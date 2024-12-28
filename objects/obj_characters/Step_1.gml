@@ -6,6 +6,7 @@
 // Characters are affected by Damage Over Time
 scr_take_dot();
 
+// ** STUN **
 // Check character is stunned
 if(stunned == true)
 {
@@ -22,6 +23,8 @@ if(stunned == true)
 	}
 }
 
+
+// ** POISON DEBUFF ABILITY **
 // Check if cooldown ticking
 if(poison_debuff == true)
 {
@@ -35,6 +38,8 @@ if(poison_debuff == true)
 	}
 }
 
+
+// ** KNOCKBACK **
 // Check character is stunned
 if(knocked_back == true)
 {
@@ -50,6 +55,9 @@ if(knocked_back == true)
 		knocked_back = false;
 		knockback_cooldown_timer = 0;
 	}
+	
+	// TODO Place in here check for collisions to prevent clipping into objects
+	
 }
 
 

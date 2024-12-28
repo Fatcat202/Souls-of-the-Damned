@@ -8,27 +8,27 @@
 
 	#region database
 		
-			// Create player_index_length for tracking total number of players in csv
-			global.player_index_length = 0;
+		// Create player_index_length for tracking total number of players in csv
+		global.player_index_length = 0;
 
-			// Create player_stats array for tracking stats
-			global.player_stats[0] = 0
+		// Create player_stats array for tracking stats
+		global.player_stats[0] = 0
 
-			// Initialize player index arrays
-			global.arr_player_index_name[0] = "No valid player name";
-			global.arr_player_index_num[0] = 0;
+		// Initialize player index arrays
+		global.arr_player_index_name[0] = "No valid player name";
+		global.arr_player_index_num[0] = 0;
 
-			// The variable that initially changes when changing characters
-			global.selected_char = 1;
+		// The variable that initially changes when changing characters
+		global.selected_char = 1;
 
-			// Create enemy_index_length for tracking total number of enemy in csv
-			global.enemy_index_length = 0;
+		// Create enemy_index_length for tracking total number of enemy in csv
+		global.enemy_index_length = 0;
 
-			// Create enemy_stats array for tracking stats
-			global.enemy_stats[0] = 0
+		// Create enemy_stats array for tracking stats
+		global.enemy_stats[0] = 0
 
-			// Initialize enemy index arrays
-			global.arr_enemy_index_name[0] = "No valid enemy name";
+		// Initialize enemy index arrays
+		global.arr_enemy_index_name[0] = "No valid enemy name";
 			global.arr_enemy_index_num[0] = 0;
 			
 			
@@ -64,10 +64,16 @@
 			global.arr_combat_pause[7] = obj_combat_pause_Bronwin;
 			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
 			
-			// Array for holding active players and npcs
-			global.arr_active_pcs = array_create(0)		
-			// Maxiumum number of playable characters allowed at once
-			global.max_pcs = 4;
+			// Array for holding active players and npcs objects
+			global.arr_active_pcs = array_create(0)
+			
+			// Array for holding active players and npcs names
+			global.arr_active_pcs_names = array_create(0)
+			
+			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
+			global.char_index = 1;
+			
+
 			
 		#endregion Swapping Characters
 	
@@ -114,6 +120,9 @@
 	// Sets starting combat round for arena
 	global.combat_round = 1;
 	
+	// Maxiumum number of playable characters allowed at once
+	global.max_pcs = 4;
+	
 	
 		
 	
@@ -157,7 +166,7 @@
 		}
 
 
-#endregion Enums
+	#endregion Enums
 	
 	
 #endregion Global Variables
@@ -185,7 +194,6 @@ function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_at
 
 // Create player_stats struct array
 // **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
-
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
@@ -207,7 +215,6 @@ for(var i = 0; i < global.player_index_length; i++)
 	global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 	global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
-
 }
 
 
@@ -218,8 +225,7 @@ for(var p = 0; p < global.player_index_length; p++)
 	// Sets 1st place in array as names
 	global.arr_player_index_name[n] = ds_grid_get(ds_player_stats_csv, 0, n);
 	// Sets 2nd place in array as index
-	global.arr_player_index_num[n] = n
-
+	global.arr_player_index_num[n] = n;
 }
 
 

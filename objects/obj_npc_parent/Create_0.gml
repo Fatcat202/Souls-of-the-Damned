@@ -23,10 +23,16 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 // Assigning object name to active pcs array
 var i = array_length(global.arr_active_pcs)
-if(i < global.max_pcs) global.arr_active_pcs[i] = npc_name;
+if(i < global.max_pcs)
+{
+	global.arr_active_pcs[i] = object_name;
+	global.arr_active_pcs_names[i] = npc_name;
+}
 
-show_debug_message("global.arr_active_pcs :" + string(global.arr_active_pcs))
+
 show_debug_message("i: " + string(i))
+show_debug_message("global.arr_active_pcs :" + string(global.arr_active_pcs))
+show_debug_message("global.arr_active_pcs_names :" + string(global.arr_active_pcs_names))
 
 #endregion Assigning Character
 

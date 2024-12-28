@@ -11,7 +11,6 @@ scr_regain_armor();
 // Checks if the player is moveable
 if(can_control == true)
 {
-	
 	// Assign input variable defaults
 	var _left = 0;
 	var _right = 0;
@@ -59,7 +58,6 @@ if(can_control == true)
 }
 
 
-
 #endregion Movement
 
 
@@ -87,24 +85,26 @@ if(keyboard_check(ord(global.cont_attack_4)))
 
 
 // TODO rebuild to track the player and npc objects in the room before assigning binds
-//		add
+//
+
+
 #region Change Character 
 var i = 1;
 if(keyboard_check(ord(global.cont_char_1)))
 {
-	if(global.player_index_length > i) scr_change_char(1); i++
+	if(global.max_pcs > i) scr_change_char(1); i++
 }
 if(keyboard_check(ord(global.cont_char_2)))
 {
-	if(global.player_index_length > i) scr_change_char(2); i++
+	if(global.max_pcs > i) scr_change_char(2); i++
 }
 if(keyboard_check(ord(global.cont_char_3)))
 {
-	if(global.player_index_length > i) scr_change_char(3); i++
+	if(global.max_pcs > i) scr_change_char(3); i++
 }
 if(keyboard_check(ord(global.cont_char_4)))
 {
-	if(global.player_index_length > i) scr_change_char(4); i++
+	if(global.max_pcs > i) scr_change_char(4); i++
 }
 
 
