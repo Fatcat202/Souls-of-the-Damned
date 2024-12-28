@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Trophies and Awards",
-    "path":"folders/Sprites/Assets/Full Colour/Trophies and Awards.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour/Trophies and Awards.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

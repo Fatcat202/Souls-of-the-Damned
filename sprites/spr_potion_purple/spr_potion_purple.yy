@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Magical",
-    "path":"folders/Sprites/Assets/Full Colour/Magical.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour/Magical.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

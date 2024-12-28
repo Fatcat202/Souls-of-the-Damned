@@ -14,22 +14,11 @@ index = 0;
 // Determine starting character
 for(var i = 1; i <= global.enemy_index_length; i++)
 {
-	//show_debug_message("i: " + string(i));
-	//show_debug_message(string(global.arr_enemy_index_name[i]));
 		if (enemy_name == string(global.arr_enemy_index_name[i]))
 		{
 			index = i;
-			
 		}
-		//show_debug_message("index: " + string(index));
 }
-
-/*
-// Debug messages
-show_debug_message("enemy_name: " + string(enemy_name));
-show_debug_message("enemy_index: " + string(global.enemy_index_length));
-show_debug_message("Loaded stats for " + string(global.arr_enemy_index_name[index] + ":" + string(global.enemy_stats[index])));
-*/
 
 #endregion Assigning Character and Stats
 

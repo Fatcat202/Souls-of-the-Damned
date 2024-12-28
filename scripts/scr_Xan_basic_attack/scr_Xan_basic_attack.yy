@@ -6,7 +6,7 @@
   "name":"scr_Xan_basic_attack",
   "parent":{
     "name":"Xan Attacks",
-    "path":"folders/Scripts/Attacks/Xan Attacks.yy",
+    "path":"folders/Scripts/Xan Attacks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

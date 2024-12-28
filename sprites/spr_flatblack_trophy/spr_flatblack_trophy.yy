@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tropies and Awards",
-    "path":"folders/Sprites/Assets/Flat Black/Tropies and Awards.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat Black/Tropies and Awards.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_stun_TODO",
+  "%Name":"scr_stun",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_stun_TODO",
+  "name":"scr_stun",
   "parent":{
     "name":"Effects",
     "path":"folders/Scripts/Effects.yy",

@@ -39,7 +39,7 @@
   "origin":9,
   "parent":{
     "name":"2D_animated_VFX",
-    "path":"folders/Sprites/2D_animated_VFX.yy",
+    "path":"folders/Sprites/Packs/2D_animated_VFX.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

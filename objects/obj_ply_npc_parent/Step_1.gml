@@ -1,5 +1,6 @@
 /// @description Death and Timers
 
+event_inherited()
 
 #region Non-Lethal
 var non_lethal_tick_rate = 30
@@ -56,8 +57,7 @@ if(cooldown_2 == false)
 		// Reset cooldown once time has been reached
 		cooldown_2 = true;
 		cooldown_timer_2 = 0;
-		// Temporary hardcoded fix for blocking abilities
-		can_damage = true;
+
 	}
 }
 
@@ -84,6 +84,22 @@ if(cooldown_4 == false)
 		// Reset cooldown once time has been reached
 		cooldown_4 = true;
 		cooldown_timer_4 = 0;
+	}
+}
+
+// Blocking timer to make sure it stays on when holding mouse down, but turns off immediatly after
+if(blocking == true)
+{
+	// Increment cooldown each frame
+	blocking_cooldown_timer++;
+	
+	// If ability length has been reached
+	if(blocking_cooldown_timer > 1)
+	{
+		// Reset changed variables
+		can_damage = true;
+		blocking = false;
+		blocking_cooldown_timer = 0;
 	}
 }
 

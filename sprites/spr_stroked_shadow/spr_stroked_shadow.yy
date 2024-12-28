@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Full Colour with Stroke",
-    "path":"folders/Sprites/Assets/Full Colour with Stroke.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour with Stroke.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

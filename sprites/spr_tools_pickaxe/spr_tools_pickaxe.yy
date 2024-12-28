@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Tools",
-    "path":"folders/Sprites/Assets/Full Colour/Tools.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour/Tools.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

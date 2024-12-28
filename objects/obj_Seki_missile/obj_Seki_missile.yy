@@ -12,8 +12,8 @@
     "path":"folders/Objects/Attacks/Projectiles/Players/Seki.yy",
   },
   "parentObjectId":{
-    "name":"obj_projectiles_parent",
-    "path":"objects/obj_projectiles_parent/obj_projectiles_parent.yy",
+    "name":"obj_dest_projectiles_parent",
+    "path":"objects/obj_dest_projectiles_parent/obj_dest_projectiles_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

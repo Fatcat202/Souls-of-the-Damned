@@ -4,13 +4,27 @@ function scr_change_char(change_char)
 	// **REPLACE CHARACTERS**
 
 	// Bypass if attempting to swap to active character
-	if(global.selected_char == change_char)
+	if(global.selected_char == change_char) return;
+	
+	
+
+	
+	for(var i = 1; i <= 8; i++)
 	{
-		return;
+		if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[change_char - 1] || object_get_name(global.arr_players[i]) == global.arr_active_pcs[change_char - 1])
+		{
+			global.char_index = i;
+			show_debug_message("global.char_index: " + string(global.char_index))
+		}
+		show_debug_message("global.arr_npc[i]: " + string(object_get_name(global.arr_npc[i])))
+		show_debug_message("global.arr_active_pcs[change_char - 1]: " + string(global.arr_active_pcs[change_char - 1]))
 	}
+	
+	
+
 
 // Create npc in place of player
-var npc = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Players", global.arr_npc[global.selected_char]);
+var npc = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Players", global.arr_npc[index]);
 	// Transfer stats
 	
 	// Health and armor
@@ -40,7 +54,7 @@ var npc = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Playe
 
 
 // Create player in place of npc
-var player = instance_create_layer(global.arr_npc[change_char].x, global.arr_npc[change_char].y, "Players", global.arr_players[change_char]);
+var player = instance_create_layer(global.arr_npc[global.char_index].x, global.arr_npc[global.char_index].y, "Players", global.arr_players[global.char_index]);
 	// Transfer stats
 	
 	// Health and armor
@@ -66,10 +80,10 @@ var player = instance_create_layer(global.arr_npc[change_char].x, global.arr_npc
 	player.cooldown_time_4 = cooldown_time_4;
 
 	// Destroy npc
-	instance_destroy(global.arr_npc[change_char]);
+	instance_destroy(global.arr_npc[global.char_index]);
 
+	// Update selected_char
+	global.selected_char = change_char;
 
-// Update selected_char
-global.selected_char = change_char;
 
 }

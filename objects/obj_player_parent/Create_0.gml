@@ -11,11 +11,22 @@ player_name = string_delete(object_name, 0, 11);
 // Determine starting character
 for(var i = 1; i <= global.player_index_length; i++)
 {
-		if (player_name == string(global.arr_player_index_name[i]))
-		{
-			global.selected_char = i;
-		}
+	if (player_name == string(global.arr_player_index_name[i]))
+	{
+		global.selected_char = i;
+	}
 }
+
+// Assigning object name to active pcs array
+var i = array_length(global.arr_active_pcs)
+if(i < global.max_pcs)
+{
+	global.arr_active_pcs[i] = object_name;
+	global.arr_active_pcs_names[i] = player_name;
+}
+
+
+
 
 #endregion Assigning Character
 
@@ -31,7 +42,8 @@ active_health = max_hp;
 max_armor = global.player_stats[index].armor;
 active_armor = max_armor;
 
-collision_speed = global.player_stats[index].move_spd + global.collision_distance;
+move_spd = global.player_stats[index].move_spd;
+collision_speed = move_spd + global.collision_distance;
 
 
 #endregion

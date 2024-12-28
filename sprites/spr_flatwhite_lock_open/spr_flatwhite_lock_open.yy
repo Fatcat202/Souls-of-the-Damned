@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Locks and Keys",
-    "path":"folders/Sprites/Assets/Flat White/Locks and Keys.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat White/Locks and Keys.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

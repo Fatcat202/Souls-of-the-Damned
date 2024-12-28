@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Resources",
-    "path":"folders/Sprites/Assets/Full Colour with Stroke/Resources.yy",
+    "path":"folders/Sprites/Packs/Assets/Full Colour with Stroke/Resources.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

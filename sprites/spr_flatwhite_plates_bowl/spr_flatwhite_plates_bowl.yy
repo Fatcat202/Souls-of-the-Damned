@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Cutlery and Crockery",
-    "path":"folders/Sprites/Assets/Flat White/Cutlery and Crockery.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat White/Cutlery and Crockery.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

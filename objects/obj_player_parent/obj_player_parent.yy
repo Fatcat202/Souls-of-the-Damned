@@ -10,7 +10,9 @@
   ],
   "managed":true,
   "name":"obj_player_parent",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_characters","path":"objects/obj_characters/obj_characters.yy",},"propertyId":{"name":"can_control","path":"objects/obj_characters/obj_characters.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+  ],
   "parent":{
     "name":"Players",
     "path":"folders/Objects/Characters/Players.yy",
@@ -32,9 +34,7 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"can_control","filters":[],"listItems":[],"multiselect":false,"name":"can_control","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":true,

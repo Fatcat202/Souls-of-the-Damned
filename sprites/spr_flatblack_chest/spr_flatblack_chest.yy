@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Treasure",
-    "path":"folders/Sprites/Assets/Flat Black/Treasure.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat Black/Treasure.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

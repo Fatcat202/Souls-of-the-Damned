@@ -5,7 +5,7 @@ if(self.can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true) // ****
 	{
-		
+		scr_Bronwin_basic_attack();
 		
 		// Set up attack cooldown
 		cooldown_1 = false;

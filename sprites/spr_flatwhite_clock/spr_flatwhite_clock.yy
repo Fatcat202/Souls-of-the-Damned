@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Gadgets",
-    "path":"folders/Sprites/Assets/Flat White/Gadgets.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat White/Gadgets.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

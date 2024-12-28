@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Bones and Body",
-    "path":"folders/Sprites/Assets/Flat Black/Bones and Body.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat Black/Bones and Body.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

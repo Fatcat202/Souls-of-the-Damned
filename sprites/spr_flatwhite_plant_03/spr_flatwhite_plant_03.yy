@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Resources",
-    "path":"folders/Sprites/Assets/Flat White/Resources.yy",
+    "path":"folders/Sprites/Packs/Assets/Flat White/Resources.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
