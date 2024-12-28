@@ -29,6 +29,8 @@ Make attacks compatable with all attack slots when consitering timers and allowi
 
 Add functionality for detecting players/npcs in the game
 
+Add ability to swap between characters, no matter which are put in the game
+
 
 ** HIGH PRIORITY**
 

@@ -13,8 +13,8 @@
   ],
   "name":"rm_pause_manu",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"Demo",
+    "path":"folders/Rooms/Demo.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
