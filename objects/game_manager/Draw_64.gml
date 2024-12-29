@@ -16,8 +16,8 @@ var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
 #region Combat Round
 	
 	// Displays text stating combat round
-	draw_text(xx, 50, "Combat Round: " + string(global.combat_round));
-	draw_set_halign(fa_center);
+	draw_text(xx, 30, "Combat Round: " + string(global.combat_round));
+	
 		
 #endregion Combat Round
 
