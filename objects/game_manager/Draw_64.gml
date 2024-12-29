@@ -11,7 +11,7 @@ var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
 var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
 var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
 
-
+draw_set_font(fnt_default);
 
 #region Combat Round
 	

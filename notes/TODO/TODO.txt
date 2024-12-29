@@ -34,6 +34,8 @@ Add ability to swap between characters, no matter which are put in the game
 
 ** HIGH PRIORITY**
 
+Find optimal resolution / sprite size
+
 
 Fix Xan Peppo's Quickdraw abilty. Does not fire at enemies
 
@@ -43,26 +45,8 @@ Gary/Rager
 	-Block
 	-Throw rager
 		-
-			
 		
-	**LOW PRIORITY**
-	
-	
-Save / Load Game
-	-Manual
-	-Autosave
-
-
-Create ESC menu
-	-Settings
-		-Resolution scaling
-		-Graphics options
-		-Accessibility
-			-Controller
-			-Color blindness
-		-FPS scaling
-	-Keybindings
-	-Save / Load (start of "quest" or whenever)
+Fix broken collision system
 
 
 Create combat pause function (tactical mode)
@@ -73,44 +57,33 @@ Create combat pause function (tactical mode)
 		-Click to assign location
 		-Drag to assign path
 	-Can move camera slightly around characters allowing some extra visibility
-
-
-Add leveling system
-	-More attacks unlocked
-	-Percentage bonus to stats
-	-New character passive abilities / mechanics
 	
 	
-Add mythic system
-	-"Ultimate" ability
-	-Limited uses, gain more through progression
-	-Mythic enemy varients
-
+	
+	** Mid Priority **
+	
+Create ESC menu
+	-Settings
+		-Resolution scaling
+		-Graphics options
+		-Accessibility
+			-Controller
+			-Color blindness
+		-FPS scaling
+	-Keybindings
+	-Save / Load (start of "quest" or whenever)
+	
 
 Add enemy spawning system
 	-Add random spawning system
 	-Add set spawning system
-
-
-Update death
-	-Resurrection system
-		-Abilities
-		-Consumables
-	-Unconsious mechanic (down but not out)
-		-Wake up when healed enough or after non-lethal
-	-Character can no longer be selected and swaps to a sprite, player auto swaps to another character on death
-
-Add ability to choose between attacks in menu
-
-
-Add loot/rewards
-
-
-Add inventory
-
-
-Add arena shop
-
+	
+	
+Create main menu
+	-Arena vs Story
+	-Select Characters
+	-Load game
+	
 
 Create GUI
 	-Name DONE
@@ -130,13 +103,49 @@ Create GUI
 	-Minimap?
 	
 	
-Create main menu
-	-Arena vs Story
-	-Select Characters
-	-Load game
-	
-	
 Fully build arena map
+	
+	
+			
+		
+	**LOW PRIORITY**
+	
+	
+Save / Load Game
+	-Manual
+	-Autosave
+
+
+Add leveling system
+	-More attacks unlocked
+	-Percentage bonus to stats
+	-New character passive abilities / mechanics
+	
+	
+Add mythic system
+	-"Ultimate" ability
+	-Limited uses, gain more through progression
+	-Mythic enemy varients
+	
+
+Update death
+	-Resurrection system
+		-Abilities
+		-Consumables
+	-Unconsious mechanic (down but not out)
+		-Wake up when healed enough or after non-lethal
+	-Character can no longer be selected and swaps to a sprite, player auto swaps to another character on death
+
+Add ability to choose between attacks in menu
+
+
+Add loot/rewards
+
+
+Add inventory
+
+
+Add arena shop
 	
 	
 	
