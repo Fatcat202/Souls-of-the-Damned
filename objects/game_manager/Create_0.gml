@@ -294,6 +294,27 @@ for(var p = 0; p < global.enemy_index_length; p++)
 
 
 
+#region Camera
+// Resolution
+view_width = 640;
+view_height = 360;
+
+// Scaling (hardcoded for now)
+window_scale = 1;
+
+// Set size of window and center it
+window_set_size(view_width * window_scale, view_height * window_scale);
+alarm[0] = 1;
+
+surface_resize(application_surface, view_width * window_scale, view_height * window_scale);
+
+
+
+
+#endregion Camera
+
+
+
 #region Levels TODO
 
 

@@ -390,7 +390,6 @@
     {"id":{"name":"scr_Seki_fireball","path":"scripts/scr_Seki_fireball/scr_Seki_fireball.yy",},},
     {"id":{"name":"scr_Seki_lightning","path":"scripts/scr_Seki_lightning/scr_Seki_lightning.yy",},},
     {"id":{"name":"scr_Seki_teleport","path":"scripts/scr_Seki_teleport/scr_Seki_teleport.yy",},},
-    {"id":{"name":"scr_set_camera","path":"scripts/scr_set_camera/scr_set_camera.yy",},},
     {"id":{"name":"scr_sprite_direction","path":"scripts/scr_sprite_direction/scr_sprite_direction.yy",},},
     {"id":{"name":"scr_standard_pmelee","path":"scripts/scr_standard_pmelee/scr_standard_pmelee.yy",},},
     {"id":{"name":"scr_stun","path":"scripts/scr_stun/scr_stun.yy",},},
