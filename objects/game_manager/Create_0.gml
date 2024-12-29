@@ -29,7 +29,7 @@
 
 		// Initialize enemy index arrays
 		global.arr_enemy_index_name[0] = "No valid enemy name";
-			global.arr_enemy_index_num[0] = 0;
+		global.arr_enemy_index_num[0] = 0;
 			
 			
 		#region Swapping Characters

@@ -25,9 +25,6 @@ if(i < global.max_pcs)
 	global.arr_active_pcs_names[i] = player_name;
 }
 
-
-
-
 #endregion Assigning Character
 
 

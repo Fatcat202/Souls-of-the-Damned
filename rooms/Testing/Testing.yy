@@ -128,7 +128,7 @@
     {"name":"inst_1CD96898","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_2BB45C36","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_715BEA5A","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_7C7C320","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_4B328FC7","path":"rooms/Testing/Testing.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -139,7 +139,7 @@
     {"$GMRInstanceLayer":"","%Name":"Combat_Paused","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Combat_Paused","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_715BEA5A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_715BEA5A","objectId":{"name":"obj_player_Alok","path":"objects/obj_player_Alok/obj_player_Alok.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":896.0,"y":992.0,},
-        {"$GMRInstance":"v1","%Name":"inst_7C7C320","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7C7C320","objectId":{"name":"obj_npc_Seki","path":"objects/obj_npc_Seki/obj_npc_Seki.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":1088.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4B328FC7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4B328FC7","objectId":{"name":"obj_npc_Dogan","path":"objects/obj_npc_Dogan/obj_npc_Dogan.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":800.0,"y":1056.0,},
       ],"layers":[],"name":"Players","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_578A48B4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_578A48B4","objectId":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":448.0,},
