@@ -19,11 +19,9 @@ draw_set_font(fnt_default);
 	// Displays text stating combat round
 	draw_text(xx, 30, "Combat Round: " + string(global.combat_round));
 	
-		
 #endregion Combat Round
 
 
-	
 #region Not Combat Paused
 
 // Check if combat paused
@@ -190,6 +188,8 @@ if(!global.game_combat_paused)
 				true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
 				);
 			#endregion Armor Healthbar
+			
+		#endregion Armor and Healthbars
 		
 			// Reset and increment locations
 			char_x_start = 20;
@@ -373,6 +373,8 @@ if(!global.game_combat_paused)
 				true	//Whether the bar's elements have a 1px wide black border (true) or not (false).
 				);
 			#endregion Armor Healthbar
+			
+		#endregion Armor and Healthbars
 		
 			// Reset and increment locations
 			char_x_start = 20;
