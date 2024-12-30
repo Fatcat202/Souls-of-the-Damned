@@ -8,16 +8,8 @@ function scr_change_char(change_char)
 	
 	var current_total_pcs = array_length(global.arr_active_pcs)
 
+	scr_data_cross_reference(change_char - 1)
 	
-	// Take name of active char and convert to allow cross reference with npc and player arrays
-	for(var i = 1; i <= 8; i++)
-	{
-		if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[change_char - 1] || object_get_name(global.arr_players[i]) == global.arr_active_pcs[change_char - 1])
-		{
-			global.char_index = i;
-			break;
-		}
-	}
 	
 	
 // Create npc in place of player

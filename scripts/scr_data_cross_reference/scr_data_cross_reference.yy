@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Xan_quickdraw",
+  "%Name":"scr_data_cross_reference",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Xan_quickdraw",
+  "name":"scr_data_cross_reference",
   "parent":{
-    "name":"Xan Attacks",
-    "path":"folders/Scripts/Attacks/Xan Attacks.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
