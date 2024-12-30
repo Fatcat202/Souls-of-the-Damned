@@ -30,7 +30,7 @@ if(can_control == true)
 	var _hspd = _right - _left;
 	var _vspd = _down - _up;
 	
-	// Normalise direction to avoid speed boost when moving diagonally
+	// Normalise vector to avoid speed boost when moving diagonally
 	if (_hspd != 0 && _vspd != 0)
 	{
 		var len = sqrt(_hspd * _hspd + _vspd * _vspd);
@@ -54,6 +54,7 @@ if(can_control == true)
 		{
 			image_xscale = -1;
 		}else image_xscale = 1;
+
 	}
 }
 

@@ -386,7 +386,7 @@
     {"id":{"name":"scr_non_player_collision","path":"scripts/scr_non_player_collision/scr_non_player_collision.yy",},},
     {"id":{"name":"scr_Nyx_basic_attack","path":"scripts/scr_Nyx_basic_attack/scr_Nyx_basic_attack.yy",},},
     {"id":{"name":"scr_part_systems_set_auto_update","path":"scripts/scr_part_systems_set_auto_update/scr_part_systems_set_auto_update.yy",},},
-    {"id":{"name":"scr_poison_debuff","path":"scripts/scr_poison_debuff/scr_poison_debuff.yy",},},
+    {"id":{"name":"scr_poison_coating","path":"scripts/scr_poison_coating/scr_poison_coating.yy",},},
     {"id":{"name":"scr_reduce_cooldown_TODO","path":"scripts/scr_reduce_cooldown_TODO/scr_reduce_cooldown_TODO.yy",},},
     {"id":{"name":"scr_regain_armor","path":"scripts/scr_regain_armor/scr_regain_armor.yy",},},
     {"id":{"name":"scr_Seki_basic_attack","path":"scripts/scr_Seki_basic_attack/scr_Seki_basic_attack.yy",},},
