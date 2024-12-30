@@ -101,8 +101,9 @@
 	#endregion Pausing
 	
 	
-	// Initialize player level
-	global.player_level = 1;
+	
+	// Maxiumum number of playable characters allowed at once
+	global.max_pcs = 4;
 	
 	// Sets default if a cutscene is active to false
 	global.cutscene_active = false;
@@ -117,14 +118,26 @@
 	// (x2 if both move towards each other)
 	global.collision_distance = 3;
 	
-	// Sets starting combat round for arena
-	global.combat_round = 1;
 	
-	// Maxiumum number of playable characters allowed at once
-	global.max_pcs = 4;
+	#region Arena Mechanics
 	
+		// Initialize player level
+		global.player_level = 1;
 	
+		// Sets starting combat round for arena
+		global.combat_round = 1;
 		
+		// Sets maximum number of combat rounds
+		global.max_combat_rounds = 20;
+	
+		// Tracker for how many enemies remain before the round ends
+		global.remaining_enemies = 0;
+		
+		// Detects if the round has been started and spawning triggered
+		global.spawn_triggered = false;
+		
+	#endregion Arena Mechanics
+
 	
 	#endregion Variables
 

@@ -245,6 +245,7 @@
     {"id":{"name":"obj_Seki_fireball","path":"objects/obj_Seki_fireball/obj_Seki_fireball.yy",},},
     {"id":{"name":"obj_Seki_lightning","path":"objects/obj_Seki_lightning/obj_Seki_lightning.yy",},},
     {"id":{"name":"obj_Seki_missile","path":"objects/obj_Seki_missile/obj_Seki_missile.yy",},},
+    {"id":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},},
     {"id":{"name":"obj_vene_blast","path":"objects/obj_vene_blast/obj_vene_blast.yy",},},
     {"id":{"name":"obj_Xan_powerful_shot","path":"objects/obj_Xan_powerful_shot/obj_Xan_powerful_shot.yy",},},
     {"id":{"name":"Ps_Bubbles","path":"particles/Ps_Bubbles/Ps_Bubbles.yy",},},

@@ -1,7 +1,5 @@
 /// @description Creation
 
-
-
 #region Determening Enemy for Stats
 
 // Read name of object and assigns it to object_name
@@ -23,7 +21,6 @@ for(var i = 1; i <= global.enemy_index_length; i++)
 #endregion Assigning Character and Stats
 
 
-
 #region Loading instance stats
 
 // Assign active health that can be removed and added to
@@ -32,13 +29,4 @@ active_health = max_hp;
 armor_percent = global.enemy_stats[index].armor;
 
 #endregion
-
-
-
-#region
-
-
-
-#endregion
-
 

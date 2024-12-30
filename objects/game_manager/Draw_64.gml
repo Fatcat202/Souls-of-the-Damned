@@ -16,8 +16,21 @@ draw_set_font(fnt_default);
 
 #region Combat Round
 	
-	// Displays text stating combat round
-	draw_text(xx, 30, "Combat Round: " + string(global.combat_round));
+	with(obj_spawner)
+	{
+		if(global.spawn_triggered == true)
+		{
+			// Displays text stating combat round and remaining enemies
+			draw_text(xx, 30, "Combat Round: " + string(global.combat_round) + "     Remaining Enemies: " + string(global.remaining_enemies));
+		}else
+		{
+			// Displays text stating combat round
+			draw_text(xx, 30, "Combat Round: " + string(global.combat_round));
+		}
+	}
+	
+	
+	
 	
 #endregion Combat Round
 

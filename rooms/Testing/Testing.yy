@@ -12,8 +12,6 @@
     {"name":"inst_1B53E8B5","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_4FBA1706","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_61804ECE","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_578A48B4","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_62CBC4CF","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_266778FF","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_51054B77","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_70F5FB8","path":"rooms/Testing/Testing.yy",},
@@ -129,6 +127,9 @@
     {"name":"inst_2BB45C36","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_715BEA5A","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_4E206CB1","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_82F9DCC","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_393157A5","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_561C1C8A","path":"rooms/Testing/Testing.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -142,8 +143,9 @@
         {"$GMRInstance":"v1","%Name":"inst_4E206CB1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E206CB1","objectId":{"name":"obj_npc_Dogan","path":"objects/obj_npc_Dogan/obj_npc_Dogan.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":800.0,"y":1024.0,},
       ],"layers":[],"name":"Players","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_578A48B4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_578A48B4","objectId":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":672.0,"y":448.0,},
-        {"$GMRInstance":"v1","%Name":"inst_62CBC4CF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_62CBC4CF","objectId":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":480.0,},
+        {"$GMRInstance":"v1","%Name":"inst_82F9DCC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_82F9DCC","objectId":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":480.0,},
+        {"$GMRInstance":"v1","%Name":"inst_393157A5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_393157A5","objectId":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":480.0,},
+        {"$GMRInstance":"v1","%Name":"inst_561C1C8A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_561C1C8A","objectId":{"name":"obj_spawner","path":"objects/obj_spawner/obj_spawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":832.0,"y":512.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Collisions","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_14F58B8B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_14F58B8B","objectId":{"name":"obj_collision_wall","path":"objects/obj_collision_wall/obj_collision_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":4.5,"x":1056.0,"y":720.0,},
