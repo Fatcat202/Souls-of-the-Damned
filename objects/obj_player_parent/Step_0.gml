@@ -54,7 +54,73 @@ if(can_control == true)
 		{
 			image_xscale = -1;
 		}else image_xscale = 1;
+	}
+	
+	// Force objects outside of other objects if stuck or overlaping
+	if(place_meeting(x, y, obj_solid))
+	{
+		for(var i = 0; i < 1000; i++)
+		{
+			// Right
+			if(!place_meeting(x + i, y, obj_solid))
+			{
+				x += i;
+				break;	
+			}
 
+			// Left
+			if(!place_meeting(x - i, y, obj_solid))
+			{
+				x -= i;
+				break;	
+			}
+		
+			// Up
+			if(!place_meeting(x, y + i, obj_solid))
+			{
+				y += i;
+				break;	
+			}
+		
+			// Down
+			if(!place_meeting(x, y - i, obj_solid))
+			{
+				y -= i;
+				break;	
+			}
+		
+			// Top Right
+			if(!place_meeting(x + i, y - i, obj_solid))
+			{
+				x += i;
+				y -= i;
+				break;	
+			}
+			
+			// Top Left
+			if(!place_meeting(x - i, y - i, obj_solid))
+			{
+				x -= i;
+				y -= i;
+				break;	
+			}
+			
+			// Bottom Right
+			if(!place_meeting(x + i, y + i, obj_solid))
+			{
+				x += i;
+				y += i;
+				break;	
+			}
+			
+			// Bottom Left
+			if(!place_meeting(x - i, y - i, obj_solid))
+			{
+				x += i;
+				y -= i;
+				break;	
+			}
+		}
 	}
 }
 
