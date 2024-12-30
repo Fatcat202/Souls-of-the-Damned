@@ -275,7 +275,7 @@ function e_stats(_hp = 0, _armor = 0, _move_spd = 0, _melee_atk_dmg_1 = 0, _mele
 	is_flyer = _is_flyer;
 }
 
-// Create enemy_stats struct array
+// Create enemy_stats struct array. Add another line with another added enemy.
 global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
 global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats();
 global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
@@ -295,7 +295,7 @@ for(var i = 0; i < global.enemy_index_length; i++)
 	global.enemy_stats[yy].ranged_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	//global.enemy_stats[yy].is_flyer = real(ds_grid_get(ds_enemy_stats_csv, xx, yy));
+	global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy);
 
 }
 
