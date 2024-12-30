@@ -12,16 +12,12 @@ timer = 0;
 // **SPAWN DATA**
 waves = ds_list_create();
 
-// Set spawn location
-spawn_x = x;
-spawn_y = y;
-
 // Format to create:
 // ds_list_add(waves, [round to spawn, object name, frame delay])
 
 #region Round 1
 
-	ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0]);
+	ds_list_add(waves, [1, obj_enemy_Cacodaemon, 50]);
 	
 #endregion Round 1
 

@@ -1,4 +1,6 @@
 
+// Randomise randomisation seed
+randomise()
 
 #region Global Variables
 

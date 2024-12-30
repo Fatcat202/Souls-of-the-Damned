@@ -16,7 +16,7 @@ draw_set_font(fnt_default);
 
 #region Combat Round
 	
-	with(obj_spawner)
+	with(obj_arena_spawner)
 	{
 		if(global.spawn_triggered == true)
 		{
@@ -24,14 +24,11 @@ draw_set_font(fnt_default);
 			draw_text(xx, 30, "Combat Round: " + string(global.combat_round) + "     Remaining Enemies: " + string(global.remaining_enemies));
 		}else
 		{
-			// Displays text stating combat round
-			draw_text(xx, 30, "Combat Round: " + string(global.combat_round));
+			// Displays text saying to press "J" to start the next round
+			draw_text(xx, 30, "Press J to start Combat Round " + string(global.combat_round));
 		}
 	}
-	
-	
-	
-	
+
 #endregion Combat Round
 
 
