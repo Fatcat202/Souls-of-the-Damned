@@ -92,19 +92,19 @@ if(keyboard_check_pressed(ord(global.cont_attack_4)))
 var i = 1;
 if(keyboard_check_pressed(ord(global.cont_char_1)))
 {
-	if(global.max_pcs > i) scr_change_char(1); i++
+	if(global.total_active_pcs > i) scr_change_char(1); i++
 }
 if(keyboard_check_pressed(ord(global.cont_char_2)))
 {
-	if(global.max_pcs > i) scr_change_char(2); i++
+	if(global.total_active_pcs > i) scr_change_char(2); i++
 }
 if(keyboard_check_pressed(ord(global.cont_char_3)))
 {
-	if(global.max_pcs > i) scr_change_char(3); i++
+	if(global.total_active_pcs > i) scr_change_char(3); i++
 }
 if(keyboard_check_pressed(ord(global.cont_char_4)))
 {
-	if(global.max_pcs > i) scr_change_char(4); i++
+	if(global.total_active_pcs > i) scr_change_char(4); i++
 }
 
 

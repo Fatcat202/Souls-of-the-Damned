@@ -75,6 +75,13 @@ randomise()
 			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
 			global.char_index = 1;
 			
+			// Maxiumum number of playable characters allowed at once
+			global.max_pcs = 4;
+			
+			// Total number of active PCs
+			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent)
+			show_debug_message("global.total_active_pcs: " + string(global.total_active_pcs));
+			
 
 			
 		#endregion Swapping Characters
@@ -103,9 +110,6 @@ randomise()
 	#endregion Pausing
 	
 	
-	
-	// Maxiumum number of playable characters allowed at once
-	global.max_pcs = 4;
 	
 	// Sets default if a cutscene is active to false
 	global.cutscene_active = false;
