@@ -14,7 +14,7 @@ function scr_Alok_channel()
 			scr_heal(30, 0);
 		}
 	
-		// Heal allies
+		// Heal allies if within range
 		with(obj_npc_parent)
 		{
 			if(point_distance(x, y, obj_player_parent.x, obj_player_parent.y) <= range)

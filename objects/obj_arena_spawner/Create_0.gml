@@ -17,7 +17,7 @@ waves = ds_list_create();
 
 #region Round 1
 
-	ds_list_add(waves, [1, obj_enemy_Cacodaemon, 50]);
+	ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0]);
 	
 #endregion Round 1
 
