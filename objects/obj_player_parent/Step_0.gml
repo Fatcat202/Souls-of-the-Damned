@@ -30,7 +30,7 @@ if(can_control == true)
 	var _hspd = _right - _left;
 	var _vspd = _down - _up;
 	
-	// Normalise direction to avoid speed boost when moving diagonally
+	// Normalise vector to avoid speed boost when moving diagonally
 	if (_hspd != 0 && _vspd != 0)
 	{
 		var len = sqrt(_hspd * _hspd + _vspd * _vspd);
@@ -55,6 +55,73 @@ if(can_control == true)
 			image_xscale = -1;
 		}else image_xscale = 1;
 	}
+	
+	// Force objects outside of other objects if stuck or overlaping
+	if(place_meeting(x, y, obj_solid))
+	{
+		for(var i = 0; i < 1000; i++)
+		{
+			// Right
+			if(!place_meeting(x + i, y, obj_solid))
+			{
+				x += i;
+				break;	
+			}
+
+			// Left
+			if(!place_meeting(x - i, y, obj_solid))
+			{
+				x -= i;
+				break;	
+			}
+		
+			// Up
+			if(!place_meeting(x, y + i, obj_solid))
+			{
+				y += i;
+				break;	
+			}
+		
+			// Down
+			if(!place_meeting(x, y - i, obj_solid))
+			{
+				y -= i;
+				break;	
+			}
+		
+			// Top Right
+			if(!place_meeting(x + i, y - i, obj_solid))
+			{
+				x += i;
+				y -= i;
+				break;	
+			}
+			
+			// Top Left
+			if(!place_meeting(x - i, y - i, obj_solid))
+			{
+				x -= i;
+				y -= i;
+				break;	
+			}
+			
+			// Bottom Right
+			if(!place_meeting(x + i, y + i, obj_solid))
+			{
+				x += i;
+				y += i;
+				break;	
+			}
+			
+			// Bottom Left
+			if(!place_meeting(x - i, y - i, obj_solid))
+			{
+				x += i;
+				y -= i;
+				break;	
+			}
+		}
+	}
 }
 
 
@@ -63,19 +130,19 @@ if(can_control == true)
 
 #region Change Attacks
 
-if(keyboard_check(ord(global.cont_attack_1)))
+if(keyboard_check_pressed(ord(global.cont_attack_1)))
 {
 	active_power = 1;
 }
-if(keyboard_check(ord(global.cont_attack_2)))
+if(keyboard_check_pressed(ord(global.cont_attack_2)))
 {
 	active_power = 2;
 }
-if(keyboard_check(ord(global.cont_attack_3)))
+if(keyboard_check_pressed(ord(global.cont_attack_3)))
 {
 	active_power = 3;
 }
-if(keyboard_check(ord(global.cont_attack_4)))
+if(keyboard_check_pressed(ord(global.cont_attack_4)))
 {
 	active_power = 4;
 }
@@ -90,21 +157,21 @@ if(keyboard_check(ord(global.cont_attack_4)))
 
 #region Change Character 
 var i = 1;
-if(keyboard_check(ord(global.cont_char_1)))
+if(keyboard_check_pressed(ord(global.cont_char_1)))
 {
-	if(global.max_pcs > i) scr_change_char(1); i++
+	if(global.total_active_pcs > i) scr_change_char(1); i++
 }
-if(keyboard_check(ord(global.cont_char_2)))
+if(keyboard_check_pressed(ord(global.cont_char_2)))
 {
-	if(global.max_pcs > i) scr_change_char(2); i++
+	if(global.total_active_pcs > i) scr_change_char(2); i++
 }
-if(keyboard_check(ord(global.cont_char_3)))
+if(keyboard_check_pressed(ord(global.cont_char_3)))
 {
-	if(global.max_pcs > i) scr_change_char(3); i++
+	if(global.total_active_pcs > i) scr_change_char(3); i++
 }
-if(keyboard_check(ord(global.cont_char_4)))
+if(keyboard_check_pressed(ord(global.cont_char_4)))
 {
-	if(global.max_pcs > i) scr_change_char(4); i++
+	if(global.total_active_pcs > i) scr_change_char(4); i++
 }
 
 

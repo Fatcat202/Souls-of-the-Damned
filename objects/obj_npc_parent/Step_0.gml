@@ -9,7 +9,7 @@ scr_regain_armor();
 
 // Follow player if further than 175
 
-var within_range = collision_circle(x, y, 175, obj_player_parent, 1, 0);
+var within_range = collision_circle(x, y, 100, obj_player_parent, 1, 0);
 	
 if(within_range == noone)
 {

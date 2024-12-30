@@ -1,4 +1,6 @@
 
+// Randomise randomisation seed
+randomise()
 
 #region Global Variables
 
@@ -29,7 +31,7 @@
 
 		// Initialize enemy index arrays
 		global.arr_enemy_index_name[0] = "No valid enemy name";
-			global.arr_enemy_index_num[0] = 0;
+		global.arr_enemy_index_num[0] = 0;
 			
 			
 		#region Swapping Characters
@@ -73,6 +75,13 @@
 			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
 			global.char_index = 1;
 			
+			// Maxiumum number of playable characters allowed at once
+			global.max_pcs = 4;
+			
+			// Total number of active PCs
+			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent)
+			show_debug_message("global.total_active_pcs: " + string(global.total_active_pcs));
+			
 
 			
 		#endregion Swapping Characters
@@ -101,8 +110,6 @@
 	#endregion Pausing
 	
 	
-	// Initialize player level
-	global.player_level = 1;
 	
 	// Sets default if a cutscene is active to false
 	global.cutscene_active = false;
@@ -115,16 +122,28 @@
 	
 	// Sets how many pixel away objects must be from another object to collide 
 	// (x2 if both move towards each other)
-	global.collision_distance = 5;
-	
-	// Sets starting combat round for arena
-	global.combat_round = 1;
-	
-	// Maxiumum number of playable characters allowed at once
-	global.max_pcs = 4;
+	global.collision_distance = 2;
 	
 	
+	#region Arena Mechanics
+	
+		// Initialize player level
+		global.player_level = 1;
+	
+		// Sets starting combat round for arena
+		global.combat_round = 1;
 		
+		// Sets maximum number of combat rounds
+		global.max_combat_rounds = 20;
+	
+		// Tracker for how many enemies remain before the round ends
+		global.remaining_enemies = 0;
+		
+		// Detects if the round has been started and spawning triggered
+		global.spawn_triggered = false;
+		
+	#endregion Arena Mechanics
+
 	
 	#endregion Variables
 
@@ -256,7 +275,7 @@ function e_stats(_hp = 0, _armor = 0, _move_spd = 0, _melee_atk_dmg_1 = 0, _mele
 	is_flyer = _is_flyer;
 }
 
-// Create enemy_stats struct array
+// Create enemy_stats struct array. Add another line with another added enemy.
 global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
 global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats();
 global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
@@ -276,7 +295,7 @@ for(var i = 0; i < global.enemy_index_length; i++)
 	global.enemy_stats[yy].ranged_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 	global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	//global.enemy_stats[yy].is_flyer = real(ds_grid_get(ds_enemy_stats_csv, xx, yy));
+	global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy);
 
 }
 
@@ -291,6 +310,27 @@ for(var p = 0; p < global.enemy_index_length; p++)
 }
 
 #endregion Enemy Stats
+
+
+
+#region Camera
+// Resolution
+view_width = 640;
+view_height = 360;
+
+// Scaling (hardcoded for now)
+window_scale = 1;
+
+// Set size of window and center it
+window_set_size(view_width * window_scale, view_height * window_scale);
+alarm[0] = 1;
+
+surface_resize(application_surface, view_width * window_scale, view_height * window_scale);
+
+
+
+
+#endregion Camera
 
 
 

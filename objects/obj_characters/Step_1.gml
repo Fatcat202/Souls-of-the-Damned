@@ -57,7 +57,7 @@ if(knocked_back == true)
 	}
 	
 	// TODO Place in here check for collisions to prevent clipping into objects
-	
+	if(knockback_cooldown_timer > 3) scr_non_player_collision(speed);
 }
 
 

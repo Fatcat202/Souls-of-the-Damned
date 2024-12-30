@@ -23,7 +23,7 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 // Assigning object name to active pcs array
 var i = array_length(global.arr_active_pcs)
-if(i < global.max_pcs)
+if(i < global.total_active_pcs)
 {
 	global.arr_active_pcs[i] = object_name;
 	global.arr_active_pcs_names[i] = npc_name;
