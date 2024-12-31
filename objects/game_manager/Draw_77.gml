@@ -13,14 +13,4 @@ if(global.game_combat_paused == true)
 	}
 	
 	surface_reset_target();
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

@@ -1,8 +1,12 @@
 /// @description HUD GUI
 
+// ** VARIABLES **
 
+// Half display width and height
 var xx = display_get_gui_width() / 2;
 var yy = display_get_gui_height() / 2;
+
+// Healthbars
 var healthbar_thickness = 8;
 var armor_healthbar_y_top = 320; // Top of healthbars
 var healthbar_half_width = 100; // Half width of healthbars
@@ -11,8 +15,21 @@ var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
 var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
 var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
 
+// Attacks
+var attack_x = 610; // Starting x location
+var attack_y = 20; // Starting y location
+var attack_spacing = 25; // Space between cooldowns
+
+
 // Set default font
 draw_set_font(fnt_default);
+
+
+
+
+
+
+
 
 #region Combat Round
 	
@@ -32,7 +49,7 @@ draw_set_font(fnt_default);
 #endregion Combat Round
 
 
-#region Not Combat Paused
+#region ** NOT COMBAT PAUSED **
 
 // Check if combat paused
 if(!global.game_combat_paused)
@@ -91,11 +108,25 @@ if(!global.game_combat_paused)
 	#endregion Armor Healthbar
 
 
-	#region Attacks TODO
-
-
-
-
+	#region Attacks
+		// Shows circle in the top right part of the screen indicating the time
+		// remaining on the cooldown for each attack
+		
+		// Cooldown 1
+		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_maroon, 10, 1)
+		attack_y += attack_spacing;
+		
+		// Cooldown 2
+		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_maroon, 10, 1)
+		attack_y += attack_spacing;
+		
+		// Cooldown 3
+		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_maroon, 10, 1)
+		attack_y += attack_spacing;
+		
+		// Cooldown 4
+		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_maroon, 10, 1)
+			
 	#endregion Attacks
 	
 	
@@ -113,9 +144,7 @@ if(!global.game_combat_paused)
 	// Initial location variables
 	var char_x_start = 20;
 	var char_y_start = 30;
-	
 	var char_index = 0;
-	
 	// Healthbar variables
 	var select_healthbar_thickness = 6; // Thickness of healthbars
 	var select_healthbar_half_width = 20; // Half width of healthbars
@@ -209,10 +238,10 @@ if(!global.game_combat_paused)
 	#endregion Selectable Characters
 	
 
-#endregion Not Combat Paused
+#endregion ** NOT COMBAT PAUSED **
 
 
-#region Combat Paused
+#region ** COMBAT PAUSED **
 
 	// Display if combat paused
 } else if(global.game_combat_paused == true)
@@ -272,6 +301,7 @@ if(!global.game_combat_paused)
 	
 	#region Attacks TODO
 	
+		
 	
 	
 	#endregion Attacks
@@ -302,7 +332,6 @@ if(!global.game_combat_paused)
 	// Initial location variables
 	var char_x_start = 20;
 	var char_y_start = 30;
-	
 	var char_index = 0;
 	
 	// Healthbar variables

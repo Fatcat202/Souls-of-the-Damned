@@ -380,6 +380,7 @@
     {"id":{"name":"scr_Dogan_basic_attack","path":"scripts/scr_Dogan_basic_attack/scr_Dogan_basic_attack.yy",},},
     {"id":{"name":"scr_Dogan_bomb","path":"scripts/scr_Dogan_bomb/scr_Dogan_bomb.yy",},},
     {"id":{"name":"scr_Dogan_poison","path":"scripts/scr_Dogan_poison/scr_Dogan_poison.yy",},},
+    {"id":{"name":"scr_draw_circ_healthbar","path":"scripts/scr_draw_circ_healthbar/scr_draw_circ_healthbar.yy",},},
     {"id":{"name":"scr_Garyrager_basic_attack","path":"scripts/scr_Garyrager_basic_attack/scr_Garyrager_basic_attack.yy",},},
     {"id":{"name":"scr_Garyrager_block","path":"scripts/scr_Garyrager_block/scr_Garyrager_block.yy",},},
     {"id":{"name":"scr_Garyrager_rager_toss","path":"scripts/scr_Garyrager_rager_toss/scr_Garyrager_rager_toss.yy",},},
