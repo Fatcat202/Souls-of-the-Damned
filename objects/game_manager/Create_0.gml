@@ -97,19 +97,20 @@ randomise()
 			// Sets default game combat pause state
 			global.game_combat_paused = false
 	
-			// Sets default of if a pause can occor to false
+			// Sets default of if a pause can occour to false
 			global.can_pause = false;
 	
-			// Sets default of if a pause can occor to false
+			// Sets default of if a pause can occour to false
 			global.can_combat_pause = false;
 			
-			// Creates combat_pause_surf
+			// Creates combat_pause_surf and its buffer
 			global.combat_pause_surf = -1;
+			global.combat_pause_surf_buffer = -1;
 			
 			
 	#endregion Pausing
 	
-	
+	#region Misc
 	
 	// Sets default if a cutscene is active to false
 	global.cutscene_active = false;
@@ -123,6 +124,14 @@ randomise()
 	// Sets how many pixel away objects must be from another object to collide 
 	// (x2 if both move towards each other)
 	global.collision_distance = 2;
+	
+	// Game Resolution
+	global.res_w = 640;
+	global.res_h = 360;
+
+	
+	
+	#endregion Misc
 	
 	
 	#region Arena Mechanics

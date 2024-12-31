@@ -1,8 +1,7 @@
 // Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function scr_combat_resume()
 {
-	
 	
 	// States that the game is not combat paused
 	global.game_combat_paused = false;
@@ -12,9 +11,13 @@ function scr_combat_resume()
 	game_set_speed(60, gamespeed_fps);
 	
 	
+	// Delete the drawn surface and its buffer
+	if(surface_exists(global.combat_pause_surf)) surface_free(global.combat_pause_surf); 
+	if(buffer_exists(global.combat_pause_surf_buffer)) buffer_delete(global.combat_pause_surf_buffer);
+
+	
+	// Reactivate regular objects and destroy all combat pause objects
 	instance_activate_all();
 	instance_destroy(obj_combat_pause_parent);
-	
-	
-	
+
 }
