@@ -110,6 +110,7 @@ randomise()
 			
 	#endregion Pausing
 	
+	
 	#region Misc
 	
 	// Sets default if a cutscene is active to false

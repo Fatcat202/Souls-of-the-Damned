@@ -1,37 +1,27 @@
 
-function scr_track_player(range){
+function scr_track_player(range)
+{
+	// ** USED FOR ENEMIES **
 
-	var player_within_range = collision_circle(x, y, range, obj_player_parent, true, true);
-	var npc_within_range = collision_circle(x, y, range, obj_npc_parent, true, true);
-	
+	var nearest = instance_nearest(x, y, obj_ply_npc_parent)
+	var within_range = collision_circle(x, y, range, nearest, true, true);
+
 	// Check if player is within collision range
-	if(player_within_range != noone)
+	if(within_range != noone)
 	{
-		// Move towards player 
-		speed = global.enemy_stats[index].move_spd;
-		direction = point_direction(x, y, obj_player_parent.x, obj_player_parent.y);
-		scr_sprite_direction(direction);
-		
-		scr_non_player_collision(speed);
-		
-		// Defines that a player is being tracked for melee
-		melee_player_tracked = true;
-	} else if(npc_within_range != noone)
-	{
-		// Move towards npc
-		speed = global.enemy_stats[index].move_spd;
-		direction = point_direction(x, y, obj_npc_parent.x, obj_npc_parent.y);
+		// Move towards player, avoiding solid objects along the way
+		mp_potential_step(nearest.x, nearest.y, global.enemy_stats[index].move_spd, 1);
 		scr_sprite_direction(direction);
 		scr_non_player_collision(speed);
 		
-		// Defines that a player is being tracked for melee
+		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;
-		
-	}else
+
+	} else
 	{
 		// Remains still if no player is within range
 		speed = 0;
-		// Defines that a player is not being tracked for melee
+		// Defines that a player is not being tracked for melee for some enemy abilities
 		melee_player_tracked = false;
 	}
 }

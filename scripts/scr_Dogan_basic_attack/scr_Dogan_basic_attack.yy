@@ -6,7 +6,7 @@
   "name":"scr_Dogan_basic_attack",
   "parent":{
     "name":"Dogan Attacks",
-    "path":"folders/Scripts/Attacks/Dogan Attacks.yy",
+    "path":"folders/Scripts/Attacks/Players/Dogan Attacks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

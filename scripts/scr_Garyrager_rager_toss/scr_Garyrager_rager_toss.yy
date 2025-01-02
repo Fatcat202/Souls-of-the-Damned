@@ -6,7 +6,7 @@
   "name":"scr_Garyrager_rager_toss",
   "parent":{
     "name":"Gary and Rager Attacks",
-    "path":"folders/Scripts/Attacks/Gary and Rager Attacks.yy",
+    "path":"folders/Scripts/Attacks/Players/Gary and Rager Attacks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

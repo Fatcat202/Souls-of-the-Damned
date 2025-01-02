@@ -4,7 +4,7 @@ function scr_damage(dmg)
 
 	// Script will check if enemy has armor, if they do then deal damage to armor
 	// If armor is destroyed then deal remaining damage to HP
-	
+
 	
 	// Check if the enemy has armor
 	if (other.active_armor > 0)

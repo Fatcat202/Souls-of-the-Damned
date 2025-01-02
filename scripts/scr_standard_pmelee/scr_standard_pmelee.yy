@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_standard_pmelee",
   "parent":{
-    "name":"Effects",
-    "path":"folders/Scripts/Effects.yy",
+    "name":"Players",
+    "path":"folders/Scripts/Attacks/Players.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

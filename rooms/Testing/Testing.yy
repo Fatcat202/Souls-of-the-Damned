@@ -7,9 +7,6 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_2612957C_2","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_3A298470_2","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_932636B_2","path":"rooms/Testing/Testing.yy",},
-    {"name":"inst_6BCAE12A_2","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_CB1F697_2","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_35A3C3F9","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_7A75BCFF","path":"rooms/Testing/Testing.yy",},
@@ -80,6 +77,8 @@
     {"name":"inst_6791ED9F","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_2BA452A0","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_20B9A593","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_16172E08","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_CAAA8D0","path":"rooms/Testing/Testing.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -90,11 +89,10 @@
     {"$GMRInstanceLayer":"","%Name":"Combat_Paused","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Combat_Paused","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_CB1F697_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_CB1F697_2","objectId":{"name":"obj_player_Xan","path":"objects/obj_player_Xan/obj_player_Xan.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":928.0,"y":1184.0,},
+        {"$GMRInstance":"v1","%Name":"inst_CAAA8D0","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_CAAA8D0","objectId":{"name":"obj_npc_Alok","path":"objects/obj_npc_Alok/obj_npc_Alok.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":1184.0,},
       ],"layers":[],"name":"Players","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_3A298470_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A298470_2","objectId":{"name":"obj_enemy_Cacodaemon","path":"objects/obj_enemy_Cacodaemon/obj_enemy_Cacodaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":800.0,"y":512.0,},
-        {"$GMRInstance":"v1","%Name":"inst_932636B_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_932636B_2","objectId":{"name":"obj_enemy_Cacodaemon","path":"objects/obj_enemy_Cacodaemon/obj_enemy_Cacodaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":512.0,},
-        {"$GMRInstance":"v1","%Name":"inst_6BCAE12A_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6BCAE12A_2","objectId":{"name":"obj_enemy_Cacodaemon","path":"objects/obj_enemy_Cacodaemon/obj_enemy_Cacodaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1120.0,"y":512.0,},
+        {"$GMRInstance":"v1","%Name":"inst_16172E08","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16172E08","objectId":{"name":"obj_enemy_Vulnadaemon","path":"objects/obj_enemy_Vulnadaemon/obj_enemy_Vulnadaemon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":544.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Collisions","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_35A3C3F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_35A3C3F9","objectId":{"name":"obj_collision_wall","path":"objects/obj_collision_wall/obj_collision_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":5.5,"x":1216.0,"y":816.0,},
