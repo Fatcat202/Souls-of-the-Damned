@@ -12,6 +12,7 @@ tick++
 if(tick >= game_get_speed(gamespeed_fps) / 4)
 {
 	can_attack = true;
+	can_move = true;
 }
 
 // Closest player or npc
@@ -29,5 +30,6 @@ if(can_attack == true && point_distance(x, y, nearest.x, nearest.y) <= range)
 		melee.index = index;
 		
 	can_attack = false;
+	can_move = false;
 	tick = 0;
 }

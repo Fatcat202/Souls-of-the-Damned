@@ -26,4 +26,5 @@ if(can_attack == true && point_distance(x, y, nearest.x, nearest.y) <= range)
 	
 	alarm[1] = game_get_speed(gamespeed_fps) / 2;
 	can_attack = false;
+	can_move = false;
 }

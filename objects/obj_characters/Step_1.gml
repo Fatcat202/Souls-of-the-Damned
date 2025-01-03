@@ -24,7 +24,7 @@ if(stunned == true)
 }
 
 
-// ** POISON DEBUFF ABILITY **
+// ** POISON COATING ATTACK **
 // Check if cooldown ticking
 if(poison_debuff == true)
 {

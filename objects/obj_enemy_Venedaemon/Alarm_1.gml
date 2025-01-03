@@ -2,3 +2,4 @@
 // You can write your code in this editor
 
 	can_attack = true;
+	can_move = true;

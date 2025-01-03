@@ -34,14 +34,18 @@ scr_data_cross_reference(i)
 
 #region Loading instance stats
 
+// Index for databases, changing characters, and other functions
 index = global.selected_char;
 
+// Health
 max_hp = global.player_stats[index].hp;
 active_health = max_hp;
 
+// Armor
 max_armor = global.player_stats[index].armor;
 active_armor = max_armor;
 
+// Speed
 move_spd = global.player_stats[index].move_spd;
 collision_speed = move_spd + global.collision_distance;
 

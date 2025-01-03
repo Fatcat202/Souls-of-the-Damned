@@ -1,6 +1,6 @@
 /// @description Behavior
 
-if(can_move)
+if(can_move == true)
 {
 
 // Closest player or npc
@@ -35,6 +35,7 @@ if(within_blast_range != noone)
 			
 			// Cooldown
 			can_attack = false;
+			can_move = false;
 			alarm[1] = game_get_speed(gamespeed_fps) + random(60);
 		}
 	
@@ -58,6 +59,7 @@ if(within_blast_range != noone)
 	
 			alarm[1] = game_get_speed(gamespeed_fps) / 4;
 			can_attack = false;
+			can_move = false;
 		}
 	}
 

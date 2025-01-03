@@ -30,10 +30,6 @@ if(i < global.total_active_pcs)
 }
 
 
-show_debug_message("i: " + string(i))
-show_debug_message("global.arr_active_pcs :" + string(global.arr_active_pcs))
-show_debug_message("global.arr_active_pcs_names :" + string(global.arr_active_pcs_names))
-
 #endregion Assigning Character
 
 
@@ -43,8 +39,14 @@ show_debug_message("global.arr_active_pcs_names :" + string(global.arr_active_pc
 // Assign active health that can be removed and added to
 active_health = global.player_stats[index].hp;
 max_hp = active_health;
+
+// Armor
 max_armor = global.player_stats[index].armor;
 active_armor  = max_armor;
+
+// Speed
+move_spd = global.player_stats[index].move_spd;
+collision_speed = move_spd + global.collision_distance;
 
 
 #endregion
