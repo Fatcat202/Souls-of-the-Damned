@@ -126,9 +126,11 @@ randomise()
 	// (x2 if both move towards each other)
 	global.collision_distance = 2;
 	
-	// Game Resolution
+	// Game resolution
 	global.res_w = 640;
 	global.res_h = 360;
+	
+	
 
 	
 	
@@ -153,6 +155,19 @@ randomise()
 		global.spawn_triggered = false;
 		
 	#endregion Arena Mechanics
+	
+	
+	#region Camera
+	
+	// Storing previous frames mouse location in relation to GUI
+	global.mouse_x_previous = device_mouse_x_to_gui(0);
+	global.mouse_y_previous = device_mouse_y_to_gui(0);
+	
+	// Camera smoothing speed
+	global.cam_smoothing = 0.3;
+	
+	
+	#endregion Camera
 
 	
 	#endregion Variables
@@ -179,6 +194,7 @@ randomise()
 		global.cont_menu = "ESC"; // Find actual name
 		global.cont_combat_pause = "SPACE"; // Find actual name
 		global.cont_quick_save = "F2"; // Find actual name
+		global.cont_cam_panning = "P";
 	
 	#endregion Controls
 
