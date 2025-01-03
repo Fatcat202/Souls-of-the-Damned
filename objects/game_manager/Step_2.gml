@@ -20,22 +20,25 @@ if(mouse_check_button(mb_middle))
 	
 	cam_x -= move_x;
 	cam_y -= move_y;
+	
+// Default movement
 }else
 {
 	// Check if obj_player_parent exists
 	if(instance_exists(obj_player_parent))
 	{
-		// Set camera to target obj_player_parent, blocked by edge of map
+		// Set camera to target obj_player_parent
 		target_x = obj_player_parent.x - cam_w / 2;
 		target_y = obj_player_parent.y - cam_h / 2;
 	
 	} else if(instance_exists(obj_combat_pause_parent))
 	{
-		// Set camera to target obj_combat_pause_parent, blocked by edge of map
+		// Set camera to target obj_combat_pause_parent
 		target_x = obj_combat_pause_parent.x - cam_w / 2;
 		target_y = obj_combat_pause_parent.y - cam_h / 2;
 	}
 	
+	// Prevent camera from leaving map
 	target_x = clamp(target_x, 0, room_height - cam_w);
 	target_y = clamp(target_y, 0, room_width - cam_h);
 	
@@ -45,9 +48,7 @@ if(mouse_check_button(mb_middle))
 }
 
 
-
-
-// Zooming
+// Zooming camera
 var wheel = mouse_wheel_down() - mouse_wheel_up();
 if(wheel != 0)
 {
