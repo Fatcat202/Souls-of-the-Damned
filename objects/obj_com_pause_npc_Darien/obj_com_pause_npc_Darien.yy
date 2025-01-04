@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_pause_Darien",
+  "%Name":"obj_com_pause_npc_Darien",
   "eventList":[],
   "managed":true,
-  "name":"obj_combat_pause_Darien",
+  "name":"obj_com_pause_npc_Darien",
   "overriddenProperties":[],
   "parent":{
     "name":"Darien",
     "path":"folders/Objects/Characters/Players/Implemented/Darien.yy",
   },
   "parentObjectId":{
-    "name":"obj_combat_pause_parent",
-    "path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",
+    "name":"obj_com_pause_npc_parent",
+    "path":"objects/obj_com_pause_npc_parent/obj_com_pause_npc_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_Darien",
     "path":"sprites/spr_Darien/spr_Darien.yy",

@@ -31,11 +31,11 @@ if(mouse_check_button(mb_middle))
 		target_x = obj_player_parent.x - cam_w / 2;
 		target_y = obj_player_parent.y - cam_h / 2;
 	
-	} else if(instance_exists(obj_combat_pause_parent))
+	} else if(instance_exists(obj_com_pause_parent))
 	{
-		// Set camera to target obj_combat_pause_parent
-		target_x = obj_combat_pause_parent.x - cam_w / 2;
-		target_y = obj_combat_pause_parent.y - cam_h / 2;
+		// Set camera to target obj_com_pause_parent
+		target_x = obj_com_pause_parent.x - cam_w / 2;
+		target_y = obj_com_pause_parent.y - cam_h / 2;
 	}
 	
 	// Prevent camera from leaving map

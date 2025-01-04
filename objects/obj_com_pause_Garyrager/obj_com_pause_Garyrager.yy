@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_pause_Garyrager",
+  "%Name":"obj_com_pause_Garyrager",
   "eventList":[],
   "managed":true,
-  "name":"obj_combat_pause_Garyrager",
+  "name":"obj_com_pause_Garyrager",
   "overriddenProperties":[],
   "parent":{
     "name":"Gary and Rager",
     "path":"folders/Objects/Characters/Players/Implemented/Gary and Rager.yy",
   },
   "parentObjectId":{
-    "name":"obj_combat_pause_parent",
-    "path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",
+    "name":"obj_com_pause_parent",
+    "path":"objects/obj_com_pause_parent/obj_com_pause_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

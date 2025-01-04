@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_pause_Dogan",
+  "%Name":"obj_com_pause_npc_Bronwin",
   "eventList":[],
   "managed":true,
-  "name":"obj_combat_pause_Dogan",
+  "name":"obj_com_pause_npc_Bronwin",
   "overriddenProperties":[],
   "parent":{
-    "name":"Dogan Darkwater",
-    "path":"folders/Objects/Characters/Players/Implemented/Dogan Darkwater.yy",
+    "name":"Bronwin",
+    "path":"folders/Objects/Characters/Players/Unimplemented/Bronwin.yy",
   },
   "parentObjectId":{
-    "name":"obj_combat_pause_parent",
-    "path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",
+    "name":"obj_com_pause_npc_parent",
+    "path":"objects/obj_com_pause_npc_parent/obj_com_pause_npc_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -29,11 +29,8 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
-  "spriteId":{
-    "name":"spr_Dogan",
-    "path":"sprites/spr_Dogan/spr_Dogan.yy",
-  },
+  "solid":false,
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

@@ -304,26 +304,43 @@ if(global.game_combat_paused == false)
 		
 		// Cooldown 1
 		draw_sprite(spr_atk_1, 0, attack_x, attack_y)
-		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_1, obj_combat_pause_parent.cooldown_time_1, c_black, 16, 0.5)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_1, obj_com_pause_parent.cooldown_time_1, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 		
 		// Cooldown 2
 		draw_sprite(spr_atk_2, 0, attack_x, attack_y)
-		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_2, obj_combat_pause_parent.cooldown_time_2, c_black, 16, 0.5)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_2, obj_com_pause_parent.cooldown_time_2, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 		
 		// Cooldown 3
 		draw_sprite(spr_atk_3, 0, attack_x, attack_y)
-		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_3, obj_combat_pause_parent.cooldown_time_3, c_black, 16, 0.5)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_3, obj_com_pause_parent.cooldown_time_3, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 		
 		// Cooldown 4
 		draw_sprite(spr_atk_4, 0, attack_x, attack_y)
-		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_4, obj_combat_pause_parent.cooldown_time_4, c_black, 16, 0.5)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_4, obj_com_pause_parent.cooldown_time_4, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 	
 	
 	#endregion Attacks
+	
+	
+	#region Commands
+		
+		draw_sprite(spr_button_attack, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+		draw_sprite(spr_button_defend, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+		draw_sprite(spr_button_path, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+		draw_sprite(spr_button_follow, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+	#endregion Commands
 	
 	
 	#region Player Name text
@@ -440,25 +457,6 @@ if(global.game_combat_paused == false)
 		}
 	
 	#endregion Selectable Characters
-	
-	
-	#region Commands
-		
-		draw_sprite(spr_button_attack, 0, attack_x, attack_y)
-		attack_y += attack_spacing;
-		
-		draw_sprite(spr_button_defend, 0, attack_x, attack_y)
-		attack_y += attack_spacing;
-		
-		draw_sprite(spr_button_path, 0, attack_x, attack_y)
-		attack_y += attack_spacing;
-		
-		draw_sprite(spr_button_follow, 0, attack_x, attack_y)
-		attack_y += attack_spacing;
-		
-		
-	#endregion Commands
-	
 	
 
 }

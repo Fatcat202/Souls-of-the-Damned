@@ -35,7 +35,7 @@ function scr_combat_pause()
 			// Checks if players exist, if it does replace with combat pause object
 			}else if(instance_exists(global.arr_npc[i]) == true)
 			{
-				var combat_pause_char = instance_create_layer(global.arr_npc[i].x, global.arr_npc[i].y, "Combat_Paused", global.arr_combat_pause[i]);
+				var combat_pause_char = instance_create_layer(global.arr_npc[i].x, global.arr_npc[i].y, "Combat_Paused", global.arr_combat_pause_npc[i]);
 					// Transfer stats ** MUST ADD REMAINING STATS AND TIMERS **
 					combat_pause_char.active_health = global.arr_npc[i].active_health;
 					combat_pause_char.max_hp = global.arr_npc[i].max_hp;
@@ -65,5 +65,5 @@ function scr_combat_pause()
 	
 	instance_deactivate_object(all);
 	instance_activate_object(game_manager);
-	instance_activate_object(obj_combat_pause_parent);
+	instance_activate_object(obj_com_pause_parent);
 }

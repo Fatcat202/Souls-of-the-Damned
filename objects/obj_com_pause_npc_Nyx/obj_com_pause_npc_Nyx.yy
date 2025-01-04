@@ -1,17 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_pause_Xan",
+  "%Name":"obj_com_pause_npc_Nyx",
   "eventList":[],
   "managed":true,
-  "name":"obj_combat_pause_Xan",
+  "name":"obj_com_pause_npc_Nyx",
   "overriddenProperties":[],
   "parent":{
-    "name":"Xan Peppo",
-    "path":"folders/Objects/Characters/Players/Implemented/Xan Peppo.yy",
+    "name":"Nyx",
+    "path":"folders/Objects/Characters/Players/Unimplemented/Nyx.yy",
   },
   "parentObjectId":{
-    "name":"obj_combat_pause_parent",
-    "path":"objects/obj_combat_pause_parent/obj_combat_pause_parent.yy",
+    "name":"obj_com_pause_npc_parent",
+    "path":"objects/obj_com_pause_npc_parent/obj_com_pause_npc_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_Xan",
-    "path":"sprites/spr_Xan/spr_Xan.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

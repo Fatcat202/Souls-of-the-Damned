@@ -57,14 +57,24 @@ randomise()
 			global.arr_npc[8] = obj_npc_Nyx;
 			
 			// Assign combat pause objects to array
-			global.arr_combat_pause[1] = obj_combat_pause_Alok;
-			global.arr_combat_pause[2] = obj_combat_pause_Seki;
-			global.arr_combat_pause[3] = obj_combat_pause_Xan;
-			global.arr_combat_pause[4] = obj_combat_pause_Garyrager;
-			global.arr_combat_pause[5] = obj_combat_pause_Dogan;
-			global.arr_combat_pause[6] = obj_combat_pause_Darien;
-			global.arr_combat_pause[7] = obj_combat_pause_Bronwin;
-			global.arr_combat_pause[8] = obj_combat_pause_Nyx;
+			global.arr_combat_pause[1] = obj_com_pause_Alok;
+			global.arr_combat_pause[2] = obj_com_pause_Seki;
+			global.arr_combat_pause[3] = obj_com_pause_Xan;
+			global.arr_combat_pause[4] = obj_com_pause_Garyrager;
+			global.arr_combat_pause[5] = obj_com_pause_Dogan;
+			global.arr_combat_pause[6] = obj_com_pause_Darien;
+			global.arr_combat_pause[7] = obj_com_pause_Bronwin;
+			global.arr_combat_pause[8] = obj_com_pause_Nyx;
+			
+			// Assign combat pause npc objects to array
+			global.arr_combat_pause_npc[1] = obj_com_pause_npc_Alok;
+			global.arr_combat_pause_npc[2] = obj_com_pause_npc_Seki;
+			global.arr_combat_pause_npc[3] = obj_com_pause_npc_Xan;
+			global.arr_combat_pause_npc[4] = obj_com_pause_npc_Garyrager;
+			global.arr_combat_pause_npc[5] = obj_com_pause_npc_Dogan;
+			global.arr_combat_pause_npc[6] = obj_com_pause_npc_Darien;
+			global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
+			global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 			
 			// Array for holding active players and npcs objects
 			global.arr_active_pcs = array_create(0)

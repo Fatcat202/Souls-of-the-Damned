@@ -1,10 +1,9 @@
 /// @description Pulling Data
 
-
 // Read name of object and assigns it to object_name
 object_name = object_get_name(object_index);
 // Isolates the character name from object_name
-player_name = string_delete(object_name, 0, 17);
+player_name = string_delete(object_name, 0, 18);
 
 
 combat_pause_index = 0;
@@ -16,16 +15,3 @@ for(var i = 1; i <= global.player_index_length; i++)
 			combat_pause_index = i;
 		}
 }
-
-
-#region Assigning Instance Stats
-
-// Assign active health that can be removed and added to
-/*
-max_hp = global.player_stats[combat_pause_index].hp;
-active_hp = obj_player_parent.active_hp
-max_armor = global.player_stats[combat_pause_index].armor;
-active_armor = obj_player_parent.active_armor;
-*/
-
-#endregion
