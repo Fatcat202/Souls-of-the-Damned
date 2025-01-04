@@ -26,11 +26,6 @@ draw_set_font(fnt_default);
 
 
 
-
-
-
-
-
 #region Combat Round
 	
 	with(obj_arena_spawner)
@@ -424,9 +419,11 @@ if(!global.game_combat_paused)
 	
 	
 	#region Commands
+	
+	
 		var start_y = 610;
-		
-		var follow = instance_create_layer(310, start_y, "Game_Manager", obj_button_follow)
+		var start_x = 330;
+
 		
 		
 	#endregion Commands
@@ -435,5 +432,5 @@ if(!global.game_combat_paused)
 
 }
 
-#endregion Not Combat Paused
+#endregion ** COMBAT PAUSED **
 
