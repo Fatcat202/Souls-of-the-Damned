@@ -16,9 +16,9 @@ var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
 var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
 
 // Attacks
-var attack_x = 610; // Starting x location
+var attack_x = 620; // Starting x location
 var attack_y = 20; // Starting y location
-var attack_spacing = 25; // Space between cooldowns
+var attack_spacing = 36; // Space between cooldowns
 
 
 // Set default font
@@ -108,19 +108,23 @@ if(global.game_combat_paused == false)
 		// remaining on the cooldown for each attack
 		
 		// Cooldown 1
-		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_maroon, 10, 1)
+		draw_sprite(spr_atk_1, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 		
 		// Cooldown 2
-		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_maroon, 10, 1)
+		draw_sprite(spr_atk_2, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 		
 		// Cooldown 3
-		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_maroon, 10, 1)
+		draw_sprite(spr_atk_3, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_black, 16, 0.5)
 		attack_y += attack_spacing;
 		
 		// Cooldown 4
-		scr_draw_circ_healthbar(attack_x, attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_maroon, 10, 1)
+		draw_sprite(spr_atk_4, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
 			
 	#endregion Attacks
 	
@@ -294,9 +298,29 @@ if(global.game_combat_paused == false)
 	#endregion Armor Healthbar
 	
 	
-	#region Attacks TODO
-	
+	#region Attacks
+		// Shows circle in the top right part of the screen indicating the time
+		// remaining on the cooldown for each attack
 		
+		// Cooldown 1
+		draw_sprite(spr_atk_1, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_1, obj_combat_pause_parent.cooldown_time_1, c_black, 16, 0.5)
+		attack_y += attack_spacing;
+		
+		// Cooldown 2
+		draw_sprite(spr_atk_2, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_2, obj_combat_pause_parent.cooldown_time_2, c_black, 16, 0.5)
+		attack_y += attack_spacing;
+		
+		// Cooldown 3
+		draw_sprite(spr_atk_3, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_3, obj_combat_pause_parent.cooldown_time_3, c_black, 16, 0.5)
+		attack_y += attack_spacing;
+		
+		// Cooldown 4
+		draw_sprite(spr_atk_4, 0, attack_x, attack_y)
+		scr_draw_circ_healthbar(attack_x , attack_y, obj_combat_pause_parent.cooldown_timer_4, obj_combat_pause_parent.cooldown_time_4, c_black, 16, 0.5)
+		attack_y += attack_spacing;
 	
 	
 	#endregion Attacks
@@ -419,11 +443,18 @@ if(global.game_combat_paused == false)
 	
 	
 	#region Commands
-	
-	
-		var start_y = 610;
-		var start_x = 330;
-
+		
+		draw_sprite(spr_button_attack, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+		draw_sprite(spr_button_defend, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+		draw_sprite(spr_button_path, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
+		
+		draw_sprite(spr_button_follow, 0, attack_x, attack_y)
+		attack_y += attack_spacing;
 		
 		
 	#endregion Commands

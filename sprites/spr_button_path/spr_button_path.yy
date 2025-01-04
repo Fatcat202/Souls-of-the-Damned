@@ -23,7 +23,7 @@
   ],
   "name":"spr_button_path",
   "nineSlice":null,
-  "origin":7,
+  "origin":4,
   "parent":{
     "name":"Buttons",
     "path":"folders/Sprites/Buttons.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":16,
-    "yorigin":32,
+    "yorigin":16,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
