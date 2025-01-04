@@ -2,7 +2,7 @@
 function scr_data_cross_reference(referenced_char)
 {
 	// Take name of active char and convert to allow cross reference with npc and player arrays
-	// Needed for some specific data transfers between objects
+	// Needed for some specific data transfers between objects and to display the player name in the hud
 	
 	for(var i = 1; i <= 8; i++)
 	{

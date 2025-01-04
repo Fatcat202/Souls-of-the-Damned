@@ -47,7 +47,7 @@ draw_set_font(fnt_default);
 #region ** NOT COMBAT PAUSED **
 
 // Check if combat paused
-if(!global.game_combat_paused)
+if(global.game_combat_paused == false)
 {
 
 	#region HP Healthbar

@@ -23,10 +23,11 @@ if(i < global.total_active_pcs)
 {
 	global.arr_active_pcs[i] = object_name;
 	global.arr_active_pcs_names[i] = player_name;
+	scr_data_cross_reference(i)
 }
 
-// Find data for active char
-scr_data_cross_reference(i)
+
+
 
 #endregion Assigning Character
 
