@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_options",
+  "%Name":"obj_button_follow",
   "eventList":[],
   "managed":true,
-  "name":"obj_button_options",
-  "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_parent/obj_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Options",},
-  ],
+  "name":"obj_button_follow",
+  "overriddenProperties":[],
   "parent":{
-    "name":"Main Menu",
-    "path":"folders/Objects/Buttons/Main Menu.yy",
+    "name":"Combat Pause",
+    "path":"folders/Objects/Buttons/Combat Pause.yy",
   },
   "parentObjectId":{
     "name":"obj_button_parent",
@@ -33,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_menu_button_long",
-    "path":"sprites/spr_menu_button_long/spr_menu_button_long.yy",
+    "name":"spr_button_follow",
+    "path":"sprites/spr_button_follow/spr_button_follow.yy",
   },
   "spriteMaskId":null,
   "visible":true,

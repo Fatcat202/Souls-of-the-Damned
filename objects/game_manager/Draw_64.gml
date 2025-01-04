@@ -423,6 +423,15 @@ if(!global.game_combat_paused)
 	#endregion Selectable Characters
 	
 	
+	#region Commands
+		var start_y = 610;
+		
+		var follow = instance_create_layer(310, start_y, "Game_Manager", obj_button_follow)
+		
+		
+	#endregion Commands
+	
+	
 
 }
 
