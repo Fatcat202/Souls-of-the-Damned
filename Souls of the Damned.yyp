@@ -399,7 +399,7 @@
     {"id":{"name":"scr_damage","path":"scripts/scr_damage/scr_damage.yy",},},
     {"id":{"name":"scr_Darien_basic_attack","path":"scripts/scr_Darien_basic_attack/scr_Darien_basic_attack.yy",},},
     {"id":{"name":"scr_Darien_loh","path":"scripts/scr_Darien_loh/scr_Darien_loh.yy",},},
-    {"id":{"name":"scr_Darien_shield_wall","path":"scripts/scr_Darien_shield_wall/scr_Darien_shield_wall.yy",},},
+    {"id":{"name":"scr_Darien_shield","path":"scripts/scr_Darien_shield/scr_Darien_shield.yy",},},
     {"id":{"name":"scr_data_cross_reference","path":"scripts/scr_data_cross_reference/scr_data_cross_reference.yy",},},
     {"id":{"name":"scr_Dogan_basic_attack","path":"scripts/scr_Dogan_basic_attack/scr_Dogan_basic_attack.yy",},},
     {"id":{"name":"scr_Dogan_bomb","path":"scripts/scr_Dogan_bomb/scr_Dogan_bomb.yy",},},
