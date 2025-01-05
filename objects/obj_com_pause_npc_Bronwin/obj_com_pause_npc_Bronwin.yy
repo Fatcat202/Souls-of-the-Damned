@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_Bronwin",
+    "path":"sprites/spr_Bronwin/spr_Bronwin.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
