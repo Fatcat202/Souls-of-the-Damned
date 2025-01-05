@@ -414,6 +414,7 @@
     {"id":{"name":"scr_Garyrager_rager_toss","path":"scripts/scr_Garyrager_rager_toss/scr_Garyrager_rager_toss.yy",},},
     {"id":{"name":"scr_heal","path":"scripts/scr_heal/scr_heal.yy",},},
     {"id":{"name":"scr_increment_all_alarms","path":"scripts/scr_increment_all_alarms/scr_increment_all_alarms.yy",},},
+    {"id":{"name":"scr_instance_nth_nearest","path":"scripts/scr_instance_nth_nearest/scr_instance_nth_nearest.yy",},},
     {"id":{"name":"scr_knockback","path":"scripts/scr_knockback/scr_knockback.yy",},},
     {"id":{"name":"scr_non_lethal","path":"scripts/scr_non_lethal/scr_non_lethal.yy",},},
     {"id":{"name":"scr_non_player_collision","path":"scripts/scr_non_player_collision/scr_non_player_collision.yy",},},

@@ -8,12 +8,15 @@ if(can_move == true)
 // Standard melee attack
 
 // Check if attack cooldown is over and increment tick
-tick++
-if(tick >= game_get_speed(gamespeed_fps) / 4)
+atk_tick++
+if(atk_tick >= game_get_speed(gamespeed_fps) / 4)
 {
 	can_attack = true;
 	can_move = true;
 }
+
+
+
 
 // Closest player or npc
 var nearest = instance_nearest(x, y, obj_ply_npc_parent)
@@ -31,5 +34,5 @@ if(can_attack == true && point_distance(x, y, nearest.x, nearest.y) <= range)
 		
 	can_attack = false;
 	can_move = false;
-	tick = 0;
+	atk_tick = 0;
 }

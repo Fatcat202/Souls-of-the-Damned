@@ -138,7 +138,8 @@ randomise()
 	global.res_w = 640;
 	global.res_h = 360;
 	
-	
+	// Tracks the total number of dead PCs
+	global.dead_char = 0;
 
 	
 	
@@ -161,6 +162,8 @@ randomise()
 		
 		// Detects if the round has been started and spawning triggered
 		global.spawn_triggered = false;
+		
+		
 		
 	#endregion Arena Mechanics
 	
