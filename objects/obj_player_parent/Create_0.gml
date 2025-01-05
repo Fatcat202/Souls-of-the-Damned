@@ -1,5 +1,6 @@
 /// @description Initial Creation
 
+event_inherited();
 
 #region Assigning Character
 
@@ -32,23 +33,22 @@ if(i < global.total_active_pcs)
 #endregion Assigning Character
 
 
-
 #region Loading instance stats
 
-// Index for databases, changing characters, and other functions
-index = global.selected_char;
+	// Index for databases, changing characters, and other functions
+	index = global.selected_char;
 
-// Health
-max_hp = global.player_stats[index].hp;
-active_health = max_hp;
+	// Health
+	max_hp = global.player_stats[index].hp;
+	active_health = max_hp;
 
-// Armor
-max_armor = global.player_stats[index].armor;
-active_armor = max_armor;
+	// Armor
+	max_armor = global.player_stats[index].armor;
+	active_armor = max_armor;
 
-// Speed
-move_spd = global.player_stats[index].move_spd;
-collision_speed = move_spd + global.collision_distance;
+	// Speed
+	move_spd = global.player_stats[index].move_spd;
+	collision_speed = move_spd + global.collision_distance;
 
 
 #endregion

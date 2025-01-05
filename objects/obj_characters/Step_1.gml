@@ -1,6 +1,4 @@
 /// @description Timers
-// You can write your code in this editor
-
 
 
 // Characters are affected by Damage Over Time

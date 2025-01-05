@@ -11,8 +11,8 @@
   "name":"obj_com_pause_npc_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Players",
-    "path":"folders/Objects/Characters/Players.yy",
+    "name":"Parents",
+    "path":"folders/Objects/Characters/Players/Parents.yy",
   },
   "parentObjectId":{
     "name":"obj_ply_npc_parent",

@@ -1,5 +1,6 @@
 /// @description Pulling Data
 
+
 // Read name of object and assigns it to object_name
 object_name = object_get_name(object_index);
 // Isolates the character name from object_name

@@ -6,7 +6,8 @@ function scr_data_cross_reference(referenced_char)
 	
 	for(var i = 1; i <= 8; i++)
 	{
-		if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[referenced_char] || object_get_name(global.arr_players[i]) == global.arr_active_pcs[referenced_char])
+		if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[referenced_char]
+		|| object_get_name(global.arr_players[i]) == global.arr_active_pcs[referenced_char])
 		{
 			global.char_index = i;
 			break;

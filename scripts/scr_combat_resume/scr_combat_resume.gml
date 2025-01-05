@@ -20,5 +20,7 @@ function scr_combat_resume()
 	instance_activate_all();
 	instance_destroy(obj_com_pause_parent);
 	instance_destroy(obj_com_pause_npc_parent);
-
+	
+	//scr_change_char(global.char_index);
+	
 }

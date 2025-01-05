@@ -17,23 +17,41 @@ function scr_combat_pause()
 	scr_part_systems_set_auto_update();
 	
 	
-	for(var n = 0; n < global.player_index_length; n++)
+	for(var n = 0; n < global.total_active_pcs; n++)
 	{
 		for(var i = 1; i < array_length(global.arr_players); i++)
 		{
-			// Checks if players exist, if it does replace with combat pause object
-			if(instance_exists(global.arr_players[i]) == true)
-			{
-				var combat_pause_char = instance_create_layer(global.arr_players[i].x, global.arr_players[i].y, "Combat_Paused", global.arr_combat_pause[i]);
-					// Transfer stats ** MUST ADD REMAINING STATS AND TIMERS **
-					combat_pause_char.active_health = global.arr_players[i].active_health;
-					combat_pause_char.max_hp = global.arr_players[i].max_hp;
-					combat_pause_char.active_power = global.arr_players[i].active_power;
-					combat_pause_char.active_armor = global.arr_players[i].active_armor;
-					combat_pause_char.max_armor = global.arr_players[i].max_armor;
 			
 			// Checks if players exist, if it does replace with combat pause object
-			}else if(instance_exists(global.arr_npc[i]) == true)
+			if(string(global.arr_player_index_name[i]) == string(global.arr_active_pcs_names[n]))
+			{
+				var combat_pause_char = instance_create_layer(global.arr_players[global.char_index].x, global.arr_players[global.char_index].y, "Combat_Paused", global.arr_combat_pause[i]);
+					// Transfer stats ** MUST ADD REMAINING STATS AND TIMERS **
+					combat_pause_char.active_health = global.arr_players[global.char_index].active_health;
+					combat_pause_char.max_hp = global.arr_players[global.char_index].max_hp;
+					combat_pause_char.active_power = global.arr_players[global.char_index].active_power;
+					combat_pause_char.active_armor = global.arr_players[global.char_index].active_armor;
+					combat_pause_char.max_armor = global.arr_players[global.char_index].max_armor;
+					
+					combat_pause_char.active_power = global.arr_players[global.char_index].active_power;
+	
+					// Cooldowns
+					combat_pause_char.cooldown_1 = global.arr_players[global.char_index].cooldown_1;
+					combat_pause_char.cooldown_timer_1 = global.arr_players[global.char_index].cooldown_timer_1;
+					combat_pause_char.cooldown_time_1 = global.arr_players[global.char_index].cooldown_time_1;
+					combat_pause_char.cooldown_2 = global.arr_players[global.char_index].cooldown_2;
+					combat_pause_char.cooldown_timer_2 = global.arr_players[global.char_index].cooldown_timer_2;
+					combat_pause_char.cooldown_time_2 = global.arr_players[global.char_index].cooldown_time_2;
+					combat_pause_char.cooldown_3 = global.arr_players[global.char_index].cooldown_3;
+					combat_pause_char.cooldown_timer_3 = global.arr_players[global.char_index].cooldown_timer_3;
+					combat_pause_char.cooldown_time_3 = global.arr_players[global.char_index].cooldown_time_3;
+					combat_pause_char.cooldown_4 = global.arr_players[global.char_index].cooldown_4;
+					combat_pause_char.cooldown_timer_4 = global.arr_players[global.char_index].cooldown_timer_4;
+					combat_pause_char.cooldown_time_4 = global.arr_players[global.char_index].cooldown_time_4;
+					
+			
+			// Checks if players exist, if it does replace with combat pause object
+			}else if(global.arr_npc[i] == global.arr_active_pcs[n])
 			{
 				var combat_pause_char = instance_create_layer(global.arr_npc[i].x, global.arr_npc[i].y, "Combat_Paused", global.arr_combat_pause_npc[i]);
 					// Transfer stats ** MUST ADD REMAINING STATS AND TIMERS **
@@ -41,7 +59,23 @@ function scr_combat_pause()
 					combat_pause_char.max_hp = global.arr_npc[i].max_hp;
 					combat_pause_char.active_power = global.arr_npc[i].active_power;
 					combat_pause_char.active_armor = global.arr_npc[i].active_armor;
-					combat_pause_char.max_armor = global.arr_npc[i].max_armor;	
+					combat_pause_char.max_armor = global.arr_npc[i].max_armor;
+					
+					combat_pause_char.active_power = global.arr_npc[i].active_power;
+	
+					// Cooldowns
+					combat_pause_char.cooldown_1 = global.arr_npc[i].cooldown_1;
+					combat_pause_char.cooldown_timer_1 = global.arr_npc[i].cooldown_timer_1;
+					combat_pause_char.cooldown_time_1 = global.arr_npc[i].cooldown_time_1;
+					combat_pause_char.cooldown_2 = global.arr_npc[i].cooldown_2;
+					combat_pause_char.cooldown_timer_2 = global.arr_npc[i].cooldown_timer_2;
+					combat_pause_char.cooldown_time_2 = global.arr_npc[i].cooldown_time_2;
+					combat_pause_char.cooldown_3 = global.arr_npc[i].cooldown_3;
+					combat_pause_char.cooldown_timer_3 = global.arr_npc[i].cooldown_timer_3;
+					combat_pause_char.cooldown_time_3 = global.arr_npc[i].cooldown_time_3;
+					combat_pause_char.cooldown_4 = global.arr_npc[i].cooldown_4;
+					combat_pause_char.cooldown_timer_4 = global.arr_npc[i].cooldown_timer_4;
+					combat_pause_char.cooldown_time_4 = global.arr_npc[i].cooldown_time_4;
 		
 			}else // Debug
 			{
@@ -62,8 +96,8 @@ function scr_combat_pause()
 	buffer_get_surface(global.combat_pause_surf_buffer, global.combat_pause_surf, 0);
 	
 	
-	
 	instance_deactivate_object(all);
 	instance_activate_object(game_manager);
 	instance_activate_object(obj_com_pause_parent);
+	instance_activate_object(obj_com_pause_npc_parent);
 }

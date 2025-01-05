@@ -77,10 +77,10 @@ randomise()
 			global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 			
 			// Array for holding active players and npcs objects
-			global.arr_active_pcs = array_create(0)
+			global.arr_active_pcs = array_create(0);
 			
 			// Array for holding active players and npcs names
-			global.arr_active_pcs_names = array_create(0)
+			global.arr_active_pcs_names = array_create(0);
 			
 			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
 			global.char_index = 1;
@@ -89,10 +89,8 @@ randomise()
 			global.max_pcs = 4;
 			
 			// Total number of active PCs
-			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent)
-			show_debug_message("global.total_active_pcs: " + string(global.total_active_pcs));
+			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
 			
-
 			
 		#endregion Swapping Characters
 	

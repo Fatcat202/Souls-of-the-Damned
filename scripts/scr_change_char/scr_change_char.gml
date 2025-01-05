@@ -68,11 +68,12 @@ var player = instance_create_layer(global.arr_npc[global.char_index].x, global.a
 	player.cooldown_timer_4 = global.arr_npc[global.char_index].cooldown_timer_4;
 	player.cooldown_time_4 = global.arr_npc[global.char_index].cooldown_time_4;
 
-	// Destroy npc
-	instance_destroy(global.arr_npc[global.char_index]);
 
 	// Update selected_char
 	global.selected_char = change_char;
+	
+	// Destroy npc
+	instance_destroy(global.arr_npc[global.char_index]);
 
-
+	
 }
