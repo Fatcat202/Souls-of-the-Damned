@@ -5,13 +5,17 @@
 #macro TYPE 1
 #macro DELAY 2
 #macro SPAWN 3
+#macro RANDOM_SPAWN  r_spawn = random(num_spawn_points - 1)
 
 // Counts down frames until enemy is spawned
 timer = 0;
 
 // Adds a variation to spawn points.
 var spawn_range = 100;
-
+// Number of spawn points
+var num_spawn_points = 3;
+// Used for setting a new random spawn point
+var r_spawn;
 
 // **SPAWN DATA**
 waves = ds_list_create();
@@ -42,6 +46,9 @@ spawn[2, 1] = 560 + round(random(spawn_range))
 
 #region Rounds
 
+// To add randomness to spawn locations add between groups of enemies: RANDOM_SPAWN
+// If enemy is to have a random spawn: [wave, obj, delay, r_spawn]
+
 	#region Round 1
 
 		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 0]);
@@ -55,6 +62,13 @@ spawn[2, 1] = 560 + round(random(spawn_range))
 	#endregion Round 1
 
 	#region Round 2
+	
+		RANDOM_SPAWN
+			ds_list_add(waves, [2, obj_enemy_Cacodaemon, 0, r_spawn]);
+		RANDOM_SPAWN
+			ds_list_add(waves, [2, obj_enemy_Cacodaemon, 0, r_spawn]);
+		RANDOM_SPAWN
+			ds_list_add(waves, [2, obj_enemy_Cacodaemon, 0, r_spawn]);
 
 		ds_list_add(waves, [2, obj_enemy_Venedaemon, 0, 0]);
 		ds_list_add(waves, [2, obj_enemy_Venedaemon, 0, 1]);
