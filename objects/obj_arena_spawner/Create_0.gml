@@ -4,6 +4,7 @@
 #macro COMBAT_ROUND 0
 #macro TYPE 1
 #macro DELAY 2
+#macro SPAWN 3
 
 // Counts down frames until enemy is spawned
 timer = 0;
@@ -12,24 +13,55 @@ timer = 0;
 // **SPAWN DATA**
 waves = ds_list_create();
 
-// Format to create:
-// ds_list_add(waves, [round to spawn, object name, frame delay])
+// Format to create new enemy entry:
+// ds_list_add(waves, [round to spawn, object name, frame delay, spawn point])
 
-#region Round 1
 
-	ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0]);
+#region Spawn Points
+
+// Spawn points are set by being added to spawn[]
+// 1st place is spawn point number, 2nd is 0 for x and 1 for y
+
+// Spawn Location 0
+spawn[0, 0] = 716
+spawn[0, 1] = 522
+
+// Spawn Location 1
+spawn[1, 0] = 940
+spawn[1, 1] = 524
+
+// Spawn Location 2
+spawn[2, 0] = 1120
+spawn[2, 1] = 560
+
+#endregion Spawn Points
+
+
+#region Rounds
+
+	#region Round 1
+
+		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 0]);
+		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 1]);
+		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 2]);
 	
-#endregion Round 1
+	#endregion Round 1
 
-#region Round 2
+	#region Round 2
 
-	ds_list_add(waves, [2, obj_enemy_Venedaemon, 0]);
+		ds_list_add(waves, [2, obj_enemy_Venedaemon, 0, 0]);
+		ds_list_add(waves, [2, obj_enemy_Venedaemon, 0, 1]);
+		ds_list_add(waves, [2, obj_enemy_Venedaemon, 0, 2]);
 
-#endregion Round 2
+	#endregion Round 2
 
-#region Round 3
+	#region Round 3
 
-	ds_list_add(waves, [3, obj_enemy_Vulnadaemon, 0]);
+		ds_list_add(waves, [3, obj_enemy_Vulnadaemon, 0, 0]);
+		ds_list_add(waves, [3, obj_enemy_Vulnadaemon, 0, 1]);
+		ds_list_add(waves, [3, obj_enemy_Vulnadaemon, 0, 2]);
+	
 
-#endregion Round 3
+	#endregion Round 3
 
+#endregion Rounds
