@@ -21,7 +21,10 @@ if(global.spawn_triggered == true)
 	// Increment spawning timer
 	timer++;
 	
-
+	
+	// **THIS WORKS FINE**
+	
+	
 	// End this wave and reset spawning timer if all enemies are killed
 	if(global.remaining_enemies <= 0)
 	{

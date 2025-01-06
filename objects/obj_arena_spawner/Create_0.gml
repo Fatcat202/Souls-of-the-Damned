@@ -9,6 +9,9 @@
 // Counts down frames until enemy is spawned
 timer = 0;
 
+// Adds a variation to spawn points.
+var spawn_range = 100;
+
 
 // **SPAWN DATA**
 waves = ds_list_create();
@@ -23,16 +26,16 @@ waves = ds_list_create();
 // 1st place is spawn point number, 2nd is 0 for x and 1 for y
 
 // Spawn Location 0
-spawn[0, 0] = 716
-spawn[0, 1] = 522
+spawn[0, 0] = 716 + round(random(spawn_range))
+spawn[0, 1] = 522 + round(random(spawn_range))
 
 // Spawn Location 1
-spawn[1, 0] = 940
-spawn[1, 1] = 524
+spawn[1, 0] = 940 + round(random(spawn_range))
+spawn[1, 1] = 524 + round(random(spawn_range))
 
 // Spawn Location 2
-spawn[2, 0] = 1120
-spawn[2, 1] = 560
+spawn[2, 0] = 1120 + round(random(spawn_range))
+spawn[2, 1] = 560 + round(random(spawn_range))
 
 #endregion Spawn Points
 
@@ -42,7 +45,11 @@ spawn[2, 1] = 560
 	#region Round 1
 
 		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 0]);
+		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 0]);
+		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 0]);
+		
 		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 1]);
+		
 		ds_list_add(waves, [1, obj_enemy_Cacodaemon, 0, 2]);
 	
 	#endregion Round 1
