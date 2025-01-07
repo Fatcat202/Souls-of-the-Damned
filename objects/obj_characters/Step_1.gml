@@ -38,7 +38,7 @@ if(poison_coating == true)
 
 
 // ** KNOCKBACK **
-// Check character is stunned
+// Check character is knocked back
 if(knocked_back == true)
 {
 	// Increment cooldown each frame
@@ -54,10 +54,26 @@ if(knocked_back == true)
 		knocked_back = false;
 		knockback_cooldown_timer = 0;
 	}
-	
-	// TODO Place in here check for collisions to prevent clipping into objects
+
 	if(knockback_cooldown_timer > 3) scr_non_player_collision(speed);
 }
+
+
+// ** ARMOR REGAIN **
+// Check if armor can be regained
+if(can_regain_armor == false)
+{
+	// Increment cooldown each frame
+	armor_regain_cooldown_timer++;
+	if(armor_regain_cooldown_timer >= armor_regain_cooldown_time) 
+	{
+		// Reset changed conditions
+		can_regain_armor = true;
+		armor_regain_cooldown_timer = 0;
+	}
+}
+if(can_regain_armor == true) scr_regain_armor();
+
 
 
 

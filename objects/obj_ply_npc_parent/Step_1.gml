@@ -38,16 +38,27 @@ if(active_health <= 0)
 	image_angle = 90;
 	image_blend = c_red;
 
-	
-	 global.dead_char++;
-	
-	
-	//game_restart();
+	// global.dead_char++;	
 }
 
-// Restart the game if all PCs are dead
-//if(global.dead_char >= global.total_active_pcs) game_restart();
+// Added check to make sure players do not spontaniously resurrect
+if(is_dead == true && active_health > 0) active_health = -1;
 
+
+
+// Attempt at game restart on all characters being dead
+/*
+var dead_char = 0;
+for(var i = 0; i < global.total_active_pcs; i++)
+{
+	if(global.arr_active_pcs[i].is_dead == true)
+	{
+		dead_char++
+	}
+}
+
+if(dead_char >= global.total_active_pcs) game_restart();
+*/
 
 #endregion Death
 
