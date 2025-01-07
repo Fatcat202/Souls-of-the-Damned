@@ -419,6 +419,7 @@
     {"id":{"name":"scr_increment_all_alarms","path":"scripts/scr_increment_all_alarms/scr_increment_all_alarms.yy",},},
     {"id":{"name":"scr_instance_nth_nearest","path":"scripts/scr_instance_nth_nearest/scr_instance_nth_nearest.yy",},},
     {"id":{"name":"scr_knockback","path":"scripts/scr_knockback/scr_knockback.yy",},},
+    {"id":{"name":"scr_map_value","path":"scripts/scr_map_value/scr_map_value.yy",},},
     {"id":{"name":"scr_non_lethal","path":"scripts/scr_non_lethal/scr_non_lethal.yy",},},
     {"id":{"name":"scr_non_player_collision","path":"scripts/scr_non_player_collision/scr_non_player_collision.yy",},},
     {"id":{"name":"scr_Nyx_basic_attack","path":"scripts/scr_Nyx_basic_attack/scr_Nyx_basic_attack.yy",},},

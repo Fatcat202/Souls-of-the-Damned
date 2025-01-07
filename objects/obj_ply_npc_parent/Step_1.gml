@@ -24,7 +24,7 @@ if (non_lethal_tick mod non_lethal_tick_rate == 0)
 
 if(active_health <= 0)
 {
-	/*
+	
 	// Set death conditions
 	can_attack = false;
 	can_control = false;
@@ -40,9 +40,9 @@ if(active_health <= 0)
 
 	
 	 global.dead_char++;
-	*/
 	
-	game_restart();
+	
+	//game_restart();
 }
 
 // Restart the game if all PCs are dead

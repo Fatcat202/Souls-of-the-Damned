@@ -24,9 +24,30 @@ for(var i = 1; i <= global.enemy_index_length; i++)
 #region Loading instance stats
 
 // Assign active health that can be removed and added to
+
+// Health
 max_hp = global.enemy_stats[index].hp;
 active_health = max_hp;
+
+// Armor
 armor_percent = global.enemy_stats[index].armor;
+
+// Movement speed
+move_speed = global.enemy_stats[index].move_spd;
 
 #endregion
 
+#region Enemy AI variables
+
+	// Set range
+	view_range = 250;
+
+	// Set target position values and ID
+	target_pos_x = x;
+	target_pos_y = y;
+	target_id = noone;
+
+	// Array holding ID and weight of found target within range
+	arr_options = [];
+	
+#endregion Enemy AI Variables

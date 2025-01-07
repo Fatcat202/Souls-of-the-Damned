@@ -5,16 +5,22 @@
  
  
 Cacodaemon: IMPLEMENTED
--Tracks player and attempts to melee
+- Tracks player and attempts to melee
+
+- Attack in groups
 
 Venedaemon: IMPLEMENTED
--Shoots missiles at range, attacks with melee if close
+- Shoots missiles at range, attacks with melee if close
+
+- Target enemies that have ranged attacks
 
 Vulnadaemon: IMPLEMENTED
--Attacks fast, does more damage from behind, bleed
+- Attacks fast, does more damage from behind, bleed
+
+- Target enemies with no/low armor
 
 Lacridaemon
--DOT, can stagger character in area (only one lacridaemon at a time)
+- DOT, can stagger character in area (only one lacridaemon at a time)
 
 Humanoid:
 -
@@ -35,6 +41,8 @@ Sepsidaemon
 
 Leukodaemon
 - Ranged attacks, breath attack
+
+
 
 
 **HIGH LEVEL**
@@ -61,10 +69,19 @@ Alexi
 Dogan
 -
 
-Alexi(upgraded)
+Alexi(Anisydaemon)
 -
 
 Alarasis
+-
+
+Lider Ulrich
+-
+
+Johnny
+-
+
+Braismois
 -
 
 Apollyon
