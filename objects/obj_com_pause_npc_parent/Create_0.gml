@@ -16,3 +16,14 @@ for(var i = 1; i <= global.player_index_length; i++)
 			combat_pause_index = i;
 		}
 }
+
+
+
+// Assigning object name to global.arr_active_com_pause_pcs array
+var i = array_length(global.arr_active_com_pause_pcs);
+if(i < global.total_active_com_pause_pcs)
+{
+	global.arr_active_com_pause_pcs[i] = object_name;
+	global.arr_active_com_pause_pcs_names[i] = player_name;
+	scr_data_cross_reference(i)
+}

@@ -2,7 +2,7 @@
 function scr_take_dot()
 {
 	// Tracks ticks each step
-	tick++;
+	dot_tick++;
 	
 	// Check if there is armor, terminate if there is
 	if(active_armor <= 0) return;
@@ -16,7 +16,7 @@ function scr_take_dot()
 		var _can_kill = _debuff[dot_data.can_kill]
 	  
 		// When tick rate is reached, apply damage
-		if(tick >= _tick_rate) 
+		if(dot_tick >= _tick_rate) 
 		{
 			var _dmg = _debuff[dot_data.dmg];
 			
@@ -31,8 +31,6 @@ function scr_take_dot()
 					
 				// Set HP to -1 and end if it can kill
 				}else active_health = -1 return;
-			
-			
 			}else
 			{
 				// Do damage normally if not about to kill

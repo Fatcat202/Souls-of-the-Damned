@@ -28,8 +28,6 @@ if(i < global.total_active_pcs)
 }
 
 
-
-
 #endregion Assigning Character
 
 

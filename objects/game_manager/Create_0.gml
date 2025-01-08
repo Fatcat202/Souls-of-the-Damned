@@ -79,8 +79,14 @@ randomise()
 			// Array for holding active players and npcs objects
 			global.arr_active_pcs = array_create(0);
 			
+			// Array for holding active combat paused players and npcs objects
+			global.arr_active_com_pause_pcs = array_create(0);
+			
 			// Array for holding active players and npcs names
 			global.arr_active_pcs_names = array_create(0);
+			
+			// Array for holding active combat paused players and npcs names
+			global.arr_active_com_pause_pcs_names = array_create(0);
 			
 			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
 			global.char_index = 1;
@@ -91,7 +97,10 @@ randomise()
 			// Total number of active PCs
 			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
 			
+			// Total number of active combat paused PCs
+			global.total_active_com_pause_pcs = instance_number(obj_com_pause_parent) + instance_number(obj_com_pause_npc_parent);
 			
+
 		#endregion Swapping Characters
 	
 	#endregion Databse
