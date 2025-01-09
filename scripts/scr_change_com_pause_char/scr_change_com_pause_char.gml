@@ -6,13 +6,11 @@ function scr_change_com_pause_char(change_char)
 	// Bypass if attempting to swap to active character
 	if(global.selected_char == change_char) return;
 	
-	var current_total_pcs = array_length(global.arr_active_pcs)
-	
 	// Set global.char_index
 	scr_data_cross_reference(change_char - 1)
 	
 	// Create npc in place of player
-	var npc = instance_create_layer(obj_com_pause_parent.x, obj_com_pause_parent.y, "Combat_Paused", global.arr_combat_pause_npc[global.char_index]);
+	var npc = instance_create_layer(x, y, "Combat_Paused", global.arr_combat_pause_npc[index]);
 		// Transfer stats to npc from player
 	
 		// Health and armor
@@ -63,6 +61,7 @@ function scr_change_com_pause_char(change_char)
 		npc.poison_coating_timer = poison_coating_time;
 		npc.knockback_cooldown_timer = knockback_cooldown_timer;
 		npc.knockback_cooldown_time = knockback_cooldown_time;
+		
 
 		// Destroy player
 		instance_destroy(obj_com_pause_parent);
@@ -120,11 +119,12 @@ function scr_change_com_pause_char(change_char)
 		player.poison_coating_timer = global.arr_combat_pause_npc[global.char_index].poison_coating_time;
 		player.knockback_cooldown_timer = global.arr_combat_pause_npc[global.char_index].knockback_cooldown_timer;
 		player.knockback_cooldown_time = global.arr_combat_pause_npc[global.char_index].knockback_cooldown_time;
-		
+
 		
 	// Destroy npc
 	instance_destroy(global.arr_combat_pause_npc[global.char_index]);
 
 	// Update selected_char
 	global.selected_char = change_char;
+	show_debug_message("global.selected_char: " + string(global.selected_char))
 }

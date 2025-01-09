@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-
 function scr_combat_resume()
 {
 
@@ -17,6 +15,10 @@ function scr_combat_resume()
 	instance_destroy(obj_com_pause_parent);
 	instance_destroy(obj_com_pause_npc_parent);
 	
-	//scr_change_char(global.char_index);
+	// Clear active_com_pause array
+	global.arr_active_com_pause_pcs = -1;
+	global.arr_active_com_pause_pcs = array_create(0);
+	
+
 	
 }

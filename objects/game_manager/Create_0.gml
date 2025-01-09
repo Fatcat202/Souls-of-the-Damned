@@ -98,8 +98,7 @@ randomise()
 			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
 			
 			// Total number of active combat paused PCs
-			global.total_active_com_pause_pcs = instance_number(obj_com_pause_parent) + instance_number(obj_com_pause_npc_parent);
-			
+			global.total_active_com_pause_pcs = 0;
 
 		#endregion Swapping Characters
 	

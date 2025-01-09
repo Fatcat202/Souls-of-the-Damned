@@ -133,7 +133,7 @@ draw_set_font(fnt_default);
 	
 			// Displays text stating player name
 			draw_set_halign(fa_center);
-			draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, global.arr_players[global.char_index].player_name + "    Level: " + string(global.player_level))
+			draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Level: " + string(global.player_level))
 		
 		#endregion Player Name Text
 	
