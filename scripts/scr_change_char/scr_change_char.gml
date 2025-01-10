@@ -12,7 +12,7 @@ function scr_change_char(change_char)
 	// Create npc in place of player
 	var npc = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Players", global.arr_npc[index]);
 		// Transfer stats to npc from player
-	
+
 		// Health and armor
 		npc.active_health = active_health;
 		npc.max_hp = max_hp;
@@ -60,7 +60,7 @@ function scr_change_char(change_char)
 		npc.poison_coating_timer = poison_coating_time;
 		npc.knockback_cooldown_timer = knockback_cooldown_timer;
 		npc.knockback_cooldown_time = knockback_cooldown_time;
-	
+
 	
 	// Destroy player
 	instance_destroy(obj_player_parent);
@@ -118,7 +118,7 @@ function scr_change_char(change_char)
 		player.knockback_cooldown_timer = global.arr_npc[global.char_index].knockback_cooldown_timer;
 		player.knockback_cooldown_time = global.arr_npc[global.char_index].knockback_cooldown_time;
 
-
+	
 	// Update selected_char
 	global.selected_char = change_char;
 	

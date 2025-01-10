@@ -149,12 +149,12 @@ draw_set_font(fnt_default);
 			var select_healthbar_half_width = 20; // Half width of healthbars
 	
 			// Draw the sprite, name, and health of all active PCs
-			for(var i = 0; i < array_length(global.arr_active_pcs); i++)
+			for(var i = 0; i < ds_list_size(global.active_pc_list); i++)
 			{
 				// Detecting which sprite and stats to draw
 				for(var z = 1; z <= array_length(global.arr_players); z++)
 				{
-					if(object_get_name(global.arr_npc[z]) == global.arr_active_pcs[i] || object_get_name(global.arr_players[z]) == global.arr_active_pcs[i])
+					if(object_get_name(global.arr_npc[z]) == global.active_pc_list[| i] || object_get_name(global.arr_players[z]) == global.active_pc_list[| i])
 					{
 						char_index = z;
 						break;
@@ -169,7 +169,7 @@ draw_set_font(fnt_default);
 				// Separate sprite and text
 				char_x_start = char_x_start + 35
 				// Draw name
-				draw_text(char_x_start, char_y_start - 20, global.arr_active_pcs_names[i]);
+				draw_text(char_x_start, char_y_start - 20, global.active_pc_names_list[| i]);
 		
 		
 				#region HP and Armor healthbars
@@ -343,11 +343,11 @@ draw_set_font(fnt_default);
 	#endregion Commands
 	
 	
-	#region Player Name text
+	#region Combat Paused Player Name Text
 	
 		// Displays text stating player name
 		draw_set_halign(fa_center);
-		draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, global.arr_combat_pause[global.char_index].player_name + "    Level: " + string(global.player_level));
+		draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Level: " + string(global.player_level));
 
 			
 	#endregion Player Name Text
@@ -375,12 +375,12 @@ draw_set_font(fnt_default);
 		var select_healthbar_half_width = 20; // Half width of healthbars
 	
 		// Draw the sprite, name, and health of all combat paused pcs
-		for(var i = 0; i < array_length(global.arr_active_pcs); i++)
+		for(var i = 0; i < ds_list_size(global.active_pc_list); i++)
 		{
 			// Detecting which sprite and stats to draw
 			for(var z = 1; z <= array_length(global.arr_players); z++)
 			{
-				if(object_get_name(global.arr_npc[z]) == global.arr_active_pcs[i] || object_get_name(global.arr_players[z]) == global.arr_active_pcs[i])
+				if(object_get_name(global.arr_npc[z]) == global.active_pc_list[| i] || object_get_name(global.arr_players[z]) == global.active_pc_list[| i])
 				{
 					char_index = z;
 					break;
@@ -395,7 +395,7 @@ draw_set_font(fnt_default);
 			// Seporate sprite and text
 			char_x_start = char_x_start + 35
 			// Draw name
-			draw_text(char_x_start, char_y_start - 20, global.arr_active_pcs_names[i]);
+			draw_text(char_x_start, char_y_start - 20, global.active_pc_names_list[| i]);
 		
 		
 			#region HP and Armor healthbars

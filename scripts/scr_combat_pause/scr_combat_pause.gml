@@ -24,7 +24,7 @@ function scr_combat_pause()
 		for(var i = 1; i <= 8; i++)
 		{
 			// If player, replace player with com pause player
-			if(object_get_name(global.arr_players[i]) == global.arr_active_pcs[n])
+			if(object_get_name(global.arr_players[i]) == global.active_pc_list[| n])
 			{
 				var combat_pause_char = instance_create_layer(x, y, "Combat_Paused", global.arr_combat_pause[i]);	
 				{
@@ -78,7 +78,7 @@ function scr_combat_pause()
 					combat_pause_char.knockback_cooldown_time = knockback_cooldown_time;
 				}
 				// If npc, replace with combat pause npc
-			}else if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[n])
+			}else if(object_get_name(global.arr_npc[i]) == global.active_pc_list[| n])
 			{
 				var combat_pause_npc = instance_create_layer(global.arr_npc[i].x, global.arr_npc[i].y, "Combat_Paused", global.arr_combat_pause_npc[i]);
 					// Transfer stats
@@ -140,7 +140,7 @@ function scr_combat_pause()
 	// Capture game moment (except GUI)
 	global.combat_pause_surf = surface_create(global.res_w, global.res_h);
 	surface_set_target(global.combat_pause_surf);
-		//draw_surface(application_surface, 0, 0);
+	draw_surface(application_surface, 0, 0);
 	surface_reset_target();
 	
 	// Create buffer to back the surface up to in case it is lost

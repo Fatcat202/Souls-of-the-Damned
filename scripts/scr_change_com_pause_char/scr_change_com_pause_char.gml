@@ -6,9 +6,8 @@ function scr_change_com_pause_char(change_char)
 	// Bypass if attempting to swap to active character
 	if(global.selected_char == change_char) return;
 	
-	// Set global.char_index
 	scr_data_cross_reference(change_char - 1)
-	
+
 	// Create npc in place of player
 	var npc = instance_create_layer(x, y, "Combat_Paused", global.arr_combat_pause_npc[index]);
 		// Transfer stats to npc from player
@@ -123,8 +122,7 @@ function scr_change_com_pause_char(change_char)
 		
 	// Destroy npc
 	instance_destroy(global.arr_combat_pause_npc[global.char_index]);
-
+	
 	// Update selected_char
 	global.selected_char = change_char;
-	show_debug_message("global.selected_char: " + string(global.selected_char))
 }

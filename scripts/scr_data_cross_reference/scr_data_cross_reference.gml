@@ -9,8 +9,8 @@ function scr_data_cross_reference(referenced_char)
 	{
 		for(var i = 1; i <= array_length(global.arr_combat_pause); i++)
 		{
-			if(object_get_name(global.arr_combat_pause_npc[i]) == global.arr_active_com_pause_pcs[referenced_char]
-			|| object_get_name(global.arr_combat_pause[i]) == global.arr_active_com_pause_pcs[referenced_char])
+			if(object_get_name(global.arr_combat_pause_npc[i]) == global.active_pc_com_pause_list[| referenced_char]
+			|| object_get_name(global.arr_combat_pause[i]) == global.active_pc_com_pause_names_list[| referenced_char])
 			{
 				global.char_index = i;
 				break;
@@ -20,8 +20,8 @@ function scr_data_cross_reference(referenced_char)
 	{
 		for(var i = 1; i <= array_length(global.arr_players); i++)
 		{
-			if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[referenced_char]
-			|| object_get_name(global.arr_players[i]) == global.arr_active_pcs[referenced_char])
+			if(object_get_name(global.arr_npc[i]) == global.active_pc_list[| referenced_char]
+			|| object_get_name(global.arr_players[i]) == global.active_pc_list[| referenced_char])
 			{
 				global.char_index = i;
 				break;

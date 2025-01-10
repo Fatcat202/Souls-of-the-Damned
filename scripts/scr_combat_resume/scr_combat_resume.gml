@@ -1,6 +1,7 @@
 function scr_combat_resume()
 {
-
+	var swap_char = global.selected_char;
+	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
 	
@@ -16,9 +17,9 @@ function scr_combat_resume()
 	instance_destroy(obj_com_pause_npc_parent);
 	
 	// Clear active_com_pause array
-	global.arr_active_com_pause_pcs = -1;
-	global.arr_active_com_pause_pcs = array_create(0);
+	ds_list_clear(global.active_pc_com_pause_list)
+	ds_list_clear(global.active_pc_com_pause_names_list)
 	
+	scr_change_char(swap_char);
 
-	
 }

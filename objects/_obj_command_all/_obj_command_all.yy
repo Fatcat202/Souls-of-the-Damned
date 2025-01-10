@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_path",
+  "%Name":"_obj_command_all",
   "eventList":[],
   "managed":true,
-  "name":"obj_button_path",
+  "name":"_obj_command_all",
   "overriddenProperties":[],
   "parent":{
     "name":"Combat Pause",
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_button_path",
-    "path":"sprites/spr_button_path/spr_button_path.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

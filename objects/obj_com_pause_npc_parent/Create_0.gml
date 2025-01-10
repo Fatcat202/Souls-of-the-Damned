@@ -18,11 +18,19 @@ for(var i = 1; i <= global.player_index_length; i++)
 
 
 // Assigning object name to global.arr_active_com_pause_pcs array
-var i = array_length(global.arr_active_com_pause_pcs);
+var i = ds_list_size(global.active_pc_com_pause_list);
 if(i < global.total_active_com_pause_pcs)
 {
-	global.arr_active_com_pause_pcs[i] = object_name;
-	global.arr_active_com_pause_pcs_names[i] = player_name;
+	global.active_pc_com_pause_list[| i] = object_name;
+	global.active_pc_com_pause_names_list[| i] = player_name;
+	
+}else // If list is filled, replace object name instead
+{
+	// Find posision in active DS lists
+	var list_index = ds_list_find_index(global.active_pc_com_pause_names_list, player_name)
+	show_debug_message("list_index: " + string(list_index));
+	
+	// Replace position in active DS lists
+	ds_list_replace(global.active_pc_com_pause_list, list_index, object_name)
+	ds_list_replace(global.active_pc_com_pause_names_list, list_index, player_name)
 }
-show_debug_message("global.arr_active_com_pause_pcs: " + string(global.arr_active_com_pause_pcs))
-	show_debug_message("global.arr_active_com_pause_pcs_names: " + string(global.arr_active_com_pause_pcs_names))
