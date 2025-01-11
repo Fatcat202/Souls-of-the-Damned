@@ -3,6 +3,7 @@ function scr_com_resume_change_char(change_char)
 {
 	// **REPLACE CHARACTERS**
 
+	scr_data_cross_reference(change_char - 1)
 	
 	
 	// Create npc in place of player

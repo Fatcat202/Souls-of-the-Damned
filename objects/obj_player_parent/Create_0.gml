@@ -23,6 +23,7 @@
 		global.active_pc_list[| i] = object_name;
 		global.active_pc_names_list[| i] = player_name;
 		global.selected_char = i + 1;
+		pc_index = i + 1;
 
 	}else // If list is filled, replace object name instead
 	{
@@ -34,6 +35,7 @@
 		ds_list_replace(global.active_pc_list, list_index, object_name)
 		ds_list_replace(global.active_pc_names_list, list_index, player_name)
 		global.selected_char = list_index + 1;
+		pc_index = list_index + 1;
 	}
 	
 	
