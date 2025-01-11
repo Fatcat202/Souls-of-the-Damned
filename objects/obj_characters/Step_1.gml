@@ -1,6 +1,4 @@
 /// @description Timers
-// You can write your code in this editor
-
 
 
 // Characters are affected by Damage Over Time
@@ -24,23 +22,23 @@ if(stunned == true)
 }
 
 
-// ** POISON DEBUFF ABILITY **
+// ** POISON COATING ATTACK **
 // Check if cooldown ticking
-if(poison_debuff == true)
+if(poison_coating == true)
 {
 	// Increment cooldown each frame
-	poison_debuff_timer++;
-	if(poison_debuff_timer >= poison_debuff_time) 
+	poison_coating_timer++;
+	if(poison_coating_timer >= poison_coating_time) 
 	{
 		// Reset changed conditions
-		poison_debuff = false;
-		poison_debuff_time = 0;
+		poison_coating = false;
+		poison_coating_time = 0;
 	}
 }
 
 
 // ** KNOCKBACK **
-// Check character is stunned
+// Check character is knocked back
 if(knocked_back == true)
 {
 	// Increment cooldown each frame
@@ -50,15 +48,32 @@ if(knocked_back == true)
 		// Reset changed conditions
 		can_control = true;
 		can_damage = true;
+		can_move = true;
 		speed = 0;
 		direction = 0;
 		knocked_back = false;
 		knockback_cooldown_timer = 0;
 	}
-	
-	// TODO Place in here check for collisions to prevent clipping into objects
+
 	if(knockback_cooldown_timer > 3) scr_non_player_collision(speed);
 }
+
+
+// ** ARMOR REGAIN **
+// Check if armor can be regained
+if(can_regain_armor == false)
+{
+	// Increment cooldown each frame
+	armor_regain_cooldown_timer++;
+	if(armor_regain_cooldown_timer >= armor_regain_cooldown_time) 
+	{
+		// Reset changed conditions
+		can_regain_armor = true;
+		armor_regain_cooldown_timer = 0;
+	}
+}
+if(can_regain_armor == true) scr_regain_armor();
+
 
 
 

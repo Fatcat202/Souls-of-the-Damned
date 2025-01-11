@@ -8,8 +8,8 @@
   "name":"obj_Dogan_melee",
   "overriddenProperties":[],
   "parent":{
-    "name":"Melee",
-    "path":"folders/Objects/Attacks/Melee.yy",
+    "name":"Players",
+    "path":"folders/Objects/Attacks/Melee/Players.yy",
   },
   "parentObjectId":{
     "name":"obj_pmelee_parent",

@@ -6,6 +6,7 @@ function scr_knockback(length)
 	{
 		// Knockback
 		other.can_control = false;
+		other.can_move = false;
 		other.speed = 4
 		other.direction = point_direction(x ,y, other.x, other.y)
 		

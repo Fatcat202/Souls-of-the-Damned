@@ -6,7 +6,7 @@
   "name":"scr_Darien_basic_attack",
   "parent":{
     "name":"Darien Attacks",
-    "path":"folders/Scripts/Attacks/Darien Attacks.yy",
+    "path":"folders/Scripts/Attacks/Players/Darien Attacks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

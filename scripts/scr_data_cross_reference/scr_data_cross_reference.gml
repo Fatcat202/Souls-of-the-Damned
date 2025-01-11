@@ -2,12 +2,30 @@
 function scr_data_cross_reference(referenced_char)
 {
 	// Take name of active char and convert to allow cross reference with npc and player arrays
-	for(var i = 1; i <= 8; i++)
+	// Needed for some specific data transfers between objects and to display the player name in the hud
+	
+	// Check if combat paused
+	if(global.game_combat_paused == true)
 	{
-		if(object_get_name(global.arr_npc[i]) == global.arr_active_pcs[referenced_char] || object_get_name(global.arr_players[i]) == global.arr_active_pcs[referenced_char])
+		for(var i = 1; i <= array_length(global.arr_combat_pause); i++)
 		{
-			global.char_index = i;
-			break;
+			if(object_get_name(global.arr_combat_pause_npc[i]) == global.active_pc_com_pause_list[| referenced_char]
+			|| object_get_name(global.arr_combat_pause[i]) == global.active_pc_com_pause_names_list[| referenced_char])
+			{
+				global.char_index = i;
+				break;
+			}
+		}
+	} else // Not combat paused
+	{
+		for(var i = 1; i <= array_length(global.arr_players); i++)
+		{
+			if(object_get_name(global.arr_npc[i]) == global.active_pc_list[| referenced_char]
+			|| object_get_name(global.arr_players[i]) == global.active_pc_list[| referenced_char])
+			{
+				global.char_index = i;
+				break;
+			}
 		}
 	}
 }

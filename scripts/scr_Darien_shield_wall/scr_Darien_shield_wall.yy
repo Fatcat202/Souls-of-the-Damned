@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_Darien_shield_wall",
   "parent":{
-    "name":"Darien Attacks",
-    "path":"folders/Scripts/Attacks/Darien Attacks.yy",
+    "name":"Player Abilities",
+    "path":"folders/Scripts/Mythic/Player Abilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

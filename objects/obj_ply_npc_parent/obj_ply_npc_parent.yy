@@ -10,8 +10,8 @@
   "name":"obj_ply_npc_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Players",
-    "path":"folders/Objects/Characters/Players.yy",
+    "name":"Parents",
+    "path":"folders/Objects/Characters/Players/Parents.yy",
   },
   "parentObjectId":{
     "name":"obj_characters",
@@ -46,7 +46,7 @@
     {"$GMObjectProperty":"v1","%Name":"cooldown_time_2","filters":[],"listItems":[],"multiselect":false,"name":"cooldown_time_2","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"cooldown_time_3","filters":[],"listItems":[],"multiselect":false,"name":"cooldown_time_3","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"cooldown_time_4","filters":[],"listItems":[],"multiselect":false,"name":"cooldown_time_4","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"index","filters":[],"listItems":[],"multiselect":false,"name":"index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"is_dead","filters":[],"listItems":[],"multiselect":false,"name":"is_dead","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

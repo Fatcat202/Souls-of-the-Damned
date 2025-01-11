@@ -14,8 +14,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_characters","path":"objects/obj_characters/obj_characters.yy",},"propertyId":{"name":"can_control","path":"objects/obj_characters/obj_characters.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
-    "name":"Players",
-    "path":"folders/Objects/Characters/Players.yy",
+    "name":"Parents",
+    "path":"folders/Objects/Characters/Players/Parents.yy",
   },
   "parentObjectId":{
     "name":"obj_ply_npc_parent",

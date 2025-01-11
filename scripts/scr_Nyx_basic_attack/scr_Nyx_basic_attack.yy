@@ -6,7 +6,7 @@
   "name":"scr_Nyx_basic_attack",
   "parent":{
     "name":"Nyx Attacks",
-    "path":"folders/Scripts/Attacks/Nyx Attacks.yy",
+    "path":"folders/Scripts/Attacks/Players/Nyx Attacks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

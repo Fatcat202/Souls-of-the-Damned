@@ -9,7 +9,10 @@ if(global.spawn_triggered == true)
 		var next = ds_list_find_value(waves, i);
 		if(next[COMBAT_ROUND] == global.combat_round && next[DELAY] == timer)
 		{
-			instance_create_layer(x, y, "Enemies", next[TYPE]);
+			// Collect spawn points
+			var spawn_point = next[SPAWN];
+			// Create enemy
+			instance_create_layer(spawn[spawn_point, 0], spawn[spawn_point, 1], "Enemies", next[TYPE]);
 			global.remaining_enemies++
 			show_debug_message("ds_list_size : " + string(ds_list_size(waves)));
 		}	

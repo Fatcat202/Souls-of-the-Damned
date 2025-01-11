@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_track_player",
   "parent":{
-    "name":"Movement",
-    "path":"folders/Scripts/Movement.yy",
+    "name":"Enemy AI",
+    "path":"folders/Scripts/Enemy AI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

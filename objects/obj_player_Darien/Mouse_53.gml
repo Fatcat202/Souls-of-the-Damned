@@ -13,7 +13,7 @@ if(self.can_attack == true)
 	
 	}else if(active_power = 2 && cooldown_2 == true) // ****
 	{
-		
+		scr_Darien_Shield();
 		
 		// Set up attack cooldown
 		cooldown_2 = false;

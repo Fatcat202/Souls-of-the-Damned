@@ -9,8 +9,8 @@
   "name":"obj_pmelee_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Melee",
-    "path":"folders/Objects/Attacks/Melee.yy",
+    "name":"Players",
+    "path":"folders/Objects/Attacks/Melee/Players.yy",
   },
   "parentObjectId":null,
   "persistent":false,

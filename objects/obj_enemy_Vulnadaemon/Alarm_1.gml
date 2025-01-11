@@ -3,4 +3,6 @@
 
 can_attack = true;
 
+can_move = true;
+
 sprite_index = spr_vulna_passive;

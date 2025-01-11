@@ -6,7 +6,7 @@
   "name":"scr_Seki_teleport",
   "parent":{
     "name":"Seki Attacks",
-    "path":"folders/Scripts/Attacks/Seki Attacks.yy",
+    "path":"folders/Scripts/Attacks/Players/Seki Attacks.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

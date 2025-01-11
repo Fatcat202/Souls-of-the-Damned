@@ -4,13 +4,17 @@ function scr_damage(dmg)
 
 	// Script will check if enemy has armor, if they do then deal damage to armor
 	// If armor is destroyed then deal remaining damage to HP
-	
+
+	// Reset regain armor timer to 0 and set to being unable to regain armor
+	other.armor_regain_cooldown_timer = 0;
+	other.can_regain_armor = false;
 	
 	// Check if the enemy has armor
 	if (other.active_armor > 0)
 	{
 		// If there is armor, deal damage to armor
 		other.active_armor = other.active_armor - dmg;
+		other.armor_regain_cooldown_time = game_get_speed(gamespeed_fps) * global.regain_armor_timer;
 		
 		// Set armor to 0 if brought below 0
 		if(other.active_armor < 0) other.active_armor = 0;
@@ -23,13 +27,12 @@ function scr_damage(dmg)
 		if(other.active_armor > 0)
 		{
 			// Delay armor regeneration by armor regeneration time
-			other.can_regain_armor = false;
-			other.alarm[6] = game_get_speed(gamespeed_fps) * global.regain_armor_timer;
+			other.armor_regain_cooldown_time = game_get_speed(gamespeed_fps) * global.regain_armor_timer;
 		}else
 		{
 			// Delay armor regeneration by 150% armor regeneration time
 			other.can_regain_armor = false;
-			other.alarm[6] = game_get_speed(gamespeed_fps) * global.regain_armor_timer * 1.5;
+			other.armor_regain_cooldown_time = game_get_speed(gamespeed_fps) * global.regain_armor_timer * 1.5;
 		}
 	}else if(other.active_armor <= 0) // Apply damage if no armor
 	{
