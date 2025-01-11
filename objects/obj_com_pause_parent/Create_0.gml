@@ -24,6 +24,7 @@ if(i < global.total_active_com_pause_pcs)
 	global.active_pc_com_pause_list[| i] = object_name;
 	global.active_pc_com_pause_names_list[| i] = player_name;
 	global.selected_char = i + 1;
+	pc_index = i + 1;
 
 }else // If list is filled, replace object name instead
 {
@@ -35,6 +36,7 @@ if(i < global.total_active_com_pause_pcs)
 	ds_list_replace(global.active_pc_com_pause_list, list_index, object_name)
 	ds_list_replace(global.active_pc_com_pause_names_list, list_index, player_name)
 	global.selected_char = list_index + 1;
+	pc_index = list_index + 1;
 }
 
 
