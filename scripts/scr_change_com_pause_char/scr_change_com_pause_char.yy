@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_change_com_pause_char",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Changing Character",
+    "path":"folders/Scripts/Changing Character.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

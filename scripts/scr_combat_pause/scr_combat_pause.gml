@@ -13,10 +13,7 @@ function scr_combat_pause()
 	global.total_active_com_pause_pcs = global.total_active_pcs;
 	
 
-	// ** NOT WORKING AS THE NAME OF THE NPCs ARE NOT BEING TESTED **
 	// Checks if players exist, if it does replace with combat pause object
-	
-
 	// Loop through all active pcs
 	for(var n = 0; n < global.total_active_pcs; n++)
 	{

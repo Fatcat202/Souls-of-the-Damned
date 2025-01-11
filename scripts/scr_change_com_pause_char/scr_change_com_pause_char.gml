@@ -4,7 +4,7 @@ function scr_change_com_pause_char(change_char)
 	// **REPLACE CHARACTERS**
 
 	// Bypass if attempting to swap to active character
-	if(global.selected_char == change_char) return;
+	//if(global.selected_char == change_char) return;
 	
 	scr_data_cross_reference(change_char - 1)
 

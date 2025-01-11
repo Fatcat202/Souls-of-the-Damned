@@ -13,7 +13,6 @@ for(var i = 1; i <= global.player_index_length; i++)
 	if (player_name == string(global.arr_player_index_name[i]))
 	{
 		index = i;
-		global.selected_char = i;
 	}
 }
 
@@ -24,6 +23,7 @@ if(i < global.total_active_com_pause_pcs)
 {
 	global.active_pc_com_pause_list[| i] = object_name;
 	global.active_pc_com_pause_names_list[| i] = player_name;
+	global.selected_char = i + 1;
 
 }else // If list is filled, replace object name instead
 {
@@ -34,6 +34,7 @@ if(i < global.total_active_com_pause_pcs)
 	// Replace position in active DS lists
 	ds_list_replace(global.active_pc_com_pause_list, list_index, object_name)
 	ds_list_replace(global.active_pc_com_pause_names_list, list_index, player_name)
+	global.selected_char = list_index + 1;
 }
 
 

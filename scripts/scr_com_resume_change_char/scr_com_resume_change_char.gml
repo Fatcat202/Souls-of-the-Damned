@@ -1,12 +1,8 @@
 
-function scr_change_char(change_char)
+function scr_com_resume_change_char(change_char)
 {
 	// **REPLACE CHARACTERS**
 
-	// Bypass if attempting to swap to active character
-	//if(global.selected_char == change_char) return;
-
-	scr_data_cross_reference(change_char - 1)
 	
 	
 	// Create npc in place of player

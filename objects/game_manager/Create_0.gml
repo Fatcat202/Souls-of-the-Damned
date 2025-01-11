@@ -8,30 +8,30 @@ randomise()
 	#region Variables
 
 
-	#region database
+		#region database
 		
-		// Create player_index_length for tracking total number of players in csv
-		global.player_index_length = 0;
+			// Create player_index_length for tracking total number of players in csv
+			global.player_index_length = 0;
 
-		// Create player_stats array for tracking stats
-		global.player_stats[0] = 0
+			// Create player_stats array for tracking stats
+			global.player_stats[0] = 0
 
-		// Initialize player index arrays
-		global.arr_player_index_name[0] = "No valid player name";
-		global.arr_player_index_num[0] = 0;
+			// Initialize player index arrays
+			global.arr_player_index_name[0] = "No valid player name";
+			global.arr_player_index_num[0] = 0;
 
-		// The variable that initially changes when changing characters
-		global.selected_char = 1;
+			// The variable that initially changes when changing characters
+			global.selected_char = 1;
 
-		// Create enemy_index_length for tracking total number of enemy in csv
-		global.enemy_index_length = 0;
+			// Create enemy_index_length for tracking total number of enemy in csv
+			global.enemy_index_length = 0;
 
-		// Create enemy_stats array for tracking stats
-		global.enemy_stats[0] = 0
+			// Create enemy_stats array for tracking stats
+			global.enemy_stats[0] = 0
 
-		// Initialize enemy index arrays
-		global.arr_enemy_index_name[0] = "No valid enemy name";
-		global.arr_enemy_index_num[0] = 0;
+			// Initialize enemy index arrays
+			global.arr_enemy_index_name[0] = "No valid enemy name";
+			global.arr_enemy_index_num[0] = 0;
 			
 			
 		#region Swapping Characters
@@ -102,7 +102,7 @@ randomise()
 
 		#endregion Swapping Characters
 	
-	#endregion Databse
+	#endregion Database
 	
 	
 	#region Pausing
@@ -129,25 +129,25 @@ randomise()
 	
 	#region Misc
 	
-	// Sets default if a cutscene is active to false
-	global.cutscene_active = false;
+		// Sets default if a cutscene is active to false
+		global.cutscene_active = false;
 
-	// Sets time it takes to start regaining armor in seconds
-	global.regain_armor_timer = 6;
+		// Sets time it takes to start regaining armor in seconds
+		global.regain_armor_timer = 6;
 	
-	// Sets speed at which armor regains, divided with fps
-	global.regain_armor_speed = 20;
+		// Sets speed at which armor regains, divided with fps
+		global.regain_armor_speed = 20;
 	
-	// Sets how many pixel away objects must be from another object to collide 
-	// (x2 if both move towards each other)
-	global.collision_distance = 2;
+		// Sets how many pixel away objects must be from another object to collide 
+		// (x2 if both move towards each other)
+		global.collision_distance = 2;
 	
-	// Game resolution
-	global.res_w = 640;
-	global.res_h = 360;
+		// Game resolution
+		global.res_w = 640;
+		global.res_h = 360;
 	
-	// Tracks the total number of dead PCs
-	global.dead_char = 0;
+		// Tracks the total number of dead PCs
+		global.dead_char = 0;
 
 	
 	
@@ -172,18 +172,18 @@ randomise()
 		global.spawn_triggered = false;
 		
 		
-		
+	
 	#endregion Arena Mechanics
 	
 	
 	#region Camera
 	
-	// Storing previous frames mouse location in relation to GUI
-	global.mouse_x_previous = device_mouse_x_to_gui(0);
-	global.mouse_y_previous = device_mouse_y_to_gui(0);
+		// Storing previous frames mouse location in relation to GUI
+		global.mouse_x_previous = device_mouse_x_to_gui(0);
+		global.mouse_y_previous = device_mouse_y_to_gui(0);
 	
-	// Camera smoothing speed
-	global.cam_smoothing = 0.3;
+		// Camera smoothing speed
+		global.cam_smoothing = 0.3;
 	
 	
 	#endregion Camera
@@ -238,142 +238,146 @@ randomise()
 
 #region Player Stats
 
-var ds_player_stats_csv = load_csv("player_data.csv");
+	var ds_player_stats_csv = load_csv("player_data.csv");
 
-// Ensure the grid is valid
-if (ds_player_stats_csv == -1) {
-    show_error("Failed to load CSV file.", true);
-    exit;
-}
+	// Ensure the grid is valid
+	if (ds_player_stats_csv == -1) {
+	    show_error("Failed to load CSV file.", true);
+	    exit;
+	}
 
-// Initialize stats dictionary constructor
-function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_atk_spd = 0, _kb_percent = 0) constructor {
-	hp = _hp;
-	armor = _armor;
-	move_spd = _move_spd;
-	main_atk_dmg = _main_atk_dmg;
-	main_atk_spd = _main_atk_spd;
-	kb_percent = _kb_percent;
-}
+	// Initialize stats dictionary constructor
+	function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_atk_spd = 0, _kb_percent = 0) constructor {
+		hp = _hp;
+		armor = _armor;
+		move_spd = _move_spd;
+		main_atk_dmg = _main_atk_dmg;
+		main_atk_spd = _main_atk_spd;
+		kb_percent = _kb_percent;
+	}
 
-// Create player_stats struct array
-// **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
-global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	// Create player_stats struct array
+	// **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats(); 
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();	
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 
-// Assign all values from CSV file into stats database structs
-for(var i = 0; i < global.player_index_length; i++)
-{
-	var yy = i + 1;
-	var xx = 1;
+	// Assign all values from CSV file into stats database structs
+	for(var i = 0; i < global.player_index_length; i++)
+	{
+		var yy = i + 1;
+		var xx = 1;
 	
-	global.player_stats[yy].hp = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].move_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-	global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
-}
+		global.player_stats[yy].hp = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].move_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
+	
+	}
 
 
-// Assign data to player index arrays
-for(var p = 0; p < global.player_index_length; p++)
-{
-	var n = p + 1;
-	// Sets 1st place in array as names
-	global.arr_player_index_name[n] = ds_grid_get(ds_player_stats_csv, 0, n);
-	// Sets 2nd place in array as index
-	global.arr_player_index_num[n] = n;
-}
+	// Assign data to player index arrays
+	for(var p = 0; p < global.player_index_length; p++)
+	{
+		var n = p + 1;
+		// Sets 1st place in array as names
+		global.arr_player_index_name[n] = ds_grid_get(ds_player_stats_csv, 0, n);
+		// Sets 2nd place in array as index
+		global.arr_player_index_num[n] = n;
+	}
 
-
+		// Cleanup DS grid
+		ds_grid_destroy(ds_player_stats_csv);
+	
 #endregion Player Stats
 
 
 
 #region Enemy Stats
 
-var ds_enemy_stats_csv = load_csv("enemy_data.csv");
+	var ds_enemy_stats_csv = load_csv("enemy_data.csv");
 
-// Ensure the grid is valid
-if (ds_enemy_stats_csv == -1) {
-    show_error("Failed to load CSV file.", true);
-    exit;
-}
+	// Ensure the grid is valid
+	if (ds_enemy_stats_csv == -1) {
+	    show_error("Failed to load CSV file.", true);
+	    exit;
+	}
 
-// Initialize stats dictionary constructor
-function e_stats(_hp = 0, _armor = 0, _move_spd = 0, _melee_atk_dmg_1 = 0, _melee_atk_dmg_2 = 0, _ranged_atk_dmg_1 = 0, _ranged_atk_dmg_2 = 0, _kb_percent = 0, _is_flyer = 0) constructor {
-	hp = _hp;
-    armor = _armor;
-    move_spd = _move_spd;
-    melee_atk_dmg_1 = _melee_atk_dmg_1;
-	melee_atk_dmg_2 = _melee_atk_dmg_2;
-	ranged_atk_dmg_1 = _ranged_atk_dmg_1;
-	ranged_atk_dmg_2 = _ranged_atk_dmg_2;
-    kb_percent = _kb_percent;
-	is_flyer = _is_flyer;
-}
+	// Initialize stats dictionary constructor
+	function e_stats(_hp = 0, _armor = 0, _move_spd = 0, _melee_atk_dmg_1 = 0, _melee_atk_dmg_2 = 0, _ranged_atk_dmg_1 = 0, _ranged_atk_dmg_2 = 0, _kb_percent = 0, _is_flyer = 0) constructor {
+		hp = _hp;
+	    armor = _armor;
+	    move_spd = _move_spd;
+	    melee_atk_dmg_1 = _melee_atk_dmg_1;
+		melee_atk_dmg_2 = _melee_atk_dmg_2;
+		ranged_atk_dmg_1 = _ranged_atk_dmg_1;
+		ranged_atk_dmg_2 = _ranged_atk_dmg_2;
+	    kb_percent = _kb_percent;
+		is_flyer = _is_flyer;
+	}
 
-// Create enemy_stats struct array. Add another line with another added enemy.
-global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
-global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats();
-global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
+	// Create enemy_stats struct array. Add another line with another added enemy.
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats();
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
 
-// Assign all values from CSV file into stats database structs
-for(var i = 0; i < global.enemy_index_length; i++)
-{
-	var yy = i + 1;
-	var xx = 1;
+	// Assign all values from CSV file into stats database structs
+	for(var i = 0; i < global.enemy_index_length; i++)
+	{
+		var yy = i + 1;
+		var xx = 1;
 	
-	global.enemy_stats[yy].hp = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].armor = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].move_spd = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].melee_atk_dmg_1 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].melee_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].ranged_atk_dmg_1 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].ranged_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-	global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy);
+		global.enemy_stats[yy].hp = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].armor = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].move_spd = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].melee_atk_dmg_1 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].melee_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].ranged_atk_dmg_1 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].ranged_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy);
 
-}
+	}
 
-// Assign data to enemy index arrays
-for(var p = 0; p < global.enemy_index_length; p++)
-{
-	var n = p + 1;
-	// Sets 1st place in array as names
-	global.arr_enemy_index_name[n] = ds_grid_get(ds_enemy_stats_csv, 0, n);
-	// Sets 2nd place in array as index
-	global.arr_enemy_index_num[n] = n;
-}
+	// Assign data to enemy index arrays
+	for(var p = 0; p < global.enemy_index_length; p++)
+	{
+		var n = p + 1;
+		// Sets 1st place in array as names
+		global.arr_enemy_index_name[n] = ds_grid_get(ds_enemy_stats_csv, 0, n);
+		// Sets 2nd place in array as index
+		global.arr_enemy_index_num[n] = n;
+	}
+
+	// Cleanup DS grid
+	ds_grid_destroy(ds_enemy_stats_csv);
 
 #endregion Enemy Stats
 
 
 
 #region Camera
-// Resolution
-view_width = 640;
-view_height = 360;
 
-// Scaling (hardcoded for now)
-window_scale = 1;
+	// Resolution
+	view_width = 640;
+	view_height = 360;
 
-// Set size of window and center it
-window_set_size(view_width * window_scale, view_height * window_scale);
-alarm[0] = 1;
+	// Scaling (hardcoded for now)
+	window_scale = 1;
 
-surface_resize(application_surface, view_width * window_scale, view_height * window_scale);
+	// Set size of window and center it
+	window_set_size(view_width * window_scale, view_height * window_scale);
+	alarm[0] = 1;
 
-
-
+	surface_resize(application_surface, view_width * window_scale, view_height * window_scale);
 
 #endregion Camera
 
@@ -383,7 +387,7 @@ surface_resize(application_surface, view_width * window_scale, view_height * win
 
 
 
-#endregion Levels
+#endregion Levels TODO
 
 
 
@@ -391,15 +395,7 @@ surface_resize(application_surface, view_width * window_scale, view_height * win
 
 
 
-#endregion Items
-
-
-
-#region Combat Pausing TODO
-
-
-
-#endregion
+#endregion Items TODO
 
 
 
@@ -407,7 +403,7 @@ surface_resize(application_surface, view_width * window_scale, view_height * win
 
 
 
-#endregion Save Game
+#endregion Save Game TODO
 
 
 
@@ -416,6 +412,3 @@ surface_resize(application_surface, view_width * window_scale, view_height * win
 
 
 #endregion Load Game
-
-
-

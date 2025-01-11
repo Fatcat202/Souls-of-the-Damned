@@ -1,7 +1,5 @@
 /// @description Initial Creation
 
-event_inherited();
-
 #region Assigning Character
 
 	// Read name of object and assigns it to object_name
@@ -14,7 +12,7 @@ event_inherited();
 	{
 		if (player_name == string(global.arr_player_index_name[i]))
 		{
-			global.selected_char = i;
+			index = i;
 		}
 	}
 
@@ -24,6 +22,7 @@ event_inherited();
 	{
 		global.active_pc_list[| i] = object_name;
 		global.active_pc_names_list[| i] = player_name;
+		global.selected_char = i + 1;
 
 	}else // If list is filled, replace object name instead
 	{
@@ -34,15 +33,16 @@ event_inherited();
 		// Replace position in active DS lists
 		ds_list_replace(global.active_pc_list, list_index, object_name)
 		ds_list_replace(global.active_pc_names_list, list_index, player_name)
+		global.selected_char = list_index + 1;
 	}
+	
+	
 
 #endregion Assigning Character
 
 
 #region Loading instance stats
 
-	// Index for databases, changing characters, and other functions
-	index = global.selected_char;
 
 	// Health
 	max_hp = global.player_stats[index].hp;

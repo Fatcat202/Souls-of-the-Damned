@@ -1,5 +1,9 @@
 /// @description
 
+
+if(global.selected_char != index) scr_change_char(global.selected_char)
+
+
 #region Controls
 
 

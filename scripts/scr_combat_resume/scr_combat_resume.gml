@@ -1,6 +1,10 @@
 function scr_combat_resume()
 {
-	var swap_char = global.selected_char;
+
+	
+	// States that the game not combat paused
+	global.game_combat_paused = false;
+	global.combat_pause = false;
 	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
@@ -13,6 +17,7 @@ function scr_combat_resume()
 	
 	// Reactivate regular objects and destroy all combat pause objects
 	instance_activate_all();
+	
 	instance_destroy(obj_com_pause_parent);
 	instance_destroy(obj_com_pause_npc_parent);
 	
@@ -20,6 +25,5 @@ function scr_combat_resume()
 	ds_list_clear(global.active_pc_com_pause_list)
 	ds_list_clear(global.active_pc_com_pause_names_list)
 	
-	scr_change_char(swap_char);
-
+	
 }
