@@ -328,16 +328,16 @@ draw_set_font(fnt_default);
 	
 	#region Commands
 		
-		draw_sprite(spr_button_attack, 0, attack_x, attack_y)
+		instance_create_layer(attack_x, attack_y, "HUD", obj_button_attack)
 		attack_y += attack_spacing;
 		
-		draw_sprite(spr_button_defend, 0, attack_x, attack_y)
+		instance_create_layer(attack_x, attack_y, "HUD", obj_button_defend)
 		attack_y += attack_spacing;
 		
-		draw_sprite(spr_button_path, 0, attack_x, attack_y)
+		instance_create_layer(attack_x, attack_y, "HUD", obj_button_move)
 		attack_y += attack_spacing;
 		
-		draw_sprite(spr_button_follow, 0, attack_x, attack_y)
+		instance_create_layer(attack_x, attack_y, "HUD", obj_button_follow)
 		attack_y += attack_spacing;
 		
 	#endregion Commands

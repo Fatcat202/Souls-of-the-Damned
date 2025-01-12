@@ -1,6 +1,4 @@
 /// @description Controls
-// You can write your code in this editor
-
 
 
 #region Change Attacks
@@ -26,7 +24,6 @@
 
 
 #region Change Character 
-
 	var i = 1;
 	if(keyboard_check_pressed(ord(global.cont_char_1)))
 	{

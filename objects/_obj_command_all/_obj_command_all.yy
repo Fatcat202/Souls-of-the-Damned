@@ -10,8 +10,8 @@
     "path":"folders/Objects/Buttons/Combat Pause.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_parent",
-    "path":"objects/obj_button_parent/obj_button_parent.yy",
+    "name":"obj_menu_button_parent",
+    "path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

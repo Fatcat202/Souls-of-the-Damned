@@ -1,0 +1,17 @@
+Attack:
+
+Attack the closest enemy
+
+Defend:
+
+Remain still and attack closest enemy. Enemies are more inclined to attack
+
+
+Follow:
+
+Follow the player
+
+
+Move:
+
+Create a path and move to the selected location, must also either be set to attack or defend.

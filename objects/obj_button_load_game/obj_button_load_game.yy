@@ -5,15 +5,15 @@
   "managed":true,
   "name":"obj_button_load_game",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_parent/obj_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Load Game",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button_parent","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Load Game",},
   ],
   "parent":{
     "name":"Main Menu",
     "path":"folders/Objects/Buttons/Main Menu.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_parent",
-    "path":"objects/obj_button_parent/obj_button_parent.yy",
+    "name":"obj_menu_button_parent",
+    "path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

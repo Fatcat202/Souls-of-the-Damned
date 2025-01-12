@@ -76,19 +76,26 @@ randomise()
 			global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
 			global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 			
-			// DS list to hold active PCs
+			// DS list to hold active PC object names
 			global.active_pc_list = ds_list_create();
 			
 			// DS list to hold active PC names
 			global.active_pc_names_list = ds_list_create();
 			
-			// DS list to hold active PCs
+			// DS list to hold active com pause PC object names
 			global.active_pc_com_pause_list = ds_list_create();
 			
-			// DS list to hold active PC names
+			// DS list to hold active com pause PC names
 			global.active_pc_com_pause_names_list = ds_list_create();
 			
-			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
+			// DS list to hold all active PC objects
+			global.active_pc_object_list = ds_list_create();
+			
+			// DS list to hold active com pause PC objects
+			global.active_pc_com_pause_object_list = ds_list_create();
+			
+			
+			// Tracks active player index in player, npc, and combat paused DS lists. Default to 1
 			global.char_index = 1;
 			
 			// Maxiumum number of playable characters allowed at once

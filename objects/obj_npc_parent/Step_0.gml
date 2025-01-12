@@ -1,24 +1,25 @@
 // Behavior
 
-// Follow player if further than 100
-var range = 100 
-var within_range = collision_circle(x, y, range, obj_player_parent, true, true);
-	
-if(can_move == true)
+// Activate the command state
+
+
+if(command_state == "attack_state")
 {
-
-	// Check if player is within collision range
-	if(within_range == noone)
-	{
-		// Move towards player, avoiding solid objects along the way
-		mp_potential_step(obj_player_parent.x, obj_player_parent.y, move_spd, 1);
-		scr_sprite_direction(direction);
-		scr_non_player_collision(speed);
-
-	} else
-	{
-		// Remains still if no player is within range
-		speed = 0;
-
-	}
+	scr_attack();
+	
+	
+}else if(command_state == "defend_state")
+{
+	scr_defend();
+	
+	
+}else if(command_state == "move_state")
+{
+	scr_move();
+	
+}else if(command_state == "follow_state")
+{
+	
+	scr_follow()
+	
 }

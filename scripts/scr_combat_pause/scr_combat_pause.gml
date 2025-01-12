@@ -60,6 +60,7 @@ function scr_combat_pause()
 					combat_pause_char.can_heal = can_heal;
 					combat_pause_char.index = index;
 					combat_pause_char.active_power = active_power;
+					combat_pause_char.command_state = command_state;
 	
 					// Timers
 					combat_pause_char.dot_tick = dot_tick;
@@ -115,6 +116,7 @@ function scr_combat_pause()
 					combat_pause_npc.can_heal = global.arr_npc[i].can_heal;
 					combat_pause_npc.index = global.arr_npc[i].index;
 					combat_pause_npc.active_power = global.arr_npc[i].active_power;
+					combat_pause_npc.command_state = global.arr_npc[i].command_state;
 	
 					// Timers
 					combat_pause_npc.dot_tick = global.arr_npc[i].dot_tick;
@@ -134,7 +136,7 @@ function scr_combat_pause()
 	}
 	
 	
-	// Capture game moment (except GUI)
+	// Capture game moment (except GUI as GUI is rendered independently)
 	global.combat_pause_surf = surface_create(global.res_w, global.res_h);
 	surface_set_target(global.combat_pause_surf);
 	draw_surface(application_surface, 0, 0);

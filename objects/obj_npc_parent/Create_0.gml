@@ -25,6 +25,7 @@ if(i < global.total_active_pcs)
 {
 	global.active_pc_list[| i] = object_name;
 	global.active_pc_names_list[| i] = player_name;
+	global.active_pc_object_list[| i] = object_index;
 }else // If list is filled, replace object name instead
 {
 	// Find posision in active DS lists
@@ -34,6 +35,7 @@ if(i < global.total_active_pcs)
 	// Replace position in active DS lists
 	ds_list_replace(global.active_pc_list, list_index, object_name)
 	ds_list_replace(global.active_pc_names_list, list_index, player_name)
+	ds_list_replace(global.active_pc_object_list, list_index, object_index)
 }
 
 
@@ -57,4 +59,3 @@ collision_speed = move_spd + global.collision_distance;
 
 
 #endregion
-

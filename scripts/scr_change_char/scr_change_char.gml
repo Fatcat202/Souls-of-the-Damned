@@ -47,6 +47,7 @@ function scr_change_char(change_char)
 		npc.can_heal = can_heal;
 		npc.index = index;
 		npc.active_power = active_power;
+		npc.command_state = command_state;
 	
 		// Timers
 		npc.dot_tick = dot_tick;
@@ -104,6 +105,7 @@ function scr_change_char(change_char)
 		player.can_heal = global.arr_npc[global.char_index].can_heal;
 		player.index = global.arr_npc[global.char_index].index;
 		player.active_power = global.arr_npc[global.char_index].active_power;
+		player.command_state = global.arr_npc[global.char_index].command_state;
 	
 		// Timers
 		player.dot_tick = global.arr_npc[global.char_index].dot_tick;
