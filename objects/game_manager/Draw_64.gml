@@ -340,6 +340,9 @@ draw_set_font(fnt_default);
 		instance_create_layer(attack_x, attack_y, "HUD", obj_button_follow)
 		attack_y += attack_spacing;
 		
+		instance_create_layer(attack_x, attack_y, "HUD", obj_button_command_all)
+		attack_y += attack_spacing;
+		
 	#endregion Commands
 	
 	

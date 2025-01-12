@@ -175,6 +175,3 @@ if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_
 
 
 #endregion Controls
-
-
-#endregion

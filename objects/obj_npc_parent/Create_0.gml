@@ -39,7 +39,7 @@ if(i < global.total_active_pcs)
 }
 
 
-#endregion Assigning Character
+#endregion Assigning Character and Stats
 
 
 
@@ -58,4 +58,20 @@ move_spd = global.player_stats[index].move_spd;
 collision_speed = move_spd + global.collision_distance;
 
 
-#endregion
+#endregion Assigning Instance Stats
+
+
+#region AI Behavior Variables
+
+	// Set range
+	view_range = 250;
+
+	// Set target position values and ID
+	target_pos_x = x;
+	target_pos_y = y;
+	target_id = noone;
+
+	// Array holding ID and weight of found target within range
+	arr_options = [];
+	
+#endregion AI Behavior Variables

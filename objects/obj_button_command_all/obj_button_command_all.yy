@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"_obj_command_all",
-  "eventList":[],
+  "%Name":"obj_button_command_all",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"_obj_command_all",
+  "name":"obj_button_command_all",
   "overriddenProperties":[],
   "parent":{
     "name":"Combat Pause",
     "path":"folders/Objects/Buttons/Combat Pause.yy",
   },
   "parentObjectId":{
-    "name":"obj_menu_button_parent",
-    "path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",
+    "name":"obj_gui_button_parent",
+    "path":"objects/obj_gui_button_parent/obj_gui_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_button_command_all",
+    "path":"sprites/spr_button_command_all/spr_button_command_all.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

@@ -2,24 +2,40 @@
 
 // Activate the command state
 
-
-if(command_state == "attack_state")
+if(global.command_all == false) // If command_all is false affect only active character
 {
-	scr_attack();
+	if(command_state == "attack_state")
+	{
+		scr_attack();
 	
+	}else if(command_state == "defend_state")
+	{
+		scr_defend();
 	
-}else if(command_state == "defend_state")
+	}else if(command_state == "move_state")
+	{
+		scr_move();
+	
+	}else if(command_state == "follow_state")
+	{
+		scr_follow();
+	}
+} else // If command_all is true affect all NPCs
 {
-	scr_defend();
+	if(command_state == "attack_state")
+	{
+		with(obj_npc_parent) scr_attack();
 	
+	}else if(command_state == "defend_state")
+	{
+		with(obj_npc_parent) scr_defend();
 	
-}else if(command_state == "move_state")
-{
-	scr_move();
+	}else if(command_state == "move_state")
+	{
+		with(obj_npc_parent) scr_move();
 	
-}else if(command_state == "follow_state")
-{
-	
-	scr_follow()
-	
+	}else if(command_state == "follow_state")
+	{
+		with(obj_npc_parent) scr_follow();
+	}
 }

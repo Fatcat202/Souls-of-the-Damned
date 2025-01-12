@@ -94,7 +94,6 @@ randomise()
 			// DS list to hold active com pause PC objects
 			global.active_pc_com_pause_object_list = ds_list_create();
 			
-			
 			// Tracks active player index in player, npc, and combat paused DS lists. Default to 1
 			global.char_index = 1;
 			
@@ -114,21 +113,21 @@ randomise()
 	
 	#region Pausing
 	
-			// Sets default game pause state
-			global.game_paused = false
+		// Sets default game pause state
+		global.game_paused = false
 		
-			// Sets default game combat pause state
-			global.game_combat_paused = false
+		// Sets default game combat pause state
+		global.game_combat_paused = false
 	
-			// Sets default of if a pause can occour to false
-			global.can_pause = false;
+		// Sets default of if a pause can occour to false
+		global.can_pause = false;
 	
-			// Sets default of if a pause can occour to false
-			global.can_combat_pause = false;
+		// Sets default of if a pause can occour to false
+		global.can_combat_pause = false;
 			
-			// Creates combat_pause_surf and its buffer
-			global.combat_pause_surf = -1;
-			global.combat_pause_surf_buffer = -1;
+		// Creates combat_pause_surf and its buffer
+		global.combat_pause_surf = -1;
+		global.combat_pause_surf_buffer = -1;
 			
 			
 	#endregion Pausing
@@ -155,6 +154,9 @@ randomise()
 	
 		// Tracks the total number of dead PCs
 		global.dead_char = 0;
+		
+		// Used for commanding all PCs at once
+		global.command_all = false;
 
 	
 	
