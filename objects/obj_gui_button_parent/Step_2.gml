@@ -1,6 +1,6 @@
 /// @description Delete Self
 
-if(global.combat_pause == false)
+if(global.game_combat_paused == false)
 {
 	instance_destroy();
 }
