@@ -4,11 +4,7 @@
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
-
-
 // Movement
-
-
 var within_range = false;
 if(can_move == true)
 {

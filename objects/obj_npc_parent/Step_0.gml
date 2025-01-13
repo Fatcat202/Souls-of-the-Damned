@@ -39,3 +39,5 @@ if(global.command_all == false) // If command_all is false affect only active ch
 		with(obj_npc_parent) scr_follow();
 	}
 }
+
+
