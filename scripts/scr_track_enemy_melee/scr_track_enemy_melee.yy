@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_track_enemy_melee",
   "parent":{
-    "name":"Movement",
-    "path":"folders/Scripts/Movement.yy",
+    "name":"Character AI",
+    "path":"folders/Scripts/Character AI.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

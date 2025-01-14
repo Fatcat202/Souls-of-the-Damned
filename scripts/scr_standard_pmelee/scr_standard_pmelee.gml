@@ -5,7 +5,7 @@ function scr_standard_pmelee(){
 	object_set_sprite(obj_pmelee_parent, spr_melee_attack);
 	
 	// Melee attack that does damage
-		melee_atk = instance_create_layer(obj_player_parent.x + 30, obj_player_parent.y, "Projectiles", obj_pmelee_parent); 
+		melee_atk = instance_create_layer(x + 30, y, "Projectiles", obj_pmelee_parent); 
 		melee_atk.direction = 0;
 		
 		// Check what direction sprite is facing

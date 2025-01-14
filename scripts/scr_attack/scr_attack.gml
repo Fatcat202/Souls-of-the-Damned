@@ -1,7 +1,7 @@
 function scr_attack()
 {
 	#region Targeting AI
-
+	
 		#region Set up Weights
 	
 			// Create list to store targets in
