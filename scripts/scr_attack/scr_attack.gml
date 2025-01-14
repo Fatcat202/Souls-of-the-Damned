@@ -39,13 +39,13 @@ function scr_attack()
 						case obj_enemy_Cacodaemon:
 				
 							// Set initial weight based on range
-							_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
+							_weight = scr_enemy_default_weight(obj_enemy_Cacodaemon, dis, view_range)
 			
 						break;
 						case obj_enemy_Venedaemon:
 					
 							// Set initial weight based on range
-							_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
+							_weight = scr_enemy_default_weight(obj_enemy_Cacodaemon, dis, view_range)
 					
 						break;
 						case obj_enemy_Vulnadaemon:

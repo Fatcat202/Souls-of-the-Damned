@@ -9,8 +9,8 @@
   "name":"obj_arena_spawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Characters/Enemies.yy",
+    "name":"Spawner",
+    "path":"folders/Objects/Characters/Spawner.yy",
   },
   "parentObjectId":null,
   "persistent":false,
