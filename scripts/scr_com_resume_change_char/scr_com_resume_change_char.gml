@@ -45,6 +45,9 @@ function scr_com_resume_change_char(change_char)
 		npc.index = index;
 		npc.active_power = active_power;
 		npc.command_state = command_state;
+		npc.command_state_previous = command_state_previous;
+		npc.move_to_x = move_to_x;
+		npc.move_to_y = move_to_y;
 	
 		// Timers
 		npc.dot_tick = dot_tick;
@@ -103,6 +106,9 @@ function scr_com_resume_change_char(change_char)
 		player.index = global.arr_npc[global.char_index].index;
 		player.active_power = global.arr_npc[global.char_index].active_power;
 		player.command_state = global.arr_npc[global.char_index].command_state;
+		player.command_state_previous = global.arr_npc[global.char_index].command_state_previous;
+		player.move_to_x = global.arr_npc[global.char_index].move_to_x;
+		player.move_to_y = global.arr_npc[global.char_index].move_to_y;
 	
 		// Timers
 		player.dot_tick = global.arr_npc[global.char_index].dot_tick;

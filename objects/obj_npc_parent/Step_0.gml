@@ -14,7 +14,9 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	
 	}else if(command_state == "move_state")
 	{
-		scr_move();
+		var path = path_add();
+		scr_pathfinding(move_to_x, move_to_y, move_spd, global.mp_grid_player, path, 0);
+		//command_state = command_state_previous;
 	
 	}else if(command_state == "follow_state")
 	{
@@ -32,7 +34,11 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	
 	}else if(command_state == "move_state")
 	{
-		with(obj_npc_parent) scr_move();
+		with(obj_npc_parent)
+		{
+			var path = path_add();
+			scr_pathfinding(move_to_x, move_to_y, move_spd, global.mp_grid_player, path, 0);
+		}
 	
 	}else if(command_state == "follow_state")
 	{

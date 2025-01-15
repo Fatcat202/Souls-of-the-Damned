@@ -1,5 +1,5 @@
 
-// Randomise randomisation seed
+// Randomise randomization seed
 randomise()
 
 #region Global Variables
@@ -157,7 +157,18 @@ randomise()
 		
 		// Used for commanding all PCs at once
 		global.command_all = false;
-
+		
+		global.cell_size = 32;
+		
+		// Create default mp grid for pathfinding
+		global.mp_grid = mp_grid_create(0, 0, room_width / global.cell_size, room_height / global.cell_size, global.cell_size, global.cell_size)
+		mp_grid_add_instances(global.mp_grid, obj_collision_parent, true);
+		
+		// Create mp grid for player usage
+		global.mp_grid_player = global.mp_grid;
+		
+		// Create mp grid for enemy usage
+		global.mp_grid_enemy = global.mp_grid;
 	
 	
 	#endregion Misc

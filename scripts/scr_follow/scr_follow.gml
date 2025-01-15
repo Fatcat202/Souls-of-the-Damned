@@ -1,5 +1,6 @@
 
-function scr_follow(){
+function scr_follow()
+{
 	// Follow player if further than 100
 	var range = 100 
 	var within_range = collision_circle(x, y, range, obj_player_parent, true, true);
@@ -25,4 +26,21 @@ function scr_follow(){
 		}
 	}
 
+
+/*
+	// Follow player if further than 100
+	var range = 100 
+	var within_range = collision_circle(x, y, range, obj_player_parent, true, true);
+	
+	var path = path_add();
+	if(can_move == true && point_distance(x, y, obj_player_parent.x, obj_player_parent.y) > range)
+	{
+	
+		mp_grid_clear_all(global.mp_grid_player)
+		mp_grid_add_instances(global.mp_grid_player, obj_enemy_parent, true);
+		mp_grid_add_instances(global.mp_grid_player, obj_collision_parent, true);
+		
+		scr_pathfinding(obj_player_parent.x, obj_player_parent.y, move_spd, global.mp_grid_player, path)	
+	}else speed = 0; path_delete(path);
+*/
 }

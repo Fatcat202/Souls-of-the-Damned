@@ -49,30 +49,41 @@
 
 	// Temporary to allow keyboard controls to test commands
 
-	if(keyboard_check_pressed(ord("Z")))
+	if(keyboard_check_pressed(ord("Z"))) // Command NPC to seek out nearby enemies
 	{
 		if(global.command_all == true)
 		{
-			obj_ply_npc_parent.command_state = "attack_state";
+			with obj_ply_npc_parent command_state = "attack_state";
 		}else command_state = "attack_state";
 		show_debug_message("** ATTACK STATE **");
 	}
-	if(keyboard_check_pressed(ord("X")))
+	if(keyboard_check_pressed(ord("X"))) // Command NPC to hold their ground
 	{
 		if(global.command_all == true)
 		{
-			obj_ply_npc_parent.command_state = "defend_state";
+			with obj_ply_npc_parent command_state = "defend_state";
 		}else command_state = "defend_state";
 		show_debug_message("** DEFEND STATE **");
 	}
-	if(keyboard_check_pressed(ord("C")))
+	if(mouse_check_button_pressed(mb_right)) // Select position to move to
 	{
 		if(global.command_all == true)
 		{
-			obj_ply_npc_parent.command_state = "move_state";
-		}else command_state = "move_state";
+			with obj_ply_npc_parent
+			{
+				previous_command_state = command_state;
+				command_state = "move_state";
+				move_to_x = mouse_x;
+				move_to_y = mouse_y;
+			}
+		}else
+		{
+			command_state = "move_state";
+			move_to_x = mouse_x;
+			move_to_y = mouse_y;
+		}
 	}
-	if(keyboard_check_pressed(ord("V")))
+	if(keyboard_check_pressed(ord("V"))) // Command NPC to follow player
 	{
 		if(global.command_all == true)
 		{

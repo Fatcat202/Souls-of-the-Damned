@@ -16,12 +16,18 @@ function scr_combat_resume()
 	// Reactivate regular objects
 	instance_activate_all();
 
-	
+	// Transfer command data to PCs
 	for(var i = 0; i < global.total_active_pcs; i++)
 	{
 		global.active_pc_object_list[| i].command_state = global.active_pc_com_pause_object_list[| i].command_state;
+		global.active_pc_object_list[| i].command_state_previous = global.active_pc_com_pause_object_list[| i].command_state_previous;
+		global.active_pc_object_list[| i].move_to_x = global.active_pc_com_pause_object_list[| i].move_to_x;
+		global.active_pc_object_list[| i].move_to_y = global.active_pc_com_pause_object_list[| i].move_to_y;
 	}
 	obj_player_parent.command_state = obj_com_pause_parent.command_state;
+	obj_player_parent.command_state_previous = obj_com_pause_parent.command_state_previous;
+	obj_player_parent.move_to_x = obj_com_pause_parent.move_to_x;
+	obj_player_parent.move_to_y = obj_com_pause_parent.move_to_y;
 	
 	
 	// Destroy all combat pause objects

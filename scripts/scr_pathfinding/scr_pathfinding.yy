@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_move",
+  "%Name":"scr_pathfinding",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_move",
+  "name":"scr_pathfinding",
   "parent":{
-    "name":"NPC Commands",
-    "path":"folders/Scripts/NPC Commands.yy",
+    "name":"Movement",
+    "path":"folders/Scripts/Movement.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

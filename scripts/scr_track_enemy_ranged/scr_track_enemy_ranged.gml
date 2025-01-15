@@ -1,7 +1,9 @@
 
 function scr_track_enemy_ranged()
 {
-	// Movement
+	
+	// Move away from enemy if they come within range
+	
 	var within_range = false;
 	if(can_move == true)
 	{
