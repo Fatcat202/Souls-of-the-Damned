@@ -71,10 +71,6 @@
 	// Target pos for when ordered to move
 	target_move_x = x
 	target_move_y = y
-	
-	
-	
-
 
 #endregion Assigning Instance Stats
 

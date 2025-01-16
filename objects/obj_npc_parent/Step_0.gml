@@ -16,10 +16,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	
 	}else if(command_state == "move_state")
 	{
-		// Clear follow path if it has points
-		path_clear_points(follow_path)
 		scr_move()
-
 	
 	}else if(command_state == "follow_state")
 	{
@@ -39,7 +36,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	{
 		with(obj_npc_parent)
 		{
-			
+			scr_move();
 		}
 	
 	}else if(command_state == "follow_state")

@@ -1,5 +1,9 @@
 function scr_attack()
 {
+	path_clear_points(follow_path);
+	path_clear_points(move_path);
+	
+	
 	#region Targeting AI
 	
 		#region Set up Weights

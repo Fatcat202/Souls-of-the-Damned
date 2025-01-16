@@ -344,10 +344,6 @@ draw_set_font(fnt_default);
 		draw_sprite(spr_button_defend, 0, attack_x, attack_y)
 		attack_y += attack_spacing;
 		
-		//instance_create_layer(attack_x, attack_y, "HUD", obj_button_move)
-		draw_sprite(spr_button_path, 0, attack_x, attack_y)
-		attack_y += attack_spacing;
-		
 		//instance_create_layer(attack_x, attack_y, "HUD", obj_button_follow)
 		draw_sprite(spr_button_follow, 0, attack_x, attack_y)
 		attack_y += attack_spacing;

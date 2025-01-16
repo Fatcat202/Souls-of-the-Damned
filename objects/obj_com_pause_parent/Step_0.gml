@@ -78,13 +78,14 @@
 			}
 		}else
 		{
+			command_state_previous = command_state;
 			command_state = "move_state";
 			target_move_x = mouse_x;
 			target_move_y = mouse_y;
 			
 		}
 	}
-	if(keyboard_check_pressed(ord("V"))) // Command NPC to follow player
+	if(keyboard_check_pressed(ord("c"))) // Command NPC to follow player
 	{
 		if(global.command_all == true)
 		{
@@ -92,7 +93,7 @@
 		}else command_state = "follow_state";
 		show_debug_message("** FOLLOW STATE **")
 	}
-	if(keyboard_check_pressed(ord("B"))) // Toggle Command All
+	if(keyboard_check_pressed(ord("v"))) // Toggle Command All
 	{
 		if(global.command_all == true)
 		{
