@@ -21,13 +21,13 @@ function scr_combat_resume()
 	{
 		global.active_pc_object_list[| i].command_state = global.active_pc_com_pause_object_list[| i].command_state;
 		global.active_pc_object_list[| i].command_state_previous = global.active_pc_com_pause_object_list[| i].command_state_previous;
-		global.active_pc_object_list[| i].move_to_x = global.active_pc_com_pause_object_list[| i].move_to_x;
-		global.active_pc_object_list[| i].move_to_y = global.active_pc_com_pause_object_list[| i].move_to_y;
+		global.active_pc_object_list[| i].target_move_x = global.active_pc_com_pause_object_list[| i].target_move_x;
+		global.active_pc_object_list[| i].target_move_y = global.active_pc_com_pause_object_list[| i].target_move_y;
 	}
 	obj_player_parent.command_state = obj_com_pause_parent.command_state;
 	obj_player_parent.command_state_previous = obj_com_pause_parent.command_state_previous;
-	obj_player_parent.move_to_x = obj_com_pause_parent.move_to_x;
-	obj_player_parent.move_to_y = obj_com_pause_parent.move_to_y;
+	obj_player_parent.target_move_x = obj_com_pause_parent.target_move_x;
+	obj_player_parent.target_move_y = obj_com_pause_parent.target_move_y;
 	
 	
 	// Destroy all combat pause objects

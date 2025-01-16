@@ -1,5 +1,7 @@
 // Behavior
 
+scr_non_player_collision(move_spd);
+
 // Activate the command state
 
 if(global.command_all == false) // If command_all is false affect only active character
@@ -14,9 +16,10 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	
 	}else if(command_state == "move_state")
 	{
-		var path = path_add();
-		scr_pathfinding(move_to_x, move_to_y, move_spd, global.mp_grid_player, path, 0);
-		//command_state = command_state_previous;
+		// Clear follow path if it has points
+		path_clear_points(follow_path)
+		scr_move()
+
 	
 	}else if(command_state == "follow_state")
 	{
@@ -36,8 +39,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	{
 		with(obj_npc_parent)
 		{
-			var path = path_add();
-			scr_pathfinding(move_to_x, move_to_y, move_spd, global.mp_grid_player, path, 0);
+			
 		}
 	
 	}else if(command_state == "follow_state")

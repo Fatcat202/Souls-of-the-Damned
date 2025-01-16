@@ -62,8 +62,8 @@ function scr_combat_pause()
 					combat_pause_char.active_power = active_power;
 					combat_pause_char.command_state = command_state;
 					combat_pause_char.command_state_previous = command_state_previous;
-					combat_pause_char.move_to_x = move_to_x;
-					combat_pause_char.move_to_y = move_to_y;
+					combat_pause_char.target_move_x = target_move_x;
+					combat_pause_char.target_move_y = target_move_y;
 	
 					// Timers
 					combat_pause_char.dot_tick = dot_tick;
@@ -121,8 +121,8 @@ function scr_combat_pause()
 					combat_pause_npc.active_power = global.arr_npc[i].active_power;
 					combat_pause_npc.command_state = global.arr_npc[i].command_state;
 					combat_pause_npc.command_state_previous = global.arr_npc[i].command_state_previous;
-					combat_pause_npc.move_to_x = global.arr_npc[i].move_to_x;
-					combat_pause_npc.move_to_y = global.arr_npc[i].move_to_y;
+					combat_pause_npc.target_move_x = global.arr_npc[i].target_move_x;
+					combat_pause_npc.target_move_y = global.arr_npc[i].target_move_y;
 	
 					// Timers
 					combat_pause_npc.dot_tick = global.arr_npc[i].dot_tick;

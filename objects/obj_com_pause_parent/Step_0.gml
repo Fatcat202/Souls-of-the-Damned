@@ -73,14 +73,15 @@
 			{
 				previous_command_state = command_state;
 				command_state = "move_state";
-				move_to_x = mouse_x;
-				move_to_y = mouse_y;
+				target_move_x = mouse_x;
+				target_move_y = mouse_y;
 			}
 		}else
 		{
 			command_state = "move_state";
-			move_to_x = mouse_x;
-			move_to_y = mouse_y;
+			target_move_x = mouse_x;
+			target_move_y = mouse_y;
+			
 		}
 	}
 	if(keyboard_check_pressed(ord("V"))) // Command NPC to follow player
