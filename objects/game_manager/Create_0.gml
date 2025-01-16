@@ -118,6 +118,9 @@ randomise()
 		
 		// Sets default game combat pause state
 		global.game_combat_paused = false
+		
+		// Sets default game esc pause state
+		global.game_esc_paused = false
 	
 		// Sets default of if a pause can occour to false
 		global.can_pause = false;
@@ -128,6 +131,10 @@ randomise()
 		// Creates combat_pause_surf and its buffer
 		global.combat_pause_surf = -1;
 		global.combat_pause_surf_buffer = -1;
+		
+		// Creates esc_pause_surf and its buffer
+		global.esc_pause_surf = -1;
+		global.esc_pause_surf_buffer = -1;
 			
 			
 	#endregion Pausing

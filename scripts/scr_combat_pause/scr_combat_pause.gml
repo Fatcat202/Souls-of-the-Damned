@@ -1,5 +1,8 @@
 function scr_combat_pause()
 {
+	// Set combat pause to true
+	global.game_combat_paused = true;
+	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps)
 	
