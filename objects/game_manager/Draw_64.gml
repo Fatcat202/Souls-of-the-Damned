@@ -1,8 +1,6 @@
 /// @description HUD GUI
 
-// Check if ESC paused
-if(global.game_esc_paused == false)
-{
+
 	// ** VARIABLES **
 
 	// Half display width and height
@@ -22,12 +20,18 @@ if(global.game_esc_paused == false)
 	var attack_x = 620; // Starting x location
 	var attack_y = 20; // Starting y location
 	var attack_spacing = 36; // Space between cooldowns
+	
+	var esc_button_x = xx / 2;
+	var esc_button_y = 40;
 
 
 	// Set default font
 	draw_set_font(fnt_default);
 
 
+// Check if ESC paused
+if(global.game_esc_paused == false)
+{
 
 	#region Combat Round
 	
@@ -497,12 +501,17 @@ if(global.game_esc_paused == false)
 		draw_set_color(c_white)
 	draw_set_alpha(1);
 	
-	
+
 	// Pause background image
+	draw_sprite(spr_menu_esc_background, 0, global.res_w / 2, global.res_h / 2);
 	
 	
 	// Buttons
+
+	
+	
 	
 	
 	
 } #endregion ESC Paused
+

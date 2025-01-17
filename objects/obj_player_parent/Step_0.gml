@@ -3,7 +3,6 @@
 // Automatically change char if there was an issue with being changed to the right char
 if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_char)
 
-
 #region Controls
 
 
@@ -34,7 +33,7 @@ if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_
 		// Normalise vector to avoid speed boost when moving diagonally
 		if (_hspd != 0 && _vspd != 0)
 		{
-			var len = sqrt(_hspd * _hspd + _vspd * _vspd);
+			var len = sqrt((_hspd * _hspd) + (_vspd * _vspd));
 			_hspd /= len;
 			_vspd /= len;
 		}
