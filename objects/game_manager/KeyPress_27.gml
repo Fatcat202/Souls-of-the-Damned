@@ -1,6 +1,5 @@
 /// @description ESC Pause
 
-
 if(global.game_esc_paused = false)
 {
 	global.game_esc_paused = true;
@@ -8,5 +7,5 @@ if(global.game_esc_paused = false)
 }else 
 {
 	global.game_esc_paused = false;
-	scr_esc_resume()
+	scr_esc_resume();
 }

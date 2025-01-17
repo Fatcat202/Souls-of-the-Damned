@@ -3,7 +3,6 @@
 // Check if ESC paused
 if(global.game_esc_paused == false)
 {
-
 	// ** VARIABLES **
 
 	// Half display width and height
@@ -497,6 +496,12 @@ if(global.game_esc_paused == false)
 			draw_rectangle(0, 0, global.res_w, global.res_h, false)
 		draw_set_color(c_white)
 	draw_set_alpha(1);
+	
+	
+	// Pause background image
+	
+	
+	// Buttons
 	
 	
 	
