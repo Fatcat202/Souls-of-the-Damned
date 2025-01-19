@@ -4,11 +4,7 @@
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
-
-
 // Movement
-
-
 var within_range = false;
 if(can_move == true)
 {
@@ -44,12 +40,11 @@ if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
 }
 
 // Closest player or npc
-//var nearest = instance_nearest(x, y, obj_ply_npc_parent)
 
 var range = sprite_get_width(spr_standard_emelee);
 if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
 {
-	// Create blast object
+	// Create attack object
 	var melee = instance_create_layer(x, y, "Projectiles", obj_emelee_parent);
 		
 		// Set direction, and image angle

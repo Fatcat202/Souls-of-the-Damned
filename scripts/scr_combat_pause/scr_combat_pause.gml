@@ -1,5 +1,8 @@
 function scr_combat_pause()
 {
+	// Set combat pause to true
+	global.game_combat_paused = true;
+	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps)
 	
@@ -60,6 +63,10 @@ function scr_combat_pause()
 					combat_pause_char.can_heal = can_heal;
 					combat_pause_char.index = index;
 					combat_pause_char.active_power = active_power;
+					combat_pause_char.command_state = command_state;
+					combat_pause_char.command_state_previous = command_state_previous;
+					combat_pause_char.target_move_x = target_move_x;
+					combat_pause_char.target_move_y = target_move_y;
 	
 					// Timers
 					combat_pause_char.dot_tick = dot_tick;
@@ -115,6 +122,10 @@ function scr_combat_pause()
 					combat_pause_npc.can_heal = global.arr_npc[i].can_heal;
 					combat_pause_npc.index = global.arr_npc[i].index;
 					combat_pause_npc.active_power = global.arr_npc[i].active_power;
+					combat_pause_npc.command_state = global.arr_npc[i].command_state;
+					combat_pause_npc.command_state_previous = global.arr_npc[i].command_state_previous;
+					combat_pause_npc.target_move_x = global.arr_npc[i].target_move_x;
+					combat_pause_npc.target_move_y = global.arr_npc[i].target_move_y;
 	
 					// Timers
 					combat_pause_npc.dot_tick = global.arr_npc[i].dot_tick;
@@ -134,7 +145,8 @@ function scr_combat_pause()
 	}
 	
 	
-	// Capture game moment (except GUI)
+	
+	// Capture game moment (except GUI as GUI is rendered independently)
 	global.combat_pause_surf = surface_create(global.res_w, global.res_h);
 	surface_set_target(global.combat_pause_surf);
 	draw_surface(application_surface, 0, 0);
@@ -144,7 +156,6 @@ function scr_combat_pause()
 	if(buffer_exists(global.combat_pause_surf_buffer)) buffer_delete(global.combat_pause_surf_buffer);
 	global.combat_pause_surf_buffer = buffer_create(global.res_w * global.res_h * 4, buffer_fixed, 1);
 	buffer_get_surface(global.combat_pause_surf_buffer, global.combat_pause_surf, 0);
-	
 	
 	// Deactivate all but those needed
 	instance_deactivate_object(all);

@@ -11,6 +11,7 @@ function scr_part_systems_set_auto_update()
 		{
 			part_system_automatic_update(i, !global.game_combat_paused);
 			part_system_automatic_update(i, !global.game_paused);
+			part_system_automatic_update(i, !global.game_esc_paused);
 		}
 		i++
 	}

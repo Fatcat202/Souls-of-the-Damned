@@ -1,7 +1,7 @@
 
 function scr_track_player(range)
 {
-	// ** USED FOR ENEMIES **
+	// Old tracking system for enemies
 
 	var nearest, within_range = false;
 	

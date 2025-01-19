@@ -5,15 +5,15 @@
   "managed":true,
   "name":"obj_button_main_menu",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_parent/obj_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Main Menu",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button_parent","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Main Menu",},
   ],
   "parent":{
     "name":"ESC Menu",
     "path":"folders/Objects/Buttons/ESC Menu.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_parent",
-    "path":"objects/obj_button_parent/obj_button_parent.yy",
+    "name":"obj_menu_button_parent",
+    "path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

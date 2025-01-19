@@ -1,19 +1,21 @@
 {
   "$GMObject":"",
   "%Name":"obj_button_resume",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_button_resume",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_button_parent","path":"objects/obj_button_parent/obj_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_button_parent/obj_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Resume",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button_parent","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Resume",},
   ],
   "parent":{
     "name":"ESC Menu",
     "path":"folders/Objects/Buttons/ESC Menu.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_parent",
-    "path":"objects/obj_button_parent/obj_button_parent.yy",
+    "name":"obj_menu_button_parent",
+    "path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

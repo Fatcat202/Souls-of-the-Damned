@@ -42,85 +42,97 @@ scr_take_dot();
 					case obj_npc_Alok:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_npc_Alok.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_npc_Alok, dis, view_range);
 			
 					break;
 					case obj_player_Alok:
 					
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_player_Alok.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_player_Alok, dis, view_range);
 					
 					break;
 					case obj_npc_Darien:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_npc_Darien.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_npc_Darien, dis, view_range);
 			
 					break;
 					case obj_player_Darien:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_player_Darien.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_player_Darien, dis, view_range);
 			
 					break;
 					case obj_npc_Dogan:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_npc_Dogan.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_npc_Dogan, dis, view_range);
 			
 					break;
 					case obj_player_Dogan:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_player_Dogan.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_player_Dogan, dis, view_range);
 			
 					break;
 					case obj_npc_Garyrager:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_npc_Garyrager.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_npc_Garyrager, dis, view_range);
 			
 					break;
 					case obj_player_Garyrager:
 				
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_player_Garyrager.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_player_Garyrager, dis, view_range);
 			
 					break;
 					case obj_npc_Seki:
 			
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_npc_Seki.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_npc_Seki, dis, view_range);
 			
 					break;
 					case obj_player_Seki:
 			
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_player_Seki.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_player_Seki, dis, view_range);
 			
 					break;
 					case obj_npc_Xan:
 			
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_npc_Xan.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_npc_Xan, dis, view_range);
 			
 					break;
 					case obj_player_Xan:
 			
 						// Set initial weight based on range
-						_weight = round(scr_map_value(dis, view_range, 5, 0, 70));
-						if(obj_player_Xan.is_dead == true) _weight = 0;
+						_weight = scr_player_default_weight(obj_player_Xan, dis, view_range);
+			
+					break;
+					case obj_npc_Bronwin:
+			
+						// Set initial weight based on range
+						_weight = scr_player_default_weight(obj_npc_Bronwin, dis, view_range);
+			
+					break;
+					case obj_player_Bronwin:
+			
+						// Set initial weight based on range
+						_weight = scr_player_default_weight(obj_player_Bronwin, dis, view_range);
+			
+					break;
+					case obj_npc_Nyx:
+			
+						// Set initial weight based on range
+						_weight = scr_player_default_weight(obj_npc_Nyx, dis, view_range);
+			
+					break;
+					case obj_player_Nyx:
+			
+						// Set initial weight based on range
+						_weight = scr_player_default_weight(obj_player_Nyx, dis, view_range);
 			
 					break;
 				}

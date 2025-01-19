@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_button_defend",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_button_defend",
   "overriddenProperties":[],
@@ -10,8 +12,8 @@
     "path":"folders/Objects/Buttons/Combat Pause.yy",
   },
   "parentObjectId":{
-    "name":"obj_button_parent",
-    "path":"objects/obj_button_parent/obj_button_parent.yy",
+    "name":"obj_gui_button_parent",
+    "path":"objects/obj_gui_button_parent/obj_gui_button_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
