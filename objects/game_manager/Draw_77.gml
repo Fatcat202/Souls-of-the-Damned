@@ -1,4 +1,4 @@
-/// @description Pausing
+/// @description Pausing Buffers
 
 
 // Check if combat pause is active

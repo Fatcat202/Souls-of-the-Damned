@@ -1,8 +1,8 @@
 /// @description Draw Button
 
-
-// Draw Button
+surface_set_target(global.esc_pause_surf);
 draw_self();
+surface_reset_target();
 
 // Set Font
 draw_set_font(fnt_menu)

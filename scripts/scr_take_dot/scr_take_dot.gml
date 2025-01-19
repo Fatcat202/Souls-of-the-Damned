@@ -5,7 +5,7 @@ function scr_take_dot()
 	dot_tick++;
 	
 	// Check if there is armor, terminate if there is
-	if(active_armor <= 0) return;
+	if(active_armor > 0) return;
 	
 	// dot loop
 	for (var i = array_length(debuffs) - 1; i >= 0; --i)

@@ -21,8 +21,7 @@
 	var attack_y = 20; // Starting y location
 	var attack_spacing = 36; // Space between cooldowns
 	
-	var esc_button_x = xx / 2;
-	var esc_button_y = 40;
+
 
 
 	// Set default font
@@ -357,6 +356,10 @@ if(global.game_esc_paused == false)
 		
 			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_command_all)
 			draw_sprite(spr_button_command_all, 0, attack_x, attack_y)
+			if(global.command_all == false)
+			{
+				image_index = 0;
+			}else image_index = 1;
 			attack_y += attack_spacing;
 		
 		#endregion Commands
@@ -503,15 +506,9 @@ if(global.game_esc_paused == false)
 	
 
 	// Pause background image
-	draw_sprite(spr_menu_esc_background, 0, global.res_w / 2, global.res_h / 2);
-	
-	
-	// Buttons
+//	draw_sprite(spr_menu_esc_background, 0, global.res_w / 2, global.res_h / 2);
 
-	
-	
-	
-	
+
 	
 } #endregion ESC Paused
 

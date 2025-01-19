@@ -26,4 +26,6 @@ function scr_esc_pause()
 	// Deactivate all objects except game_manger
 	instance_deactivate_object(all);
 	instance_activate_object(game_manager)
+	
+	
 }

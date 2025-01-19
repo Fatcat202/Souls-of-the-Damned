@@ -75,6 +75,3 @@ if(can_regain_armor == false)
 if(can_regain_armor == true) scr_regain_armor();
 
 
-
-
-

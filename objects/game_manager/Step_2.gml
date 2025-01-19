@@ -3,14 +3,6 @@
 #macro CAMERA view_camera[0]
 
 
-var target_x = 0;
-var target_y = 0;
-var cam_x = camera_get_view_x(CAMERA);
-var cam_y = camera_get_view_y(CAMERA);
-var cam_w = camera_get_view_width(CAMERA);
-var cam_h = camera_get_view_height(CAMERA);
-
-
 // Panning the camera
 if(mouse_check_button(mb_middle))
 {
@@ -28,23 +20,23 @@ if(mouse_check_button(mb_middle))
 	if(instance_exists(obj_player_parent))
 	{
 		// Set camera to target obj_player_parent
-		target_x = obj_player_parent.x - cam_w / 2;
-		target_y = obj_player_parent.y - cam_h / 2;
+		cam_target_x = obj_player_parent.x - cam_w / 2;
+		cam_target_y = obj_player_parent.y - cam_h / 2;
 	
 	} else if(instance_exists(obj_com_pause_parent))
 	{
 		// Set camera to target obj_com_pause_parent
-		target_x = obj_com_pause_parent.x - cam_w / 2;
-		target_y = obj_com_pause_parent.y - cam_h / 2;
+		cam_target_x = obj_com_pause_parent.x - cam_w / 2;
+		cam_target_y = obj_com_pause_parent.y - cam_h / 2;
 	}
 	
 	// Prevent camera from leaving map
-	target_x = clamp(target_x, 0, room_height - cam_w);
-	target_y = clamp(target_y, 0, room_width - cam_h);
+	cam_target_x = clamp(cam_target_x, 0, room_height - cam_w);
+	cam_target_y = clamp(cam_target_y, 0, room_width - cam_h);
 	
 	// Set linear interpolation for camera movement smoothing
-	cam_x = lerp(cam_x, target_x, global.cam_smoothing);
-	cam_y = lerp(cam_y, target_y, global.cam_smoothing);
+	cam_x = lerp(cam_x, cam_target_x, global.cam_smoothing);
+	cam_y = lerp(cam_y, cam_target_y, global.cam_smoothing);
 }
 
 

@@ -262,6 +262,7 @@
     {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_enemy_Venedaemon","path":"objects/obj_enemy_Venedaemon/obj_enemy_Venedaemon.yy",},},
     {"id":{"name":"obj_enemy_Vulnadaemon","path":"objects/obj_enemy_Vulnadaemon/obj_enemy_Vulnadaemon.yy",},},
+    {"id":{"name":"obj_esc_menu","path":"objects/obj_esc_menu/obj_esc_menu.yy",},},
     {"id":{"name":"obj_gui_button_parent","path":"objects/obj_gui_button_parent/obj_gui_button_parent.yy",},},
     {"id":{"name":"obj_indest_projectile_parent","path":"objects/obj_indest_projectile_parent/obj_indest_projectile_parent.yy",},},
     {"id":{"name":"obj_menu_button_parent","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},},

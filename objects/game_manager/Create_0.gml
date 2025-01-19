@@ -211,6 +211,14 @@ randomise()
 	
 		// Camera smoothing speed
 		global.cam_smoothing = 0.3;
+		
+		
+		cam_target_x = 0;
+		cam_target_y = 0;
+		cam_x = camera_get_view_x(CAMERA);
+		cam_y = camera_get_view_y(CAMERA);
+		cam_w = camera_get_view_width(CAMERA);
+		cam_h = camera_get_view_height(CAMERA);
 	
 	
 	#endregion Camera
@@ -240,7 +248,7 @@ randomise()
 		global.cont_menu = "ESC"; // Find actual name
 		global.cont_combat_pause = "SPACE"; // Find actual name
 		global.cont_quick_save = "F2"; // Find actual name
-		global.cont_cam_panning = "P";
+		global.cont_cam_panning = mouse_check_button(mb_middle);
 	
 	#endregion Controls
 
@@ -410,8 +418,15 @@ randomise()
 
 
 
-#region Levels TODO
+#region ESC Menu
 
+	
+
+#endregion ESC MENU
+
+
+
+#region Levels TODO
 
 
 #endregion Levels TODO

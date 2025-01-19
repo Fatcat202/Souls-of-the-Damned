@@ -53,17 +53,31 @@
 	{
 		if(global.command_all == true)
 		{
-			with obj_ply_npc_parent command_state = "attack_state";
-		}else command_state = "attack_state";
-		show_debug_message("** ATTACK STATE **");
+			with (obj_ply_npc_parent)
+			{
+				command_state = "attack_state";
+			}
+			show_debug_message("** ALL ATTACK STATE **");
+		}else
+		{
+			command_state = "attack_state";
+			show_debug_message("** ATTACK STATE **");
+		}
 	}
 	if(keyboard_check_pressed(ord("X"))) // Command NPC to hold their ground
 	{
 		if(global.command_all == true)
 		{
-			with obj_ply_npc_parent command_state = "defend_state";
-		}else command_state = "defend_state";
-		show_debug_message("** DEFEND STATE **");
+			with (obj_ply_npc_parent)
+			{
+				command_state = "defend_state";
+			}
+			show_debug_message("** ALL DEFEND STATE **");
+		}else
+		{
+			command_state = "defend_state";
+			show_debug_message("** DEFEND STATE **");
+		}
 	}
 	if(mouse_check_button_pressed(mb_right)) // Select position to move to
 	{
@@ -75,8 +89,8 @@
 				command_state = "move_state";
 				target_move_x = mouse_x;
 				target_move_y = mouse_y;
-				show_debug_message("** MOVE STATE **");
 			}
+			show_debug_message("** ALL MOVE STATE **");
 		}else
 		{
 			command_state_previous = command_state;
@@ -91,9 +105,16 @@
 	{
 		if(global.command_all == true)
 		{
-			obj_ply_npc_parent.command_state = "follow_state";
-		}else command_state = "follow_state";
-		show_debug_message("** FOLLOW STATE **")
+			with (obj_ply_npc_parent)
+			{
+				command_state = "follow_state";
+			}
+			show_debug_message("** ALL FOLLOW STATE **");
+		}else
+		{
+			command_state = "follow_state";
+			show_debug_message("** FOLLOW STATE **");
+		}
 	}
 	if(keyboard_check_pressed(ord("V"))) // Toggle Command All
 	{
@@ -102,9 +123,6 @@
 			// Turn command_all off
 			global.command_all = false;
 		
-			// Set sprite frame to frame 0
-			image_speed = 0;
-			image_index = 0;
 			show_debug_message("** COMMAND ALL OFF **");
 		
 		}else if(global.command_all == false)
@@ -112,9 +130,6 @@
 			// Turn command_all on
 			global.command_all = true;
 		
-			// Set sprite frame to frame 1
-			image_speed = 0;
-			image_index = 1;
 			show_debug_message("** COMMAND ALL ON **");
 		}
 	}
