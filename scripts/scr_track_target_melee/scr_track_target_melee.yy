@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_track_enemy_ranged",
+  "%Name":"scr_track_target_melee",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_track_enemy_ranged",
+  "name":"scr_track_target_melee",
   "parent":{
     "name":"Character AI",
     "path":"folders/Scripts/Character AI.yy",

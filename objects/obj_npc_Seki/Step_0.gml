@@ -6,7 +6,7 @@ event_inherited()
 
 if(command_state == "attack_state")
 {
-	scr_track_enemy_ranged()();
+	scr_track_target_ranged(move_spd);
 	
 }
 

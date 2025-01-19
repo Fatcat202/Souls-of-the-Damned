@@ -2,6 +2,7 @@ function scr_move()
 {
 	// Clear all follow path points if there are any
 	path_clear_points(follow_path)
+	path_clear_points(attack_path);
 	
 	// Clear move path point if there are any, then create a new one
 	path_clear_points(move_path)

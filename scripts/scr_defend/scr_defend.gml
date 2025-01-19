@@ -1,6 +1,11 @@
 function scr_defend()
 {
-	// Hold Position
+	// Clear other potential paths
+	path_clear_points(follow_path);
+	path_clear_points(move_path);
+	path_clear_points(attack_path);
 	
+	
+	// Hold Position
 	move_spd = 0;
 }
