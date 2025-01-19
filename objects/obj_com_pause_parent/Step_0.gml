@@ -75,6 +75,7 @@
 				command_state = "move_state";
 				target_move_x = mouse_x;
 				target_move_y = mouse_y;
+				show_debug_message("** MOVE STATE **");
 			}
 		}else
 		{
@@ -82,10 +83,11 @@
 			command_state = "move_state";
 			target_move_x = mouse_x;
 			target_move_y = mouse_y;
+			show_debug_message("** MOVE STATE **");
 			
 		}
 	}
-	if(keyboard_check_pressed(ord("c"))) // Command NPC to follow player
+	if(keyboard_check_pressed(ord("C"))) // Command NPC to follow player
 	{
 		if(global.command_all == true)
 		{
@@ -93,7 +95,7 @@
 		}else command_state = "follow_state";
 		show_debug_message("** FOLLOW STATE **")
 	}
-	if(keyboard_check_pressed(ord("v"))) // Toggle Command All
+	if(keyboard_check_pressed(ord("V"))) // Toggle Command All
 	{
 		if(global.command_all == true)
 		{
@@ -103,6 +105,7 @@
 			// Set sprite frame to frame 0
 			image_speed = 0;
 			image_index = 0;
+			show_debug_message("** COMMAND ALL OFF **");
 		
 		}else if(global.command_all == false)
 		{
@@ -112,6 +115,7 @@
 			// Set sprite frame to frame 1
 			image_speed = 0;
 			image_index = 1;
+			show_debug_message("** COMMAND ALL ON **");
 		}
 	}
 #endregion Commands

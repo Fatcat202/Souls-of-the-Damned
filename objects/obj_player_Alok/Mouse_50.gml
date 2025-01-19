@@ -1,7 +1,7 @@
 /// @description Attacks
 
 // Check if attacks area allowed
-if(self.can_attack == true)
+if(can_attack == true)
 {	
 	// Attacks
 	if(active_power == 1 && cooldown_1 == true) // **Melee Attack**

@@ -1,6 +1,7 @@
 
 function scr_track_target_melee(move_spd)
 {
+	/*
 	// Movement
 	var within_range = false;
 	if(can_move == true)
@@ -20,4 +21,7 @@ function scr_track_target_melee(move_spd)
 			speed = 0;
 		}
 	}
+	*/
+	
+
 }
