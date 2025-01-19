@@ -14,7 +14,7 @@ var cam_h = camera_get_view_height(CAMERA);
 // Panning the camera
 if(mouse_check_button(mb_middle))
 {
-	// Compare mouse position with where it was last frame
+	// Compare mouse position with where it was last frame 
 	var move_x = device_mouse_x_to_gui(0) - global.mouse_x_previous;
 	var move_y = device_mouse_y_to_gui(0) - global.mouse_y_previous;
 	

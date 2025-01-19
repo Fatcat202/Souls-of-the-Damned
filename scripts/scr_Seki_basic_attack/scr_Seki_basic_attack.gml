@@ -1,10 +1,10 @@
 
-function scr_Seki_basic_attack()
+function scr_Seki_basic_attack(target_x, target_y)
 {
 	// Shoots a single magic blast dealing damage to the target it hits
-	seki_missile = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Projectiles", obj_Seki_missile); 
+	seki_missile = instance_create_layer(x, y, "Projectiles", obj_Seki_missile); 
 	seki_missile.speed = 6;
-	seki_missile.direction = point_direction(x, y, mouse_x, mouse_y);
+	seki_missile.direction = point_direction(x, y, target_x, target_y);
 	seki_missile.image_angle = seki_missile.direction + 90;
 		
 	// Cooldown

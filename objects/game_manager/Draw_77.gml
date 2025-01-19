@@ -1,5 +1,6 @@
 /// @description Pausing
 
+
 // Check if combat pause is active
 if(global.game_combat_paused == true)
 {
@@ -14,6 +15,7 @@ if(global.game_combat_paused == true)
 	
 	surface_reset_target();
 }
+
 
 // Check if esc pause is active
 if(global.game_esc_paused == true)

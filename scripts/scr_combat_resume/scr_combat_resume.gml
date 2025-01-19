@@ -5,11 +5,12 @@ function scr_combat_resume()
 	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
-	
-	
+
 	// Delete the drawn surface and its buffer
 	if(surface_exists(global.combat_pause_surf)) surface_free(global.combat_pause_surf); 
 	if(buffer_exists(global.combat_pause_surf_buffer)) buffer_delete(global.combat_pause_surf_buffer);
+
+	
 
 	
 	// Reactivate regular objects

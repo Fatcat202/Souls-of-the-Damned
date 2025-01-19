@@ -145,6 +145,7 @@ function scr_combat_pause()
 	}
 	
 	
+	
 	// Capture game moment (except GUI as GUI is rendered independently)
 	global.combat_pause_surf = surface_create(global.res_w, global.res_h);
 	surface_set_target(global.combat_pause_surf);
@@ -155,7 +156,6 @@ function scr_combat_pause()
 	if(buffer_exists(global.combat_pause_surf_buffer)) buffer_delete(global.combat_pause_surf_buffer);
 	global.combat_pause_surf_buffer = buffer_create(global.res_w * global.res_h * 4, buffer_fixed, 1);
 	buffer_get_surface(global.combat_pause_surf_buffer, global.combat_pause_surf, 0);
-	
 	
 	// Deactivate all but those needed
 	instance_deactivate_object(all);
