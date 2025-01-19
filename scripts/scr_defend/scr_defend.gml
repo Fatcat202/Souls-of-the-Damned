@@ -1,5 +1,11 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_defend(){
-
+function scr_defend()
+{
+	// Clear other potential paths
+	path_clear_points(follow_path);
+	path_clear_points(move_path);
+	path_clear_points(attack_path);
+	
+	
+	// Hold Position
+	move_spd = 0;
 }

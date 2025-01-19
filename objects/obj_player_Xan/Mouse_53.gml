@@ -5,7 +5,7 @@ if(self.can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true) // ****
 	{
-		scr_Xan_basic_attack();
+		scr_Xan_basic_attack(mouse_x, mouse_y);
 		
 		// Set up attack cooldown
 		cooldown_1 = false;
@@ -13,7 +13,7 @@ if(self.can_attack == true)
 	
 	}else if(active_power = 2 && cooldown_2 == true) // ****
 	{
-		scr_Xan_powerful_shot();
+		scr_Xan_powerful_shot(mouse_x, mouse_y);
 		
 		// Set up attack cooldown
 		cooldown_2 = false;

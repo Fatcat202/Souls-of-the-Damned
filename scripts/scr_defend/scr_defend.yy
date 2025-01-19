@@ -6,7 +6,7 @@
   "name":"scr_defend",
   "parent":{
     "name":"NPC Commands",
-    "path":"folders/Scripts/NPC Commands.yy",
+    "path":"folders/Scripts/Character AI/NPC Commands.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -7,7 +7,7 @@ function scr_increment_all_alarms()
 	with(all)
 	{
 		// Check if game is paused or if a cutscene is active. If not, exit script
-		if(global.cutscene_active && !global.game_paused && !global.game_combat_paused) continue;
+		if(global.cutscene_active && !global.game_paused && !global.game_combat_paused && !global.game_esc_paused) continue;
 		
 		// Itterate through all alarms
 		for(var i = 0; i < 12; i++)

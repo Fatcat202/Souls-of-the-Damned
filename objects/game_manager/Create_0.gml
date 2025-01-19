@@ -1,5 +1,5 @@
 
-// Randomise randomisation seed
+// Randomise randomization seed
 randomise()
 
 #region Global Variables
@@ -76,19 +76,25 @@ randomise()
 			global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
 			global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 			
-			// DS list to hold active PCs
+			// DS list to hold active PC object names
 			global.active_pc_list = ds_list_create();
 			
 			// DS list to hold active PC names
 			global.active_pc_names_list = ds_list_create();
 			
-			// DS list to hold active PCs
+			// DS list to hold active com pause PC object names
 			global.active_pc_com_pause_list = ds_list_create();
 			
-			// DS list to hold active PC names
+			// DS list to hold active com pause PC names
 			global.active_pc_com_pause_names_list = ds_list_create();
 			
-			// Tracks active player index in player, npc, and combat paused arrays. Default to 1
+			// DS list to hold all active PC objects
+			global.active_pc_object_list = ds_list_create();
+			
+			// DS list to hold active com pause PC objects
+			global.active_pc_com_pause_object_list = ds_list_create();
+			
+			// Tracks active player index in player, npc, and combat paused DS lists. Default to 1
 			global.char_index = 1;
 			
 			// Maxiumum number of playable characters allowed at once
@@ -107,21 +113,28 @@ randomise()
 	
 	#region Pausing
 	
-			// Sets default game pause state
-			global.game_paused = false
+		// Sets default game pause state
+		global.game_paused = false
 		
-			// Sets default game combat pause state
-			global.game_combat_paused = false
+		// Sets default game combat pause state
+		global.game_combat_paused = false
+		
+		// Sets default game esc pause state
+		global.game_esc_paused = false
 	
-			// Sets default of if a pause can occour to false
-			global.can_pause = false;
+		// Sets default of if a pause can occour to false
+		global.can_pause = false;
 	
-			// Sets default of if a pause can occour to false
-			global.can_combat_pause = false;
+		// Sets default of if a pause can occour to false
+		global.can_combat_pause = false;
 			
-			// Creates combat_pause_surf and its buffer
-			global.combat_pause_surf = -1;
-			global.combat_pause_surf_buffer = -1;
+		// Creates combat_pause_surf and its buffer
+		global.combat_pause_surf = -1;
+		global.combat_pause_surf_buffer = -1;
+		
+		// Creates esc_pause_surf and its buffer
+		global.esc_pause_surf = -1;
+		global.esc_pause_surf_buffer = -1;
 			
 			
 	#endregion Pausing
@@ -148,7 +161,21 @@ randomise()
 	
 		// Tracks the total number of dead PCs
 		global.dead_char = 0;
-
+		
+		// Used for commanding all PCs at once
+		global.command_all = false;
+		
+		global.cell_size = 32;
+		
+		// Create default mp grid for pathfinding
+		global.mp_grid = mp_grid_create(0, 0, room_width / global.cell_size, room_height / global.cell_size, global.cell_size, global.cell_size)
+		mp_grid_add_instances(global.mp_grid, obj_collision_parent, true);
+		
+		// Create mp grid for player usage
+		global.mp_grid_player = global.mp_grid;
+		
+		// Create mp grid for enemy usage
+		global.mp_grid_enemy = global.mp_grid;
 	
 	
 	#endregion Misc

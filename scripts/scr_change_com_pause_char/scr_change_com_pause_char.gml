@@ -47,6 +47,10 @@ function scr_change_com_pause_char(change_char)
 		npc.can_heal = can_heal;
 		npc.index = index;
 		npc.active_power = active_power;
+		npc.command_state = command_state;
+		npc.command_state_previous = command_state_previous;
+		npc.target_move_x = target_move_x;
+		npc.target_move_y = target_move_y;
 	
 		// Timers
 		npc.dot_tick = dot_tick;
@@ -105,6 +109,10 @@ function scr_change_com_pause_char(change_char)
 		player.can_heal = global.arr_combat_pause_npc[global.char_index].can_heal;
 		player.index = global.arr_combat_pause_npc[global.char_index].index;
 		player.active_power = global.arr_combat_pause_npc[global.char_index].active_power;
+		player.command_state = global.arr_combat_pause_npc[global.char_index].command_state;
+		player.command_state_previous = global.arr_combat_pause_npc[global.char_index].command_state_previous;
+		player.target_move_x = global.arr_combat_pause_npc[global.char_index].target_move_x;
+		player.target_move_y = global.arr_combat_pause_npc[global.char_index].target_move_y;
 	
 		// Timers
 		player.dot_tick = global.arr_combat_pause_npc[global.char_index].dot_tick;

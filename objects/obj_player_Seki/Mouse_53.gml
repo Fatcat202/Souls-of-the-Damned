@@ -7,7 +7,7 @@ if(self.can_attack == true)
 
 	if(active_power = 1 && cooldown_1 == true) // **SEKI MISSILE ATTACK**
 	{
-		scr_Seki_basic_attack();
+		scr_Seki_basic_attack(mouse_x, mouse_y);
 		
 		// Set up attack cooldown
 		cooldown_1 = false;

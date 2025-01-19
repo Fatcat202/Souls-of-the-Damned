@@ -3,7 +3,6 @@
 // Automatically change char if there was an issue with being changed to the right char
 if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_char)
 
-
 #region Controls
 
 
@@ -34,7 +33,7 @@ if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_
 		// Normalise vector to avoid speed boost when moving diagonally
 		if (_hspd != 0 && _vspd != 0)
 		{
-			var len = sqrt(_hspd * _hspd + _vspd * _vspd);
+			var len = sqrt((_hspd * _hspd) + (_vspd * _vspd));
 			_hspd /= len;
 			_vspd /= len;
 		}
@@ -153,28 +152,24 @@ if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_
 
 #region Change Character 
 
-	var i = 1;
 	if(keyboard_check_pressed(ord(global.cont_char_1)))
 	{
-		if(global.total_active_pcs > i) scr_change_char(1); i++
+		if(global.total_active_pcs >= 1) scr_change_char(1);
 	}
 	if(keyboard_check_pressed(ord(global.cont_char_2)))
 	{
-		if(global.total_active_pcs > i) scr_change_char(2); i++
+		if(global.total_active_pcs >= 2) scr_change_char(2);
 	}
 	if(keyboard_check_pressed(ord(global.cont_char_3)))
 	{
-		if(global.total_active_pcs > i) scr_change_char(3); i++
+		if(global.total_active_pcs >= 3) scr_change_char(3);
 	}
 	if(keyboard_check_pressed(ord(global.cont_char_4)))
 	{
-		if(global.total_active_pcs > i) scr_change_char(4); i++
+		if(global.total_active_pcs == 4) scr_change_char(4);
 	}
 
 #endregion Change Character
 
 
 #endregion Controls
-
-
-#endregion
