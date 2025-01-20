@@ -13,10 +13,7 @@ if(can_move == true)
 	// Check if player is within collision range
 	if(within_range == true)
 	{
-		// Move towards player, avoiding solid objects along the way
-		mp_potential_step(target_pos_x, target_pos_y, global.enemy_stats[index].move_spd, 1);
-		scr_sprite_direction(direction);
-		scr_non_player_collision(speed);
+		scr_track_target_melee()
 		
 		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;
@@ -39,6 +36,7 @@ if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
 	// End Cooldown
 	can_attack = true;
 	can_move = true;
+	sprite_index = spr_vulna_passive;
 }
 
 // Attack if within range
@@ -52,6 +50,8 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= ran
 		melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
 		melee.image_angle = melee.direction;
 		melee.index = index;
+		
+	sprite_index = spr_vulna_attack;
 	
 	// Restart cooldown
 	can_attack = false;

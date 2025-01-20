@@ -1,4 +1,4 @@
-/// @description Insert description here
+/// @description On Collision
 
 
 scr_damage(global.enemy_stats[index].melee_atk_dmg_1);
