@@ -80,6 +80,10 @@ function scr_combat_pause()
 					combat_pause_char.poison_coating_timer = poison_coating_time;
 					combat_pause_char.knockback_cooldown_timer = knockback_cooldown_timer;
 					combat_pause_char.knockback_cooldown_time = knockback_cooldown_time;
+					
+					
+					// Image Flip
+					combat_pause_char.image_xscale = image_xscale;
 				}
 				// If npc, replace with combat pause npc
 			}else if(object_get_name(global.arr_npc[i]) == global.active_pc_list[| n])
@@ -139,24 +143,38 @@ function scr_combat_pause()
 					combat_pause_npc.poison_coating_timer = global.arr_npc[i].poison_coating_time;
 					combat_pause_npc.knockback_cooldown_timer = global.arr_npc[i].knockback_cooldown_timer;
 					combat_pause_npc.knockback_cooldown_time = global.arr_npc[i].knockback_cooldown_time;
+					
+					
+					// Image Flip
+					combat_pause_npc.image_xscale = global.arr_npc[i].image_xscale;
 				}
 			}
 		}
 	}
 	
-	
-	
+
 	// Capture game moment (except GUI as GUI is rendered independently)
-	global.combat_pause_surf = surface_create(global.res_w, global.res_h);
-	surface_set_target(global.combat_pause_surf);
-	draw_surface(application_surface, 0, 0);
-	surface_reset_target();
 	
-	// Create buffer to back the surface up to in case it is lost
-	if(buffer_exists(global.combat_pause_surf_buffer)) buffer_delete(global.combat_pause_surf_buffer);
-	global.combat_pause_surf_buffer = buffer_create(global.res_w * global.res_h * 4, buffer_fixed, 1);
-	buffer_get_surface(global.combat_pause_surf_buffer, global.combat_pause_surf, 0);
 	
+	// Adding background sprite ** IN PROGRESS **
+	var spr_temp_background = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false, false, surface_get_width(application_surface) / 2, surface_get_height(application_surface) / 2)
+	
+	// Place new background sprite over where camera is located
+	var background_pause_layer = layer_get_id("Pause")
+	var background_pause_id = layer_background_get_id(background_pause_layer);
+	layer_background_sprite(background_pause_id, spr_temp_background)
+	layer_x(background_pause_layer, global.cam_x)
+	layer_y(background_pause_layer, global.cam_y)
+	
+	// Make pause layer visible
+	layer_background_visible(background_pause_id, true)
+
+	// Make background layer invisible
+	var background_layer = layer_get_id("Background")
+	var background_id = layer_background_get_id(background_layer);
+	layer_background_visible(background_id, false)
+
+
 	// Deactivate all but those needed
 	instance_deactivate_object(all);
 	instance_activate_object(game_manager);

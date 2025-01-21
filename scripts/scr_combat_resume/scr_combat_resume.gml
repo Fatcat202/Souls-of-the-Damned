@@ -6,11 +6,14 @@ function scr_combat_resume()
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
 
-	// Delete the drawn surface and its buffer
-	if(surface_exists(global.combat_pause_surf)) surface_free(global.combat_pause_surf); 
-	if(buffer_exists(global.combat_pause_surf_buffer)) buffer_delete(global.combat_pause_surf_buffer);
-
+	// Removing background sprite ** IN PROGRESS **
+	var background_pause_layer = layer_get_id("Pause")
+	var background_pause_id = layer_background_get_id(background_pause_layer);
+	layer_background_visible(background_pause_id, false)
 	
+	var background_layer = layer_get_id("Background")
+	var background_id = layer_background_get_id(background_layer);
+	layer_background_visible(background_id, true)
 
 	
 	// Reactivate regular objects
@@ -36,5 +39,5 @@ function scr_combat_resume()
 	
 	// Clear active_com_pause array
 	ds_list_clear(global.active_pc_com_pause_list)
-	ds_list_clear(global.active_pc_com_pause_names_list)	
+	ds_list_clear(global.active_pc_com_pause_names_list)
 }

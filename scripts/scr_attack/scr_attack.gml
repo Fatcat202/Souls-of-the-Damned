@@ -5,5 +5,5 @@ function scr_attack()
 	path_clear_points(move_path);
 
 
-
+	// Specific actions located in associated npc object
 }

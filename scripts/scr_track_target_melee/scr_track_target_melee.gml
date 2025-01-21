@@ -1,8 +1,8 @@
 
-function scr_track_target_melee()
+function scr_track_target_melee(range)
 {
-	// Move towards tracked target to attack
-	var range = 250;
+	// Move towards tracked target to attack using A* Grid
+	range = 250;
 
 	if(can_move == true)
 	{

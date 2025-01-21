@@ -5,7 +5,6 @@
 event_inherited()
 
 
-
 var within_range = false;
 if(can_move == true)
 {

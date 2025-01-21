@@ -10,22 +10,33 @@ function scr_esc_pause()
 	scr_increment_all_alarms();
 	
 	// Pauses all particle systems
-	scr_part_systems_set_auto_update();	
-
-	// Capture game moment (except GUI as GUI is rendered independently)
-	global.esc_pause_surf = surface_create(global.res_w, global.res_h);
-	surface_set_target(global.esc_pause_surf);
-	draw_surface(application_surface, 0, 0);
-	surface_reset_target();
+	scr_part_systems_set_auto_update();
 	
-	// Create buffer to back the surface up to in case it is lost
-	if(buffer_exists(global.esc_pause_surf_buffer)) buffer_delete(global.esc_pause_surf_buffer);
-	global.esc_pause_surf_buffer = buffer_create(global.res_w * global.res_h * 4, buffer_fixed, 1);
-	buffer_get_surface(global.esc_pause_surf_buffer, global.esc_pause_surf, 0);
+	if(!global.game_combat_paused)
+	{
+
+		// Adding background sprite ** IN PROGRESS **
+		var spr_temp_background = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false, false, surface_get_width(application_surface) / 2, surface_get_height(application_surface) / 2)
+	
+		// Place new background sprite over where camera is located
+		var background_pause_layer = layer_get_id("Pause")
+		var background_pause_id = layer_background_get_id(background_pause_layer);
+		layer_background_sprite(background_pause_id, spr_temp_background)
+		layer_x(background_pause_layer, global.cam_x)
+		layer_y(background_pause_layer, global.cam_y)
+	
+		// Make pause layer visible
+		layer_background_visible(background_pause_id, true)
+
+		// Make background layer invisible
+		var background_layer = layer_get_id("Background")
+		var background_id = layer_background_get_id(background_layer);
+		layer_background_visible(background_id, false)
+	
+	}
 	
 	// Deactivate all objects except game_manger
 	instance_deactivate_object(all);
 	instance_activate_object(game_manager)
-	
-	
+		
 }

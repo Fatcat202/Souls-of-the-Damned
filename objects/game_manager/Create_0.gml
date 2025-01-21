@@ -127,16 +127,9 @@ randomise()
 	
 		// Sets default of if a pause can occour to false
 		global.can_combat_pause = false;
-			
-		// Creates combat_pause_surf and its buffer
-		global.combat_pause_surf = -1;
-		global.combat_pause_surf_buffer = -1;
-		
-		// Creates esc_pause_surf and its buffer
-		global.esc_pause_surf = -1;
-		global.esc_pause_surf_buffer = -1;
-			
-			
+
+
+
 	#endregion Pausing
 	
 	
@@ -212,13 +205,17 @@ randomise()
 		// Camera smoothing speed
 		global.cam_smoothing = 0.3;
 		
+		// Camera target position
+		global.cam_target_x = 0;
+		global.cam_target_y = 0;
 		
-		cam_target_x = 0;
-		cam_target_y = 0;
-		cam_x = camera_get_view_x(CAMERA);
-		cam_y = camera_get_view_y(CAMERA);
-		cam_w = camera_get_view_width(CAMERA);
-		cam_h = camera_get_view_height(CAMERA);
+		// Camera origin
+		global.cam_x = camera_get_view_x(CAMERA);
+		global.cam_y = camera_get_view_y(CAMERA);
+		
+		// Camera size
+		global.cam_w = camera_get_view_width(CAMERA);
+		global.cam_h = camera_get_view_height(CAMERA);
 	
 	
 	#endregion Camera
