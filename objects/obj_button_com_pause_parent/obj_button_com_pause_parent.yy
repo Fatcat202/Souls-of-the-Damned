@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_button_move",
+  "%Name":"obj_button_com_pause_parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_button_move",
+  "name":"obj_button_com_pause_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat Pause",
-    "path":"folders/Objects/Buttons/Combat Pause.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/Buttons.yy",
   },
   "parentObjectId":{
     "name":"obj_gui_button_parent",
@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_button_path",
-    "path":"sprites/spr_button_path/spr_button_path.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

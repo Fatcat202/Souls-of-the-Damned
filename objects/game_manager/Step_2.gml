@@ -1,7 +1,6 @@
 /// @description Camera
 
 #macro CAMERA view_camera[0]
-#macro PAUSE_CAMERA view_camera[1]
 
 if(!global.game_esc_paused)
 {
@@ -12,9 +11,11 @@ if(!global.game_esc_paused)
 		// Compare mouse position with where it was last frame 
 		var move_x = device_mouse_x_to_gui(0) - global.mouse_x_previous;
 		var move_y = device_mouse_y_to_gui(0) - global.mouse_y_previous;
-	
-		global.cam_x -= move_x;
-		global.cam_y -= move_y;
+		
+		// Prevent camera from leaving map
+		global.cam_x = clamp(global.cam_x - move_x, 0, room_height - global.cam_w);
+		global.cam_y = clamp(global.cam_y - move_y, 0, room_width - global.cam_h);
+
 	
 	// Default movement
 	}else

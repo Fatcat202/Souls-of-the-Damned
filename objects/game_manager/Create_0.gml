@@ -415,14 +415,6 @@ randomise()
 
 
 
-#region ESC Menu
-
-	
-
-#endregion ESC MENU
-
-
-
 #region Levels TODO
 
 
