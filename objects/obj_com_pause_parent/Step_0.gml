@@ -6,18 +6,26 @@
 	if(keyboard_check(ord(global.cont_attack_1)))
 	{
 		active_power = 1;
+		obj_button_attack_parent.image_index = 0;
+		obj_button_atk_1.image_index = 1;
 	}
 	if(keyboard_check(ord(global.cont_attack_2)))
 	{
 		active_power = 2;
+		obj_button_attack_parent.image_index = 0;
+		obj_button_atk_2.image_index = 1;
 	}
 	if(keyboard_check(ord(global.cont_attack_3)))
 	{
 		active_power = 3;
+		obj_button_attack_parent.image_index = 0;
+		obj_button_atk_3.image_index = 1;
 	}
 	if(keyboard_check(ord(global.cont_attack_4)))
 	{
 		active_power = 4;
+		obj_button_attack_parent.image_index = 0;
+		obj_button_atk_4.image_index = 1;
 	}
 
 #endregion Change Attacks
@@ -56,6 +64,7 @@
 			with (obj_ply_npc_parent)
 			{
 				command_state = "attack_state";
+				
 			}
 			show_debug_message("** ALL ATTACK STATE **");
 		}else
@@ -63,6 +72,9 @@
 			command_state = "attack_state";
 			show_debug_message("** ATTACK STATE **");
 		}
+		
+		obj_button_com_pause_parent.image_index = 0;
+		obj_button_attack.image_index = 1;
 	}
 	if(keyboard_check_pressed(ord("X"))) // Command NPC to hold their ground
 	{
@@ -78,6 +90,9 @@
 			command_state = "defend_state";
 			show_debug_message("** DEFEND STATE **");
 		}
+		
+		obj_button_com_pause_parent.image_index = 0;
+		obj_button_defend.image_index = 1;
 	}
 	if(mouse_check_button_pressed(mb_right)) // Select position to move to
 	{
@@ -115,6 +130,8 @@
 			command_state = "follow_state";
 			show_debug_message("** FOLLOW STATE **");
 		}
+		obj_button_com_pause_parent.image_index = 0;
+		obj_button_follow.image_index = 1;
 	}
 	if(keyboard_check_pressed(ord("V"))) // Toggle Command All
 	{

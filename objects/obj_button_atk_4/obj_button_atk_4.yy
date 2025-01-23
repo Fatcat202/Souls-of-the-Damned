@@ -3,6 +3,7 @@
   "%Name":"obj_button_atk_4",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_button_atk_4",
@@ -12,8 +13,8 @@
     "path":"folders/Objects/Buttons/HUD/Attacks.yy",
   },
   "parentObjectId":{
-    "name":"obj_gui_button_parent",
-    "path":"objects/obj_gui_button_parent/obj_gui_button_parent.yy",
+    "name":"obj_button_attack_parent",
+    "path":"objects/obj_button_attack_parent/obj_button_attack_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

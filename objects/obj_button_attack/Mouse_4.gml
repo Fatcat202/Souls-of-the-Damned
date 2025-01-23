@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+event_inherited()
 
 if(global.command_all == true)
 {
@@ -14,3 +15,5 @@ if(global.command_all == true)
 	obj_com_pause_parent.command_state = "attack_state";
 	show_debug_message("** ATTACK STATE **");
 }
+
+

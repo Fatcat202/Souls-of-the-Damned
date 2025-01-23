@@ -43,7 +43,7 @@ if(!global.game_esc_paused)
 		global.cam_y = lerp(global.cam_y, global.cam_target_y, global.cam_smoothing);
 	}
 
-
+/*
 	// Zooming camera
 	var wheel = mouse_wheel_down() - mouse_wheel_up();
 	if(wheel != 0)
@@ -62,6 +62,7 @@ if(!global.game_esc_paused)
 		global.cam_x -= add_w / 2;
 		global.cam_y -= add_h / 2;
 	}
+	*/
 
 	// Set camera position
 	camera_set_view_pos(CAMERA, global.cam_x, global.cam_y);
