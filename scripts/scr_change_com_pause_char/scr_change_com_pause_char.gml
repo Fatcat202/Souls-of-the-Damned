@@ -65,6 +65,9 @@ function scr_change_com_pause_char(change_char)
 		npc.knockback_cooldown_timer = knockback_cooldown_timer;
 		npc.knockback_cooldown_time = knockback_cooldown_time;
 		
+		// Bullets
+		npc.bullets = bullets;
+		
 
 		// Destroy player
 		instance_destroy(obj_com_pause_parent);
@@ -127,6 +130,9 @@ function scr_change_com_pause_char(change_char)
 		player.knockback_cooldown_timer = global.arr_combat_pause_npc[global.char_index].knockback_cooldown_timer;
 		player.knockback_cooldown_time = global.arr_combat_pause_npc[global.char_index].knockback_cooldown_time;
 
+		
+		// Bullets
+		player.bullets = global.arr_combat_pause_npc[global.char_index].bullets;
 		
 	// Destroy npc
 	instance_destroy(global.arr_combat_pause_npc[global.char_index]);

@@ -81,9 +81,10 @@ function scr_combat_pause()
 					combat_pause_char.knockback_cooldown_timer = knockback_cooldown_timer;
 					combat_pause_char.knockback_cooldown_time = knockback_cooldown_time;
 					
+					// Bullets
+					combat_pause_char.bullets = bullets;
 					
-					// Image Flip
-					combat_pause_char.image_xscale = image_xscale;
+
 				}
 				// If npc, replace with combat pause npc
 			}else if(object_get_name(global.arr_npc[i]) == global.active_pc_list[| n])
@@ -144,9 +145,10 @@ function scr_combat_pause()
 					combat_pause_npc.knockback_cooldown_timer = global.arr_npc[i].knockback_cooldown_timer;
 					combat_pause_npc.knockback_cooldown_time = global.arr_npc[i].knockback_cooldown_time;
 					
+					// Bullets
+					combat_pause_npc.bullets = global.arr_npc[i].bullets;
 					
-					// Image Flip
-					combat_pause_npc.image_xscale = global.arr_npc[i].image_xscale;
+
 				}
 			}
 		}

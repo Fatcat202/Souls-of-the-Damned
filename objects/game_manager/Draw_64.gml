@@ -135,7 +135,14 @@ if(global.game_esc_paused == false)
 	
 				// Displays text stating player name
 				draw_set_halign(fa_center);
-				draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Level: " + string(global.player_level))
+				
+				if(obj_player_parent.player_name == "Xan")
+				{
+					draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Bullets: " + string(obj_player_Xan.bullets) + "    Level: " + string(global.player_level))
+				}else 
+				{
+					draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Level: " + string(global.player_level))
+				}
 		
 			#endregion Player Name Text
 	
@@ -327,9 +334,15 @@ if(global.game_esc_paused == false)
 		#region Combat Paused Player Name Text
 	
 			// Displays text stating player name
-			draw_set_halign(fa_center);
-			draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Level: " + string(global.player_level));
 
+			if(obj_com_pause_parent.player_name == "Xan")
+			{
+				draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Bullets: " + string(obj_com_pause_Xan.bullets) + "    Level: " + string(global.player_level))
+		
+			} else // If not Xan
+			{
+				draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Level: " + string(global.player_level))
+			}
 			
 		#endregion Player Name Text
 	
