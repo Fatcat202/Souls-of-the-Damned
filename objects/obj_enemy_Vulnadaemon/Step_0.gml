@@ -4,15 +4,14 @@
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
-
 var within_range = false;
 if(can_move == true)
 {
-	if(point_distance(x, y, target_pos_x, target_pos_y) <= 250) within_range = true;
+	if(point_distance(x, y, target_pos_x, target_pos_y) <= view_range) within_range = true;
 	// Check if player is within collision range
 	if(within_range == true)
 	{
-		scr_track_target_melee()
+		scr_track_target_melee(view_range)
 		
 		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;
@@ -39,8 +38,8 @@ if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
 }
 
 // Attack if within range
-var range = sprite_get_width(spr_standard_emelee);
-if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
+var m_range = sprite_get_width(spr_standard_emelee);
+if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
 {
 	// Create melee attack object
 	var melee = instance_create_layer(x, y, "Projectiles", obj_vulna_melee);

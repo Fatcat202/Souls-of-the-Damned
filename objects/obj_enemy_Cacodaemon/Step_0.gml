@@ -8,12 +8,12 @@ event_inherited()
 var within_range = false;
 if(can_move == true)
 {
-	if(point_distance(x, y, target_pos_x, target_pos_y) <= 250) within_range = true;
+	if(point_distance(x, y, target_pos_x, target_pos_y) <= view_range) within_range = true;
 	// Check if player is within collision range
 	if(within_range == true)
 	{
 		// Move towards player avoiding solid objects along the way
-		scr_track_target_melee()
+		scr_track_target_melee(view_range)
 		
 		
 		// Defines that a player is being tracked for melee for some enemy abilites

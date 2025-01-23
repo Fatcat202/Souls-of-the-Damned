@@ -1,6 +1,8 @@
 
 function scr_take_dot()
 {
+	var _debuff, _tick_rate, _can_kill;
+	
 	// Tracks ticks each step
 	dot_tick++;
 	
@@ -11,9 +13,10 @@ function scr_take_dot()
 	for (var i = array_length(debuffs) - 1; i >= 0; --i)
 	{
 		// Apply dot data
-		var _debuff = debuffs[i];
-		var _tick_rate = round(_debuff[dot_data.tick_rate]);
-		var _can_kill = _debuff[dot_data.can_kill]
+		_debuff = debuffs[i];
+		_tick_rate = round(_debuff[dot_data.tick_rate]);
+		_can_kill = _debuff[dot_data.can_kill]
+	
 	  
 		// When tick rate is reached, apply damage
 		if(dot_tick >= _tick_rate) 
@@ -27,6 +30,7 @@ function scr_take_dot()
 				if(_can_kill == 0)
 				{
 					active_health = 1;
+					array_delete(debuffs, i, 1);
 					return;
 					
 				// Set HP to -1 and end if it can kill
@@ -37,6 +41,8 @@ function scr_take_dot()
 				active_health -= _dmg;
 				image_blend = c_red;
 				alarm[11] = game_get_speed(gamespeed_fps) / 10;
+				scr_test()
+				dot_tick = 0;
 			}
 		}
 		

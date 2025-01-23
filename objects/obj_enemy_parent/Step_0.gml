@@ -1,5 +1,5 @@
 
-
+scr_non_player_collision(speed)
 
 #region Targeting AI
 
