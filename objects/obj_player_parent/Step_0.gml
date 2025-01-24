@@ -1,4 +1,4 @@
-/// @description
+/// @description Controls
 
 // Automatically change char if there was an issue with being changed to the right char
 if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_char)
