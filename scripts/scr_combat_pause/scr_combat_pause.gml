@@ -84,6 +84,9 @@ function scr_combat_pause()
 					// Bullets
 					combat_pause_char.bullets = bullets;
 					
+					// Image Xscale
+					combat_pause_char.image_xscale = image_xscale
+					
 
 				}
 				// If npc, replace with combat pause npc
@@ -147,6 +150,9 @@ function scr_combat_pause()
 					
 					// Bullets
 					combat_pause_npc.bullets = global.arr_npc[i].bullets;
+					
+					// Image Angle
+					combat_pause_npc.image_xscale = global.arr_npc[i].image_xscale;
 					
 
 				}
