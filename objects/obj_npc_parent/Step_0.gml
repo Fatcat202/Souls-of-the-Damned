@@ -34,10 +34,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	
 	}else if(command_state == "move_state")
 	{
-		with(obj_npc_parent)
-		{
-			scr_move();
-		}
+		with(obj_npc_parent) scr_move();
 	
 	}else if(command_state == "follow_state")
 	{

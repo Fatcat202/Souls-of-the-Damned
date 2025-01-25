@@ -52,6 +52,7 @@
     {"$GMObjectProperty":"v1","%Name":"target_move_x","filters":[],"listItems":[],"multiselect":false,"name":"target_move_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"x","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"target_move_y","filters":[],"listItems":[],"multiselect":false,"name":"target_move_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"y","varType":4,},
     {"$GMObjectProperty":"v1","%Name":"command_state_previous","filters":[],"listItems":[],"multiselect":false,"name":"command_state_previous","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"follow_state","varType":2,},
+    {"$GMObjectProperty":"v1","%Name":"bullets","filters":[],"listItems":[],"multiselect":false,"name":"bullets","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"4","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

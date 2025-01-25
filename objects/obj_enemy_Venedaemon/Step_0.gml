@@ -9,14 +9,12 @@ event_inherited()
 var within_range = false;
 if(can_move == true)
 {
-	if(point_distance(x, y, target_pos_x, target_pos_y) <= view_range) within_range = true;
+	if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) within_range = true;
 	// Check if player is within collision range
 	if(within_range == true)
 	{
 		// Move towards player, avoiding solid objects along the way
-		mp_potential_step(target_pos_x, target_pos_y, global.enemy_stats[index].move_spd, 1);
-		scr_sprite_direction(direction);
-		scr_non_player_collision(speed);
+		scr_track_target_melee(move_spd)
 		
 		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;
@@ -25,6 +23,8 @@ if(can_move == true)
 	{
 		// Remains still if no player is within range
 		speed = 0;
+		target_pos_x = x;
+		target_pos_y = y;
 		// Defines that a player is not being tracked for melee for some enemy abilities
 		melee_player_tracked = false;
 	}
@@ -69,10 +69,10 @@ if(can_move == true)
 			// Stops all movement
 			speed = 0;
 			
-			if(can_attack == true)
+			if(can_attack == true && melee_player_tracked != true)
 			{
 				// Create blast object
-				var vene_blast = instance_create_layer(x + 30, y + 30, "Projectiles", obj_vene_blast);
+				var vene_blast = instance_create_layer(x, y, "Projectiles", obj_vene_blast);
 		
 				// Set speed, direction, and image angle
 				vene_blast.speed = 6;
@@ -87,8 +87,8 @@ if(can_move == true)
 				
 		}else // Melee Attack
 		{ 
-			var range = sprite_get_width(spr_standard_emelee);
-			if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
+			var m_range = sprite_get_width(spr_standard_emelee);
+			if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
 			{
 				// Create blast object
 				var melee = instance_create_layer(x, y, "Projectiles", obj_emelee_parent);

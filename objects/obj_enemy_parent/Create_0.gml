@@ -33,7 +33,7 @@
 	armor_percent = global.enemy_stats[index].armor;
 
 	// Movement speed
-	move_speed = global.enemy_stats[index].move_spd;
+	move_spd = global.enemy_stats[index].move_spd;
 
 #endregion
 
@@ -49,6 +49,10 @@
 
 	// Array holding ID and weight of found target within range
 	arr_options = [];
+	
+	// Pathfinding
+		// Paths
+		attack_path = path_add();
 	
 #endregion AI Behavior Variables
 

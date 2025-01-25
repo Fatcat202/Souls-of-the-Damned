@@ -21,8 +21,7 @@
 	var attack_y = 20; // Starting y location
 	var attack_spacing = 36; // Space between cooldowns
 	
-	var esc_button_x = xx / 2;
-	var esc_button_y = 40;
+
 
 
 	// Set default font
@@ -110,41 +109,40 @@ if(global.game_esc_paused == false)
 			#endregion Armor Healthbar
 
 
-			#region Attacks
+			#region Attack Cooldowns
 				// Shows circle in the top right part of the screen indicating the time
 				// remaining on the cooldown for each attack
 		
 				// Cooldown 1
-				//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_1)
-				draw_sprite(spr_atk_1, 0, attack_x, attack_y)
 				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_black, 16, 0.5)
 				attack_y += attack_spacing;
 		
 				// Cooldown 2
-				//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_2)
-				draw_sprite(spr_atk_2, 0, attack_x, attack_y)
 				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_black, 16, 0.5)
 				attack_y += attack_spacing;
 		
 				// Cooldown 3
-				//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_3)
-				draw_sprite(spr_atk_3, 0, attack_x, attack_y)
 				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_black, 16, 0.5)
 				attack_y += attack_spacing;
 		
 				// Cooldown 4
-				//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_4)
-				draw_sprite(spr_atk_4, 0, attack_x, attack_y)
 				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
 			
 			#endregion Attacks
-	
+
 	
 			#region Player Name Text
 	
 				// Displays text stating player name
 				draw_set_halign(fa_center);
-				draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Level: " + string(global.player_level))
+				
+				if(obj_player_parent.player_name == "Xan")
+				{
+					draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Bullets: " + string(obj_player_Xan.bullets) + "    Level: " + string(global.player_level))
+				}else 
+				{
+					draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_player_parent.player_name + "    Level: " + string(global.player_level))
+				}
 		
 			#endregion Player Name Text
 	
@@ -309,65 +307,42 @@ if(global.game_esc_paused == false)
 		#endregion Armor Healthbar
 	
 	
-		#region Attacks
+		#region Attack Cooldowns
 			// Shows circle in the top right part of the screen indicating the time
 			// remaining on the cooldown for each attack
 		
 			// Cooldown 1
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_1)
-			draw_sprite(spr_atk_1, 0, attack_x, attack_y)
 			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_1, obj_com_pause_parent.cooldown_time_1, c_black, 16, 0.5)
 			attack_y += attack_spacing;
 		
 			// Cooldown 2
-			draw_sprite(spr_atk_2, 0, attack_x, attack_y)
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_2)
 			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_2, obj_com_pause_parent.cooldown_time_2, c_black, 16, 0.5)
 			attack_y += attack_spacing;
 		
 			// Cooldown 3
-			draw_sprite(spr_atk_3, 0, attack_x, attack_y)
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_3)
 			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_3, obj_com_pause_parent.cooldown_time_3, c_black, 16, 0.5)
 			attack_y += attack_spacing;
 		
 			// Cooldown 4
-			draw_sprite(spr_atk_4, 0, attack_x, attack_y)
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_atk_4)
 			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_4, obj_com_pause_parent.cooldown_time_4, c_black, 16, 0.5)
 			attack_y += attack_spacing;
 	
 	
-		#endregion Attacks
-	
-	
-		#region Commands
-		
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_attack)
-			draw_sprite(spr_button_attack, 0, attack_x, attack_y)
-			attack_y += attack_spacing;
-		
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_defend)
-			draw_sprite(spr_button_defend, 0, attack_x, attack_y)
-			attack_y += attack_spacing;
-		
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_follow)
-			draw_sprite(spr_button_follow, 0, attack_x, attack_y)
-			attack_y += attack_spacing;
-		
-			//instance_create_layer(attack_x, attack_y, "HUD", obj_button_command_all)
-			draw_sprite(spr_button_command_all, 0, attack_x, attack_y)
-			attack_y += attack_spacing;
-		
-		#endregion Commands
+		#endregion Attack Cooldowns
 	
 	
 		#region Combat Paused Player Name Text
 	
 			// Displays text stating player name
-			draw_set_halign(fa_center);
-			draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Level: " + string(global.player_level));
 
+			if(obj_com_pause_parent.player_name == "Xan")
+			{
+				draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Bullets: " + string(obj_com_pause_Xan.bullets) + "    Level: " + string(global.player_level))
+		
+			} else // If not Xan
+			{
+				draw_text(xx, armor_healthbar_y_top - healthbar_thickness * 2, obj_com_pause_parent.player_name + "    Level: " + string(global.player_level))
+			}
 			
 		#endregion Player Name Text
 	
@@ -490,28 +465,5 @@ if(global.game_esc_paused == false)
 
 	#endregion ** COMBAT PAUSED **
 	
-} else
-{
-#region ESC Paused
-	
-	// Draw black rectangle to darken background
-	draw_set_alpha(0.5)
-		draw_set_color(c_black);
-			draw_rectangle(0, 0, global.res_w, global.res_h, false)
-		draw_set_color(c_white)
-	draw_set_alpha(1);
-	
-
-	// Pause background image
-	draw_sprite(spr_menu_esc_background, 0, global.res_w / 2, global.res_h / 2);
-	
-	
-	// Buttons
-
-	
-	
-	
-	
-	
-} #endregion ESC Paused
+}
 

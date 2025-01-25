@@ -1,13 +1,13 @@
 
-function scr_track_target_ranged(move_spd)
+function scr_track_target_ranged(range)
 {
 	
-	// Move away from enemy if they come within range
-	
+	// Move away from enemy if they come within range, not using A* Grid
+	range = 80;
 	var within_range = false;
 	if(can_move == true)
 	{
-		if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) within_range = true;
+		if(point_distance(x, y, target_pos_x, target_pos_y) <= range) within_range = true;
 		// Check if player is within collision range
 		if(within_range == true)
 		{

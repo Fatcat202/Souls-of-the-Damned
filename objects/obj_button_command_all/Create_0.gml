@@ -1,3 +1,13 @@
-/// @description Prevent frame switching
+/// @description Insert description here
+// You can write your code in this editor
 
-image_speed = 0;
+
+if(global.command_all == true)
+{
+	image_speed = 0;
+	image_index = 1;
+}else
+{
+	image_speed = 0;
+	image_index = 0;
+}

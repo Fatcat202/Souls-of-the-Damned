@@ -65,7 +65,8 @@ function scr_change_char(change_char)
 		npc.knockback_cooldown_timer = knockback_cooldown_timer;
 		npc.knockback_cooldown_time = knockback_cooldown_time;
 		
-
+		// Bullets
+		npc.bullets = bullets;
 	
 	// Destroy player
 	instance_destroy(obj_player_parent);
@@ -114,8 +115,6 @@ function scr_change_char(change_char)
 		player.target_move_x = global.arr_npc[global.char_index].target_move_x;
 		player.target_move_y = global.arr_npc[global.char_index].target_move_y;
 		
-		
-		
 	
 		// Timers
 		player.dot_tick = global.arr_npc[global.char_index].dot_tick;
@@ -130,7 +129,11 @@ function scr_change_char(change_char)
 		player.knockback_cooldown_timer = global.arr_npc[global.char_index].knockback_cooldown_timer;
 		player.knockback_cooldown_time = global.arr_npc[global.char_index].knockback_cooldown_time;
 
-	
+
+		// Bullets
+		player.bullets = global.arr_npc[global.char_index].bullets;
+		
+		
 	// Update selected_char
 	global.selected_char = change_char;
 	

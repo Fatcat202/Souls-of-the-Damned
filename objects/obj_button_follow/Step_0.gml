@@ -1,7 +1,14 @@
-/// @description Select Command State
+/// @description Update Sprite Index
 
+event_inherited()
 
-if(mouse_check_button_pressed(mb_left) == true)
+if(instance_exists(obj_com_pause_parent))
 {
-	obj_com_pause_parent.command_state = "follow_state";
+
+	if(obj_com_pause_parent.command_state == "follow_state")
+	{
+		// Set sprite frame to frame 1
+		image_speed = 0;
+		image_index = 1;
+	}
 }
