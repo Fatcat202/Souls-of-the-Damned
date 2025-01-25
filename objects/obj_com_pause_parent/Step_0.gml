@@ -139,6 +139,7 @@
 		{
 			// Turn command_all off
 			global.command_all = false;
+			obj_button_command_all.image_index = 0;
 		
 			show_debug_message("** COMMAND ALL OFF **");
 		
@@ -146,6 +147,7 @@
 		{
 			// Turn command_all on
 			global.command_all = true;
+			obj_button_command_all.image_index = 1;
 		
 			show_debug_message("** COMMAND ALL ON **");
 		}
