@@ -1,7 +1,16 @@
 /// @description Controls
 
 // Automatically change char if there was an issue with being changed to the right char
-if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_char)
+//if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_char)
+
+#region End Combat Pause
+
+	// End combat pause
+	if(global.end_combat_pause) scr_combat_resume()
+	
+	
+#endregion End Combat Pause
+
 
 #region Controls
 

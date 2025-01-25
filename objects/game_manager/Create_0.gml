@@ -127,6 +127,9 @@ randomise()
 	
 		// Sets default of if a pause can occour to false
 		global.can_combat_pause = false;
+		
+		// Used to end combat pause and correctly transfer data
+		global.end_combat_pause = false;
 
 
 

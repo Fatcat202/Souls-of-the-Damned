@@ -7,7 +7,7 @@ function scr_com_resume_change_char(change_char)
 	
 	
 	// Create npc in place of player
-	var npc = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Players", global.arr_npc[index]);
+	var npc = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Players", global.arr_npc[obj_player_parent.index]);
 		// Transfer stats to npc from player
 
 		// Health and armor

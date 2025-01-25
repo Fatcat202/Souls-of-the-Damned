@@ -1,6 +1,9 @@
 /// @description HUD Buttons
 
 
+
+
+
 #region HUD Buttons
 
 	var attack_x = camera_get_view_x(CAMERA) + 620; // Starting x location
