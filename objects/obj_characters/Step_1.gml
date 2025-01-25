@@ -3,6 +3,7 @@
 
 // Characters are affected by Damage Over Time
 scr_take_dot();
+scr_non_player_collision(speed);
 
 // ** STUN **
 // Check character is stunned
@@ -73,8 +74,5 @@ if(can_regain_armor == false)
 	}
 }
 if(can_regain_armor == true) scr_regain_armor();
-
-
-
 
 

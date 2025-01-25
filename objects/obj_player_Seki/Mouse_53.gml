@@ -5,7 +5,7 @@ if(self.can_attack == true)
 {
 
 
-	if(active_power = 1 && cooldown_1 == true) // **SEKI MISSILE ATTACK**
+	if(active_power = 1 && cooldown_1 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // **SEKI MISSILE ATTACK**
 	{
 		scr_Seki_basic_attack(mouse_x, mouse_y);
 		
@@ -13,7 +13,7 @@ if(self.can_attack == true)
 		cooldown_1 = false;
 		cooldown_time_1 = cooldown;
 	
-	}else if(active_power = 2 && cooldown_2 == true) // **SEKI FIREBALL**
+	}else if(active_power = 2 && cooldown_2 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // **SEKI FIREBALL**
 	{
 		scr_Seki_fireball();
 		
@@ -21,7 +21,7 @@ if(self.can_attack == true)
 		cooldown_2 = false;
 		cooldown_time_2 = cooldown;
 	
-	}else if(active_power = 3 && cooldown_3 == true) // **SEKI LIGHTNING BOLT**
+	}else if(active_power = 3 && cooldown_3 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // **SEKI LIGHTNING BOLT**
 	{
 		scr_Seki_lightning()
 		
@@ -29,7 +29,7 @@ if(self.can_attack == true)
 		cooldown_3 = false;
 		cooldown_time_3 = cooldown;
 	
-	}else if(active_power = 4 && cooldown_4 == true) // **SEKI TELEPORT**
+	}else if(active_power = 4 && cooldown_4 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // **SEKI TELEPORT**
 	{
 		scr_Seki_teleport();
 		

@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button_parent","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"propertyId":{"name":"button_text","path":"objects/obj_menu_button_parent/obj_menu_button_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Load Game",},
   ],
   "parent":{
-    "name":"Main Menu",
-    "path":"folders/Objects/Buttons/Main Menu.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Buttons/Menu.yy",
   },
   "parentObjectId":{
     "name":"obj_menu_button_parent",

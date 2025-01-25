@@ -29,3 +29,6 @@ draw_self()
 	}
 	
 #endregion
+
+// Path Debug
+draw_path(attack_path, x, y, false)

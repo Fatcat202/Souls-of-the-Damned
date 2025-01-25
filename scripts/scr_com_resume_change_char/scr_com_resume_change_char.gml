@@ -61,6 +61,9 @@ function scr_com_resume_change_char(change_char)
 		npc.poison_coating_timer = poison_coating_time;
 		npc.knockback_cooldown_timer = knockback_cooldown_timer;
 		npc.knockback_cooldown_time = knockback_cooldown_time;
+		
+		// Bullets
+		npc.bullets = bullets;
 
 	
 	// Destroy player
@@ -122,6 +125,9 @@ function scr_com_resume_change_char(change_char)
 		player.poison_coating_timer = global.arr_npc[global.char_index].poison_coating_time;
 		player.knockback_cooldown_timer = global.arr_npc[global.char_index].knockback_cooldown_timer;
 		player.knockback_cooldown_time = global.arr_npc[global.char_index].knockback_cooldown_time;
+		
+		// Bullets
+		player.bullets = global.arr_npc[global.char_index].bullets;
 
 	
 	// Update selected_char

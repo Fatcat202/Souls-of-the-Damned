@@ -1,16 +1,21 @@
-/// @description Action When Clicked
+/// @description Update Sprite Index
+
 
 // Check if combat paused
 if(global.game_combat_paused == true)
 {
-	if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id))
+	if(obj_com_pause_parent.active_power == 1)
 	{
-		obj_com_pause_parent.active_power = 1;
+		// Set sprite frame to frame 1
+		image_speed = 0;
+		image_index = 1;
 	}
 } else // If not combat paused
 {
-	if(mouse_check_button_pressed(mb_left) && position_meeting(mouse_x, mouse_y, id))
+	if(obj_player_parent.active_power == 1)
 	{
-		obj_player_parent.active_power = 1;
+		// Set sprite frame to frame 1
+		image_speed = 0;
+		image_index = 1;
 	}
 }

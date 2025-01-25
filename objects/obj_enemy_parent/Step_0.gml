@@ -1,7 +1,5 @@
 
-
-// Enemies are affected by Damage Over Time
-scr_take_dot();
+scr_non_player_collision(speed)
 
 #region Targeting AI
 
