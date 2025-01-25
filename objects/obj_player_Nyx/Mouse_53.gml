@@ -27,7 +27,7 @@ if(self.can_attack == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_pa
 		cooldown_3 = false;
 		cooldown_time_3 = cooldown;
 	
-	}else if(active_power = 4 && cooldown_4 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)aa) // ****
+	}else if(active_power = 4 && cooldown_4 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
 		
 		
