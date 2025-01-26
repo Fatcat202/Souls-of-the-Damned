@@ -1,5 +1,6 @@
 /// @description Spawn Things
 
+
 if(global.spawn_triggered == true)
 {
 	// Check the list for enemies that are ready to spawn and 

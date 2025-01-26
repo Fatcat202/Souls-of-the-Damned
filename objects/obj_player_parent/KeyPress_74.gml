@@ -5,4 +5,4 @@ if(global.spawn_triggered == false)
 	// Trigger spawning
 	global.spawn_triggered = true;
 
-}else return;
+}

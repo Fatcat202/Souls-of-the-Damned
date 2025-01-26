@@ -81,8 +81,8 @@ function scr_non_player_collision(move_spd)
 			// Bottom Left
 			if(!place_meeting(x - i, y + i, obj_collision_parent) && !place_meeting(x - i, y + i, obj_enemy_parent) && !place_meeting(x - i, y + i, obj_player_parent) && !place_meeting(x - i, y + i, obj_npc_parent))
 			{
-				x += i;
-				y -= i;
+				x -= i;
+				y += i;
 				break;	
 			}
 		}	
