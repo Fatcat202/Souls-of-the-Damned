@@ -238,10 +238,51 @@ if(global.game_esc_paused == false)
 			
 					#endregion Armor and Healthbars
 		
-						// Reset and increment locations
-						char_x_start = 20;
-						char_y_start = char_y_start + 40;
-					}
+					var command_sprite_y = (select_armor_healthbar_y_bottom + select_hp_healthbar_y_top) / 2
+					var command_sprite_x = char_x_start + select_healthbar_half_width + 10
+						
+					// Active Commands for Controlled PC
+					if(instance_exists(global.arr_players[char_index]))
+					{
+						if(obj_player_parent.command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_player_parent.command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_player_parent.command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_player_parent.command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+						
+					// Active Commands for NPCs
+					}else if(instance_exists(global.arr_npc[char_index]))
+					{
+						if(global.arr_npc[char_index].command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_npc[char_index].command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_npc[char_index].command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_npc[char_index].command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+					}else show_debug_message("NO OBJECT LOCATED FOR ASSIGNED COMMAND");
+						
+						
+						
+					// Reset and increment locations
+					char_x_start = 20;
+					char_y_start = char_y_start + 40;
+						
+				}
 	
 			#endregion Selectable Characters
 	
@@ -454,6 +495,48 @@ if(global.game_esc_paused == false)
 					#endregion Armor Healthbar
 			
 				#endregion Armor and Healthbars
+				
+				#region Selected Command
+				
+					var command_sprite_y = (select_armor_healthbar_y_bottom + select_hp_healthbar_y_top) / 2
+					var command_sprite_x = char_x_start + select_healthbar_half_width + 10
+						
+					// Active Commands for Controlled PC
+					if(instance_exists(global.arr_combat_pause[char_index]))
+					{
+						if(obj_com_pause_parent.command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_com_pause_parent.command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_com_pause_parent.command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_com_pause_parent.command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+						
+					// Active Commands for NPCs
+					}else if(instance_exists(global.arr_combat_pause_npc[char_index]))
+					{
+						if(global.arr_combat_pause_npc[char_index].command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_combat_pause_npc[char_index].command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_combat_pause_npc[char_index].command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_combat_pause_npc[char_index].command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+					}else show_debug_message("NO OBJECT LOCATED FOR ASSIGNED COMMAND");
+					
+				#endregion Selected Command
 		
 				// Reset and increment locations
 				char_x_start = 20;

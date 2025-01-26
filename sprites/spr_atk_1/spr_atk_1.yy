@@ -45,8 +45,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"Buttons",
-    "path":"folders/Sprites/Buttons.yy",
+    "name":"Attacks",
+    "path":"folders/Sprites/Buttons/Attacks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
