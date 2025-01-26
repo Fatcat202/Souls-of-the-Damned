@@ -1,5 +1,7 @@
 /// @description Initial Creation
 
+event_inherited()
+
 #region Assigning Character and Stats
 
 	// Read name of object and assigns it to object_name
@@ -58,10 +60,7 @@
 	
 	// Pathfinding
 	
-	// Paths
-	follow_path = path_add();
-	move_path = path_add();
-	attack_path = path_add();
+	
 	
 	// Target pos for following player
 	target_follow_x = obj_player_parent.x;

@@ -71,6 +71,7 @@
 		{
 			command_state = "attack_state";
 			show_debug_message("** ATTACK STATE **");
+			
 		}
 		
 		obj_button_com_pause_parent.image_index = 0;
@@ -83,12 +84,14 @@
 			with (obj_ply_npc_parent)
 			{
 				command_state = "defend_state";
+
 			}
 			show_debug_message("** ALL DEFEND STATE **");
 		}else
 		{
 			command_state = "defend_state";
 			show_debug_message("** DEFEND STATE **");
+
 		}
 		
 		obj_button_com_pause_parent.image_index = 0;
@@ -104,6 +107,23 @@
 				command_state = "move_state";
 				target_move_x = mouse_x;
 				target_move_y = mouse_y;
+				
+				// Clear all path points if there are any
+				path_clear_points(follow_path)
+				path_clear_points(attack_path);
+	
+				// Clear move path point if there are any, then create a new one
+				path_clear_points(move_path)
+				move_path = path_add();
+
+				// Update player grid to show positions of enemies and walls
+				mp_grid_clear_all(global.mp_grid_player)
+				mp_grid_add_instances(global.mp_grid_player, obj_enemy_parent, true);
+				mp_grid_add_instances(global.mp_grid_player, obj_collision_parent, true);
+
+				// Create path on grid
+				mp_grid_path(global.mp_grid_player, move_path, x, y, target_move_x, target_move_y, true);
+
 			}
 			show_debug_message("** ALL MOVE STATE **");
 		}else
@@ -114,6 +134,22 @@
 			target_move_y = mouse_y;
 			show_debug_message("** MOVE STATE **");
 			
+			// Clear all follow path points if there are any
+			path_clear_points(follow_path)
+			path_clear_points(attack_path);
+	
+			// Clear move path point if there are any, then create a new one
+			path_clear_points(move_path)
+			move_path = path_add();
+
+			// Update player grid to show positions of enemies and walls
+			mp_grid_clear_all(global.mp_grid_player)
+			mp_grid_add_instances(global.mp_grid_player, obj_enemy_parent, true);
+			mp_grid_add_instances(global.mp_grid_player, obj_collision_parent, true);
+
+			// Create path on grid
+			mp_grid_path(global.mp_grid_player, move_path, x, y, target_move_x, target_move_y, true);
+			
 		}
 	}
 	if(keyboard_check_pressed(ord("C"))) // Command NPC to follow player
@@ -123,12 +159,14 @@
 			with (obj_ply_npc_parent)
 			{
 				command_state = "follow_state";
+
 			}
 			show_debug_message("** ALL FOLLOW STATE **");
 		}else
 		{
 			command_state = "follow_state";
 			show_debug_message("** FOLLOW STATE **");
+
 		}
 		obj_button_com_pause_parent.image_index = 0;
 		obj_button_follow.image_index = 1;

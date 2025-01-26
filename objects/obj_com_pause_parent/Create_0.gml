@@ -1,5 +1,7 @@
 /// @description Pulling Data
 
+event_inherited()
+
 
 // Read name of object and assigns it to object_name
 object_name = object_get_name(object_index);

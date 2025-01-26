@@ -68,6 +68,14 @@ function scr_change_com_pause_char(change_char)
 		// Bullets
 		npc.bullets = bullets;
 		
+		// Image Angle
+		npc.image_xscale = image_xscale;
+		
+		// Paths
+		npc.attack_path = attack_path;
+		npc.follow_path = follow_path;
+		npc.move_path = move_path;
+		
 
 		// Destroy player
 		instance_destroy(obj_com_pause_parent);
@@ -133,6 +141,14 @@ function scr_change_com_pause_char(change_char)
 		
 		// Bullets
 		player.bullets = global.arr_combat_pause_npc[global.char_index].bullets;
+		
+		// Image Angle
+		player.image_xscale = global.arr_combat_pause_npc[global.char_index].image_xscale;
+		
+		// Paths
+		player.attack_path = global.arr_combat_pause_npc[global.char_index].attack_path;
+		player.follow_path = global.arr_combat_pause_npc[global.char_index].follow_path;
+		player.move_path = global.arr_combat_pause_npc[global.char_index].move_path;
 		
 	// Destroy npc
 	instance_destroy(global.arr_combat_pause_npc[global.char_index]);

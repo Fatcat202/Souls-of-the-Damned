@@ -67,6 +67,11 @@ function scr_change_char(change_char)
 		
 		// Bullets
 		npc.bullets = bullets;
+		
+		// Paths
+		npc.attack_path = attack_path;
+		npc.follow_path = follow_path;
+		npc.move_path = move_path;
 	
 	// Destroy player
 	instance_destroy(obj_player_parent);
@@ -132,6 +137,11 @@ function scr_change_char(change_char)
 
 		// Bullets
 		player.bullets = global.arr_npc[global.char_index].bullets;
+		
+		// Paths
+		player.attack_path = global.arr_npc[global.char_index].attack_path;
+		player.follow_path = global.arr_npc[global.char_index].follow_path;
+		player.move_path = global.arr_npc[global.char_index].move_path;
 		
 		
 	// Update selected_char

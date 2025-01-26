@@ -84,6 +84,11 @@ function scr_combat_pause()
 					// Bullets
 					combat_pause_char.bullets = bullets;
 					
+					// Paths
+					combat_pause_char.attack_path = attack_path;
+					combat_pause_char.follow_path = follow_path;
+					combat_pause_char.move_path = move_path;
+					
 					// Image Xscale
 					combat_pause_char.image_xscale = image_xscale
 					
@@ -150,6 +155,11 @@ function scr_combat_pause()
 					
 					// Bullets
 					combat_pause_npc.bullets = global.arr_npc[i].bullets;
+					
+					// Paths
+					combat_pause_npc.attack_path = global.arr_npc[i].attack_path;
+					combat_pause_npc.follow_path = global.arr_npc[i].follow_path;
+					combat_pause_npc.move_path = global.arr_npc[i].move_path;
 					
 					// Image Angle
 					combat_pause_npc.image_xscale = global.arr_npc[i].image_xscale;
