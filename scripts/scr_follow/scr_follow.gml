@@ -12,8 +12,11 @@ function scr_follow()
 	{
 		if(point_distance(x, y, obj_player_parent.x, obj_player_parent.y) > range)
 		{
+			// Update attack path
+			if(!path_exists(follow_path)) follow_path = path_add()
+			
 			// Update follow path
-			alarm[2] = 1
+			alarm[2] = 1;
 	
 		}else if(point_distance(x, y, obj_player_parent.x, obj_player_parent.y) <= range)
 		{

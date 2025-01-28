@@ -173,6 +173,7 @@ function scr_combat_pause()
 
 	// Capture game moment (except GUI as GUI is rendered independently)
 
+	
 	// Adding background sprite ** IN PROGRESS **
 	var spr_temp_background = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false, false, surface_get_width(application_surface) / 2, surface_get_height(application_surface) / 2)
 	

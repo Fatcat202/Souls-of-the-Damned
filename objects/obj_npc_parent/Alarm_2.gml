@@ -1,10 +1,6 @@
 /// @description Follow Pathfinding Update
 
 
-if(path_exists(follow_path)) path_delete(follow_path)
-follow_path = path_add();
-
-
 // Target pos for following player
 var target_follow_x = obj_player_parent.x;
 var target_follow_y = obj_player_parent.y;

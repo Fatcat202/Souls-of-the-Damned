@@ -1,6 +1,8 @@
 // Behavior
 event_inherited()
 
+scr_non_player_collision()
+
 // Activate the command state
 
 if(global.command_all == false) // If command_all is false affect only active character

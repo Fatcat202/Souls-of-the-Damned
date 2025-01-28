@@ -73,8 +73,9 @@
 			show_debug_message("** ATTACK STATE **");
 			
 		}
+		obj_button_follow.image_index = 0;
+		obj_button_defend.image_index = 0;
 		
-		obj_button_com_pause_parent.image_index = 0;
 		obj_button_attack.image_index = 1;
 	}
 	if(keyboard_check_pressed(ord("X"))) // Command NPC to hold their ground
@@ -94,7 +95,9 @@
 
 		}
 		
-		obj_button_com_pause_parent.image_index = 0;
+		obj_button_attack.image_index = 0;
+		obj_button_follow.image_index = 0;
+		
 		obj_button_defend.image_index = 1;
 	}
 	if(mouse_check_button_pressed(mb_right)) // Select position to move to
@@ -109,11 +112,11 @@
 				target_move_y = mouse_y;
 				
 				// Clear all path points if there are any
-				path_clear_points(follow_path)
-				path_clear_points(attack_path);
+				if(path_exists(follow_path)) path_delete(follow_path);
+				if(path_exists(attack_path)) path_delete(attack_path);
 	
 				// Clear move path point if there are any, then create a new one
-				path_clear_points(move_path)
+				if(path_exists(move_path)) path_delete(move_path);
 				move_path = path_add();
 
 				// Update player grid to show positions of enemies and walls
@@ -135,11 +138,11 @@
 			show_debug_message("** MOVE STATE **");
 			
 			// Clear all follow path points if there are any
-			path_clear_points(follow_path)
-			path_clear_points(attack_path);
+			if(path_exists(follow_path)) path_delete(follow_path);
+			if(path_exists(attack_path)) path_delete(attack_path);
 	
 			// Clear move path point if there are any, then create a new one
-			path_clear_points(move_path)
+			if(path_exists(move_path)) path_delete(move_path)
 			move_path = path_add();
 
 			// Update player grid to show positions of enemies and walls
@@ -168,7 +171,9 @@
 			show_debug_message("** FOLLOW STATE **");
 
 		}
-		obj_button_com_pause_parent.image_index = 0;
+		obj_button_attack.image_index = 0;
+		obj_button_defend.image_index = 0;
+		
 		obj_button_follow.image_index = 1;
 	}
 	if(keyboard_check_pressed(ord("V"))) // Toggle Command All
@@ -177,6 +182,7 @@
 		{
 			// Turn command_all off
 			global.command_all = false;
+			
 			obj_button_command_all.image_index = 0;
 		
 			show_debug_message("** COMMAND ALL OFF **");
@@ -185,6 +191,7 @@
 		{
 			// Turn command_all on
 			global.command_all = true;
+			
 			obj_button_command_all.image_index = 1;
 		
 			show_debug_message("** COMMAND ALL ON **");

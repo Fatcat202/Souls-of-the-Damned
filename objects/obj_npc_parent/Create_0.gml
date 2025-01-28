@@ -60,15 +60,17 @@ event_inherited()
 	
 	// Pathfinding
 	
+		// Paths
+		attack_path = path_add()
+		follow_path = path_add()
 	
+		// Target pos for following player
+		target_follow_x = obj_player_parent.x;
+		target_follow_y = obj_player_parent.y;
 	
-	// Target pos for following player
-	target_follow_x = obj_player_parent.x;
-	target_follow_y = obj_player_parent.y;
-	
-	// Target pos for when ordered to move
-	target_move_x = x;
-	target_move_y = y;
+		// Target pos for when ordered to move
+		target_move_x = x;
+		target_move_y = y;
 
 #endregion Assigning Instance Stats
 
