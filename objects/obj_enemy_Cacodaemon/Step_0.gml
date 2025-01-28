@@ -13,18 +13,14 @@ if(can_move == true)
 	if(within_range == true)
 	{
 		// Move towards player avoiding solid objects along the way
-		scr_track_target_melee(view_range)
+		scr_move_to_target(view_range)
 		
 		
-		// Defines that a player is being tracked for melee for some enemy abilites
-		melee_player_tracked = true;
-
-	} else
+	} else // If not within range
 	{
-		// Remains still if no player is within range
-		speed = 0;
-		// Defines that a player is not being tracked for melee for some enemy abilities
-		melee_player_tracked = false;
+		// Remove Path
+		if(path_exists(attack_path)) path_delete(attack_path)
+
 	}
 }
 

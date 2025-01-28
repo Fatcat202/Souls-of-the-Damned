@@ -30,5 +30,5 @@ draw_self()
 	
 #endregion
 
-// Path Debug
-draw_path(attack_path, x, y, false)
+// Draw A* Paths
+if(path_exists(attack_path)) draw_path(attack_path, x, y, false);

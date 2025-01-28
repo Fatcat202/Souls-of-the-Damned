@@ -1,6 +1,4 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_non_player_collision(move_spd)
+function scr_non_player_collision()
 {
 	var collision_speed = move_spd + global.collision_distance;
 	
@@ -55,22 +53,6 @@ function scr_non_player_collision(move_spd)
 			}
 		
 			// Top Right
-			if(!place_meeting(x + i, y - i, obj_collision_parent) && !place_meeting(x + i, y - i, obj_enemy_parent) && !place_meeting(x + i, y - i, obj_player_parent) && !place_meeting(x + i, y - i, obj_npc_parent))
-			{
-				x += i;
-				y -= i;
-				break;	
-			}
-			
-			// Top Left
-			if(!place_meeting(x - i, y - i, obj_collision_parent) && !place_meeting(x - i, y - i, obj_enemy_parent) && !place_meeting(x - i, y - i, obj_player_parent) && !place_meeting(x - i, y - i, obj_npc_parent))
-			{
-				x -= i;
-				y -= i;
-				break;	
-			}
-			
-			// Bottom Right
 			if(!place_meeting(x + i, y + i, obj_collision_parent) && !place_meeting(x + i, y + i, obj_enemy_parent) && !place_meeting(x + i, y + i, obj_player_parent) && !place_meeting(x + i, y + i, obj_npc_parent))
 			{
 				x += i;
@@ -78,11 +60,27 @@ function scr_non_player_collision(move_spd)
 				break;	
 			}
 			
-			// Bottom Left
+			// Top Left
 			if(!place_meeting(x - i, y + i, obj_collision_parent) && !place_meeting(x - i, y + i, obj_enemy_parent) && !place_meeting(x - i, y + i, obj_player_parent) && !place_meeting(x - i, y + i, obj_npc_parent))
 			{
 				x -= i;
 				y += i;
+				break;	
+			}
+			
+			// Bottom Right
+			if(!place_meeting(x + i, y - i, obj_collision_parent) && !place_meeting(x + i, y - i, obj_enemy_parent) && !place_meeting(x + i, y - i, obj_player_parent) && !place_meeting(x + i, y - i, obj_npc_parent))
+			{
+				x += i;
+				y -= i;
+				break;	
+			}
+			
+			// Bottom Left
+			if(!place_meeting(x - i, y - i, obj_collision_parent) && !place_meeting(x - i, y - i, obj_enemy_parent) && !place_meeting(x - i, y - i, obj_player_parent) && !place_meeting(x - i, y - i, obj_npc_parent))
+			{
+				x -= i;
+				y -= i;
 				break;	
 			}
 		}	

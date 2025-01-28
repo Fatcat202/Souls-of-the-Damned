@@ -3,7 +3,6 @@
 
 // Characters are affected by Damage Over Time
 scr_take_dot();
-scr_non_player_collision(speed);
 
 // ** STUN **
 // Check character is stunned
@@ -56,7 +55,6 @@ if(knocked_back == true)
 		knockback_cooldown_timer = 0;
 	}
 
-	if(knockback_cooldown_timer > 3) scr_non_player_collision(speed);
 }
 
 

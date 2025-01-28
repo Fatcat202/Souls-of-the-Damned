@@ -1,5 +1,6 @@
 
-scr_non_player_collision(speed)
+event_inherited()
+
 
 #region Targeting AI
 

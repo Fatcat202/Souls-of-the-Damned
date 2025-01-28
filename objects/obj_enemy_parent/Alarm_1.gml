@@ -1,7 +1,7 @@
 /// @description Attack Pathfinding Update
 
 
-path_delete(attack_path)
+if(path_exists(attack_path)) path_delete(attack_path)
 attack_path = path_add();
 
 

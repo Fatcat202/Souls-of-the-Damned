@@ -30,7 +30,6 @@ function scr_track_player(range)
 			// Move towards player, avoiding solid objects along the way
 			mp_potential_step(nearest.x, nearest.y, global.enemy_stats[index].move_spd, 1);
 			scr_sprite_direction(direction);
-			scr_non_player_collision(speed);
 
 
 		} else

@@ -11,7 +11,7 @@ if(can_move == true)
 	// Check if player is within collision range
 	if(within_range == true)
 	{
-		scr_track_target_melee(view_range)
+		scr_move_to_target(view_range)
 		
 		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;

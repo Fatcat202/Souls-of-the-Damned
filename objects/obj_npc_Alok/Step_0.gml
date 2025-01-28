@@ -6,7 +6,7 @@ event_inherited()
 
 if(command_state == "attack_state")
 {
-	scr_track_target_melee();
+	scr_move_to_target();
 	
 }
 

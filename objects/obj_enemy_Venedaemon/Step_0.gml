@@ -14,7 +14,7 @@ if(can_move == true)
 	if(within_range == true)
 	{
 		// Move towards player, avoiding solid objects along the way
-		scr_track_target_melee(move_spd)
+		scr_move_to_target(move_spd)
 		
 		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;

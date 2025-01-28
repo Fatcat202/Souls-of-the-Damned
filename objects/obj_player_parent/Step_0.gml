@@ -1,7 +1,6 @@
 /// @description Controls
 
-// Automatically change char if there was an issue with being changed to the right char
-//if(global.selected_char != pc_index) scr_com_resume_change_char(global.selected_char)
+event_inherited()
 
 #region End Combat Pause
 
@@ -65,6 +64,10 @@
 				}else image_xscale = 1;
 			}
 	
+	
+			scr_non_player_collision()
+	
+		/*
 			// Force objects outside of other objects if stuck or overlaping
 			if(place_meeting(x, y, obj_solid))
 			{
@@ -130,7 +133,10 @@
 						break;	
 					}
 				}
+				
+				
 			}
+			*/
 		}
 
 	#endregion Movement

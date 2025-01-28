@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_track_target_ranged",
+  "%Name":"scr_move_to_target",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_track_target_ranged",
+  "name":"scr_move_to_target",
   "parent":{
     "name":"Behaviors",
     "path":"folders/Scripts/Character AI/Behaviors.yy",

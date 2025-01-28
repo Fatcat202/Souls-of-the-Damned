@@ -1,6 +1,5 @@
 // Behavior
-
-scr_non_player_collision(move_spd);
+event_inherited()
 
 // Activate the command state
 
