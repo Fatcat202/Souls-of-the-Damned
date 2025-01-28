@@ -20,7 +20,7 @@ function scr_non_player_collision()
 	}
 	
 	// Force objects outside of other objects if stuck or overlaping
-	if(place_meeting(x, y, obj_collision_parent) && place_meeting(x, y, obj_enemy_parent) && place_meeting(x, y, obj_player_parent) && place_meeting(x, y, obj_npc_parent))
+	if(place_meeting(x, y, obj_collision_parent) || place_meeting(x, y, obj_enemy_parent) || place_meeting(x, y, obj_player_parent) || place_meeting(x, y, obj_npc_parent))
 	{
 		for(var i = 0; i < 1000; i++)
 		{

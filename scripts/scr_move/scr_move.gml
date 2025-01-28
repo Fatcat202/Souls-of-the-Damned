@@ -2,12 +2,13 @@ function scr_move()
 {
 	
 	// Clear all follow path points if there are any
-	path_clear_points(follow_path)
-	path_clear_points(attack_path);
+	path_delete(follow_path)
+	path_delete(attack_path);
 	
 	// Clear move path point if there are any, then create a new one
-	path_clear_points(move_path)
+	if(path_exists(move_path)) path_delete(move_path)
 	move_path = path_add();
+	
 	// Update player grid to show positions of enemies and walls
 	mp_grid_clear_all(global.mp_grid_player)
 	mp_grid_add_instances(global.mp_grid_player, obj_enemy_parent, true);

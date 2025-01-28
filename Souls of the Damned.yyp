@@ -453,6 +453,7 @@
     {"id":{"name":"scr_increment_all_alarms","path":"scripts/scr_increment_all_alarms/scr_increment_all_alarms.yy",},},
     {"id":{"name":"scr_knockback","path":"scripts/scr_knockback/scr_knockback.yy",},},
     {"id":{"name":"scr_map_value","path":"scripts/scr_map_value/scr_map_value.yy",},},
+    {"id":{"name":"scr_move_along_path","path":"scripts/scr_move_along_path/scr_move_along_path.yy",},},
     {"id":{"name":"scr_move_to_target","path":"scripts/scr_move_to_target/scr_move_to_target.yy",},},
     {"id":{"name":"scr_move","path":"scripts/scr_move/scr_move.yy",},},
     {"id":{"name":"scr_non_lethal","path":"scripts/scr_non_lethal/scr_non_lethal.yy",},},
