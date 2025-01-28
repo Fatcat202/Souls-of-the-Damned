@@ -1,13 +1,10 @@
 /// @description HUD Buttons
 
 
-
-
-
 #region HUD Buttons
 
-	var attack_x = camera_get_view_x(CAMERA) + 620; // Starting x location
-	var attack_y = camera_get_view_y(CAMERA) + 20; // Starting y location
+	var attack_x = ((global.cam_target_x + global.cam_x) / 2) + 620;  //camera_get_view_x(CAMERA) + 620; // Starting x location
+	var attack_y = ((global.cam_target_y + global.cam_y) / 2) + 20; // Starting y location
 	var attack_spacing = 36; // Space between cooldowns
 
 	#region Place Buttons
