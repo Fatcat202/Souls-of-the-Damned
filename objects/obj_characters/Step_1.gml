@@ -36,6 +36,20 @@ if(poison_coating == true)
 	}
 }
 
+// ** CRITICAL ATTACK **
+// Check if cooldown ticking
+if(can_crit == true)
+{
+	// Increment cooldown each frame
+	critical_timer++;
+	if(critical_timer >= critical_time) 
+	{
+		// Reset changed conditions
+		can_crit = false;
+		critical_time = 0;
+	}
+}
+
 
 // ** KNOCKBACK **
 // Check character is knocked back

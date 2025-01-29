@@ -12,7 +12,10 @@
     "name":"Players",
     "path":"folders/Objects/Attacks/Melee/Players.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_melee_parent",
+    "path":"objects/obj_melee_parent/obj_melee_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_melee_attack",
+    "path":"sprites/spr_melee_attack/spr_melee_attack.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

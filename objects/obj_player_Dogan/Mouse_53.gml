@@ -29,7 +29,7 @@ if(self.can_attack == true)
 	
 	}else if(active_power = 4 && cooldown_4 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		
+		scr_Dogan_sneak_attack()
 		
 		// Set up attack cooldown
 		cooldown_4 = false;

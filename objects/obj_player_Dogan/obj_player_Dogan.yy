@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Dogan Darkwater",
-    "path":"folders/Objects/Characters/Players/Implemented/Dogan Darkwater.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Dogan Darkwater.yy",
   },
   "parentObjectId":{
     "name":"obj_player_parent",

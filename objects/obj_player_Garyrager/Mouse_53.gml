@@ -1,11 +1,11 @@
 /// @description Attacks
 
 
-if(self.can_attack == true)
+if(can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		scr_standard_pmelee();
+		scr_standard_pmelee(obj_pmelee_parent);
 		
 		// Set up attack cooldown
 		cooldown_1 = false;

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Alok Silvore",
-    "path":"folders/Objects/Characters/Players/Implemented/Alok Silvore.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Alok Silvore.yy",
   },
   "parentObjectId":{
     "name":"obj_player_parent",

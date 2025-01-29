@@ -67,6 +67,7 @@ function scr_combat_pause()
 					combat_pause_char.command_state_previous = command_state_previous;
 					combat_pause_char.target_move_x = target_move_x;
 					combat_pause_char.target_move_y = target_move_y;
+					combat_pause_char.can_crit = can_crit;
 	
 					// Timers
 					combat_pause_char.dot_tick = dot_tick;
@@ -80,6 +81,8 @@ function scr_combat_pause()
 					combat_pause_char.poison_coating_timer = poison_coating_time;
 					combat_pause_char.knockback_cooldown_timer = knockback_cooldown_timer;
 					combat_pause_char.knockback_cooldown_time = knockback_cooldown_time;
+					combat_pause_char.critical_time = critical_time;
+					combat_pause_char.critical_timer = critical_timer;
 					
 					// Bullets
 					combat_pause_char.bullets = bullets;
@@ -139,6 +142,7 @@ function scr_combat_pause()
 					combat_pause_npc.command_state_previous = global.arr_npc[i].command_state_previous;
 					combat_pause_npc.target_move_x = global.arr_npc[i].target_move_x;
 					combat_pause_npc.target_move_y = global.arr_npc[i].target_move_y;
+					combat_pause_npc.can_crit = global.arr_npc[i].can_crit;
 	
 					// Timers
 					combat_pause_npc.dot_tick = global.arr_npc[i].dot_tick;
@@ -152,6 +156,8 @@ function scr_combat_pause()
 					combat_pause_npc.poison_coating_timer = global.arr_npc[i].poison_coating_time;
 					combat_pause_npc.knockback_cooldown_timer = global.arr_npc[i].knockback_cooldown_timer;
 					combat_pause_npc.knockback_cooldown_time = global.arr_npc[i].knockback_cooldown_time;
+					combat_pause_npc.critical_time = global.arr_npc[i].critical_time;
+					combat_pause_npc.critical_timer = global.arr_npc[i].critical_timer;
 					
 					// Bullets
 					combat_pause_npc.bullets = global.arr_npc[i].bullets;

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Nyx",
-    "path":"folders/Objects/Characters/Players/Unimplemented/Nyx.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Nyx.yy",
   },
   "parentObjectId":{
     "name":"obj_player_parent",

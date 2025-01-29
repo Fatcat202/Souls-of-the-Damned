@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Xan Peppo",
-    "path":"folders/Objects/Characters/Players/Implemented/Xan Peppo.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Xan Peppo.yy",
   },
   "parentObjectId":{
     "name":"obj_com_pause_parent",

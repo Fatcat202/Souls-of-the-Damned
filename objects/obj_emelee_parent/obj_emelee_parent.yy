@@ -12,7 +12,10 @@
     "name":"Enemies",
     "path":"folders/Objects/Attacks/Melee/Enemies.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_melee_parent",
+    "path":"objects/obj_melee_parent/obj_melee_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
