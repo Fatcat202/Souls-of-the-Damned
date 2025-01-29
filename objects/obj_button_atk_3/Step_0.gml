@@ -2,6 +2,8 @@
 
 event_inherited()
 
+
+
 // Check if combat paused
 if(global.game_combat_paused == true)
 {

@@ -9,7 +9,7 @@ var v_align = draw_get_valign();
 // Draw name of ability
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_center);
-	draw_text(x, y, name);
+	draw_text(x, y - 80, name);
 
 
 // Draw description
