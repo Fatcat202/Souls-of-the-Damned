@@ -1,8 +1,14 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_Alok_channel()
 {
-	var range = 100;
+	
+	var channel = instance_create_layer(x, y, "Projectiles", obj_Alok_channel)
+		channel.alarm[0] = 60
+		channel.timer_length = 60
+		channel.scale_total = 500
+		
+	
+	
+	var range = 200;
 	// Heal all players within range 100, 6 second cooldown
 	var within_range = collision_circle(x, y, range, obj_player_parent, 1, 0)
 	if(within_range != noone)

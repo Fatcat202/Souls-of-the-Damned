@@ -45,7 +45,7 @@
   "origin":9,
   "parent":{
     "name":"36px Sprites",
-    "path":"folders/Sprites/Characters/36px Sprites.yy",
+    "path":"folders/Sprites/Characters/Old Sprites/36px Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

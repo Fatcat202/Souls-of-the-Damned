@@ -9,7 +9,7 @@ function scr_standard_pmelee(obj_melee)
 		melee_atk.image_angle = melee_atk.direction;
 		melee_atk.image_xscale = image_xscale;
 		// Swing in direction sprite is facing
-		if(melee_atk.image_xscale < 0) melee_atk.x = melee_atk.x - 40;
+		if(melee_atk.image_xscale < 0) melee_atk.x = melee_atk.x;
 		// Send index to attack sprite for stats
 		melee_atk.index = index;
 		
