@@ -6,7 +6,7 @@ event_inherited()
 
 if(command_state == "attack_state")
 {
-	scr_move_to_target();
+	scr_move_to_target(view_range);
 	
 }
 

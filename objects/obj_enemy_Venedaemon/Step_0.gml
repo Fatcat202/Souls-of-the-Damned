@@ -21,11 +21,14 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 		dmg_die_sides = 10
 		dmg_mod = 0;
 		
-		// Create blast object
+		// Create melee object
 		melee = instance_create_layer(x, y, "Projectiles", obj_emelee_parent);
 			melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
 			melee.image_angle = melee.direction;
 			melee.index = index;
+			
+			// Send index to attack sprite for stats
+			melee.enemy_object = object_index;
 			
 			// Damage
 			melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;

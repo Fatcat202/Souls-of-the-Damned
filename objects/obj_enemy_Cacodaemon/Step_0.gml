@@ -53,6 +53,9 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= ran
 		melee.image_angle = melee.direction;
 		melee.index = index;
 		
+		// Send index to attack sprite for stats
+		melee.enemy_object = object_index;
+		
 		// Damage
 		melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
