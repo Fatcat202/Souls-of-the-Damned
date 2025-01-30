@@ -16,6 +16,8 @@ if(desc_timer_active == true)
 				desc.x = mouse_x - 100
 				desc.y = clamp(mouse_y + 20, global.cam_y + (sprite_get_height(spr_description_box) / 2)
 									, global.cam_y + global.res_h - (sprite_get_height(spr_description_box) / 2));
+				desc.description = description
+				desc.name = name;
 			
 		}else
 		{
