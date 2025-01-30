@@ -6,10 +6,13 @@
   "name":"obj_spawn_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"Spawner",
-    "path":"folders/Objects/Spawner.yy",
+    "name":"Spawn Points",
+    "path":"folders/Objects/Spawner/Spawn Points.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_spawn_point_parent",
+    "path":"objects/obj_spawn_point_parent/obj_spawn_point_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

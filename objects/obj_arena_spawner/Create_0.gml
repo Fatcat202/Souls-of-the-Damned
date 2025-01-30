@@ -26,20 +26,30 @@ waves = ds_list_create();
 
 #region Spawn Points
 
-// Spawn points are set by being added to spawn[]
+// Spawn points are set by being added to spawn[]. Place in the room to be read.
 // 1st place is spawn point number, 2nd is 0 for x and 1 for y
 
-// Spawn Location 0
-spawn[0, 0] = 716 + round(random(spawn_range))
-spawn[0, 1] = 522 + round(random(spawn_range))
+// Initialize the spawn array
+spawn = [];
 
-// Spawn Location 1
-spawn[1, 0] = 940 + round(random(spawn_range))
-spawn[1, 1] = 524 + round(random(spawn_range))
+// Find all instances of obj_spawn_point_parent
+var count = instance_number(obj_spawn_point_parent);
+var spawn_points = [];
 
-// Spawn Location 2
-spawn[2, 0] = 1120 + round(random(spawn_range))
-spawn[2, 1] = 560 + round(random(spawn_range))
+// Populate the spawn_points array with the positions of obj_spawn_point_parent instances
+for (var i = 0; i < count; i++) {
+    var point = instance_find(obj_spawn_point_parent, i);
+    spawn_points[i] = [point.x, point.y];
+}
+
+// Reinitialize the spawn array to clear it
+spawn = [];
+
+// Populate the spawn array with random positions around the spawn points
+for (var i = 0; i < count; i++) {
+    spawn[i, 0] = spawn_points[i][0] + round(random(spawn_range));
+    spawn[i, 1] = spawn_points[i][1] + round(random(spawn_range));
+}
 
 #endregion Spawn Points
 

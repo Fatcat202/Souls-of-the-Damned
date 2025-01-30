@@ -1,18 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_spawn_2",
+  "%Name":"obj_spawn_point_parent",
   "eventList":[],
   "managed":true,
-  "name":"obj_spawn_2",
+  "name":"obj_spawn_point_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Spawner",
     "path":"folders/Objects/Spawner.yy",
   },
-  "parentObjectId":{
-    "name":"obj_spawn_point_parent",
-    "path":"objects/obj_spawn_point_parent/obj_spawn_point_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

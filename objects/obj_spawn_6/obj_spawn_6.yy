@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_spawn_2",
+  "%Name":"obj_spawn_6",
   "eventList":[],
   "managed":true,
-  "name":"obj_spawn_2",
+  "name":"obj_spawn_6",
   "overriddenProperties":[],
   "parent":{
-    "name":"Spawner",
-    "path":"folders/Objects/Spawner.yy",
+    "name":"Spawn Points",
+    "path":"folders/Objects/Spawner/Spawn Points.yy",
   },
   "parentObjectId":{
     "name":"obj_spawn_point_parent",
