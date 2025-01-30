@@ -71,6 +71,7 @@ function scr_combat_pause()
 					combat_pause_char.target_move_x = target_move_x;
 					combat_pause_char.target_move_y = target_move_y;
 					combat_pause_char.can_crit = can_crit;
+					combat_pause_char.is_dead = is_dead;
 	
 					// Timers
 					combat_pause_char.dot_tick = dot_tick;
@@ -146,6 +147,7 @@ function scr_combat_pause()
 					combat_pause_npc.target_move_x = global.arr_npc[i].target_move_x;
 					combat_pause_npc.target_move_y = global.arr_npc[i].target_move_y;
 					combat_pause_npc.can_crit = global.arr_npc[i].can_crit;
+					combat_pause_npc.is_dead = global.arr_npc[i].is_dead;
 	
 					// Timers
 					combat_pause_npc.dot_tick = global.arr_npc[i].dot_tick;

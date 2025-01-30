@@ -26,38 +26,35 @@ waves = ds_list_create();
 
 #region Spawn Points
 
-// Spawn points are set by being added to spawn[]. Place in the room to be read.
-// 1st place is spawn point number, 2nd is 0 for x and 1 for y
+	// Spawn points are set by being added to spawn[]. Place in the room to be read.
 
-// Initialize the spawn array
-spawn = [];
+	// Initialize the spawn array
+	spawn = [];
 
-// Find all instances of obj_spawn_point_parent
-var count = instance_number(obj_spawn_point_parent);
-var spawn_points = [];
+	// Find all instances of obj_spawn_point_parent
+	var count = instance_number(obj_spawn_point_parent);
+	var spawn_points = [];
 
-// Populate the spawn_points array with the positions of obj_spawn_point_parent instances
-for (var i = 0; i < count; i++) {
-    var point = instance_find(obj_spawn_point_parent, i);
-    spawn_points[i] = [point.x, point.y];
-}
+	// Populate the spawn_points array with the positions of obj_spawn_point_parent instances
+	for (var i = 0; i < count; i++) {
+	    var point = instance_find(obj_spawn_point_parent, i);
+	    spawn_points[i] = [point.x, point.y];
+	}
 
-// Reinitialize the spawn array to clear it
-spawn = [];
-
-// Populate the spawn array with random positions around the spawn points
-for (var i = 0; i < count; i++) {
-    spawn[i, 0] = spawn_points[i][0] + round(random(spawn_range));
-    spawn[i, 1] = spawn_points[i][1] + round(random(spawn_range));
-}
+	// Populate the spawn array with random positions around the spawn points
+	for (var i = 0; i < count; i++) {
+		// 1st place is spawn point number, 2nd is 0 for x and 1 for y
+	    spawn[i, 0] = spawn_points[i][0] + round(random(spawn_range));
+	    spawn[i, 1] = spawn_points[i][1] + round(random(spawn_range));
+	}
 
 #endregion Spawn Points
 
 
 #region Rounds
 
-// To add randomness to spawn locations add between groups of enemies: RANDOM_SPAWN
-// If enemy is to have a random spawn: [wave, obj, delay, r_spawn]
+	// To add randomness to spawn locations add between groups of enemies: RANDOM_SPAWN
+	// If enemy is to have a random spawn: [wave, obj, delay, r_spawn]
 
 	#region Round 1
 

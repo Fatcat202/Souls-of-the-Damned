@@ -25,6 +25,8 @@ if (non_lethal_tick mod non_lethal_tick_rate == 0)
 if(active_health <= 0)
 {
 	
+	if(is_dead == false) global.total_dead++;
+	
 	// Set death conditions
 	can_attack = false;
 	can_control = false;
@@ -37,28 +39,14 @@ if(active_health <= 0)
 	// Alter image to show death
 	image_angle = 90;
 	image_blend = c_red;
-
-	// global.dead_char++;	
+	
 }
+
+if(global.total_dead >= global.total_active_pcs) game_restart()
 
 // Added check to make sure players do not spontaniously resurrect
 if(is_dead == true && active_health > 0) active_health = -1;
 
-
-
-// Attempt at game restart on all characters being dead
-/*
-var dead_char = 0;
-for(var i = 0; i < global.total_active_pcs; i++)
-{
-	if(global.arr_active_pcs[i].is_dead == true)
-	{
-		dead_char++
-	}
-}
-
-if(dead_char >= global.total_active_pcs) game_restart();
-*/
 
 #endregion Death
 

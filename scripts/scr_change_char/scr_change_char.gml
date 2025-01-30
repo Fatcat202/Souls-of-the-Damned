@@ -52,6 +52,7 @@ function scr_change_char(change_char)
 		npc.target_move_x = target_move_x;
 		npc.target_move_y = target_move_y;
 		npc.can_crit = can_crit;
+		npc.is_dead = is_dead;
 	
 		// Timers
 		npc.dot_tick = dot_tick;
@@ -123,6 +124,7 @@ function scr_change_char(change_char)
 		player.target_move_x = global.arr_npc[global.char_index].target_move_x;
 		player.target_move_y = global.arr_npc[global.char_index].target_move_y;
 		player.can_crit = global.arr_npc[global.char_index].can_crit;
+		player.is_dead = global.arr_npc[global.char_index].is_dead;
 		
 	
 		// Timers

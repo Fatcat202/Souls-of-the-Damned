@@ -172,6 +172,9 @@ randomise()
 		
 		// Create mp grid for enemy usage
 		global.mp_grid_enemy = global.mp_grid;
+		
+		// Total number of dead PCs
+		global.total_dead = 0;
 	
 	
 	#endregion Misc
