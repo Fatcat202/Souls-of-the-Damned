@@ -1,5 +1,8 @@
 function scr_combat_resume()
 {
+	// Prevent obj_description from sticking around
+	if(instance_exists(obj_description)) instance_destroy(obj_description)
+	
 	// States that the game not combat paused
 	global.game_combat_paused = false;
 	

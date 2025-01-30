@@ -1,5 +1,6 @@
 function scr_combat_pause()
 {
+	// Prevent obj_description from sticking around
 	if(instance_exists(obj_description)) instance_destroy(obj_description)
 	
 	// Set combat pause to true
