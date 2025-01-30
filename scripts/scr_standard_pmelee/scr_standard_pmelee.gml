@@ -1,5 +1,5 @@
 
-function scr_standard_pmelee(obj_melee)
+function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod)
 {
 	// Standard melee attack with checks for conditions
 
@@ -16,6 +16,9 @@ function scr_standard_pmelee(obj_melee)
 		// Conditions
 		melee_atk.poison_coating = poison_coating;
 		melee_atk.can_crit = can_crit;
+		
+		//damage
+		melee_atk.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
 
 	// Cooldown

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_roll_dice",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_roll_dice",
+  "parent":{
+    "name":"Dice",
+    "path":"folders/Scripts/Dice.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

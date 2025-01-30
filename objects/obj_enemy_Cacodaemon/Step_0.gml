@@ -4,6 +4,8 @@
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
+
+
 // Movement
 var within_range = false;
 if(can_move == true)
@@ -36,6 +38,10 @@ if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
 
 // Closest player or npc
 
+var dmg_die_total = 1
+var dmg_die_sides = 10
+var dmg_mod = 0;
+
 var range = sprite_get_width(spr_standard_emelee);
 if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
 {
@@ -46,6 +52,9 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= ran
 		melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
 		melee.image_angle = melee.direction;
 		melee.index = index;
+		
+		// Damage
+		melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
 	can_attack = false;
 	can_move = false;

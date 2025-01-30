@@ -6,6 +6,10 @@ function scr_Xan_quickdraw()
 	var within_range = collision_circle(x, y, range, obj_enemy_parent, 1, 1);
 	var shots = 6;
 	
+	var dmg_die_total = 1
+	var dmg_die_sides = 6
+	var dmg_mod = 0;
+	
 	// Xan's x and y cords
 	var xx = x;
 	var yy = y;
@@ -23,6 +27,10 @@ function scr_Xan_quickdraw()
 				Xan_bullet.speed = 20;
 				Xan_bullet.direction = point_direction(xx, yy, x, y);
 				Xan_bullet.image_angle = Xan_bullet.direction;
+				
+				// Damage
+				Xan_bullet.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+				
 				shots--;
 			}
 		}

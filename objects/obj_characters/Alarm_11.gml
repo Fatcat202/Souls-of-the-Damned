@@ -1,4 +1,4 @@
-/// @description Damage Colour Change Reset
-// You can write your code in this editor
+/// @description I Frames
 
 image_blend = c_white;
+can_damage = true

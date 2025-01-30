@@ -3,6 +3,10 @@ function scr_Xan_powerful_shot(target_x, target_y){
 
 	// Fire a powerful shot that travels through enemies and staggers them
 	
+	var dmg_die_total = 1
+	var dmg_die_sides = 12
+	var dmg_mod = 0;
+	
 	// Checks if Xan's gun has enough ammo
 	if(bullets >= 2)
 	{
@@ -11,6 +15,9 @@ function scr_Xan_powerful_shot(target_x, target_y){
 		Xan_powerful_shot.speed = 20;
 		Xan_powerful_shot.direction = point_direction(x, y, target_x, target_y);
 		Xan_powerful_shot.image_angle = Xan_powerful_shot.direction;
+		
+		// Damage
+		Xan_powerful_shot.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
 		// Cooldown and reloading
 		cooldown = game_get_speed(gamespeed_fps) * 5;

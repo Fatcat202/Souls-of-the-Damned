@@ -5,7 +5,7 @@
 
 if(poison_coating == true)
 {
-	scr_apply_dot(3, 30, 2, 0);
+	scr_apply_dot(scr_roll_dice(1, 4), 30, 2, 0);
 }
 
 
@@ -16,9 +16,9 @@ if(can_crit == true)
 	var ran = random(100)
 	if(ran > 50)
 	{
-		scr_damage(global.player_stats[index].main_atk_dmg * 1.5);
-	} else scr_damage(global.player_stats[index].main_atk_dmg);
+		scr_damage(damage * 1.5);
+	} else scr_damage(damage);
 } else
 {
-	scr_damage(global.player_stats[index].main_atk_dmg);
+	scr_damage(damage);
 }
