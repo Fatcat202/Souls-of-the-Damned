@@ -10,5 +10,8 @@ function scr_Seki_fireball()
 		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) * 3;
+	
+	// States attack was used for cooldowns
+	used = true
 
 }

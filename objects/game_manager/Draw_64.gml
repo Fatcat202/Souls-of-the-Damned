@@ -114,19 +114,31 @@ if(global.game_esc_paused == false)
 				// remaining on the cooldown for each attack
 		
 				// Cooldown 1
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_1 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_black, 16, 0.5)
+				}
 				attack_y += attack_spacing;
 		
 				// Cooldown 2
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_2 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_black, 16, 0.5)
+				}
 				attack_y += attack_spacing;
 		
 				// Cooldown 3
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_3 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_black, 16, 0.5)
+				}
 				attack_y += attack_spacing;
 		
 				// Cooldown 4
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_4 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
+				}
 			
 			#endregion Attacks
 
@@ -356,19 +368,31 @@ if(global.game_esc_paused == false)
 			// remaining on the cooldown for each attack
 		
 			// Cooldown 1
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_1, obj_com_pause_parent.cooldown_time_1, c_black, 16, 0.5)
+			if(obj_com_pause_parent.cooldown_1 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_1, obj_com_pause_parent.cooldown_time_1, c_black, 16, 0.5)
+			}
 			attack_y += attack_spacing;
 		
 			// Cooldown 2
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_2, obj_com_pause_parent.cooldown_time_2, c_black, 16, 0.5)
+			if(obj_player_parent.cooldown_2 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_2, obj_com_pause_parent.cooldown_time_2, c_black, 16, 0.5)
+			}		
 			attack_y += attack_spacing;
 		
 			// Cooldown 3
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_3, obj_com_pause_parent.cooldown_time_3, c_black, 16, 0.5)
+			if(obj_player_parent.cooldown_3 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_3, obj_com_pause_parent.cooldown_time_3, c_black, 16, 0.5)
+			}
 			attack_y += attack_spacing;
 		
 			// Cooldown 4
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_4, obj_com_pause_parent.cooldown_time_4, c_black, 16, 0.5)
+			if(obj_player_parent.cooldown_4 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_4, obj_com_pause_parent.cooldown_time_4, c_black, 16, 0.5)
+			}
 			attack_y += attack_spacing;
 	
 	

@@ -32,5 +32,8 @@ function scr_Xan_quickdraw()
 		{
 			cooldown = game_get_speed(gamespeed_fps) * 12;
 		} else cooldown = 0;
+		
+		// States attack was used for cooldowns
+		used = true
 	}
 }

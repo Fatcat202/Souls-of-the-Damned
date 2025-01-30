@@ -29,5 +29,8 @@ function scr_Xan_powerful_shot(target_x, target_y){
 		knocked_back = true;
 		knockback_cooldown_time = game_get_speed(gamespeed_fps) * 0.2;
 		knockback_cooldown_timer = 0;
+		
+		// States attack was used for cooldowns
+		used = true
 	}
 }

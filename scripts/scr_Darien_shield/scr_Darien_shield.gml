@@ -3,4 +3,7 @@
 function scr_Darien_shield()
 {
 	scr_block();
+	
+	// States attack was used for cooldowns
+	used = true
 }

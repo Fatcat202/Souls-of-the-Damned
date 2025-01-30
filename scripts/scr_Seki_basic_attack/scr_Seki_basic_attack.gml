@@ -9,5 +9,8 @@ function scr_Seki_basic_attack(target_x, target_y)
 		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) / 4;
+	
+	// States attack was used for cooldowns
+	used = true
 
 }

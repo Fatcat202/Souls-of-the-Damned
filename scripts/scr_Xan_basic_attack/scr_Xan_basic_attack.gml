@@ -16,6 +16,9 @@ function scr_Xan_basic_attack(target_x, target_y)
 		cooldown = game_get_speed(gamespeed_fps) / 4;
 		reload_timer = 0;
 		bullets--;
+		
+		// States attack was used for cooldowns
+		used = true
 	}
 	
 }

@@ -10,6 +10,8 @@ function scr_Alok_javalin(){
 		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) * 1.5;
-		
+	
+	// States attack was used for cooldowns
+	used = true
 		
 }
