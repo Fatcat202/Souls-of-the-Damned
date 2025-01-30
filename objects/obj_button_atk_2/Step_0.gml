@@ -20,3 +20,4 @@ if(global.game_combat_paused == true)
 		image_index = 1;
 	}
 }
+

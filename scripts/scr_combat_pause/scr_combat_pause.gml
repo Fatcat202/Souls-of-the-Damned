@@ -1,5 +1,7 @@
 function scr_combat_pause()
 {
+	if(instance_exists(obj_description)) instance_destroy(obj_description)
+	
 	// Set combat pause to true
 	global.game_combat_paused = true;
 	
