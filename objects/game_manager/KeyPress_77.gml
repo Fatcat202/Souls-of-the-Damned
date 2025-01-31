@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(global.total_dead >= global.total_active_pcs)
+with(obj_ply_npc_parent)
 {
-	game_restart()
+	active_health -= 1000
 }

@@ -121,6 +121,9 @@ randomise()
 		
 		// Sets default game esc pause state
 		global.game_esc_paused = false
+		
+		// Sets default game death pause state
+		global.game_death_paused = false
 	
 		// Sets default of if a pause can occour to false
 		global.can_pause = false;

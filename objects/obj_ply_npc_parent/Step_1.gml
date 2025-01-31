@@ -42,7 +42,15 @@ if(active_health <= 0)
 	
 }
 
-if(global.total_dead >= global.total_active_pcs) game_restart()
+if(global.total_dead >= global.total_active_pcs)
+{
+	global.game_death_paused = true;
+	layer_destroy_instances("HUD_Buttons");
+	scr_esc_pause();
+	
+	instance_create_layer(0, 0, "Game_Manager", obj_death_menu);
+	instance_activate_object(obj_death_menu)
+}
 
 // Added check to make sure players do not spontaniously resurrect
 if(is_dead == true && active_health > 0) active_health = -1;
