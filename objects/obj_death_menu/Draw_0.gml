@@ -9,10 +9,6 @@ draw_set_alpha(0.5)
 draw_set_alpha(1);
 	
 
-// Pause background image
-draw_sprite(spr_menu_esc_background, 0, global.cam_target_x + (global.res_w / 2), global.cam_target_y + (global.res_h / 2));
-
-
 // Death Text
 draw_set_halign(fa_center)
 	draw_set_font(fnt_menu)

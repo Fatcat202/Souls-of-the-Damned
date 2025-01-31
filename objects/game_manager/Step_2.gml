@@ -1,5 +1,10 @@
 /// @description Camera
 
+
+
+
+
+
 #macro CAMERA view_camera[0]
 
 if(!global.game_esc_paused)

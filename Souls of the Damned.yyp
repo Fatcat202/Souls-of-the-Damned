@@ -203,6 +203,7 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"attack_data.xlsx","CopyToMask":-1,"filePath":"datafiles","name":"attack_data.xlsx","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"enemy_data.csv","CopyToMask":-1,"filePath":"datafiles","name":"enemy_data.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"enemy_data.xlsx","CopyToMask":-1,"filePath":"datafiles","name":"enemy_data.xlsx","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"player_data.csv","CopyToMask":-1,"filePath":"datafiles","name":"player_data.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
