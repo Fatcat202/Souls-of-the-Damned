@@ -33,9 +33,9 @@ switch (player_name)
 {
 	case "Alok":
 			
-		name = "HOLY JAVALIN"
+		name = "HOLY JAVELIN"
 		
-		description = "Alok conjures and throws a javalin made of divine light."
+		description = "Alok conjures and throws a javelin made of divine light."
 
 			
 	break;

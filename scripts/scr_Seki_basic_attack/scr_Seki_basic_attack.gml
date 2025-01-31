@@ -15,7 +15,7 @@ function scr_Seki_basic_attack(target_x, target_y)
 	seki_missile.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) / 4;
+	cooldown = game_get_speed(gamespeed_fps) * .5;
 	
 	// States attack was used for cooldowns
 	used = true

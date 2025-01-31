@@ -12,6 +12,7 @@ if(global.spawn_triggered == true)
 		{
 			// Collect spawn points
 			var spawn_point = next[SPAWN];
+			
 			// Create enemy
 			instance_create_layer(spawn[spawn_point, 0], spawn[spawn_point, 1], "Enemies", next[TYPE]);
 			global.remaining_enemies++
