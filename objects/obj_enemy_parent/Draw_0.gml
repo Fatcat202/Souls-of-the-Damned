@@ -29,7 +29,7 @@ draw_self()
 	}
 	
 #endregion
-
+/*
 // Draw A* Paths For Debug
 var attack_path = path_add()
 mp_grid_path(global.mp_grid_enemy, attack_path, x, y, target_pos_x, target_pos_y, true);
