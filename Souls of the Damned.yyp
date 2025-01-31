@@ -1091,6 +1091,7 @@
     {"id":{"name":"Spr_smoke_Front","path":"sprites/Spr_smoke_Front/Spr_smoke_Front.yy",},},
     {"id":{"name":"Spr_Smoke_Side","path":"sprites/Spr_Smoke_Side/Spr_Smoke_Side.yy",},},
     {"id":{"name":"Spr_smoke_swoosh","path":"sprites/Spr_smoke_swoosh/Spr_smoke_swoosh.yy",},},
+    {"id":{"name":"spr_souls_logo","path":"sprites/spr_souls_logo/spr_souls_logo.yy",},},
     {"id":{"name":"spr_spade_1","path":"sprites/spr_spade_1/spr_spade_1.yy",},},
     {"id":{"name":"spr_spade_with_blur","path":"sprites/spr_spade_with_blur/spr_spade_with_blur.yy",},},
     {"id":{"name":"spr_spade","path":"sprites/spr_spade/spr_spade.yy",},},

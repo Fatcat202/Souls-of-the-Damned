@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_spawner_9",
-    "path":"sprites/spr_spawner_9/spr_spawner_9.yy",
+    "name":"spr_spawner_10",
+    "path":"sprites/spr_spawner_10/spr_spawner_10.yy",
   },
   "spriteMaskId":null,
   "visible":false,

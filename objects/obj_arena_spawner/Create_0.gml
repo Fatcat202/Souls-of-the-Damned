@@ -179,5 +179,96 @@ waves = ds_list_create();
 	
 
 	#endregion Round 6
+	
+	
+	#region Round 7
+		_round = 7;
+		spawner = 0;
+		
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 0
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 1
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 2
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 3
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 4
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 5
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 6
+		
+		ds_list_add(waves, [_round, obj_enemy_Vulnadaemon, 0, spawner]) spawner++ // 7
+		ds_list_add(waves, [_round, obj_enemy_Vulnadaemon, 0, spawner]) spawner++ // 8
+		
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 9
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 10
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 11
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 12
+		
+	
+
+	#endregion Round 7
+	
+	
+	#region Round 8
+		_round = 8;
+		spawner = 0;
+		
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 0
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 1
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 2
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 3
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 4
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 5
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 6
+		
+		ds_list_add(waves, [_round, obj_enemy_Vulnadaemon, 0, spawner]) spawner++ // 7
+		ds_list_add(waves, [_round, obj_enemy_Vulnadaemon, 0, spawner]) spawner++ // 8
+		
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 9
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 10
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 11
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 12
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 13
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 14
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 15
+		
+
+	#endregion Round 8
+	
+	
+	#region Round 9
+		_round = 9;
+		spawner = 9;
+		
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 0
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 1
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 2
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 3
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 4
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 5
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 6
+		
+		ds_list_add(waves, [_round, obj_enemy_Vulnadaemon, 0, spawner]) spawner++ // 7
+		ds_list_add(waves, [_round, obj_enemy_Vulnadaemon, 0, spawner]) spawner++ // 8
+		
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 9
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 10
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 11
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 12
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 13
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 14
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 15
+		
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 16
+		ds_list_add(waves, [_round, obj_enemy_Cacodaemon, 0, spawner]) spawner++ // 17
+		ds_list_add(waves, [_round, obj_enemy_Venedaemon, 0, spawner]) spawner++ // 18
+		
+
+	#endregion Round 9
 
 #endregion Rounds
