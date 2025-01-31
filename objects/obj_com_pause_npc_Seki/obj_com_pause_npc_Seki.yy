@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Xan_side",
-    "path":"sprites/spr_Xan_side/spr_Xan_side.yy",
+    "name":"spr_Seki_side",
+    "path":"sprites/spr_Seki_side/spr_Seki_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

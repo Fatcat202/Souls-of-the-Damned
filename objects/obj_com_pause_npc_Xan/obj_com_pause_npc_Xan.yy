@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Xan",
-    "path":"sprites/spr_Xan/spr_Xan.yy",
+    "name":"spr_Xan_side",
+    "path":"sprites/spr_Xan_side/spr_Xan_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

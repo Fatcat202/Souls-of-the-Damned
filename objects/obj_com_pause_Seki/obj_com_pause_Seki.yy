@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Seki",
-    "path":"sprites/spr_Seki/spr_Seki.yy",
+    "name":"spr_Seki_side",
+    "path":"sprites/spr_Seki_side/spr_Seki_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,
