@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Bronwin",
-    "path":"folders/Objects/Characters/Players/Unimplemented/Bronwin.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Bronwin.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",

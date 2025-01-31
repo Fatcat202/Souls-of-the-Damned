@@ -11,6 +11,6 @@ if(global.game_combat_paused == true)
 	
 } else // If not combat paused
 {
-		obj_player_parent.active_power = 2;
+	obj_player_parent.active_power = 2;
 }
 

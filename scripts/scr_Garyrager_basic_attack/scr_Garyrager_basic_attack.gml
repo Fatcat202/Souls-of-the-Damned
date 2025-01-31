@@ -1,6 +1,13 @@
 
 function scr_Garyrager_basic_attack()
 {
-// Melee attack that does damage
-		scr_standard_pmelee();
+	var dmg_die_total = 1
+	var dmg_die_sides = 10
+	var dmg_mod = 0;
+	
+	// Melee attack that does damage
+	scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod);
+		
+	// States attack was used for cooldowns
+	used = true
 }

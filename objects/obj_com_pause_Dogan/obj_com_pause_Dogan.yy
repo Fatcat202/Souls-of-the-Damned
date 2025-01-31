@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Dogan Darkwater",
-    "path":"folders/Objects/Characters/Players/Implemented/Dogan Darkwater.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Dogan Darkwater.yy",
   },
   "parentObjectId":{
     "name":"obj_com_pause_parent",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Dogan",
-    "path":"sprites/spr_Dogan/spr_Dogan.yy",
+    "name":"spr_Dogan_side",
+    "path":"sprites/spr_Dogan_side/spr_Dogan_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

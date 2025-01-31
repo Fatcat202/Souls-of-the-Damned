@@ -51,6 +51,8 @@ function scr_change_com_pause_char(change_char)
 		npc.command_state_previous = command_state_previous;
 		npc.target_move_x = target_move_x;
 		npc.target_move_y = target_move_y;
+		npc.can_crit = can_crit;
+		npc.is_dead = is_dead;
 	
 		// Timers
 		npc.dot_tick = dot_tick;
@@ -64,9 +66,19 @@ function scr_change_com_pause_char(change_char)
 		npc.poison_coating_timer = poison_coating_time;
 		npc.knockback_cooldown_timer = knockback_cooldown_timer;
 		npc.knockback_cooldown_time = knockback_cooldown_time;
+		npc.critical_time = critical_time;
+		npc.critical_timer = critical_timer;
 		
 		// Bullets
 		npc.bullets = bullets;
+		
+		// Image Angle
+		npc.image_xscale = image_xscale;
+		
+		// Paths
+		npc.attack_path = attack_path;
+		npc.follow_path = follow_path;
+		npc.move_path = move_path;
 		
 
 		// Destroy player
@@ -116,6 +128,8 @@ function scr_change_com_pause_char(change_char)
 		player.command_state_previous = global.arr_combat_pause_npc[global.char_index].command_state_previous;
 		player.target_move_x = global.arr_combat_pause_npc[global.char_index].target_move_x;
 		player.target_move_y = global.arr_combat_pause_npc[global.char_index].target_move_y;
+		player.can_crit = global.arr_combat_pause_npc[global.char_index].can_crit;
+		player.is_dead = global.arr_combat_pause_npc[global.char_index].is_dead;
 	
 		// Timers
 		player.dot_tick = global.arr_combat_pause_npc[global.char_index].dot_tick;
@@ -129,10 +143,20 @@ function scr_change_com_pause_char(change_char)
 		player.poison_coating_timer = global.arr_combat_pause_npc[global.char_index].poison_coating_time;
 		player.knockback_cooldown_timer = global.arr_combat_pause_npc[global.char_index].knockback_cooldown_timer;
 		player.knockback_cooldown_time = global.arr_combat_pause_npc[global.char_index].knockback_cooldown_time;
-
+		player.critical_time = global.arr_combat_pause_npc[global.char_index].critical_time;
+		player.critical_timer = global.arr_combat_pause_npc[global.char_index].critical_timer;
+		
 		
 		// Bullets
 		player.bullets = global.arr_combat_pause_npc[global.char_index].bullets;
+		
+		// Image Angle
+		player.image_xscale = global.arr_combat_pause_npc[global.char_index].image_xscale;
+		
+		// Paths
+		player.attack_path = global.arr_combat_pause_npc[global.char_index].attack_path;
+		player.follow_path = global.arr_combat_pause_npc[global.char_index].follow_path;
+		player.move_path = global.arr_combat_pause_npc[global.char_index].move_path;
 		
 	// Destroy npc
 	instance_destroy(global.arr_combat_pause_npc[global.char_index]);

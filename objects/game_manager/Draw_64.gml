@@ -114,19 +114,31 @@ if(global.game_esc_paused == false)
 				// remaining on the cooldown for each attack
 		
 				// Cooldown 1
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_1 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_1, obj_player_parent.cooldown_time_1, c_black, 16, 0.5)
+				}
 				attack_y += attack_spacing;
 		
 				// Cooldown 2
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_2 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_2, obj_player_parent.cooldown_time_2, c_black, 16, 0.5)
+				}
 				attack_y += attack_spacing;
 		
 				// Cooldown 3
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_3 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_3, obj_player_parent.cooldown_time_3, c_black, 16, 0.5)
+				}
 				attack_y += attack_spacing;
 		
 				// Cooldown 4
-				scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
+				if(obj_player_parent.cooldown_4 = false != 0)
+				{
+					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
+				}
 			
 			#endregion Attacks
 
@@ -181,7 +193,7 @@ if(global.game_esc_paused == false)
 					draw_text(char_x_start, char_y_start - 20, global.active_pc_names_list[| i]);
 		
 		
-					#region HP and Armor healthbars
+				#region HP and Armor healthbars
 		
 						// Dependent location variables
 						var select_armor_healthbar_y_top = char_y_start; // Top of healthbars
@@ -237,11 +249,55 @@ if(global.game_esc_paused == false)
 						#endregion Armor Healthbar
 			
 					#endregion Armor and Healthbars
+				
+				#region Active Commands
 		
+					var command_sprite_y = (select_armor_healthbar_y_bottom + select_hp_healthbar_y_top) / 2
+					var command_sprite_x = char_x_start + select_healthbar_half_width + 10
+						
+					// Active Commands for Controlled PC
+					if(instance_exists(global.arr_players[char_index]))
+					{
+						if(obj_player_parent.command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_player_parent.command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_player_parent.command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_player_parent.command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+						
+						// Active Commands for NPCs
+						}else if(instance_exists(global.arr_npc[char_index]))
+						{
+							if(global.arr_npc[char_index].command_state == "attack_state")
+							{
+								draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+							}else if(global.arr_npc[char_index].command_state == "defend_state")
+							{
+								draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+							}else if(global.arr_npc[char_index].command_state == "follow_state")
+							{
+								draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+							}else if(global.arr_npc[char_index].command_state == "move_state")
+							{
+								draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+							}
+						}else show_debug_message("NO OBJECT LOCATED FOR ASSIGNED COMMAND");
+						
+						
 						// Reset and increment locations
 						char_x_start = 20;
 						char_y_start = char_y_start + 40;
-					}
+						
+				}
+				
+				#endregion Active Commands
 	
 			#endregion Selectable Characters
 	
@@ -312,19 +368,31 @@ if(global.game_esc_paused == false)
 			// remaining on the cooldown for each attack
 		
 			// Cooldown 1
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_1, obj_com_pause_parent.cooldown_time_1, c_black, 16, 0.5)
+			if(obj_com_pause_parent.cooldown_1 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_1, obj_com_pause_parent.cooldown_time_1, c_black, 16, 0.5)
+			}
 			attack_y += attack_spacing;
 		
 			// Cooldown 2
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_2, obj_com_pause_parent.cooldown_time_2, c_black, 16, 0.5)
+			if(obj_com_pause_parent.cooldown_2 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_2, obj_com_pause_parent.cooldown_time_2, c_black, 16, 0.5)
+			}		
 			attack_y += attack_spacing;
 		
 			// Cooldown 3
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_3, obj_com_pause_parent.cooldown_time_3, c_black, 16, 0.5)
+			if(obj_com_pause_parent.cooldown_3 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_3, obj_com_pause_parent.cooldown_time_3, c_black, 16, 0.5)
+			}
 			attack_y += attack_spacing;
 		
 			// Cooldown 4
-			scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_4, obj_com_pause_parent.cooldown_time_4, c_black, 16, 0.5)
+			if(obj_com_pause_parent.cooldown_4 = false != 0)
+			{
+				scr_draw_circ_healthbar(attack_x , attack_y, obj_com_pause_parent.cooldown_timer_4, obj_com_pause_parent.cooldown_time_4, c_black, 16, 0.5)
+			}
 			attack_y += attack_spacing;
 	
 	
@@ -454,6 +522,48 @@ if(global.game_esc_paused == false)
 					#endregion Armor Healthbar
 			
 				#endregion Armor and Healthbars
+				
+				#region Selected Command
+				
+					var command_sprite_y = (select_armor_healthbar_y_bottom + select_hp_healthbar_y_top) / 2
+					var command_sprite_x = char_x_start + select_healthbar_half_width + 10
+						
+					// Active Commands for Controlled PC
+					if(instance_exists(global.arr_combat_pause[char_index]))
+					{
+						if(obj_com_pause_parent.command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_com_pause_parent.command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_com_pause_parent.command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(obj_com_pause_parent.command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+						
+					// Active Commands for NPCs
+					}else if(instance_exists(global.arr_combat_pause_npc[char_index]))
+					{
+						if(global.arr_combat_pause_npc[char_index].command_state == "attack_state")
+						{
+							draw_sprite(spr_assigned_attack, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_combat_pause_npc[char_index].command_state == "defend_state")
+						{
+							draw_sprite(spr_assigned_defend, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_combat_pause_npc[char_index].command_state == "follow_state")
+						{
+							draw_sprite(spr_assigned_follow, 0, command_sprite_x, command_sprite_y)
+						}else if(global.arr_combat_pause_npc[char_index].command_state == "move_state")
+						{
+							draw_sprite(spr_assigned_move_to, 0, command_sprite_x, command_sprite_y)
+						}
+					}else show_debug_message("NO OBJECT LOCATED FOR ASSIGNED COMMAND");
+					
+				#endregion Selected Command
 		
 				// Reset and increment locations
 				char_x_start = 20;

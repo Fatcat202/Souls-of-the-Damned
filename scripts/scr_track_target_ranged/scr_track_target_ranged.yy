@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_track_target_ranged",
   "parent":{
-    "name":"Character AI",
-    "path":"folders/Scripts/Character AI.yy",
+    "name":"Behaviors",
+    "path":"folders/Scripts/Character AI/Behaviors.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

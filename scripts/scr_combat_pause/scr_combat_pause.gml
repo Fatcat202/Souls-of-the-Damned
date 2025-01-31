@@ -1,5 +1,8 @@
 function scr_combat_pause()
 {
+	// Prevent obj_description from sticking around
+	if(instance_exists(obj_description)) instance_destroy(obj_description)
+	
 	// Set combat pause to true
 	global.game_combat_paused = true;
 	
@@ -67,6 +70,8 @@ function scr_combat_pause()
 					combat_pause_char.command_state_previous = command_state_previous;
 					combat_pause_char.target_move_x = target_move_x;
 					combat_pause_char.target_move_y = target_move_y;
+					combat_pause_char.can_crit = can_crit;
+					combat_pause_char.is_dead = is_dead;
 	
 					// Timers
 					combat_pause_char.dot_tick = dot_tick;
@@ -80,9 +85,19 @@ function scr_combat_pause()
 					combat_pause_char.poison_coating_timer = poison_coating_time;
 					combat_pause_char.knockback_cooldown_timer = knockback_cooldown_timer;
 					combat_pause_char.knockback_cooldown_time = knockback_cooldown_time;
+					combat_pause_char.critical_time = critical_time;
+					combat_pause_char.critical_timer = critical_timer;
 					
 					// Bullets
 					combat_pause_char.bullets = bullets;
+					
+					// Paths
+					combat_pause_char.attack_path = attack_path;
+					combat_pause_char.follow_path = follow_path;
+					combat_pause_char.move_path = move_path;
+					
+					// Image Xscale
+					combat_pause_char.image_xscale = image_xscale
 					
 
 				}
@@ -131,6 +146,8 @@ function scr_combat_pause()
 					combat_pause_npc.command_state_previous = global.arr_npc[i].command_state_previous;
 					combat_pause_npc.target_move_x = global.arr_npc[i].target_move_x;
 					combat_pause_npc.target_move_y = global.arr_npc[i].target_move_y;
+					combat_pause_npc.can_crit = global.arr_npc[i].can_crit;
+					combat_pause_npc.is_dead = global.arr_npc[i].is_dead;
 	
 					// Timers
 					combat_pause_npc.dot_tick = global.arr_npc[i].dot_tick;
@@ -144,9 +161,19 @@ function scr_combat_pause()
 					combat_pause_npc.poison_coating_timer = global.arr_npc[i].poison_coating_time;
 					combat_pause_npc.knockback_cooldown_timer = global.arr_npc[i].knockback_cooldown_timer;
 					combat_pause_npc.knockback_cooldown_time = global.arr_npc[i].knockback_cooldown_time;
+					combat_pause_npc.critical_time = global.arr_npc[i].critical_time;
+					combat_pause_npc.critical_timer = global.arr_npc[i].critical_timer;
 					
 					// Bullets
 					combat_pause_npc.bullets = global.arr_npc[i].bullets;
+					
+					// Paths
+					combat_pause_npc.attack_path = global.arr_npc[i].attack_path;
+					combat_pause_npc.follow_path = global.arr_npc[i].follow_path;
+					combat_pause_npc.move_path = global.arr_npc[i].move_path;
+					
+					// Image Angle
+					combat_pause_npc.image_xscale = global.arr_npc[i].image_xscale;
 					
 
 				}
@@ -157,6 +184,7 @@ function scr_combat_pause()
 
 	// Capture game moment (except GUI as GUI is rendered independently)
 
+	
 	// Adding background sprite ** IN PROGRESS **
 	var spr_temp_background = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false, false, surface_get_width(application_surface) / 2, surface_get_height(application_surface) / 2)
 	

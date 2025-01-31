@@ -10,5 +10,8 @@ function scr_Seki_teleport(){
 		
 		// Cooldown
 		cooldown = game_get_speed(gamespeed_fps) * 6;
+		
+		// States attack was used for cooldowns
+		used = true
 	}
 }

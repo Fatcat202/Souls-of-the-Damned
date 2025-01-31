@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Spr_Ball_Of_Electricity",
-    "path":"sprites/Spr_Ball_Of_Electricity/Spr_Ball_Of_Electricity.yy",
+    "name":"spr_holy_javalin",
+    "path":"sprites/spr_holy_javalin/spr_holy_javalin.yy",
   },
   "spriteMaskId":null,
   "visible":true,

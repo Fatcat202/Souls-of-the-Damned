@@ -11,7 +11,7 @@ if(can_move == true)
 	// Check if player is within collision range
 	if(within_range == true)
 	{
-		scr_track_target_melee(view_range)
+		scr_move_to_target(view_range)
 		
 		// Defines that a player is being tracked for melee for some enemy abilites
 		melee_player_tracked = true;
@@ -37,6 +37,11 @@ if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
 	sprite_index = spr_vulna_passive;
 }
 
+
+var dmg_die_total = 2
+var dmg_die_sides = 4
+var	dmg_mod = 0;
+
 // Attack if within range
 var m_range = sprite_get_width(spr_standard_emelee);
 if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
@@ -48,6 +53,12 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_r
 		melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
 		melee.image_angle = melee.direction;
 		melee.index = index;
+		
+		// Send index to attack sprite for stats
+		melee.enemy_object = object_index;
+		
+		// Damage
+		melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
 	sprite_index = spr_vulna_attack;
 	

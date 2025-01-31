@@ -21,7 +21,7 @@ if(within_range != noone)
 		scr_Seki_basic_attack(target_pos_x, target_pos_y)
 		
 		// Attack Cooldown
-		alarm[0] = game_get_speed(gamespeed_fps) * global.player_stats[index].main_atk_spd;
+		alarm[0] = cooldown;
 		can_attack = false;
 		scr_sprite_direction(point_direction(x, y, target_pos_x, target_pos_y));
 	}

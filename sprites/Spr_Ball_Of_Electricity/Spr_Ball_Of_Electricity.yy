@@ -31,8 +31,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"2D_animated_VFX",
-    "path":"folders/Sprites/Packs/2D_animated_VFX.yy",
+    "name":"Attacks",
+    "path":"folders/Sprites/Attacks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

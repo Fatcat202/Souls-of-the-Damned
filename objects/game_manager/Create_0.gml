@@ -121,12 +121,18 @@ randomise()
 		
 		// Sets default game esc pause state
 		global.game_esc_paused = false
+		
+		// Sets default game death pause state
+		global.game_death_paused = false
 	
 		// Sets default of if a pause can occour to false
 		global.can_pause = false;
 	
 		// Sets default of if a pause can occour to false
 		global.can_combat_pause = false;
+		
+		// Used to end combat pause and correctly transfer data
+		global.end_combat_pause = false;
 
 
 
@@ -169,6 +175,9 @@ randomise()
 		
 		// Create mp grid for enemy usage
 		global.mp_grid_enemy = global.mp_grid;
+		
+		// Total number of dead PCs
+		global.total_dead = 0;
 	
 	
 	#endregion Misc

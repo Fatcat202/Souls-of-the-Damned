@@ -30,5 +30,7 @@ draw_self()
 	
 #endregion
 
-// Path Debug
-draw_path(attack_path, x, y, false)
+// Draw A* Paths For Debug
+var attack_path = path_add()
+mp_grid_path(global.mp_grid_enemy, attack_path, x, y, target_pos_x, target_pos_y, true);
+if(path_exists(attack_path)) draw_path(attack_path, x, y, false);
