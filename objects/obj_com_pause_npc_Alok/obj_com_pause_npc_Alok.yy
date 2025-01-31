@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_Alok",
-    "path":"sprites/spr_Alok/spr_Alok.yy",
+    "name":"spr_Alok_side",
+    "path":"sprites/spr_Alok_side/spr_Alok_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,
