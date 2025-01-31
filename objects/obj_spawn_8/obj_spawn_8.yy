@@ -4,7 +4,9 @@
   "eventList":[],
   "managed":true,
   "name":"obj_spawn_8",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_spawn_point_parent","path":"objects/obj_spawn_point_parent/obj_spawn_point_parent.yy",},"propertyId":{"name":"number","path":"objects/obj_spawn_point_parent/obj_spawn_point_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"8",},
+  ],
   "parent":{
     "name":"Spawn Points",
     "path":"folders/Objects/Spawner/Spawn Points.yy",
@@ -30,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_spawner_8",
+    "path":"sprites/spr_spawner_8/spr_spawner_8.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

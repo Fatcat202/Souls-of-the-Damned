@@ -16,8 +16,6 @@
 		attack_y = lerp(global.cam_y, global.cam_y, global.cam_smoothing) + 20
 	}
 		
-
-	
 	var attack_spacing = 36; // Space between cooldowns
 
 	#region Place Buttons
