@@ -3,7 +3,6 @@
 
 // Characters are affected by Damage Over Time
 scr_take_dot();
-scr_non_player_collision(speed);
 
 // ** STUN **
 // Check character is stunned
@@ -37,6 +36,20 @@ if(poison_coating == true)
 	}
 }
 
+// ** CRITICAL ATTACK **
+// Check if cooldown ticking
+if(can_crit == true)
+{
+	// Increment cooldown each frame
+	critical_timer++;
+	if(critical_timer >= critical_time) 
+	{
+		// Reset changed conditions
+		can_crit = false;
+		critical_time = 0;
+	}
+}
+
 
 // ** KNOCKBACK **
 // Check character is knocked back
@@ -56,7 +69,6 @@ if(knocked_back == true)
 		knockback_cooldown_timer = 0;
 	}
 
-	if(knockback_cooldown_timer > 3) scr_non_player_collision(speed);
 }
 
 

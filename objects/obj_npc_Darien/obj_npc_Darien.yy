@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Darien",
-    "path":"folders/Objects/Characters/Players/Implemented/Darien.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Darien.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",

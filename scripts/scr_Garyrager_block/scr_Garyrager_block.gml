@@ -3,4 +3,7 @@
 function scr_Garyrager_block()
 {
 	scr_block();
+	
+	// States attack was used for cooldowns
+	used = true
 }

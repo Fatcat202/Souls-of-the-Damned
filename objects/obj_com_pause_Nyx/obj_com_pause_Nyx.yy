@@ -7,9 +7,12 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Nyx",
-    "path":"folders/Objects/Characters/Players/Unimplemented/Nyx.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Nyx.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_com_pause_parent",
+    "path":"objects/obj_com_pause_parent/obj_com_pause_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

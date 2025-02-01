@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Seki Goldcoat",
-    "path":"folders/Objects/Characters/Players/Implemented/Seki Goldcoat.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Seki Goldcoat.yy",
   },
   "parentObjectId":{
     "name":"obj_player_parent",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Seki",
-    "path":"sprites/spr_Seki/spr_Seki.yy",
+    "name":"spr_Seki_side",
+    "path":"sprites/spr_Seki_side/spr_Seki_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,6 +1,7 @@
 // Behavior
+event_inherited()
 
-scr_non_player_collision(move_spd);
+scr_non_player_collision()
 
 // Activate the command state
 
@@ -16,7 +17,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	
 	}else if(command_state == "move_state")
 	{
-		scr_move()
+		scr_move();
 	
 	}else if(command_state == "follow_state")
 	{

@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Gary and Rager",
-    "path":"folders/Objects/Characters/Players/Implemented/Gary and Rager.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Gary and Rager.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",

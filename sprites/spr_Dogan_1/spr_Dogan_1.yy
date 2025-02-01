@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":64,
+  "height":36,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"7c3aef2a-0433-4545-8baa-a3aa425d7109","blendMode":0,"displayName":"default","isLocked":false,"name":"7c3aef2a-0433-4545-8baa-a3aa425d7109","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"64px Sprites",
-    "path":"folders/Sprites/Characters/64px Sprites.yy",
+    "path":"folders/Sprites/Characters/Old Sprites/64px Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -75,8 +75,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":32,
-    "yorigin":34,
+    "xorigin":18,
+    "yorigin":20,
   },
   "swatchColours":null,
   "swfPrecision":0.5,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":64,
+  "width":36,
 }

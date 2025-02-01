@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"64px Sprites",
-    "path":"folders/Sprites/Characters/64px Sprites.yy",
+    "path":"folders/Sprites/Characters/Old Sprites/64px Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

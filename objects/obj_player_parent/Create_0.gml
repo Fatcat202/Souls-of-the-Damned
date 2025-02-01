@@ -1,5 +1,7 @@
 /// @description Initial Creation
 
+event_inherited()
+
 #region Assigning Character
 
 	// Read name of object and assigns it to object_name
@@ -62,3 +64,6 @@
 
 
 #endregion
+
+
+

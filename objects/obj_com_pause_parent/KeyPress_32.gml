@@ -1,4 +1,7 @@
 /// @description Resume Combat
 
-scr_combat_resume();
+global.end_combat_pause = true;
+
+instance_activate_all()
+
 

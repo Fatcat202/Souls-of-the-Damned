@@ -9,7 +9,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Alok Silvore",
-    "path":"folders/Objects/Characters/Players/Implemented/Alok Silvore.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Alok Silvore.yy",
   },
   "parentObjectId":{
     "name":"obj_player_parent",
@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Alok",
-    "path":"sprites/spr_Alok/spr_Alok.yy",
+    "name":"spr_Alok_side",
+    "path":"sprites/spr_Alok_side/spr_Alok_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

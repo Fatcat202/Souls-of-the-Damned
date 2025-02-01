@@ -11,10 +11,9 @@ function scr_track_target_ranged(range)
 		// Check if player is within collision range
 		if(within_range == true)
 		{
-			// Move towards player, avoiding solid objects along the way
+			// Move away from target as they get closer
 			mp_potential_step(-target_pos_x, -target_pos_y, move_spd, 1);
 			scr_sprite_direction(direction);
-			scr_non_player_collision(speed);
 
 		} else
 		{

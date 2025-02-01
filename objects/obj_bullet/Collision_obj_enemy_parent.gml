@@ -2,6 +2,6 @@
 
 
 
-scr_damage(global.player_stats[global.selected_char].main_atk_dmg);
+scr_damage(damage);
 
 instance_destroy();

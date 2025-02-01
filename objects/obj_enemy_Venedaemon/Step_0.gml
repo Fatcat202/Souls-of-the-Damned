@@ -4,104 +4,62 @@
 event_inherited()
 
 
-
-// Movement
-var within_range = false;
-if(can_move == true)
-{
-	if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) within_range = true;
-	// Check if player is within collision range
-	if(within_range == true)
-	{
-		// Move towards player, avoiding solid objects along the way
-		scr_track_target_melee(move_spd)
-		
-		// Defines that a player is being tracked for melee for some enemy abilites
-		melee_player_tracked = true;
-
-	} else
-	{
-		// Remains still if no player is within range
-		speed = 0;
-		target_pos_x = x;
-		target_pos_y = y;
-		// Defines that a player is not being tracked for melee for some enemy abilities
-		melee_player_tracked = false;
-	}
-}
-
-
-// Check if attack cooldown is over and increment tick
-
-// Melee Attack
-atk_tick_0++
-if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
-{
-	can_attack = true;
-	can_move = true;
-}
-
-
-// Ranged Attack
-atk_tick_1++
-if(atk_tick_1 >= (game_get_speed(gamespeed_fps) * 2) + random(60))
-{
-	can_attack = true;
-	can_move = true;
-}
-
-
 // Attacks
-var within_blast_range = false;
-if(can_move == true)
+
+var dmg_die_total
+var dmg_die_sides
+var dmg_mod
+
+if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 {
-	if(point_distance(x, y, target_pos_x, target_pos_y) <= view_range) within_blast_range = true;
-	// If within blast range, then stop movement and shoot vene blast at player/npc
-	if(within_blast_range == true)
+	if(can_move) scr_move_to_target(80)
+			
+	var m_range = sprite_get_width(spr_standard_emelee);
+	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
 	{
-		// Check if in melee range, ranged attack if not
-		var within_melee_range = false;
-		if(point_distance(x, y, target_pos_x, target_pos_y) <= 100) within_melee_range = true;
-		if(within_melee_range == false)
-		{
-			// Fires Vene Blast every 60 - 120 frames semi-randomly
-			
-			// Stops all movement
-			speed = 0;
-			
-			if(can_attack == true && melee_player_tracked != true)
-			{
-				// Create blast object
-				var vene_blast = instance_create_layer(x, y, "Projectiles", obj_vene_blast);
+		dmg_die_total = 1
+		dmg_die_sides = 10
+		dmg_mod = 0;
 		
-				// Set speed, direction, and image angle
-				vene_blast.speed = 6;
-				vene_blast.direction = point_direction(x, y, target_pos_x, target_pos_y);
-				vene_blast.image_angle = vene_blast.direction;
+		// Create melee object
+		melee = instance_create_layer(x, y, "Projectiles", obj_emelee_parent);
+			melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
+			melee.image_angle = melee.direction;
+			melee.index = index;
 			
-				// Cooldown
-				can_attack = false;
-				can_move = false;
-				atk_tick_1 = 0
-			}
-				
-		}else // Melee Attack
-		{ 
-			var m_range = sprite_get_width(spr_standard_emelee);
-			if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
-			{
-				// Create blast object
-				var melee = instance_create_layer(x, y, "Projectiles", obj_emelee_parent);
+			// Send index to attack sprite for stats
+			melee.enemy_object = object_index;
+			
+			// Damage
+			melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
-					// Set direction, and image angle
-					melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
-					melee.image_angle = melee.direction;
-					melee.index = index;
+		can_attack = false;
+		can_move = false;
+		alarm[0] = game_get_speed(gamespeed_fps) / 4;
+	}
+}else if(point_distance(x, y, target_pos_x, target_pos_y) <= view_range)
+{
+	// Fires Vene Blast every 60 - 120 frames semi-randomly
+
+
+	if(can_attack)
+	{
+		dmg_die_total = 1
+		dmg_die_sides = 10
+		dmg_mod = 0;
 		
-				can_attack = false;
-				can_move = false;
-				atk_tick_0 = 0;
-			}
-		}
-	}else speed = 0;
-}else speed = 0;
+		// Create blast object
+		vene_blast = instance_create_layer(x, y, "Projectiles", obj_vene_blast);
+			vene_blast.speed = 6;
+			vene_blast.direction = point_direction(x, y, target_pos_x, target_pos_y);
+			vene_blast.image_angle = vene_blast.direction;
+			
+			// Damage
+			vene_blast.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+			
+		// Cooldown
+		can_attack = false;
+		alarm[0] = game_get_speed(gamespeed_fps) * 1.5 + random(75);
+	}
+					
+}

@@ -3,8 +3,19 @@
 
 #region HUD Buttons
 
-	var attack_x = camera_get_view_x(CAMERA) + 620; // Starting x location
-	var attack_y = camera_get_view_y(CAMERA) + 20; // Starting y location
+	var attack_x, attack_y;
+
+	if(!mouse_check_button(mb_middle))
+	{
+		attack_x = lerp(global.cam_x, global.cam_target_x, global.cam_smoothing) + 620; // Starting x location
+		attack_y = lerp(global.cam_y, global.cam_target_y, global.cam_smoothing) + 20; // Starting y location
+	} else
+	{
+		
+		attack_x = lerp(global.cam_x, global.cam_x, global.cam_smoothing) + 620
+		attack_y = lerp(global.cam_y, global.cam_y, global.cam_smoothing) + 20
+	}
+		
 	var attack_spacing = 36; // Space between cooldowns
 
 	#region Place Buttons

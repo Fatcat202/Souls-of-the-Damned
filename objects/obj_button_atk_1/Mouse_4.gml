@@ -14,7 +14,3 @@ if(global.game_combat_paused == true)
 	obj_player_parent.active_power = 1;
 	
 }
-
-
-
-

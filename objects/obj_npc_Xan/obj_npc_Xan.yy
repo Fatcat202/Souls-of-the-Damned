@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Xan Peppo",
-    "path":"folders/Objects/Characters/Players/Implemented/Xan Peppo.yy",
+    "path":"folders/Objects/Characters/Players/PCs/Xan Peppo.yy",
   },
   "parentObjectId":{
     "name":"obj_npc_parent",
@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Xan",
-    "path":"sprites/spr_Xan/spr_Xan.yy",
+    "name":"spr_Xan_side",
+    "path":"sprites/spr_Xan_side/spr_Xan_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

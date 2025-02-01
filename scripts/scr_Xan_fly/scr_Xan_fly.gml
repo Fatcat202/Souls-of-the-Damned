@@ -12,5 +12,8 @@ function scr_Xan_fly()
 	Xan_fly_timer = 0;
 	Xan_fly_end = cooldown / 2;
 	Xan_fly_active = true;
+	
+	// States attack was used for cooldowns
+	used = true
 
 }
