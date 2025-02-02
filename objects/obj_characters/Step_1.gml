@@ -36,17 +36,17 @@ if(poison_coating == true)
 	}
 }
 
-// ** CRITICAL ATTACK **
-// Check if cooldown ticking
-if(can_crit == true)
+// ** SNEAK ATTACK **
+// Check if sneak attack is active
+if(sneak_attack == true)
 {
 	// Increment cooldown each frame
-	critical_timer++;
-	if(critical_timer >= critical_time) 
+	sneak_attack_timer++;
+	if(sneak_attack_timer >= sneak_attack_time) 
 	{
 		// Reset changed conditions
-		can_crit = false;
-		critical_time = 0;
+		can_sneak_attack = false;
+		sneak_attack_time = 0;
 	}
 }
 

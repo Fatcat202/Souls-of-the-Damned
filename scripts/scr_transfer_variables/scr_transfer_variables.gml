@@ -42,7 +42,7 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.command_state_previous = send_from.command_state_previous;
 	send_to.target_move_x = send_from.target_move_x;
 	send_to.target_move_y = send_from.target_move_y;
-	send_to.can_crit = send_from.can_crit;
+	send_to.sneak_attack = send_from.sneak_attack;
 	send_to.is_dead = send_from.is_dead;
 		
 	
@@ -58,8 +58,8 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.poison_coating_timer = send_from.poison_coating_time;
 	send_to.knockback_cooldown_timer = send_from.knockback_cooldown_timer;
 	send_to.knockback_cooldown_time = send_from.knockback_cooldown_time;
-	send_to.critical_time = send_from.critical_time;
-	send_to.critical_timer = send_from.critical_timer;
+	send_to.sneak_attack_time = send_from.sneak_attack_time;
+	send_to.sneak_attack_timer = send_from.sneak_attack_timer;
 
 
 	// Bullets

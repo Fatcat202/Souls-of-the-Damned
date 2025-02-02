@@ -8,17 +8,9 @@ if(poison_coating == true)
 	scr_apply_dot(scr_roll_dice(1, 4), 30, 2, 0);
 }
 
+if sneak_attack == true
+{
+	damage = scr_critical(damage, 50, 2)
+} scr_critical(damage, 10, 1.5)
 
-// If can crit, apply crit chance
-if(can_crit == true)
-{
-	// Crit chance of 50%
-	var ran = random(100)
-	if(ran > 50)
-	{
-		scr_damage(damage * 1.5);
-	} else scr_damage(damage);
-} else
-{
-	scr_damage(damage);
-}
+scr_damage(damage)
