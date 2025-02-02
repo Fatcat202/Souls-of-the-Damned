@@ -1,6 +1,9 @@
 function scr_Alok_channel()
 {
 	
+	// Pull stats
+	attack_index = scr_find_attack_index("Alok_channel")
+	
 	var channel = instance_create_layer(x, y, "Projectiles", obj_Alok_channel)
 		channel.alarm[0] = 60
 		channel.timer_length = 60

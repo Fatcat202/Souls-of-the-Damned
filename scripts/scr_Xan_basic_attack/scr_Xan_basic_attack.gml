@@ -4,7 +4,10 @@ function scr_Xan_basic_attack(target_x, target_y)
 	// Hit first enemy in a line and deal damage.
 	// Only so many shots, must reload through timer. Timer is reset when fireing again.
 	
-	var dmg_die_total = 1
+	// Pull stats
+	attack_index = scr_find_attack_index("Xan_basic_attack")
+	
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
 	var dmg_die_sides = 10
 	var dmg_mod = 0;
 	

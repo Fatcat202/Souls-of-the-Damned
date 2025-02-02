@@ -204,6 +204,7 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
+    {"$GMIncludedFile":"","%Name":"attack_data.csv","CopyToMask":-1,"filePath":"datafiles","name":"attack_data.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"attack_data.xlsx","CopyToMask":-1,"filePath":"datafiles","name":"attack_data.xlsx","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"enemy_data.csv","CopyToMask":-1,"filePath":"datafiles","name":"enemy_data.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"enemy_data.xlsx","CopyToMask":-1,"filePath":"datafiles","name":"enemy_data.xlsx","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -481,6 +482,7 @@
     {"id":{"name":"scr_enemy_default_weight","path":"scripts/scr_enemy_default_weight/scr_enemy_default_weight.yy",},},
     {"id":{"name":"scr_esc_pause","path":"scripts/scr_esc_pause/scr_esc_pause.yy",},},
     {"id":{"name":"scr_esc_resume","path":"scripts/scr_esc_resume/scr_esc_resume.yy",},},
+    {"id":{"name":"scr_find_attack_index","path":"scripts/scr_find_attack_index/scr_find_attack_index.yy",},},
     {"id":{"name":"scr_follow","path":"scripts/scr_follow/scr_follow.yy",},},
     {"id":{"name":"scr_Garyrager_basic_attack","path":"scripts/scr_Garyrager_basic_attack/scr_Garyrager_basic_attack.yy",},},
     {"id":{"name":"scr_Garyrager_block","path":"scripts/scr_Garyrager_block/scr_Garyrager_block.yy",},},
@@ -1281,9 +1283,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_arena_1","path":"rooms/rm_arena_1/rm_arena_1.yy",},},
     {"roomId":{"name":"Testing","path":"rooms/Testing/Testing.yy",},},
+    {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

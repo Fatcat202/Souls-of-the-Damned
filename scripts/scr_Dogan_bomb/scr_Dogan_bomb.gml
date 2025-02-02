@@ -2,7 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_Dogan_bomb()
 {
-	// Shoots fireball that explodes on impact and does damage in an area
+	// Throw bomb which deals damage in area on impact or after fuse
+	
+	attack_index = scr_find_attack_index("Dogan_bomb")
 	
 	var dmg_die_total = 1
 	var dmg_die_sides = 6

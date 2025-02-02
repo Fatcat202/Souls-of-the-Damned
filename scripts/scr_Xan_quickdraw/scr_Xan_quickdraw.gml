@@ -1,6 +1,10 @@
 
 function scr_Xan_quickdraw()
 {
+	
+	// Pull stats
+	attack_index = scr_find_attack_index("Xan_quickdraw")
+	
 	// Set variables
 	var range = 150;
 	var within_range = collision_circle(x, y, range, obj_enemy_parent, 1, 1);

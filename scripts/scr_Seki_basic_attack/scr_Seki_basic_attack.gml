@@ -1,6 +1,9 @@
 
 function scr_Seki_basic_attack(target_x, target_y)
 {
+	// Pull stats
+	attack_index = scr_find_attack_index("Seki_basic_attack")
+	
 	var dmg_die_total = 1
 	var dmg_die_sides = 8
 	var dmg_mod = 0;

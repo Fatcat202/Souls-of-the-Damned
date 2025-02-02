@@ -3,6 +3,9 @@ function scr_Xan_powerful_shot(target_x, target_y){
 
 	// Fire a powerful shot that travels through enemies and staggers them
 	
+	// Pull stats
+	attack_index = scr_find_attack_index("Xan_powerful_shot")
+	
 	var dmg_die_total = 1
 	var dmg_die_sides = 12
 	var dmg_mod = 0;

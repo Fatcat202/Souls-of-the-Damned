@@ -1,0 +1,17 @@
+,dmg_die_num,dmg_die_sides,dmg_mod,cooldown,kb_length,crit_chance
+Alok_basic_attack,10,8,0,0,0,5
+Alok_channel,1,6,0,0,0,0
+Alok_javalin,1,8,0,0,0,0
+Alok_shield,0,0,0,0,0,0
+Dogan_basic_attack,1,6,0,0,0,5
+Dogan_bomb,1,6,0,0,0,0
+Dogan_sneak_attack,1,0,0,0,0,50
+Dogan_poison,1,0,0,0,0,0
+Seki_basic_attack,1,8,0,0,0,0
+Seki_fireball,1,6,0,0,0,0
+Seki_lightning,1,8,0,0,0,0
+Seki_teleport,0,0,0,0,0,0
+Xan_basic_attack,1,10,0,0,0,5
+Xan_fly,0,0,0,0,0,0
+Xan_powerful_shot,2,10,0,0,0,5
+Xan_quickdraw,1,6,0,0,0,5

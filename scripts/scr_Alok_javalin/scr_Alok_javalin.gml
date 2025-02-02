@@ -1,6 +1,10 @@
 
 function scr_Alok_javalin()
 {
+	
+	// Pull stats
+	attack_index = scr_find_attack_index("Alok_javalin")
+	
 	var dmg_die_total = 2
 	var dmg_die_sides = 8
 	var dmg_mod = 0;

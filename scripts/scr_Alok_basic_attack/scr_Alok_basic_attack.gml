@@ -1,10 +1,12 @@
 
 function scr_Alok_basic_attack()
 {
-
 	// Melee attack that does damage
 	
-	var dmg_die_total = 1
+	// Pull stats
+	attack_index = scr_find_attack_index("Alok_basic_attack")
+	
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
 	var dmg_die_sides = 8
 	var dmg_mod = 0;
 	

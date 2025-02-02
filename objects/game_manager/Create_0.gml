@@ -8,8 +8,10 @@ randomise()
 	#region Variables
 
 
-		#region database
-		
+	#region database
+			
+			// **PLAYERS**
+			
 			// Create player_index_length for tracking total number of players in csv
 			global.player_index_length = 0;
 
@@ -20,10 +22,10 @@ randomise()
 			global.arr_player_index_name[0] = "No valid player name";
 			global.arr_player_index_num[0] = 0;
 
-			// The variable that initially changes when changing characters
-			global.selected_char = 1;
+			
+			// **ENEMIES**
 
-			// Create enemy_index_length for tracking total number of enemy in csv
+			// Create enemy_index_length for tracking total number of enemies in csv
 			global.enemy_index_length = 0;
 
 			// Create enemy_stats array for tracking stats
@@ -33,48 +35,70 @@ randomise()
 			global.arr_enemy_index_name[0] = "No valid enemy name";
 			global.arr_enemy_index_num[0] = 0;
 			
+			// **ATTACKS**
 			
-		#region Swapping Characters
+			// Create attack_index_length for tracking total number of attacks in csv
+			global.attack_index_length = 0;
+
+			// Create enemy_stats array for tracking stats
+			global.attack_stats[0] = 0
+
+			// Initialize enemy index arrays
+			global.arr_attack_index_name[0] = "No valid attack name";
+			
 		
 			// Assign players to array
-			global.arr_players[1] = obj_player_Alok;
-			global.arr_players[2] = obj_player_Seki;
-			global.arr_players[3] = obj_player_Xan;
-			global.arr_players[4] = obj_player_Garyrager;
-			global.arr_players[5] = obj_player_Dogan;
-			global.arr_players[6] = obj_player_Darien;
-			global.arr_players[7] = obj_player_Bronwin;
-			global.arr_players[8] = obj_player_Nyx;
+			#region
+				global.arr_players[1] = obj_player_Alok;
+				global.arr_players[2] = obj_player_Seki;
+				global.arr_players[3] = obj_player_Xan;
+				global.arr_players[4] = obj_player_Garyrager;
+				global.arr_players[5] = obj_player_Dogan;
+				global.arr_players[6] = obj_player_Darien;
+				global.arr_players[7] = obj_player_Bronwin;
+				global.arr_players[8] = obj_player_Nyx;
+			#endregion
 
 			//	Assign npcs to array
-			global.arr_npc[1] = obj_npc_Alok;
-			global.arr_npc[2] = obj_npc_Seki;
-			global.arr_npc[3] = obj_npc_Xan;
-			global.arr_npc[4] = obj_npc_Garyrager;
-			global.arr_npc[5] = obj_npc_Dogan;
-			global.arr_npc[6] = obj_npc_Darien;
-			global.arr_npc[7] = obj_npc_Bronwin;
-			global.arr_npc[8] = obj_npc_Nyx;
+			#region
+				global.arr_npc[1] = obj_npc_Alok;
+				global.arr_npc[2] = obj_npc_Seki;
+				global.arr_npc[3] = obj_npc_Xan;
+				global.arr_npc[4] = obj_npc_Garyrager;
+				global.arr_npc[5] = obj_npc_Dogan;
+				global.arr_npc[6] = obj_npc_Darien;
+				global.arr_npc[7] = obj_npc_Bronwin;
+				global.arr_npc[8] = obj_npc_Nyx;
+			#endregion
 			
 			// Assign combat pause objects to array
-			global.arr_combat_pause[1] = obj_com_pause_Alok;
-			global.arr_combat_pause[2] = obj_com_pause_Seki;
-			global.arr_combat_pause[3] = obj_com_pause_Xan;
-			global.arr_combat_pause[4] = obj_com_pause_Garyrager;
-			global.arr_combat_pause[5] = obj_com_pause_Dogan;
-			global.arr_combat_pause[6] = obj_com_pause_Darien;
-			global.arr_combat_pause[7] = obj_com_pause_Bronwin;
-			global.arr_combat_pause[8] = obj_com_pause_Nyx;
+			#region
+				global.arr_combat_pause[1] = obj_com_pause_Alok;
+				global.arr_combat_pause[2] = obj_com_pause_Seki;
+				global.arr_combat_pause[3] = obj_com_pause_Xan;
+				global.arr_combat_pause[4] = obj_com_pause_Garyrager;
+				global.arr_combat_pause[5] = obj_com_pause_Dogan;
+				global.arr_combat_pause[6] = obj_com_pause_Darien;
+				global.arr_combat_pause[7] = obj_com_pause_Bronwin;
+				global.arr_combat_pause[8] = obj_com_pause_Nyx;
+			#endregion
 			
 			// Assign combat pause npc objects to array
-			global.arr_combat_pause_npc[1] = obj_com_pause_npc_Alok;
-			global.arr_combat_pause_npc[2] = obj_com_pause_npc_Seki;
-			global.arr_combat_pause_npc[3] = obj_com_pause_npc_Xan;
-			global.arr_combat_pause_npc[4] = obj_com_pause_npc_Garyrager;
-			global.arr_combat_pause_npc[5] = obj_com_pause_npc_Dogan;
-			global.arr_combat_pause_npc[6] = obj_com_pause_npc_Darien;
-			global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
-			global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
+			#region
+				global.arr_combat_pause_npc[1] = obj_com_pause_npc_Alok;
+				global.arr_combat_pause_npc[2] = obj_com_pause_npc_Seki;
+				global.arr_combat_pause_npc[3] = obj_com_pause_npc_Xan;
+				global.arr_combat_pause_npc[4] = obj_com_pause_npc_Garyrager;
+				global.arr_combat_pause_npc[5] = obj_com_pause_npc_Dogan;
+				global.arr_combat_pause_npc[6] = obj_com_pause_npc_Darien;
+				global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
+				global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
+			#endregion
+			
+			
+			
+			
+		#region Swapping Characters
 			
 			// DS list to hold active PC object names
 			global.active_pc_list = ds_list_create();
@@ -93,6 +117,9 @@ randomise()
 			
 			// DS list to hold active com pause PC objects
 			global.active_pc_com_pause_object_list = ds_list_create();
+			
+			// The variable that initially changes when changing characters
+			global.selected_char = 1;
 			
 			// Tracks active player index in player, npc, and combat paused DS lists. Default to 1
 			global.char_index = 1;
@@ -402,6 +429,78 @@ randomise()
 	ds_grid_destroy(ds_enemy_stats_csv);
 
 #endregion Enemy Stats
+
+
+
+#region Attack Stats
+
+	var ds_attack_stats_csv = load_csv("attack_data.csv");
+
+	// Ensure the grid is valid
+	if (ds_attack_stats_csv == -1) {
+	    show_error("Failed to load CSV file.", true);
+	    exit;
+	}
+
+	// Initialize stats dictionary constructor
+	function p_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0) constructor {
+		dmg_die_num = _dmg_die_num;
+		dmg_die_sides = _dmg_die_sides;
+		dmg_mod = _dmg_mod;
+		cooldown = _cooldown;
+		kb_length = _kb_length;
+		crit_chance = _crit_chance;
+	}
+
+	// Create attack_stats struct array
+	// **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats(); 
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();	
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+
+	// Assign all values from CSV file into stats database structs
+	for(var i = 0; i < global.attack_index_length; i++)
+	{
+		var yy = i + 1;
+		var xx = 1;
+	
+		global.attack_stats[yy].dmg_die_num = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].dmg_die_sides = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].dmg_mod = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].cooldown = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].kb_length = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].crit_chance = real(ds_grid_get(ds_attack_stats_csv, xx, yy));
+	
+	}
+
+
+	// Assign data to attack index arrays
+	for(var p = 0; p < global.attack_index_length; p++)
+	{
+		var n = p + 1;
+		// Sets 1st place in array as names
+		global.arr_attack_index_name[n] = ds_grid_get(ds_attack_stats_csv, 0, n);
+	}
+	
+	
+		// Cleanup DS grid
+		ds_grid_destroy(ds_attack_stats_csv);
+	
+#endregion Attack Stats
+
 
 
 

@@ -1,6 +1,9 @@
 
 function scr_Seki_lightning()
 {
+	// Pull stats
+	attack_index = scr_find_attack_index("Seki_lightning")
+	
 	
 	var dmg_die_total = 1
 	var dmg_die_sides = 8

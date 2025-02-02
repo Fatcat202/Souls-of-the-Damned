@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_standard_pmelee",
+  "%Name":"scr_find_attack_index",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_standard_pmelee",
+  "name":"scr_find_attack_index",
   "parent":{
-    "name":"Attacks",
-    "path":"folders/Scripts/Attacks.yy",
+    "name":"Players",
+    "path":"folders/Scripts/Attacks/Players.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

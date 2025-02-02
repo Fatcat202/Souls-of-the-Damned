@@ -1,6 +1,10 @@
 
 function scr_Dogan_basic_attack()
 {
+	
+	// Pull stats
+	attack_index = scr_find_attack_index("Dogan_basic_attack")
+	
 	var dmg_die_total = 1
 	var dmg_die_sides = 6
 	var dmg_mod = 0;
