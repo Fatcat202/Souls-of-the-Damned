@@ -6,7 +6,7 @@ if(!global.game_esc_paused)
 {
 	
 	// Panning the camera
-	if(mouse_check_button(mb_middle))
+	if(mouse_check_button(mb_middle) && !global.show_inventory)
 	{
 		// Compare mouse position with where it was last frame 
 		var move_x = device_mouse_x_to_gui(0) - global.mouse_x_previous;

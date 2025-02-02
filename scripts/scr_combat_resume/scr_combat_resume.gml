@@ -9,6 +9,13 @@ function scr_combat_resume()
 	// Resets end_combat_pause
 	global.end_combat_pause = false;
 	
+	// Exit inventory
+	if(global.show_inventory)
+	{
+		global.show_inventory = false;
+		instance_destroy(obj_inventory)
+	}
+	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
 	
@@ -40,6 +47,5 @@ function scr_combat_resume()
 	
 	// Automatically change char if there was an issue with being changed to the right char
 	if(global.selected_char != obj_player_parent.pc_index) scr_com_resume_change_char(global.selected_char)
-	
 	
 }

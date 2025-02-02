@@ -13,7 +13,6 @@ function scr_esc_pause()
 	scr_part_systems_set_auto_update();
 	
 	
-	
 	if(!global.game_combat_paused)
 	{
 

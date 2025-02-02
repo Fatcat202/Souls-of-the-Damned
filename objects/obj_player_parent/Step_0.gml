@@ -4,9 +4,11 @@ event_inherited()
 
 #region End Combat Pause
 
+	// End inventory pause
+	if(global.end_inventory_pause) scr_inventory_resume()
+	
 	// End combat pause
 	if(global.end_combat_pause) scr_combat_resume()
-	
 	
 #endregion End Combat Pause
 

@@ -8,253 +8,284 @@ randomise()
 	#region Variables
 
 
-	#region database
+		#region database
 			
-			// **PLAYERS**
+				// **PLAYERS**
 			
-			// Create player_index_length for tracking total number of players in csv
-			global.player_index_length = 0;
+				// Create player_index_length for tracking total number of players in csv
+				global.player_index_length = 0;
 
-			// Create player_stats array for tracking stats
-			global.player_stats[0] = 0
+				// Create player_stats array for tracking stats
+				global.player_stats[0] = 0
 
-			// Initialize player index arrays
-			global.arr_player_index_name[0] = "No valid player name";
-			global.arr_player_index_num[0] = 0;
+				// Initialize player index arrays
+				global.arr_player_index_name[0] = "No valid player name";
+				global.arr_player_index_num[0] = 0;
 
 			
-			// **ENEMIES**
+				// **ENEMIES**
 
-			// Create enemy_index_length for tracking total number of enemies in csv
-			global.enemy_index_length = 0;
+				// Create enemy_index_length for tracking total number of enemies in csv
+				global.enemy_index_length = 0;
 
-			// Create enemy_stats array for tracking stats
-			global.enemy_stats[0] = 0
+				// Create enemy_stats array for tracking stats
+				global.enemy_stats[0] = 0
 
-			// Initialize enemy index arrays
-			global.arr_enemy_index_name[0] = "No valid enemy name";
-			global.arr_enemy_index_num[0] = 0;
+				// Initialize enemy index arrays
+				global.arr_enemy_index_name[0] = "No valid enemy name";
+				global.arr_enemy_index_num[0] = 0;
 			
-			// **ATTACKS**
+				// **ATTACKS**
 			
-			// Create attack_index_length for tracking total number of attacks in csv
-			global.attack_index_length = 0;
+				// Create attack_index_length for tracking total number of attacks in csv
+				global.attack_index_length = 0;
 
-			// Create enemy_stats array for tracking stats
-			global.attack_stats[0] = 0
+				// Create enemy_stats array for tracking stats
+				global.attack_stats[0] = 0
 
-			// Initialize enemy index arrays
-			global.arr_attack_index_name[0] = "No valid attack name";
+				// Initialize enemy index arrays
+				global.arr_attack_index_name[0] = "No valid attack name";
 			
 		
-			// Assign players to array
-			#region
-				global.arr_players[1] = obj_player_Alok;
-				global.arr_players[2] = obj_player_Seki;
-				global.arr_players[3] = obj_player_Xan;
-				global.arr_players[4] = obj_player_Garyrager;
-				global.arr_players[5] = obj_player_Dogan;
-				global.arr_players[6] = obj_player_Darien;
-				global.arr_players[7] = obj_player_Bronwin;
-				global.arr_players[8] = obj_player_Nyx;
-			#endregion
+				// Assign players to array
+				#region
+					global.arr_players[1] = obj_player_Alok;
+					global.arr_players[2] = obj_player_Seki;
+					global.arr_players[3] = obj_player_Xan;
+					global.arr_players[4] = obj_player_Garyrager;
+					global.arr_players[5] = obj_player_Dogan;
+					global.arr_players[6] = obj_player_Darien;
+					global.arr_players[7] = obj_player_Bronwin;
+					global.arr_players[8] = obj_player_Nyx;
+				#endregion
 
-			//	Assign npcs to array
-			#region
-				global.arr_npc[1] = obj_npc_Alok;
-				global.arr_npc[2] = obj_npc_Seki;
-				global.arr_npc[3] = obj_npc_Xan;
-				global.arr_npc[4] = obj_npc_Garyrager;
-				global.arr_npc[5] = obj_npc_Dogan;
-				global.arr_npc[6] = obj_npc_Darien;
-				global.arr_npc[7] = obj_npc_Bronwin;
-				global.arr_npc[8] = obj_npc_Nyx;
-			#endregion
+				//	Assign npcs to array
+				#region
+					global.arr_npc[1] = obj_npc_Alok;
+					global.arr_npc[2] = obj_npc_Seki;
+					global.arr_npc[3] = obj_npc_Xan;
+					global.arr_npc[4] = obj_npc_Garyrager;
+					global.arr_npc[5] = obj_npc_Dogan;
+					global.arr_npc[6] = obj_npc_Darien;
+					global.arr_npc[7] = obj_npc_Bronwin;
+					global.arr_npc[8] = obj_npc_Nyx;
+				#endregion
 			
-			// Assign combat pause objects to array
-			#region
-				global.arr_combat_pause[1] = obj_com_pause_Alok;
-				global.arr_combat_pause[2] = obj_com_pause_Seki;
-				global.arr_combat_pause[3] = obj_com_pause_Xan;
-				global.arr_combat_pause[4] = obj_com_pause_Garyrager;
-				global.arr_combat_pause[5] = obj_com_pause_Dogan;
-				global.arr_combat_pause[6] = obj_com_pause_Darien;
-				global.arr_combat_pause[7] = obj_com_pause_Bronwin;
-				global.arr_combat_pause[8] = obj_com_pause_Nyx;
-			#endregion
+				// Assign combat pause objects to array
+				#region
+					global.arr_combat_pause[1] = obj_com_pause_Alok;
+					global.arr_combat_pause[2] = obj_com_pause_Seki;
+					global.arr_combat_pause[3] = obj_com_pause_Xan;
+					global.arr_combat_pause[4] = obj_com_pause_Garyrager;
+					global.arr_combat_pause[5] = obj_com_pause_Dogan;
+					global.arr_combat_pause[6] = obj_com_pause_Darien;
+					global.arr_combat_pause[7] = obj_com_pause_Bronwin;
+					global.arr_combat_pause[8] = obj_com_pause_Nyx;
+				#endregion
 			
-			// Assign combat pause npc objects to array
-			#region
-				global.arr_combat_pause_npc[1] = obj_com_pause_npc_Alok;
-				global.arr_combat_pause_npc[2] = obj_com_pause_npc_Seki;
-				global.arr_combat_pause_npc[3] = obj_com_pause_npc_Xan;
-				global.arr_combat_pause_npc[4] = obj_com_pause_npc_Garyrager;
-				global.arr_combat_pause_npc[5] = obj_com_pause_npc_Dogan;
-				global.arr_combat_pause_npc[6] = obj_com_pause_npc_Darien;
-				global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
-				global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
-			#endregion
-			
-			
+				// Assign combat pause npc objects to array
+				#region
+					global.arr_combat_pause_npc[1] = obj_com_pause_npc_Alok;
+					global.arr_combat_pause_npc[2] = obj_com_pause_npc_Seki;
+					global.arr_combat_pause_npc[3] = obj_com_pause_npc_Xan;
+					global.arr_combat_pause_npc[4] = obj_com_pause_npc_Garyrager;
+					global.arr_combat_pause_npc[5] = obj_com_pause_npc_Dogan;
+					global.arr_combat_pause_npc[6] = obj_com_pause_npc_Darien;
+					global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
+					global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
+				#endregion
 			
 			
-		#region Swapping Characters
 			
-			// DS list to hold active PC object names
-			global.active_pc_list = ds_list_create();
 			
-			// DS list to hold active PC names
-			global.active_pc_names_list = ds_list_create();
+			#region Swapping Characters
 			
-			// DS list to hold active com pause PC object names
-			global.active_pc_com_pause_list = ds_list_create();
+				// DS list to hold active PC object names
+				global.active_pc_list = ds_list_create();
 			
-			// DS list to hold active com pause PC names
-			global.active_pc_com_pause_names_list = ds_list_create();
+				// DS list to hold active PC names
+				global.active_pc_names_list = ds_list_create();
 			
-			// DS list to hold all active PC objects
-			global.active_pc_object_list = ds_list_create();
+				// DS list to hold active com pause PC object names
+				global.active_pc_com_pause_list = ds_list_create();
 			
-			// DS list to hold active com pause PC objects
-			global.active_pc_com_pause_object_list = ds_list_create();
+				// DS list to hold active com pause PC names
+				global.active_pc_com_pause_names_list = ds_list_create();
 			
-			// The variable that initially changes when changing characters
-			global.selected_char = 1;
+				// DS list to hold all active PC objects
+				global.active_pc_object_list = ds_list_create();
 			
-			// Tracks active player index in player, npc, and combat paused DS lists. Default to 1
-			global.char_index = 1;
+				// DS list to hold active com pause PC objects
+				global.active_pc_com_pause_object_list = ds_list_create();
 			
-			// Maxiumum number of playable characters allowed at once
-			global.max_pcs = 4;
+				// The variable that initially changes when changing characters
+				global.selected_char = 1;
 			
-			// Total number of active PCs
-			global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
+				// Tracks active player index in player, npc, and combat paused DS lists. Default to 1
+				global.char_index = 1;
 			
-			// Total number of active combat paused PCs
-			global.total_active_com_pause_pcs = 0;
+				// Maxiumum number of playable characters allowed at once
+				global.max_pcs = 4;
+			
+				// Total number of active PCs
+				global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
+			
+				// Total number of active combat paused PCs
+				global.total_active_com_pause_pcs = 0;
 
-		#endregion Swapping Characters
+			#endregion Swapping Characters
 	
-	#endregion Database
+		#endregion Database
 	
 	
-	#region Pausing
+		#region Pausing
 	
-		// Sets default game pause state
-		global.game_paused = false
+			// Sets default game pause state
+			global.game_paused = false
 		
-		// Sets default game combat pause state
-		global.game_combat_paused = false
+			// Sets default game combat pause state
+			global.game_combat_paused = false
 		
-		// Sets default game esc pause state
-		global.game_esc_paused = false
+			// Sets default game esc pause state
+			global.game_esc_paused = false
 		
-		// Sets default game death pause state
-		global.game_death_paused = false
+			// Sets default game death pause state
+			global.game_death_paused = false
 	
-		// Sets default of if a pause can occour to false
-		global.can_pause = false;
+			// Sets default of if a pause can occour to false
+			global.can_pause = false;
 	
-		// Sets default of if a pause can occour to false
-		global.can_combat_pause = false;
+			// Sets default of if a pause can occour to false
+			global.can_combat_pause = false;
 		
-		// Used to end combat pause and correctly transfer data
-		global.end_combat_pause = false;
+			// Used to end combat pause and correctly transfer data
+			global.end_combat_pause = false;
 
 
 
-	#endregion Pausing
+		#endregion Pausing
 	
 	
-	#region Misc
+		#region Misc
 	
-		// Sets default if a cutscene is active to false
-		global.cutscene_active = false;
+			// Sets default if a cutscene is active to false
+			global.cutscene_active = false;
 
-		// Sets time it takes to start regaining armor in seconds
-		global.regain_armor_timer = 6;
+			// Sets time it takes to start regaining armor in seconds
+			global.regain_armor_timer = 6;
 	
-		// Sets speed at which armor regains, divided with fps
-		global.regain_armor_speed = 20;
+			// Sets speed at which armor regains, divided with fps
+			global.regain_armor_speed = 20;
 	
-		// Sets how many pixel away objects must be from another object to collide 
-		// (x2 if both move towards each other)
-		global.collision_distance = 2;
+			// Sets how many pixel away objects must be from another object to collide 
+			// (x2 if both move towards each other)
+			global.collision_distance = 2;
 	
-		// Game resolution
-		global.res_w = 640;
-		global.res_h = 360;
+			// Game resolution
+			global.res_w = 640;
+			global.res_h = 360;
 	
-		// Tracks the total number of dead PCs
-		global.dead_char = 0;
+			// Tracks the total number of dead PCs
+			global.dead_char = 0;
 		
-		// Used for commanding all PCs at once
-		global.command_all = false;
+			// Used for commanding all PCs at once
+			global.command_all = false;
 		
-		global.cell_size = 32;
+			global.cell_size = 32;
 		
-		// Create default mp grid for pathfinding
-		global.mp_grid = mp_grid_create(0, 0, room_width / global.cell_size, room_height / global.cell_size, global.cell_size, global.cell_size)
-		mp_grid_add_instances(global.mp_grid, obj_collision_parent, true);
+			// Create default mp grid for pathfinding
+			global.mp_grid = mp_grid_create(0, 0, room_width / global.cell_size, room_height / global.cell_size, global.cell_size, global.cell_size)
+			mp_grid_add_instances(global.mp_grid, obj_collision_parent, true);
 		
-		// Create mp grid for player usage
-		global.mp_grid_player = global.mp_grid;
+			// Create mp grid for player usage
+			global.mp_grid_player = global.mp_grid;
 		
-		// Create mp grid for enemy usage
-		global.mp_grid_enemy = global.mp_grid;
+			// Create mp grid for enemy usage
+			global.mp_grid_enemy = global.mp_grid;
 		
-		// Total number of dead PCs
-		global.total_dead = 0;
+			// Total number of dead PCs
+			global.total_dead = 0;
 	
 	
-	#endregion Misc
+		#endregion Misc
 	
 	
-	#region Arena Mechanics
+		#region Arena Mechanics
 	
-		// Initialize player level
-		global.player_level = 1;
+			// Initialize player level
+			global.player_level = 1;
 	
-		// Sets starting combat round for arena
-		global.combat_round = 1;
+			// Sets starting combat round for arena
+			global.combat_round = 1;
 		
-		// Sets maximum number of combat rounds
-		global.max_combat_rounds = 20;
+			// Sets maximum number of combat rounds
+			global.max_combat_rounds = 20;
 	
-		// Tracker for how many enemies remain before the round ends
-		global.remaining_enemies = 0;
+			// Tracker for how many enemies remain before the round ends
+			global.remaining_enemies = 0;
 		
-		// Detects if the round has been started and spawning triggered
-		global.spawn_triggered = false;
+			// Detects if the round has been started and spawning triggered
+			global.spawn_triggered = false;
 		
 		
 	
-	#endregion Arena Mechanics
+		#endregion Arena Mechanics
 	
 	
-	#region Camera
+		#region Camera
 	
-		// Storing previous frames mouse location in relation to GUI
-		global.mouse_x_previous = device_mouse_x_to_gui(0);
-		global.mouse_y_previous = device_mouse_y_to_gui(0);
+			// Storing previous frames mouse location in relation to GUI
+			global.mouse_x_previous = device_mouse_x_to_gui(0);
+			global.mouse_y_previous = device_mouse_y_to_gui(0);
 	
-		// Camera smoothing speed
-		global.cam_smoothing = 0.3;
+			// Camera smoothing speed
+			global.cam_smoothing = 0.3;
 		
-		// Camera target position
-		global.cam_target_x = 0;
-		global.cam_target_y = 0;
+			// Camera target position
+			global.cam_target_x = 0;
+			global.cam_target_y = 0;
 		
-		// Camera origin
-		global.cam_x = camera_get_view_x(CAMERA);
-		global.cam_y = camera_get_view_y(CAMERA);
+			// Camera origin
+			global.cam_x = camera_get_view_x(CAMERA);
+			global.cam_y = camera_get_view_y(CAMERA);
 		
-		// Camera size
-		global.cam_w = camera_get_view_width(CAMERA);
-		global.cam_h = camera_get_view_height(CAMERA);
+			// Camera size
+			global.cam_w = camera_get_view_width(CAMERA);
+			global.cam_h = camera_get_view_height(CAMERA);
 	
 	
-	#endregion Camera
+		#endregion Camera
+		
+		
+		#region Inventory
+		
+			// Toggles showing the inventory
+			global.show_inventory = false
+			
+			// Total number of inventory slots
+			global.inventory_slots = 18
+			
+			// Number of inventory slots per row
+			global.inventory_row_length = 6;
+			
+			// Player inventory
+			global.inventory = array_create(global.inventory_slots, -1)
+			
+			// End inventory pause state
+			global.end_inventory_pause = false;
+			
+			// Total party gold
+			global.party_gold = 0;
+			
+			// Testing
+			randomise()
+			global.inventory[0] = 0;
+			global.inventory[1] = 0;
+			global.inventory[2] = 1;
+
+
+
+		#endregion Inventory
 
 	
 	#endregion Variables
@@ -527,14 +558,6 @@ randomise()
 
 
 #endregion Levels TODO
-
-
-
-#region Items TODO
-
-
-
-#endregion Items TODO
 
 
 

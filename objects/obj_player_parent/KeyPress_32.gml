@@ -1,3 +1,3 @@
 /// @description Combat Pause
 
-scr_combat_pause();
+if (!global.game_combat_paused) scr_combat_pause();

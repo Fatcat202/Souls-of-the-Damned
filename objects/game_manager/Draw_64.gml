@@ -34,7 +34,7 @@ if(global.game_esc_paused == false)
 
 	#region Combat Round
 	
-		with(obj_arena_spawner_parent)
+		if !global.game_combat_paused && !global.show_inventory 
 		{
 			if(global.spawn_triggered == true)
 			{
@@ -53,7 +53,7 @@ if(global.game_esc_paused == false)
 	#region ** NOT COMBAT PAUSED **
 
 		// Check if combat paused
-		if(global.game_combat_paused == false)
+		if(global.game_combat_paused == false && !global.show_inventory)
 		{
 
 			#region HP Healthbar
@@ -308,7 +308,7 @@ if(global.game_esc_paused == false)
 	#region ** COMBAT PAUSED **
 
 		// Display if combat paused
-	} else if(global.game_combat_paused == true)
+	} else if(global.game_combat_paused || global.show_inventory)
 	{
 	
 		#region HP Healthbar
@@ -417,9 +417,13 @@ if(global.game_esc_paused == false)
 	
 		#region Combat Paused Text
 		
-			// Displays text stating player name
-			draw_set_halign(fa_center);
-			draw_text(xx, 100, "Combat Paused");
+			// Do not show if not combat paused
+			if(global.game_combat_paused)
+			{
+				// Displays text stating player name
+				draw_set_halign(fa_center);
+				draw_text(xx, 50, "Combat Paused");
+			}
 		
 			
 		#endregion Combat Paused Text
