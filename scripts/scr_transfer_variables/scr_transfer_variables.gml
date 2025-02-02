@@ -1,7 +1,9 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
 function scr_transfer_variables(send_to, send_from)
 {
+	// Used to transfer variables whenever the type of character obj in the room is changed
+	
+	
 	// Health and armor
 	send_to.active_health = send_from.active_health;
 	send_to.max_hp = send_from.max_hp;

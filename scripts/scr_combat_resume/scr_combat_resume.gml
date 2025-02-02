@@ -22,20 +22,12 @@ function scr_combat_resume()
 	layer_background_visible(background_id, true)
 
 
-
-	
-	//scr_com_resume_change_char(obj_player_parent.pc_index)
-
 	// Transfer command data to PCs
 	for(var i = 0; i < global.total_active_pcs; i++)
 	{
-		global.active_pc_object_list[| i].command_state = global.active_pc_com_pause_object_list[| i].command_state;
-		global.active_pc_object_list[| i].command_state_previous = global.active_pc_com_pause_object_list[| i].command_state_previous;
-		global.active_pc_object_list[| i].target_move_x = global.active_pc_com_pause_object_list[| i].target_move_x;
-		global.active_pc_object_list[| i].target_move_y = global.active_pc_com_pause_object_list[| i].target_move_y;
+		scr_transfer_variables(global.active_pc_object_list[| i], global.active_pc_com_pause_object_list[| i]);
 	}
 
-	
 	
 	// Destroy all combat pause objects
 	instance_destroy(obj_com_pause_parent);
