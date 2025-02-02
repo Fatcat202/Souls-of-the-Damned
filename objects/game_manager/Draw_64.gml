@@ -34,7 +34,7 @@ if(global.game_esc_paused == false)
 
 	#region Combat Round
 	
-		with(obj_arena_spawner)
+		with(obj_arena_spawner_parent)
 		{
 			if(global.spawn_triggered == true)
 			{
