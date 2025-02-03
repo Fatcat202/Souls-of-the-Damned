@@ -3,16 +3,16 @@
 // Prevent inventory pausing if on death screen
 if(!global.game_death_paused && !global.game_esc_paused)
 {
-	// Activate ESC Pause
+	// Activate Inventory Pause
 	if(global.show_inventory = false)
 	{
 		global.show_inventory = true;
 		if (!global.game_combat_paused) scr_inventory_pause()
 		
-		// Create ESC Menu object
+		// Create Inventory Menu object
 		instance_create_layer(0, 0, "Inventory", obj_inventory);
 
-	}else // Deactivate ESC Pause
+	}else // Deactivate Inventory Pause
 	{
 		global.show_inventory = false;
 		
@@ -21,7 +21,7 @@ if(!global.game_death_paused && !global.game_esc_paused)
 		
 		if (!global.game_combat_paused) instance_activate_all()
 		
-		// Create ESC Menu object
+		// Create Inventory Menu object
 		instance_destroy(obj_inventory);
 		layer_destroy_instances("Inventory");
 	}

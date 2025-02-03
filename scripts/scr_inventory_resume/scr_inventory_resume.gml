@@ -4,14 +4,15 @@ function scr_inventory_resume()
 	// Prevent obj_description from sticking around
 	if(instance_exists(obj_description)) instance_destroy(obj_description)
 	
+	
 	// States that the inventory is not shown
 	global.show_inventory = false;
 	
+	// Resets end_inventory_pause
+	global.end_inventory_pause = false;
 	
 	if(!global.game_combat_paused)
 	{
-		// Resets end_inventory_pause
-		global.end_inventory_pause = false;
 		
 		// Makes sure game speed is set to 60 to prevent issues
 		game_set_speed(60, gamespeed_fps);
