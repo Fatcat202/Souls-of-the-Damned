@@ -417,8 +417,8 @@ randomise()
 		global.arr_player_index_num[n] = n;
 	}
 
-		// Cleanup DS grid
-		ds_grid_destroy(ds_player_stats_csv);
+	// Cleanup DS grid
+	ds_grid_destroy(ds_player_stats_csv);
 	
 #endregion Player Stats
 
@@ -552,8 +552,8 @@ randomise()
 	}
 	
 	
-		// Cleanup DS grid
-		ds_grid_destroy(ds_attack_stats_csv);
+	// Cleanup DS grid
+	ds_grid_destroy(ds_attack_stats_csv);
 	
 #endregion Attack Stats
 
@@ -571,13 +571,14 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0) constructor {
-		dmg_die_num = _dmg_die_num;
-		dmg_die_sides = _dmg_die_sides;
-		dmg_mod = _dmg_mod;
-		cooldown = _cooldown;
-		kb_length = _kb_length;
-		crit_chance = _crit_chance;
+	function p_stats(_spr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0) constructor {
+		spr = _spr;
+		die_num = _die_num;
+		die_sides = _die_sides;
+		die_mod = _die_mod;
+		max_stack = _max_stack;
+		price = _price;
+		min_level = _min_level;
 	}
 
 	// Create item_stats struct array
@@ -618,8 +619,8 @@ randomise()
 	}
 	
 	
-		// Cleanup DS grid
-		ds_grid_destroy(ds_item_stats_csv);
+	// Cleanup DS grid
+	ds_grid_destroy(ds_item_stats_csv);
 	
 #endregion Item Stats
 
