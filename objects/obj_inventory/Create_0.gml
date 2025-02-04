@@ -49,14 +49,36 @@ state_free = function()
 {
 	mouse_over();
 	
-	if(mouse_check_button(mb_left)) && (slot_hover != -1) && (inventory_hover != -1)
+	// Destroy control menu if control menu is active with left click
+	if(mouse_check_button(mb_left) && instance_exists(obj_item_control_menu))
 	{
+		if(!position_meeting(mouse_x, mouse_y, obj_item_control_menu))
+		{
+			instance_destroy(obj_item_control_menu);
+		}
+	}
+	
+	// Begin drag with left click
+	if(mouse_check_button(mb_left) && slot_hover != -1 && inventory_hover != -1 && !position_meeting(mouse_x, mouse_y, obj_item_control_menu))
+	{
+		
 		//Enter drag state
 		state = state_drag;
 		item_drag = inventory_hover;
 		inventory_drag = inventory_hover;
 		slot_drag = slot_hover;
 	}
+	
+	// Create control menu with right click
+	if(mouse_check_button(mb_right) && slot_hover != -1 && inventory_hover != -1 && global.inventory[slot_hover] != -1)
+	{
+		// Destroy control menu if active
+		if(instance_exists(obj_item_control_menu)) instance_destroy(obj_item_control_menu)
+		
+		// Create control menu
+		instance_create_layer(mouse_x, mouse_y, "Menu_Buttons", obj_item_control_menu)
+	}
+	
 }
 
 state_drag = function()
@@ -78,9 +100,3 @@ state_drag = function()
 	
 state = state_free;
 
-	
-	
-	
-	
-	
-	
