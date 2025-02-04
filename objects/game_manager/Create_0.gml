@@ -45,6 +45,17 @@ randomise()
 
 				// Initialize enemy index arrays
 				global.arr_attack_index_name[0] = "No valid attack name";
+				
+				// **ITEMS**
+			
+				// Create attack_index_length for tracking total number of attacks in csv
+				global.item_index_length = 0;
+
+				// Create enemy_stats array for tracking stats
+				global.item_stats[0] = 0
+
+				// Initialize enemy index arrays
+				global.arr_item_index_name[0] = "No valid item name";
 			
 		
 				// Assign players to array
@@ -327,6 +338,20 @@ randomise()
 			duration,
 			can_kill
 		}
+		
+		
+		enum item_names // Positions of items in database array
+		{
+			empty,
+			health_potion_light,
+			health_potion_moderate,
+			health_potion_severe,
+			health_potion_critical,
+			armor_potion_light,
+			armor_potion_moderate,
+			armor_potion_severe,
+			armor_potion_critical,
+		}
 
 
 	#endregion Enums
@@ -484,7 +509,7 @@ randomise()
 	}
 
 	// Create attack_stats struct array
-	// **ADD ANOTHER LINE ONCE ANOTHER CHARACTER IS IMPLEMENTED**
+	// **ADD ANOTHER LINE ONCE ANOTHER ATTACK IS IMPLEMENTED**
 	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
 	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
 	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
@@ -531,6 +556,72 @@ randomise()
 		ds_grid_destroy(ds_attack_stats_csv);
 	
 #endregion Attack Stats
+
+
+
+
+#region Item Stats
+
+	var ds_item_stats_csv = load_csv("item_data.csv");
+
+	// Ensure the grid is valid
+	if (ds_item_stats_csv == -1) {
+	    show_error("Failed to load CSV file.", true);
+	    exit;
+	}
+
+	// Initialize stats dictionary constructor
+	function p_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0) constructor {
+		dmg_die_num = _dmg_die_num;
+		dmg_die_sides = _dmg_die_sides;
+		dmg_mod = _dmg_mod;
+		cooldown = _cooldown;
+		kb_length = _kb_length;
+		crit_chance = _crit_chance;
+	}
+
+	// Create item_stats struct array
+	// **ADD ANOTHER LINE ONCE ANOTHER ITEM IS IMPLEMENTED**
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+
+
+	// Assign all values from CSV file into stats database structs
+	for(var i = 0; i < global.item_index_length; i++)
+	{
+		var yy = i + 1;
+		var xx = 1;
+	
+		global.item_stats[yy].spr = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].die_num = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].die_sides = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].die_mod = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].max_stack = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].price = real(ds_grid_get(ds_item_stats_csv, xx, yy));
+		global.item_stats[yy].min_level = real(ds_grid_get(ds_item_stats_csv, xx, yy));
+	
+	}
+
+
+	// Assign data to item index arrays
+	for(var p = 0; p < global.item_index_length; p++)
+	{
+		var n = p + 1;
+		// Sets 1st place in array as names
+		global.arr_item_index_name[n] = ds_grid_get(ds_item_stats_csv, 0, n);
+	}
+	
+	
+		// Cleanup DS grid
+		ds_grid_destroy(ds_item_stats_csv);
+	
+#endregion Item Stats
 
 
 
