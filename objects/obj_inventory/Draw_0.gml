@@ -3,17 +3,6 @@
 
 if(global.show_inventory == true)
 {
-	// Gap between slots and edge of inventory
-	var spacer = 12;
-		
-	// Width and height of inventory
-	var inv_width = 24 + global.inventory_row_length * 64;
-	var inv_height = 64 + (((global.inventory_slots - 1) div global.inventory_row_length) + 1) * 64;
-
-	// x-pos
-	var x_pos = (global.res_w / 2) - (inv_width / 2) + (spacer * 2);
-	var y_pos = (global.res_h / 2) - (inv_height / 2) + (spacer * 2) - 20;
-
 
 	// Draw inventory image
 	draw_sprite_stretched
@@ -45,10 +34,29 @@ if(global.show_inventory == true)
 	{
 		var xx = x_pos + (i mod global.inventory_row_length) * 64;
 		var yy = y_pos + (i div global.inventory_row_length) * 64 + 40;
-		draw_sprite(spr_inventory_slot, 0, xx, yy)
+		var hover = (inventory_hover == id) && (slot_hover == i)
+		draw_sprite(spr_inventory_slot, hover, xx, yy)
 		if(global.inventory[i] != -1)
 		{
-			draw_sprite(global.inventory[i].spr, 0, xx, yy);
+			var alpha = 1;
+			if(inventory_drag == id && slot_drag == i) alpha = 0.5;
+			draw_set_alpha(alpha)
+				draw_sprite(global.inventory[i].spr, 0, xx, yy);
+			draw_set_alpha(1)
 		}
 	}
+	
+	// Item Alpha when dragged
+	if(slot_drag != -1)
+	{
+		if(global.inventory[slot_drag] != -1)
+		{
+			draw_set_alpha(0.5)
+				draw_sprite(global.inventory[slot_drag].spr, 0, mouse_x, mouse_y)
+			draw_set_alpha(1)
+		}
+	}
+	
+	
+	
 }

@@ -504,6 +504,7 @@
     {"id":{"name":"scr_inventory_remove","path":"scripts/scr_inventory_remove/scr_inventory_remove.yy",},},
     {"id":{"name":"scr_inventory_resume","path":"scripts/scr_inventory_resume/scr_inventory_resume.yy",},},
     {"id":{"name":"scr_inventory_search","path":"scripts/scr_inventory_search/scr_inventory_search.yy",},},
+    {"id":{"name":"scr_inventory_swap","path":"scripts/scr_inventory_swap/scr_inventory_swap.yy",},},
     {"id":{"name":"scr_knockback","path":"scripts/scr_knockback/scr_knockback.yy",},},
     {"id":{"name":"scr_map_value","path":"scripts/scr_map_value/scr_map_value.yy",},},
     {"id":{"name":"scr_move_along_path","path":"scripts/scr_move_along_path/scr_move_along_path.yy",},},
