@@ -106,9 +106,7 @@ randomise()
 					global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 				#endregion
 			
-			
-			
-			
+
 			#region Swapping Characters
 			
 				// DS list to hold active PC object names
@@ -268,35 +266,7 @@ randomise()
 		#endregion Camera
 		
 		
-		#region Inventory
 		
-			// Toggles showing the inventory
-			global.show_inventory = false
-			
-			// Total number of inventory slots
-			global.inventory_slots = 18
-			
-			// Number of inventory slots per row
-			global.inventory_row_length = 6;
-			
-			// Player inventory
-			global.inventory = array_create(global.inventory_slots, -1)
-			
-			// End inventory pause state
-			global.end_inventory_pause = false;
-			
-			// Total party gold
-			global.party_gold = 0;
-			
-			// Testing
-			randomise()
-			global.inventory[0] = 0;
-			global.inventory[1] = 0;
-			global.inventory[2] = 1;
-
-
-
-		#endregion Inventory
 
 	
 	#endregion Variables
@@ -559,7 +529,6 @@ randomise()
 
 
 
-
 #region Item Stats
 
 	var ds_item_stats_csv = load_csv("item_data.csv");
@@ -571,7 +540,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_spr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0) constructor {
+	function p_stats(_spr = spr_placeholder, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0) constructor {
 		spr = _spr;
 		die_num = _die_num;
 		die_sides = _die_sides;
@@ -599,7 +568,7 @@ randomise()
 		var yy = i + 1;
 		var xx = 1;
 	
-		global.item_stats[yy].spr = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].spr = asset_get_index(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_num = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_sides = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_mod = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
@@ -624,6 +593,37 @@ randomise()
 	
 #endregion Item Stats
 
+
+
+#region Inventory
+		
+	// Toggles showing the inventory
+	global.show_inventory = false
+			
+	// Total number of inventory slots
+	global.inventory_slots = 18
+			
+	// Number of inventory slots per row
+	global.inventory_row_length = 6;
+			
+	// Player inventory
+	global.inventory = array_create(global.inventory_slots, -1)
+			
+	// End inventory pause state
+	global.end_inventory_pause = false;
+			
+	// Total party gold
+	global.party_gold = 0;
+			
+	// Testing
+	global.inventory[0] = global.item_stats[item_names.health_potion_light];
+	global.inventory[1] = global.item_stats[item_names.health_potion_light];
+	global.inventory[2] = global.item_stats[item_names.armor_potion_light];
+	global.inventory[3] = global.item_stats[item_names.armor_potion_moderate];
+
+
+
+#endregion Inventory
 
 
 

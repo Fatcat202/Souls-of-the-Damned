@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_light_health_potion",
+  "%Name":"spr_armor_potion_light",
   "bboxMode":0,
   "bbox_bottom":55,
   "bbox_left":22,
@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"64c82249-5ea8-4916-9252-ca424abd3969","name":"64c82249-5ea8-4916-9252-ca424abd3969","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"3c3f69cd-1016-41d5-a718-798e89180638","name":"3c3f69cd-1016-41d5-a718-798e89180638","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":64,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"3c667de9-26c8-46e4-a9fe-c831ba58f165","blendMode":0,"displayName":"default","isLocked":false,"name":"3c667de9-26c8-46e4-a9fe-c831ba58f165","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"f8112664-bfc0-41b3-ad77-51daa05dac5e","blendMode":0,"displayName":"default","isLocked":false,"name":"f8112664-bfc0-41b3-ad77-51daa05dac5e","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_light_health_potion",
+  "name":"spr_armor_potion_light",
   "nineSlice":null,
   "origin":0,
   "parent":{
@@ -33,7 +33,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_light_health_potion",
+    "%Name":"spr_armor_potion_light",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -57,7 +57,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_light_health_potion",
+    "name":"spr_armor_potion_light",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"64c82249-5ea8-4916-9252-ca424abd3969","path":"sprites/spr_light_health_potion/spr_light_health_potion.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"cfd1e6bc-abc0-42c6-9a3a-355273849b39","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"3c3f69cd-1016-41d5-a718-798e89180638","path":"sprites/spr_armor_potion_light/spr_armor_potion_light.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"c43eff22-59f8-4bcc-bddc-68ac4c263148","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

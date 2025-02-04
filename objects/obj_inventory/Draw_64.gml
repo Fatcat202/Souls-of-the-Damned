@@ -48,7 +48,7 @@ if(global.show_inventory == true)
 		draw_sprite(spr_inventory_slot, 0, xx, yy)
 		if(global.inventory[i] != -1)
 		{
-			draw_sprite(spr_light_health_potion, global.inventory[i], xx, yy);
+			draw_sprite(global.inventory[i].spr, 0, xx, yy);
 		}
 	}
 }
