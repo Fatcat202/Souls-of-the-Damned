@@ -103,8 +103,7 @@ state_free = function()
 			
 		// Indicate mb_right is being held
 		held = true;
-			
-		show_debug_message("global.inventory test" + string(global.inventory))
+
 	}
 	
 	// Set held to false when no longer held
