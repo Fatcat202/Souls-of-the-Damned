@@ -6,6 +6,8 @@ draw_self();
 var h_align = draw_get_halign();
 var v_align = draw_get_valign();
 
+
+
 // Draw name of ability
 draw_set_valign(fa_bottom);
 draw_set_halign(fa_center);

@@ -540,14 +540,17 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_spr = spr_placeholder, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0) constructor {
+	function p_stats(_spr = spr_placeholder, _scr, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Default", _description = "Default") constructor {
 		spr = _spr;
+		scr = _scr
 		die_num = _die_num;
 		die_sides = _die_sides;
 		die_mod = _die_mod;
 		max_stack = _max_stack;
 		price = _price;
 		min_level = _min_level;
+		title = _title
+		description = _description
 	}
 
 	// Create item_stats struct array
@@ -569,12 +572,15 @@ randomise()
 		var xx = 1;
 	
 		global.item_stats[yy].spr = asset_get_index(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].scr = asset_get_index(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_num = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_sides = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_mod = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].max_stack = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
-		global.item_stats[yy].price = real(ds_grid_get(ds_item_stats_csv, xx, yy));
-		global.item_stats[yy].min_level = real(ds_grid_get(ds_item_stats_csv, xx, yy));
+		global.item_stats[yy].price = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
+		global.item_stats[yy].min_level = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
+		global.item_stats[yy].title = string(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
+		global.item_stats[yy].description = string(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
 	
 	}
 
