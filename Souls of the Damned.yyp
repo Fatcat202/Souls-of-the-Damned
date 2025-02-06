@@ -472,6 +472,7 @@
     {"id":{"name":"scr_Alok_revive","path":"scripts/scr_Alok_revive/scr_Alok_revive.yy",},},
     {"id":{"name":"scr_Alok_shield","path":"scripts/scr_Alok_shield/scr_Alok_shield.yy",},},
     {"id":{"name":"scr_apply_dot","path":"scripts/scr_apply_dot/scr_apply_dot.yy",},},
+    {"id":{"name":"scr_armor_potion","path":"scripts/scr_armor_potion/scr_armor_potion.yy",},},
     {"id":{"name":"scr_attack","path":"scripts/scr_attack/scr_attack.yy",},},
     {"id":{"name":"scr_block","path":"scripts/scr_block/scr_block.yy",},},
     {"id":{"name":"scr_Bronwin_basic_attack","path":"scripts/scr_Bronwin_basic_attack/scr_Bronwin_basic_attack.yy",},},
