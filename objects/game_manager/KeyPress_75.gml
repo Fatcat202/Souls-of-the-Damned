@@ -1,6 +1,6 @@
-/// @description Instant Kill
+/// @description Damage Self
 
 with(obj_ply_npc_parent)
 {
-	active_health -= 1000;
+	active_health -= 10;
 }

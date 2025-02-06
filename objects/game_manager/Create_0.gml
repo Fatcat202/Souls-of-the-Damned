@@ -626,6 +626,15 @@ randomise()
 	global.inventory[1] = global.item_stats[item_names.health_potion_light];
 	global.inventory[2] = global.item_stats[item_names.armor_potion_light];
 	global.inventory[3] = global.item_stats[item_names.armor_potion_moderate];
+	global.inventory[4] = global.item_stats[item_names.health_potion_moderate];
+	global.inventory[5] = global.item_stats[item_names.health_potion_severe];
+	global.inventory[6] = global.item_stats[item_names.health_potion_critical];
+	global.inventory[7] = global.item_stats[item_names.health_potion_moderate];
+	global.inventory[8] = global.item_stats[item_names.health_potion_severe];
+	global.inventory[9] = global.item_stats[item_names.health_potion_critical];
+	global.inventory[10] = global.item_stats[item_names.armor_potion_moderate];
+	global.inventory[11] = global.item_stats[item_names.armor_potion_severe];
+	global.inventory[12] = global.item_stats[item_names.armor_potion_critical];
 
 
 

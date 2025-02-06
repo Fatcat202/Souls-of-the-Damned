@@ -4,7 +4,7 @@ function scr_inventory_remove(inventory, inventory_slots, item_pos = -1)
 {
 	// Remove item from inventory
 
-	if(item != -1)
+	if(item_pos != -1)
 	{
 		
 		inventory[item_pos] = -1;
