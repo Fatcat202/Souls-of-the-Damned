@@ -1,12 +1,12 @@
 ,spr,scr,die_num,die_sides,die_mod,max_stack,price,min_level,title,description
-health_potion_light,spr_health_potion_light,scr_health_potion,1,8,1,0,0,0,Light Health Potion,Heal 1d8 + 1
-health_potion_moderate,spr_health_potion_moderate,scr_health_potion,2,8,3,0,0,0,Moderate Health Potion,Heal 2d8 + 3
-health_potion_severe,spr_health_potion_severe,scr_health_potion,3,8,5,0,0,0,Severe Health Potion,Heal 3d8 + 5
-health_potion_critical,spr_health_potion_critical,scr_health_potion,4,8,7,0,0,0,Critical Health Potion,Heal 4d8 + 7
-armor_potion_light,spr_armor_potion_light,scr_armor_potion,1,8,1,0,0,0,Light Armor Potion,Repair 1d8 + 1 Armor
-armor_potion_moderate,spr_armor_potion_moderate,scr_armor_potion,2,8,3,0,0,0,Moderate Armor Potion,Repair 2d8 + 3 Armor
-armor_potion_severe,spr_armor_potion_severe,scr_armor_potion,3,8,5,0,0,0,Severe Armor Potion,Repair 3d8 + 5 Armor
-armor_potion_critical,spr_armor_potion_critical,scr_armor_potion,4,8,7,0,0,0,Critical Armor Potion,Repair 4d8 + 7 Armor
+health_potion_light,spr_health_potion_light,scr_health_potion,1,8,1,10,50,1,Light Health Potion,Heal 1d8 + 1
+health_potion_moderate,spr_health_potion_moderate,scr_health_potion,2,8,3,10,100,1,Moderate Health Potion,Heal 2d8 + 3
+health_potion_severe,spr_health_potion_severe,scr_health_potion,3,8,5,10,150,1,Severe Health Potion,Heal 3d8 + 5
+health_potion_critical,spr_health_potion_critical,scr_health_potion,4,8,7,10,200,1,Critical Health Potion,Heal 4d8 + 7
+armor_potion_light,spr_armor_potion_light,scr_armor_potion,1,8,1,10,25,1,Light Armor Potion,Repair 1d8 + 1 Armor
+armor_potion_moderate,spr_armor_potion_moderate,scr_armor_potion,2,8,3,10,50,1,Moderate Armor Potion,Repair 2d8 + 3 Armor
+armor_potion_severe,spr_armor_potion_severe,scr_armor_potion,3,8,5,10,75,1,Severe Armor Potion,Repair 3d8 + 5 Armor
+armor_potion_critical,spr_armor_potion_critical,scr_armor_potion,4,8,7,10,100,1,Critical Armor Potion,Repair 4d8 + 7 Armor
 ,,,,,,,,,,
 ,,,,,,,,,,
 ,,,,,,,,,,

@@ -1,20 +1,23 @@
 {
   "$GMObject":"",
-  "%Name":"obj_inventory",
+  "%Name":"obj_inventory_party_shop",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_inventory",
-  "overriddenProperties":[],
+  "name":"obj_inventory_party_shop",
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_inventory_parent","path":"objects/obj_inventory_parent/obj_inventory_parent.yy",},"propertyId":{"name":"inventory_row_length","path":"objects/obj_inventory_parent/obj_inventory_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"4",},
+  ],
   "parent":{
-    "name":"Inventory",
-    "path":"folders/Objects/Inventory.yy",
+    "name":"Inventories",
+    "path":"folders/Objects/Inventory/Inventories.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_inventory_parent",
+    "path":"objects/obj_inventory_parent/obj_inventory_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

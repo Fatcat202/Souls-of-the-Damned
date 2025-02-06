@@ -607,13 +607,13 @@ randomise()
 	global.show_inventory = false
 			
 	// Total number of inventory slots
-	global.inventory_slots = 18
-			
-	// Number of inventory slots per row
-	global.inventory_row_length = 6;
+	global.inventory_slots = 15
 			
 	// Player inventory
 	global.inventory = array_create(global.inventory_slots, -1)
+	
+	// Shop inventory
+	global.inventory_shop = array_create(global.inventory_slots, -1)
 			
 	// End inventory pause state
 	global.end_inventory_pause = false;

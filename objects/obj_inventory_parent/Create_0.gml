@@ -4,8 +4,8 @@
 spacer = 12;
 		
 // Width and height of inventory
-inv_width = 24 + global.inventory_row_length * 64;
-inv_height = 64 + (((global.inventory_slots - 1) div global.inventory_row_length) + 1) * 64;
+inv_width = 24 + inventory_row_length * 64;
+inv_height = 64 + (((global.inventory_slots - 1) div inventory_row_length) + 1) * 64;
 
 // Menu Pos
 x_pos = global.cam_target_x + (global.res_w / 2) - (inv_width / 2) + (spacer * 2);
@@ -36,8 +36,8 @@ function mouse_over()
 	// Create mouse over boxes for inventory slots
 	for(var i = 0; i < global.inventory_slots; i++)
 	{
-		var xx = x_pos + (i mod global.inventory_row_length) * 64;
-		var yy = y_pos + (i div global.inventory_row_length) * 64 + 40;
+		var xx = x_pos + (i mod inventory_row_length) * 64;
+		var yy = y_pos + (i div inventory_row_length) * 64 + 40;
 	
 		var spr_width = sprite_get_width(spr_inventory_slot);
 	
@@ -107,7 +107,7 @@ state_free = function()
 	}
 	
 	// Set held to false when no longer held
-	if(!mouse_check_button(mb_right))
+	if(!mouse_check_button(mb_right) || !position_meeting(x, y, obj_inventory_shop))
 	{
 		held = false;	
 	}
@@ -115,14 +115,15 @@ state_free = function()
 	// Update positions when held
 	if(mouse_check_button(mb_right) && instance_exists(obj_item_control_menu) && held)
 	{
-		
-		// Menu
-		obj_item_control_menu.x = mouse_x;
-		obj_item_control_menu.y = mouse_y;
-		
-
+		// Clamp pos
 		xx = clamp(mouse_x, global.cam_x, global.cam_x + global.res_w - (sprite_get_width(spr_item_control_menu)));
 		yy = clamp(mouse_y, global.cam_y + (sprite_get_height(spr_item_control_menu) / 2), global.cam_y + global.res_h - (sprite_get_height(spr_item_control_menu) / 2));
+		
+		
+		// Menu
+		obj_item_control_menu.x = xx
+		obj_item_control_menu.y = yy
+		
 		
 		// Use button
 		obj_button_use.x = xx + (sprite_get_width(spr_item_control_menu) / 2);

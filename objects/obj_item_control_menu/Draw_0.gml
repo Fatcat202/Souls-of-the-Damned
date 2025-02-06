@@ -1,11 +1,5 @@
 /// @description Update Location
 
-if(mouse_check_button(mb_right) && obj_inventory.held == true)
-{
-	x = clamp(mouse_x, global.cam_x, global.cam_x + global.res_w - (sprite_get_width(sprite_index)));
-	y = clamp(mouse_y, global.cam_y + (sprite_get_height(sprite_index) / 2), global.cam_y + global.res_h - (sprite_get_height(sprite_index) / 2));
-}
-
 
 // Update variables
 spr_width = sprite_get_width(sprite_index);

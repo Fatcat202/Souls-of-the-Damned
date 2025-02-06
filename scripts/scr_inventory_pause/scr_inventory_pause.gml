@@ -80,7 +80,7 @@ function scr_inventory_pause()
 	// Deactivate all but those needed
 	instance_deactivate_object(all);
 	instance_activate_object(game_manager);
-	instance_activate_object(obj_inventory)
+	instance_activate_object(obj_inventory_parent)
 	instance_activate_object(obj_com_pause_parent);
 	instance_activate_object(obj_com_pause_npc_parent);
 	instance_activate_object(obj_gui_button_parent);

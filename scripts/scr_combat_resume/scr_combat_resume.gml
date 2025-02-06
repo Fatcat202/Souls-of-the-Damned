@@ -13,7 +13,7 @@ function scr_combat_resume()
 	if(global.show_inventory)
 	{
 		global.show_inventory = false;
-		instance_destroy(obj_inventory)
+		instance_destroy(obj_inventory_parent)
 	}
 	
 	// Makes sure game speed is set to 60 to prevent issues

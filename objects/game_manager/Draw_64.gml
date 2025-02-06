@@ -27,6 +27,7 @@
 	// Set default font
 	draw_set_font(fnt_default);
 
+if(instance_exists(obj_inventory_shop)) return;
 
 // Check if ESC paused
 if(global.game_esc_paused == false)
