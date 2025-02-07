@@ -2,11 +2,13 @@
 function scr_Seki_fireball()
 {
 	// Pull stats
-	attack_index = scr_find_attack_index("Seki_fireball")
+	var attack_index = scr_find_attack_index("Seki_fireball")
 	
-	var dmg_die_total = 1
-	var dmg_die_sides = 6
-	var dmg_mod = 0;
+	// Pull variables
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
 	
 	// Shoots fireball that explodes on impact and does damage in an area
 		

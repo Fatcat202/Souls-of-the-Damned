@@ -2,9 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_Bronwin_basic_attack()
 {
-	var dmg_die_total = 1
-	var dmg_die_sides = 8
-	var dmg_mod = 0;
+	// Pull stats
+	var attack_index = scr_find_attack_index("Bronwin_basic_attack")
+	
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
 	
 	// Shoots single arrow that does damage	
 	Bronwin_arrow = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Projectiles", obj_arrow); 

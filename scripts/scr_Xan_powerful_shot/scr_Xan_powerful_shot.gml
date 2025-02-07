@@ -5,10 +5,12 @@ function scr_Xan_powerful_shot(target_x, target_y){
 	
 	// Pull stats
 	attack_index = scr_find_attack_index("Xan_powerful_shot")
-	
-	var dmg_die_total = 1
-	var dmg_die_sides = 12
-	var dmg_mod = 0;
+
+	// Pull variables
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
 	
 	// Checks if Xan's gun has enough ammo
 	if(bullets >= 2)

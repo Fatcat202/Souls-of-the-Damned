@@ -5,9 +5,11 @@ function scr_Alok_javalin()
 	// Pull stats
 	attack_index = scr_find_attack_index("Alok_javalin")
 	
-	var dmg_die_total = 2
-	var dmg_die_sides = 8
-	var dmg_mod = 0;
+	
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
 
 	// Projectile that hits enemy and does damage
 	alok_javelin = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Projectiles", obj_Alok_javelin);

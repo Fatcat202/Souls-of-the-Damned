@@ -1,12 +1,17 @@
 
 function scr_Nyx_basic_attack()
 {
-	var dmg_die_total = 1
-	var dmg_die_sides = 8
-	var dmg_mod = 0;
+	// Find attack index
+	var attack_index = scr_find_attack_index("Nyx_basic_attack")
+	
+	// Pull variables
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
 	
 	// Melee attack that does damage
-	scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod);
+	scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance);
 		
 	// States attack was used for cooldowns
 	used = true

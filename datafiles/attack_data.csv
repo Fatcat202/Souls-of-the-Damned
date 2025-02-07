@@ -1,5 +1,5 @@
 ,dmg_die_num,dmg_die_sides,dmg_mod,cooldown,kb_length,crit_chance
-Alok_basic_attack,10,8,0,0,0,5
+Alok_basic_attack,1,8,0,0,0,5
 Alok_channel,1,6,0,0,0,0
 Alok_javalin,1,8,0,0,0,0
 Alok_shield,0,0,0,0,0,0

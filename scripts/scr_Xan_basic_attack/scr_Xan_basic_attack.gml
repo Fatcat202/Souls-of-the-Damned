@@ -7,9 +7,11 @@ function scr_Xan_basic_attack(target_x, target_y)
 	// Pull stats
 	attack_index = scr_find_attack_index("Xan_basic_attack")
 	
+	// Pull variables
 	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
-	var dmg_die_sides = 10
-	var dmg_mod = 0;
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
 	
 	if(bullets != 0)
 	{
