@@ -48,10 +48,17 @@ if(global.spawn_triggered == true)
 		{
 			// Increment combat round
 			global.combat_round++;
-			// Increment player level
-			global.player_level++;
-			// Check to make sure level does not exceed 20
-			if(global.player_level > 20) global.player_level = 20;
+			
+			
+			// Increment player level, check to make sure level does not exceed 20
+			if(global.player_level < 20)
+			{
+				scr_level_up();
+				
+			}
+			
+			
+			
 			
 			// Ensure variables are reset
 			global.remaining_enemies = 0;

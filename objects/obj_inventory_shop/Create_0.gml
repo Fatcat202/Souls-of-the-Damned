@@ -128,19 +128,30 @@ state_free = function()
 
 
 #region Shop Contents
+
+	// Row 1
 	global.inventory_shop[0] = global.item_stats[item_names.health_potion_light];
 	global.inventory_shop[1] = global.item_stats[item_names.health_potion_moderate];
 	global.inventory_shop[2] = global.item_stats[item_names.health_potion_severe];
 	global.inventory_shop[3] = global.item_stats[item_names.health_potion_critical];
+	
+	// Row 2
 	global.inventory_shop[4] = global.item_stats[item_names.armor_potion_light];
 	global.inventory_shop[5] = global.item_stats[item_names.armor_potion_moderate];
 	global.inventory_shop[6] = global.item_stats[item_names.armor_potion_severe];
 	global.inventory_shop[7] = global.item_stats[item_names.armor_potion_critical];
+	
+	
+	// Row 3
 	global.inventory_shop[8] = -1
 	global.inventory_shop[9] = -1
 	global.inventory_shop[10] = -1
 	global.inventory_shop[11] = -1
+	
+	// Row 4
 	global.inventory_shop[12] = -1
+	global.inventory_shop[13] = -1
+
 #endregion Shop Contents
 
 

@@ -51,11 +51,11 @@ event_inherited()
 
 
 	// Health
-	max_hp = global.player_stats[index].hp;
+	max_hp = global.player_stats[index].dice_hp + global.player_stats[index].hp_mod;
 	active_health = max_hp;
 
 	// Armor
-	max_armor = global.player_stats[index].armor;
+	max_armor = global.player_stats[index].dice_armor;
 	active_armor = max_armor;
 
 	// Speed

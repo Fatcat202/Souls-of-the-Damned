@@ -45,13 +45,13 @@ event_inherited()
 
 #region Assigning Instance Stats
 
-	// Assign active health that can be removed and added to
-	active_health = global.player_stats[index].hp;
-	max_hp = active_health;
+	// Health
+	max_hp = global.player_stats[index].dice_hp + global.player_stats[index].hp_mod;
+	active_health = max_hp;
 
 	// Armor
-	max_armor = global.player_stats[index].armor;
-	active_armor  = max_armor;
+	max_armor = global.player_stats[index].dice_armor;
+	active_armor = max_armor;
 
 	// Speed
 	move_spd = global.player_stats[index].move_spd;

@@ -20,7 +20,6 @@ randomise()
 
 				// Initialize player index arrays
 				global.arr_player_index_name[0] = "No valid player name";
-				global.arr_player_index_num[0] = 0;
 
 			
 				// **ENEMIES**
@@ -33,7 +32,7 @@ randomise()
 
 				// Initialize enemy index arrays
 				global.arr_enemy_index_name[0] = "No valid enemy name";
-				global.arr_enemy_index_num[0] = 0;
+			
 			
 				// **ATTACKS**
 			
@@ -45,6 +44,7 @@ randomise()
 
 				// Initialize enemy index arrays
 				global.arr_attack_index_name[0] = "No valid attack name";
+				
 				
 				// **ITEMS**
 			
@@ -266,8 +266,6 @@ randomise()
 		#endregion Camera
 		
 		
-		
-
 	
 	#endregion Variables
 
@@ -341,13 +339,14 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_hp = 0, _armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_atk_spd = 0, _kb_percent = 0) constructor {
-		hp = _hp;
-		armor = _armor;
+	function p_stats(_dice_hp = 0, _hp_mod = 0, _dice_armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_atk_spd = 0, _kb_percent = 0, _view_range = 0) constructor {
+		dice_hp = _dice_hp;
+		hp_mod = _hp_mod;
+		dice_armor = _dice_armor;
 		move_spd = _move_spd;
-		main_atk_dmg = _main_atk_dmg;
 		main_atk_spd = _main_atk_spd;
 		kb_percent = _kb_percent;
+		view_range = _view_range;
 	}
 
 	// Create player_stats struct array
@@ -367,12 +366,13 @@ randomise()
 		var yy = i + 1;
 		var xx = 1;
 	
-		global.player_stats[yy].hp = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-		global.player_stats[yy].armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].dice_hp = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].hp_mod = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
+		global.player_stats[yy].dice_armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 		global.player_stats[yy].move_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-		global.player_stats[yy].main_atk_dmg = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 		global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-		global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy));
+		global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++
+		global.player_stats[yy].view_range = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++
 	
 	}
 
@@ -383,8 +383,6 @@ randomise()
 		var n = p + 1;
 		// Sets 1st place in array as names
 		global.arr_player_index_name[n] = ds_grid_get(ds_player_stats_csv, 0, n);
-		// Sets 2nd place in array as index
-		global.arr_player_index_num[n] = n;
 	}
 
 	// Cleanup DS grid
@@ -447,8 +445,7 @@ randomise()
 		var n = p + 1;
 		// Sets 1st place in array as names
 		global.arr_enemy_index_name[n] = ds_grid_get(ds_enemy_stats_csv, 0, n);
-		// Sets 2nd place in array as index
-		global.arr_enemy_index_num[n] = n;
+
 	}
 
 	// Cleanup DS grid

@@ -212,7 +212,6 @@
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[
-    {"$GMIncludedFile":"","%Name":"~$item_data.xlsx","CopyToMask":-1,"filePath":"datafiles","name":"~$item_data.xlsx","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"attack_data.csv","CopyToMask":-1,"filePath":"datafiles","name":"attack_data.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"attack_data.xlsx","CopyToMask":-1,"filePath":"datafiles","name":"attack_data.xlsx","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"enemy_data.csv","CopyToMask":-1,"filePath":"datafiles","name":"enemy_data.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -238,7 +237,6 @@
     {"id":{"name":"Commands","path":"notes/Commands/Commands.yy",},},
     {"id":{"name":"Enemies","path":"notes/Enemies/Enemies.yy",},},
     {"id":{"name":"Players","path":"notes/Players/Players.yy",},},
-    {"id":{"name":"TODO","path":"notes/TODO/TODO.yy",},},
     {"id":{"name":"game_manager","path":"objects/game_manager/game_manager.yy",},},
     {"id":{"name":"obj_Alok_channel","path":"objects/obj_Alok_channel/obj_Alok_channel.yy",},},
     {"id":{"name":"obj_Alok_javelin","path":"objects/obj_Alok_javelin/obj_Alok_javelin.yy",},},
@@ -519,6 +517,7 @@
     {"id":{"name":"scr_inventory_search","path":"scripts/scr_inventory_search/scr_inventory_search.yy",},},
     {"id":{"name":"scr_inventory_swap","path":"scripts/scr_inventory_swap/scr_inventory_swap.yy",},},
     {"id":{"name":"scr_knockback","path":"scripts/scr_knockback/scr_knockback.yy",},},
+    {"id":{"name":"scr_level_up","path":"scripts/scr_level_up/scr_level_up.yy",},},
     {"id":{"name":"scr_map_value","path":"scripts/scr_map_value/scr_map_value.yy",},},
     {"id":{"name":"scr_move_along_path","path":"scripts/scr_move_along_path/scr_move_along_path.yy",},},
     {"id":{"name":"scr_move_to_target","path":"scripts/scr_move_to_target/scr_move_to_target.yy",},},
