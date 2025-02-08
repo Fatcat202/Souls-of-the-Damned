@@ -339,7 +339,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_dice_hp = 0, _hp_mod = 0, _dice_armor = 0, _move_spd = 0, _main_atk_dmg = 0, _main_atk_spd = 0, _kb_percent = 0, _view_range = 0) constructor {
+	function p_stats(_dice_hp = 0, _hp_mod = 0, _dice_armor = 0, _move_spd = 0, _main_atk_spd = 0, _kb_percent = 0, _view_range = 0) constructor {
 		dice_hp = _dice_hp;
 		hp_mod = _hp_mod;
 		dice_armor = _dice_armor;
@@ -473,7 +473,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0, _crit_mod = 0) constructor {
+	function a_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0, _crit_mod = 0) constructor {
 		dmg_die_num = _dmg_die_num;
 		dmg_die_sides = _dmg_die_sides;
 		dmg_mod = _dmg_mod;
@@ -485,22 +485,22 @@ randomise()
 
 	// Create attack_stats struct array
 	// **ADD ANOTHER LINE ONCE ANOTHER ATTACK IS IMPLEMENTED**
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats(); 
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();	
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new p_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats(); 
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();	
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
 
 	// Assign all values from CSV file into stats database structs
 	for(var i = 0; i < global.attack_index_length; i++)
@@ -546,7 +546,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_spr = spr_placeholder, _scr, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Default", _description = "Default") constructor {
+	function i_stats(_spr = spr_placeholder, _scr, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Default", _description = "Default") constructor {
 		spr = _spr;
 		scr = _scr
 		die_num = _die_num;
@@ -561,14 +561,14 @@ randomise()
 
 	// Create item_stats struct array
 	// **ADD ANOTHER LINE ONCE ANOTHER ITEM IS IMPLEMENTED**
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
-	global.item_index_length++; global.item_stats[global.item_index_length] = new p_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
 
 
 	// Assign all values from CSV file into stats database structs
