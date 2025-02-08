@@ -15,7 +15,7 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
 	{
 		var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
-		var dmg_die_sides = global.global.enemy_stats[index].dice_melee_atk_sides
+		var dmg_die_sides = global.enemy_stats[index].dice_melee_atk_sides
 		var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
 		
 		// Create melee object
@@ -41,9 +41,9 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 
 	if(can_attack)
 	{
-		var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
-		var dmg_die_sides = global.global.enemy_stats[index].dice_melee_atk_sides
-		var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
+		var dmg_die_total = global.enemy_stats[index].dice_range_atk_num
+		var dmg_die_sides = global.enemy_stats.enemy_stats[index].dice_range_atk_sides
+		var dmg_mod = global.enemy_stats[index].dice_range_atk_mod
 		
 		// Create blast object
 		vene_blast = instance_create_layer(x, y, "Projectiles", obj_vene_blast);
