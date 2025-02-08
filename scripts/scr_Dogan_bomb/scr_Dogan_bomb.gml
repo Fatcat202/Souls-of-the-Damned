@@ -10,6 +10,7 @@ function scr_Dogan_bomb()
 	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
 	var dmg_mod = global.attack_stats[attack_index].dmg_mod
 	var crit_chance = global.attack_stats[attack_index].crit_chance
+	var crit_mod = global.attack_stats[attack_index].crit_mod
 	
 		
 	Dogan_bomb = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Projectiles", obj_Dogan_bomb); 
@@ -18,7 +19,7 @@ function scr_Dogan_bomb()
 	Dogan_bomb.image_angle = Dogan_bomb.direction;
 	
 	// Damage
-	Dogan_bomb.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod , crit_chance, 1.5)
+	Dogan_bomb.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod , crit_chance, crit_mod)
 		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) * 3;

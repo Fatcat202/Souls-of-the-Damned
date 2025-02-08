@@ -10,6 +10,7 @@ function scr_Alok_javalin()
 	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
 	var dmg_mod = global.attack_stats[attack_index].dmg_mod
 	var crit_chance = global.attack_stats[attack_index].crit_chance
+	var crit_mod = global.attack_stats[attack_index].crit_mod
 
 	// Projectile that hits enemy and does damage
 	alok_javelin = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Projectiles", obj_Alok_javelin);
@@ -18,7 +19,7 @@ function scr_Alok_javalin()
 	alok_javelin.image_angle = alok_javelin.direction;
 	
 	// Damage
-	alok_javelin.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+	alok_javelin.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) * 1.5;

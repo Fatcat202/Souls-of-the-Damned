@@ -19,6 +19,7 @@ function scr_level_up()
 		active_health += hp_gain
 		
 		
+		// Roll armor gain normally
 		var armor_gain = scr_roll_dice(1, global.player_stats[index].dice_armor)
 		
 		// Increment health

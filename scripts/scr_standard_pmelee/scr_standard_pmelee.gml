@@ -1,5 +1,5 @@
 
-function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance)
+function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod)
 {
 	// Standard melee attack with checks for conditions
 
@@ -25,7 +25,7 @@ function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, c
 		melee_atk.sneak_attack = sneak_attack
 		
 		// Crit chance
-		var damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, 1.5)
+		var damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		// Damage
 		melee_atk.damage = damage
 		
