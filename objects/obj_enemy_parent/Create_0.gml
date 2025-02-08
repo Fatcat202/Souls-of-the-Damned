@@ -23,11 +23,7 @@
 
 #region Loading instance stats
 
-	// Assign active health that can be removed and added to
-
-	// Health
-	max_hp = global.enemy_stats[index].hp;
-	active_health = max_hp;
+	scr_roll_enemy_health();
 
 	// Armor
 	armor_percent = global.enemy_stats[index].armor;

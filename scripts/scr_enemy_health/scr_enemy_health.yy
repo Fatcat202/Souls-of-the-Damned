@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_level_up",
+  "%Name":"scr_enemy_health",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_level_up",
+  "name":"scr_enemy_health",
   "parent":{
     "name":"Dice",
     "path":"folders/Scripts/Dice.yy",

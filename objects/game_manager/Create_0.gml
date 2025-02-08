@@ -403,15 +403,19 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function e_stats(_hp = 0, _armor = 0, _move_spd = 0, _melee_atk_dmg_1 = 0, _melee_atk_dmg_2 = 0, _ranged_atk_dmg_1 = 0, _ranged_atk_dmg_2 = 0, _kb_percent = 0, _is_flyer = 0) constructor {
-		hp = _hp;
+	function e_stats(_dice_hp_num = 0, _dice_hp_sides = 0, _dice_hp_mod = 0, _armor = 0, _move_spd = 0, _dice_melee_atk_num = 0, _dice_melee_atk_sides = 0, _dice_melee_atk_mod = 0, _kb_percent = 0, _dice_range_atk_num = 0, _dice_range_atk_sides = 0, _dice_range_atk_mod = 0, _knock_back_percent = 0, _is_flyer = 0) constructor {
+		dice_hp_num = _dice_hp_num;
+	    dice_hp_sides = _dice_hp_sides;
+	    dice_hp_mod = _dice_hp_mod;
 	    armor = _armor;
-	    move_spd = _move_spd;
-	    melee_atk_dmg_1 = _melee_atk_dmg_1;
-		melee_atk_dmg_2 = _melee_atk_dmg_2;
-		ranged_atk_dmg_1 = _ranged_atk_dmg_1;
-		ranged_atk_dmg_2 = _ranged_atk_dmg_2;
-	    kb_percent = _kb_percent;
+		move_spd = _move_spd;
+		dice_melee_atk_num = _dice_melee_atk_num;
+		dice_melee_atk_sides = _dice_melee_atk_sides;
+	    dice_melee_atk_mod = _dice_melee_atk_mod;
+		dice_range_atk_num = _dice_range_atk_num;
+		dice_range_atk_sides = _dice_range_atk_sides;
+		dice_range_atk_mod = _dice_range_atk_mod;
+		kb_percent = _knock_back_percent;
 		is_flyer = _is_flyer;
 	}
 
@@ -426,16 +430,19 @@ randomise()
 		var yy = i + 1;
 		var xx = 1;
 	
-		global.enemy_stats[yy].hp = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_hp_num = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_hp_sides = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_hp_mod = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 		global.enemy_stats[yy].armor = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 		global.enemy_stats[yy].move_spd = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-		global.enemy_stats[yy].melee_atk_dmg_1 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-		global.enemy_stats[yy].melee_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-		global.enemy_stats[yy].ranged_atk_dmg_1 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-		global.enemy_stats[yy].ranged_atk_dmg_2 = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-		global.enemy_stats[yy].main_atk_speed = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_melee_atk_num = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_melee_atk_sides = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_melee_atk_mod = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_range_atk_num = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_range_atk_sides = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
+		global.enemy_stats[yy].dice_range_atk_mod = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 		global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
-		global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy);
+		global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy); xx++;
 
 	}
 

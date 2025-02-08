@@ -1,4 +1,4 @@
-Name,HP,Armor,Movement Speed,Melee Attack Damage 1,Melee Attack Damage 2,Ranged Attack Damage 1,Ranged Attack Damage 2,Knockback Percentage,Is Flyer
-Cacodaemon,10,0,2,10,0,0,0,0.45,1
-Venedaemon,30,0,1,15,0,20,0,0.45,0
-Vulnadaemon,20,0,3,10,0,0,0,0.45,0
+Name,dice_hp_num,dice_hp_sides,dice_hp_mod,armor,move_spd,dice_melee_atk_num,dice_melee_atk_sides,dice_melee_atk_mod,dice_range_atk_num,dice_range_atk_sides,dice_range_atk_mod,kb_percent,is_flyer
+Cacodaemon,2,10,3,0,3,1,4,1,0,0,0,0.45,TRUE
+Venedaemon,6,10,18,0,2,1,6,0,4,6,0,0.45,FALSE
+Vulnadaemon,4,10,6,0,4,2,4,4,0,0,0,0.45,FALSE

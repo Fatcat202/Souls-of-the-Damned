@@ -500,6 +500,7 @@
     {"id":{"name":"scr_Dogan_sneak_attack","path":"scripts/scr_Dogan_sneak_attack/scr_Dogan_sneak_attack.yy",},},
     {"id":{"name":"scr_draw_circ_healthbar","path":"scripts/scr_draw_circ_healthbar/scr_draw_circ_healthbar.yy",},},
     {"id":{"name":"scr_enemy_default_weight","path":"scripts/scr_enemy_default_weight/scr_enemy_default_weight.yy",},},
+    {"id":{"name":"scr_enemy_health","path":"scripts/scr_enemy_health/scr_enemy_health.yy",},},
     {"id":{"name":"scr_esc_pause","path":"scripts/scr_esc_pause/scr_esc_pause.yy",},},
     {"id":{"name":"scr_esc_resume","path":"scripts/scr_esc_resume/scr_esc_resume.yy",},},
     {"id":{"name":"scr_find_attack_index","path":"scripts/scr_find_attack_index/scr_find_attack_index.yy",},},

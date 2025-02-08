@@ -38,9 +38,9 @@ if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
 }
 
 
-var dmg_die_total = 2
-var dmg_die_sides = 4
-var	dmg_mod = 0;
+var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
+var dmg_die_sides = global.global.enemy_stats[index].dice_melee_atk_sides
+var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
 
 // Attack if within range
 var m_range = sprite_get_width(spr_standard_emelee);
