@@ -24,7 +24,7 @@ function scr_level_up()
 		
 		// Increment health
 		max_armor += armor_gain
-		active_armor += armor_gain
+		if(!is_dead) active_armor += armor_gain
 		
 		
 	}
