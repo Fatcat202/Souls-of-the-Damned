@@ -6,7 +6,7 @@ if(global.party_gold >= global.inventory_shop[item].price)
 {
 	
 	var index = 0;
-	for(var i = 0; i < global.item_index_length; i++)
+	for(var i = 0; i < global.item_index_length + 1; i++)
 	{
 		if(global.inventory_shop[item] == global.item_stats[i])
 		{
