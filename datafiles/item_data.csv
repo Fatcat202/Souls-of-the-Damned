@@ -7,12 +7,3 @@ armor_potion_light,spr_armor_potion_light,scr_armor_potion,1,8,1,10,25,1,Light A
 armor_potion_moderate,spr_armor_potion_moderate,scr_armor_potion,2,8,3,10,50,1,Moderate Armor Potion,Repair 2d8 + 3 Armor
 armor_potion_severe,spr_armor_potion_severe,scr_armor_potion,3,8,5,10,75,1,Severe Armor Potion,Repair 3d8 + 5 Armor
 armor_potion_critical,spr_armor_potion_critical,scr_armor_potion,4,8,7,10,100,1,Critical Armor Potion,Repair 4d8 + 7 Armor
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,
-,,,,,,,,,,

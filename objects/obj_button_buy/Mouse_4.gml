@@ -12,17 +12,11 @@ if(global.party_gold >= global.inventory_shop[item].price)
 		{
 			index = i;
 			break;
-		}
-		
+		}	
 	}
 	
-	
 	scr_inventory_add(index, global.inventory_slots, global.inventory)
-	
-	
-	
-	
-	
+
 	
 	global.party_gold -= global.inventory_shop[item].price
 }else
