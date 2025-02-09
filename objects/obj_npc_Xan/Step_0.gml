@@ -16,7 +16,7 @@ var range = 200;
 var within_range = collision_circle(x, y, range, obj_enemy_parent, false, true);
 if(within_range != noone)
 {
-	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
+	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range && !is_dead)
 	{
 		scr_Xan_basic_attack(target_pos_x, target_pos_y)
 		
