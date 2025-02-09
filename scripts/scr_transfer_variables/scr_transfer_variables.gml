@@ -70,6 +70,9 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.follow_path = send_from.follow_path;
 	send_to.move_path = send_from.move_path;
 	
-	// Image Angle
+	// Image Variables
 	send_to.image_xscale = send_from.image_xscale;
+	send_to.image_yscale = send_from.image_yscale;
+	send_to.image_blend = send_from.image_blend;
+	send_to.image_angle = send_from.image_angle;
 }

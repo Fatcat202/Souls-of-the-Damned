@@ -9,7 +9,10 @@
     "name":"Melee",
     "path":"folders/Objects/Attacks/Melee.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_attacks_parent",
+    "path":"objects/obj_attacks_parent/obj_attacks_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

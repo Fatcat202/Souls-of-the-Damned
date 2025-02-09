@@ -19,14 +19,8 @@ function scr_combat_resume()
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
 	
-	// Removing background sprite ** IN PROGRESS **
-	var background_pause_layer = layer_get_id("Pause")
-	var background_pause_id = layer_background_get_id(background_pause_layer);
-	layer_background_visible(background_pause_id, false)
-	
-	var background_layer = layer_get_id("Background")
-	var background_id = layer_background_get_id(background_layer);
-	layer_background_visible(background_id, true)
+	// Destroy pause image
+	layer_destroy("Pause_Sprites")
 
 
 	// Transfer command data to PCs
