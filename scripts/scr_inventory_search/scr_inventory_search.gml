@@ -5,7 +5,7 @@ function scr_inventory_search(inventory, inventory_slots, item = -1)
 	var found = false;
 	
 	
-	// Used once sorting is implemented
+	// Used once stacking is implemented
 /*	
 	// If item is found, return position
 	if(item != -1)

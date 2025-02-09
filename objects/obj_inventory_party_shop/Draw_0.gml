@@ -56,7 +56,4 @@ if(global.show_inventory == true)
 			draw_set_alpha(1)
 		}
 	}
-	
-	
-
 }

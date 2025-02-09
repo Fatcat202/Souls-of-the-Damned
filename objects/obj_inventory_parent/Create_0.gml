@@ -86,8 +86,12 @@ state_free = function()
 		if(instance_exists(obj_item_control_menu)) instance_destroy(obj_item_control_menu)
 		if(instance_exists(obj_button_use)) instance_destroy(obj_button_use);
 		
+		xx = clamp(mouse_x, global.cam_x, global.cam_x + global.res_w - (sprite_get_width(spr_item_control_menu)));
+		yy = clamp(mouse_y, global.cam_y + (sprite_get_height(spr_item_control_menu) / 2), global.cam_y + global.res_h - (sprite_get_height(spr_item_control_menu) / 2));
+		
+		
 		// Create control menu
-		var menu = instance_create_layer(mouse_x, mouse_y, "Menu_Buttons", obj_item_control_menu)
+		var menu = instance_create_layer(xx, yy, "Menu_Buttons", obj_item_control_menu)
 			menu.title = global.inventory[slot_hover].title;
 			menu.description = global.inventory[slot_hover].description;
 			menu.item = slot_hover

@@ -318,7 +318,7 @@ randomise()
 			armor_potion_light,
 			armor_potion_moderate,
 			armor_potion_severe,
-			armor_potion_critical,
+			armor_potion_critical
 		}
 
 
@@ -546,7 +546,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function i_stats(_spr = spr_placeholder, _scr, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Default", _description = "Default") constructor {
+	function i_stats(_spr = spr_placeholder, _scr, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Empty", _description = "Empty") constructor {
 		spr = _spr;
 		scr = _scr
 		die_num = _die_num;
@@ -625,22 +625,8 @@ randomise()
 	global.end_inventory_pause = false;
 			
 	// Total party gold
-	global.party_gold = 0;
-			
-	// Testing
-	global.inventory[0] = global.item_stats[item_names.health_potion_light];
-	global.inventory[1] = global.item_stats[item_names.health_potion_light];
-	global.inventory[2] = global.item_stats[item_names.armor_potion_light];
-	global.inventory[3] = global.item_stats[item_names.armor_potion_moderate];
-	global.inventory[4] = global.item_stats[item_names.health_potion_moderate];
-	global.inventory[5] = global.item_stats[item_names.health_potion_severe];
-	global.inventory[6] = global.item_stats[item_names.health_potion_critical];
-	global.inventory[7] = global.item_stats[item_names.health_potion_moderate];
-	global.inventory[8] = global.item_stats[item_names.health_potion_severe];
-	global.inventory[9] = global.item_stats[item_names.health_potion_critical];
-	global.inventory[10] = global.item_stats[item_names.armor_potion_moderate];
-	global.inventory[11] = global.item_stats[item_names.armor_potion_severe];
-	global.inventory[12] = global.item_stats[item_names.armor_potion_critical];
+	global.party_gold = 1000;
+
 
 
 
