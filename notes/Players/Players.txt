@@ -10,7 +10,7 @@ Seki:
 
 Gary/Rager:
 
--Melee attack, Defending
+-Melee attack, Defending, heavy damage, 
 
 Xan:
 
@@ -18,7 +18,7 @@ Xan:
 
 Dogan:
 
--Damage over time, melee attack, ranged burst
+-Damage over time, melee attack, ranged burst, sneak attack
 
 Darien:
 

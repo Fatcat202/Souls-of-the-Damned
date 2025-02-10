@@ -473,7 +473,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function a_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0, _crit_mod = 0) constructor {
+	function a_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0, _crit_mod = 0, _scr, _spr = spr_placeholder, _title = "Empty", _desc = "Empty") constructor {
 		dmg_die_num = _dmg_die_num;
 		dmg_die_sides = _dmg_die_sides;
 		dmg_mod = _dmg_mod;
@@ -481,6 +481,10 @@ randomise()
 		kb_length = _kb_length;
 		crit_chance = _crit_chance;
 		crit_mod = _crit_mod;
+		scr = _scr;
+		spr = _spr;
+		title = _title;
+		desc = _desc
 	}
 
 	// Create attack_stats struct array
@@ -515,6 +519,10 @@ randomise()
 		global.attack_stats[yy].kb_length = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
 		global.attack_stats[yy].crit_chance = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
 		global.attack_stats[yy].crit_mod = real(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].scr = asset_get_index(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].spr = asset_get_index(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].title = string(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
+		global.attack_stats[yy].desc = string(ds_grid_get(ds_attack_stats_csv, xx, yy)); xx++;
 	
 	}
 

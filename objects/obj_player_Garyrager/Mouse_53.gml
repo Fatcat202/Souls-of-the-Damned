@@ -5,7 +5,7 @@ if(can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		scr_standard_pmelee(obj_pmelee_parent);
+		scr_Garyrager_basic_attack()
 		
 		// Checks if attack was used
 		if(used = true)
@@ -35,7 +35,7 @@ if(can_attack == true)
 	
 	}else if(active_power = 3 && cooldown_3 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		
+		scr_Garyrager_stunning_strike();
 		
 		// Checks if attack was used
 		if(used = true)
@@ -50,7 +50,7 @@ if(can_attack == true)
 	
 	}else if(active_power = 4 && cooldown_4 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		
+		scr_Garyrager_rager_toss()
 		
 		// Checks if attack was used
 		if(used = true)

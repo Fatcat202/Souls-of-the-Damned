@@ -1,7 +1,7 @@
 /// @description Attacks
 // You can write your code in this editor
 
-if(self.can_attack == true)
+if(can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
@@ -20,7 +20,7 @@ if(self.can_attack == true)
 	
 	}else if(active_power = 2 && cooldown_2 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		
+		scr_cone_shot()
 		
 		// Checks if attack was used
 		if(used = true)
