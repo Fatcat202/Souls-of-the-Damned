@@ -24,10 +24,8 @@ function scr_Darien_loh()
 		{
 			// Heal target
 			with(target) scr_heal(scr_roll_dice(heal_die_total, heal_die_sides) + heal_mod, 0)
-
 		}
-		
-		
+
 		// Cooldown and reloading
 		cooldown = game_get_speed(gamespeed_fps) * 2;
 	
@@ -35,8 +33,4 @@ function scr_Darien_loh()
 		used = true
 		
 	}
-	
-	
-	
-	
 }
