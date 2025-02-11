@@ -14,7 +14,7 @@ function scr_Garyrager_stunning_strike()
 	
 	// Shoots a single magic blast dealing damage to the target it hits
 	Garyrager_stunning_strike = instance_create_layer(x, y, "Projectiles", obj_Garyrager_stunning_strike); 
-	Garyrager_stunning_strike.direction = point_direction(x, y, target_x, target_y);
+	Garyrager_stunning_strike.direction = point_direction(x, y, mouse_x, mouse_y);
 	Garyrager_stunning_strike.image_angle = Garyrager_stunning_strike.direction;
 		
 		

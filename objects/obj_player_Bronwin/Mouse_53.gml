@@ -20,7 +20,7 @@ if(can_attack == true)
 	
 	}else if(active_power = 2 && cooldown_2 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		scr_cone_shot()
+		scr_Bronwin_cone_shot()
 		
 		// Checks if attack was used
 		if(used = true)
