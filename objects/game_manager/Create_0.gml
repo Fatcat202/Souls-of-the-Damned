@@ -473,7 +473,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function a_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0, _crit_mod = 0, _scr, _spr = spr_placeholder, _title = "Empty", _desc = "Empty") constructor {
+	function a_stats(_dmg_die_num = 0, _dmg_die_sides = 0, _dmg_mod = 0, _cooldown = 0, _kb_length = 0, _crit_chance = 0, _crit_mod = 0, _scr = -1, _spr = spr_placeholder, _title = "Empty", _desc = "Empty") constructor {
 		dmg_die_num = _dmg_die_num;
 		dmg_die_sides = _dmg_die_sides;
 		dmg_mod = _dmg_mod;
@@ -487,24 +487,36 @@ randomise()
 		desc = _desc
 	}
 
+
 	// Create attack_stats struct array
 	// **ADD ANOTHER LINE ONCE ANOTHER ATTACK IS IMPLEMENTED**
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats(); 
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();	
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
-	global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+
+	
 
 	// Assign all values from CSV file into stats database structs
 	for(var i = 0; i < global.attack_index_length; i++)
@@ -554,7 +566,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function i_stats(_spr = spr_placeholder, _scr, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Empty", _description = "Empty") constructor {
+	function i_stats(_spr = spr_placeholder, _scr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Empty", _description = "Empty") constructor {
 		spr = _spr;
 		scr = _scr
 		die_num = _die_num;

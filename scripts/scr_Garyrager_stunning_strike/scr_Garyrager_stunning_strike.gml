@@ -18,6 +18,9 @@ function scr_Garyrager_stunning_strike()
 	Garyrager_stunning_strike.image_angle = Garyrager_stunning_strike.direction;
 		
 		
+	// Send index to attack sprite for stats
+	Garyrager_stunning_strike.pc_object = object_index;
+		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) * 4;
 

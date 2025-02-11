@@ -14,11 +14,11 @@ function scr_find_attack_index(attack_name)
 	}
 	
 	// **DEBUG**
-/*
+
 	if(attack_index != 0)
 	{
 		show_debug_message("attack_index: " + string(attack_index))
 	}else show_error("NO ATTACK INDEX LOCATED", true)
-	}
-*/
+	
+
 }
