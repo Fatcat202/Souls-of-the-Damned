@@ -266,6 +266,33 @@ randomise()
 		#endregion Camera
 		
 		
+		#region Inventory
+		
+			// Toggles showing the inventory
+			global.show_inventory = false
+			
+			// Total number of inventory slots
+			global.inventory_slots = 15
+			
+			// Player inventory
+			global.inventory = array_create(global.inventory_slots, -1)
+	
+			// Shop inventory
+			global.inventory_shop = array_create(global.inventory_slots, -1)
+			
+			// End inventory pause state
+			global.end_inventory_pause = false;
+			
+			// Total party gold
+			global.party_gold = 1000;
+
+
+
+
+		#endregion Inventory
+
+		
+		
 	
 	#endregion Variables
 
@@ -624,33 +651,6 @@ randomise()
 	ds_grid_destroy(ds_item_stats_csv);
 	
 #endregion Item Stats
-
-
-
-#region Inventory
-		
-	// Toggles showing the inventory
-	global.show_inventory = false
-			
-	// Total number of inventory slots
-	global.inventory_slots = 15
-			
-	// Player inventory
-	global.inventory = array_create(global.inventory_slots, -1)
-	
-	// Shop inventory
-	global.inventory_shop = array_create(global.inventory_slots, -1)
-			
-	// End inventory pause state
-	global.end_inventory_pause = false;
-			
-	// Total party gold
-	global.party_gold = 1000;
-
-
-
-
-#endregion Inventory
 
 
 

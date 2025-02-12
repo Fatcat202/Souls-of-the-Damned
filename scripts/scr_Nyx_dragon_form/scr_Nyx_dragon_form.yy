@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Nyx_transform",
+  "%Name":"scr_Nyx_dragon_form",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Nyx_transform",
+  "name":"scr_Nyx_dragon_form",
   "parent":{
     "name":"Player Abilities",
     "path":"folders/Scripts/Mythic/Player Abilities.yy",

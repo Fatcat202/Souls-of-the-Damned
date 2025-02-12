@@ -12,7 +12,7 @@ function scr_Garyrager_stunning_strike()
 	var crit_chance = global.attack_stats[attack_index].crit_chance
 	var crit_mod = global.attack_stats[attack_index].crit_mod
 	
-	// Shoots a single magic blast dealing damage to the target it hits
+	// Create melee object
 	Garyrager_stunning_strike = instance_create_layer(x, y, "Projectiles", obj_Garyrager_stunning_strike); 
 	Garyrager_stunning_strike.direction = point_direction(x, y, mouse_x, mouse_y);
 	Garyrager_stunning_strike.image_angle = Garyrager_stunning_strike.direction;

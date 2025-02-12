@@ -57,7 +57,7 @@ if(can_attack == true)
 		{
 			// Set up attack cooldown
 			cooldown_4 = false;
-			cooldown_time_4 = cooldown;
+			//cooldown_time_4 = cooldown;
 			
 			// Reset used
 			used = false;
