@@ -1,20 +1,20 @@
 ,dmg_die_num,dmg_die_sides,dmg_mod,cooldown,kb_length,crit_chance,crit_mod,scr,spr,title,desc
-Alok_basic_attack,1,8,0,0,0,5,1.5,-1,-1,-1,-1
-Alok_channel,1,6,0,0,0,0,1,-1,-1,-1,-1
-Alok_javalin,1,8,0,0,0,0,1,-1,-1,-1,-1
-Alok_shield,0,0,0,0,0,0,1,-1,-1,-1,-1
-Dogan_basic_attack,1,6,0,0,0,15,1.5,-1,-1,-1,-1
-Dogan_bomb,1,6,0,0,0,0,1,-1,-1,-1,-1
-Dogan_sneak_attack,0,0,0,0,0,50,1.5,-1,-1,-1,-1
-Dogan_poison,0,0,0,0,0,0,1,-1,-1,-1,-1
-Seki_basic_attack,1,8,0,0,0,0,1,-1,-1,-1,-1
-Seki_fireball,1,6,0,0,0,0,1,-1,-1,-1,-1
-Seki_lightning,1,8,0,0,0,0,1,-1,-1,-1,-1
-Seki_teleport,0,0,0,0,0,0,1,-1,-1,-1,-1
-Xan_basic_attack,1,10,0,0,0,5,2,-1,-1,-1,-1
-Xan_fly,0,0,0,0,0,0,1,-1,-1,-1,-1
-Xan_powerful_shot,2,10,0,0,0,5,1.5,-1,-1,-1,-1
-Xan_quickdraw,1,6,0,0,0,5,1.5,-1,-1,-1,-1
+Alok_basic_attack,1,8,0,0,0,5,1.5,-1,-1,WARHAMMER,"Alok's holy warhammer, it crushes foes."
+Alok_channel,1,6,0,0,0,0,1,-1,-1,CHANNEL,"Alok channels divine power, healing all allies around him."
+Alok_javalin,1,8,0,0,0,0,1,-1,-1,HOLY JAVELIN,Alok conjures and throws a javelin made of divine light.
+Alok_shield,0,0,0,0,0,0,1,-1,-1,SHIELD,"Alok's shield, it protects against attacks when in use."
+Dogan_basic_attack,1,6,0,0,0,15,1.5,-1,-1,RAPIER,"Dogan's silver rapier, it puts holes in foes."
+Dogan_bomb,1,6,0,0,0,0,1,-1,-1,BOMB,"Dogan lights and throws a bomb, exploding either within a short time or on impact."
+Dogan_sneak_attack,0,0,0,0,0,50,1.5,-1,-1,SNEAK ATTACK,As an expert in anatomy Dogan knows weak spots to aim for. Gain a 50% critical chance for a limited time.
+Dogan_poison,0,0,0,0,0,0,1,-1,-1,POISON,"Dogan poisons his blade, dealing damage over time to foes."
+Seki_basic_attack,1,8,0,0,0,0,1,-1,-1,ARCANE BLAST,"A basic arcane blast, dealing damage with each hit and has a limited range. Colliding with other magic will destroy both this blast and the other magic."
+Seki_fireball,1,6,0,0,0,0,1,-1,-1,FIREBALL,"Seki launches an explosive fireball, damaging all foes within range."
+Seki_lightning,1,8,0,0,0,0,1,-1,-1,LIGHTNING BOLT,Seki throws a lightning bolt damaging all it passes through.
+Seki_teleport,0,0,0,0,0,0,1,-1,-1,TELEPORT,"Seki visualizes being elsewhere, teleporting him where he wishes."
+Xan_basic_attack,1,10,0,0,0,5,2,-1,-1,RIFLE,"Xan's custom rifle, it has 4 shots which must be reloaded after being fired."
+Xan_fly,0,0,0,0,0,0,1,-1,-1,FLY,"Xan spreads his wings, launching himself into the air and giving himself a speed boost."
+Xan_powerful_shot,2,10,0,0,0,5,1.5,-1,-1,POWERFUL SHOT,"Xan fires a combined shot, using 2 uses of ammo but providing more power. The shot will travel through foes and stun them, but also has extra recoil."
+Xan_quickdraw,1,6,0,0,0,5,1.5,-1,-1,QUICKDRAW,"Xan draws his revolver, shooting one shot at all within range."
 Garyrager_basic_attack,1,10,0,0,0,5,1.5,-1,-1,-1,-1
 Garyrager_block,0,0,0,0,0,0,1,-1,-1,-1,-1
 Garyrager_stunning_strike,2,10,0,0,0,5,1.5,-1,-1,-1,-1
