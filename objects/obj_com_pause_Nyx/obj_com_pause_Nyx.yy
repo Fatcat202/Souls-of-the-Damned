@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Nyx",
-    "path":"sprites/spr_Nyx/spr_Nyx.yy",
+    "name":"scr_Nyx_side",
+    "path":"sprites/scr_Nyx_side/scr_Nyx_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,
