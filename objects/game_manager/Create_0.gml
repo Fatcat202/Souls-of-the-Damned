@@ -542,6 +542,10 @@ randomise()
 		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
 		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
 		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
 
 	
 

@@ -33,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_Bronwin",
-    "path":"sprites/spr_Bronwin/spr_Bronwin.yy",
+    "name":"scr_Bronwin_side",
+    "path":"sprites/scr_Bronwin_side/scr_Bronwin_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,
