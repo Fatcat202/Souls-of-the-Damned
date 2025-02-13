@@ -8,7 +8,7 @@ if(state == "returning")
 	other.used = true
 
 	// Change Gary sprite
-	object_set_sprite(obj_player_Garyrager, spr_Garyrager)
+	object_set_sprite(obj_player_Garyrager, spr_Garyrager_side)
 
 	// Destroy object
 	instance_destroy()

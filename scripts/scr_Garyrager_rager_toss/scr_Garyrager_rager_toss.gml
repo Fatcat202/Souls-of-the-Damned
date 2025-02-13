@@ -32,7 +32,7 @@ function scr_Garyrager_rager_toss()
 	
 
 	// Swap sprite
-	//object_set_sprite(object_index, spr_Gary)
+	object_set_sprite(object_index, spr_Gary_side)
 	
 	// State attack has been used
 	used = true;

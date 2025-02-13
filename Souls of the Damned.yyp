@@ -1036,6 +1036,8 @@
     {"id":{"name":"spr_gadget_alchemy","path":"sprites/spr_gadget_alchemy/spr_gadget_alchemy.yy",},},
     {"id":{"name":"spr_gadget_runic","path":"sprites/spr_gadget_runic/spr_gadget_runic.yy",},},
     {"id":{"name":"spr_gadget_vinci","path":"sprites/spr_gadget_vinci/spr_gadget_vinci.yy",},},
+    {"id":{"name":"spr_Gary_side","path":"sprites/spr_Gary_side/spr_Gary_side.yy",},},
+    {"id":{"name":"spr_Garyrager_side","path":"sprites/spr_Garyrager_side/spr_Garyrager_side.yy",},},
     {"id":{"name":"spr_Garyrager","path":"sprites/spr_Garyrager/spr_Garyrager.yy",},},
     {"id":{"name":"spr_gem_blue","path":"sprites/spr_gem_blue/spr_gem_blue.yy",},},
     {"id":{"name":"spr_gem_cyan","path":"sprites/spr_gem_cyan/spr_gem_cyan.yy",},},
