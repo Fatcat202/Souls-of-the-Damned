@@ -15,11 +15,11 @@ Xan_basic_attack,1,10,0,0,0,5,2,-1,-1,RIFLE,"Xan's custom rifle, it has 4 shots 
 Xan_fly,0,0,0,0,0,0,1,-1,-1,FLY,"Xan spreads his wings, launching himself into the air and giving himself a speed boost."
 Xan_powerful_shot,2,10,0,0,0,5,1.5,-1,-1,POWERFUL SHOT,"Xan fires a combined shot, using 2 uses of ammo but providing more power. The shot will travel through foes and stun them, but also has extra recoil."
 Xan_quickdraw,1,6,0,0,0,5,1.5,-1,-1,QUICKDRAW,"Xan draws his revolver, shooting one shot at all within range."
-Garyrager_basic_attack,1,10,0,0,0,5,1.5,-1,-1,-1,-1
-Garyrager_block,0,0,0,0,0,0,1,-1,-1,-1,-1
-Garyrager_stunning_strike,2,10,0,0,0,5,1.5,-1,-1,-1,-1
-Garyrager_rager_toss,1,4,0,0,0,5,1.5,-1,-1,-1,-1
-Darien_basic_attack,2,4,0,0,0,5,1.5,-1,-1,-1,-1
-Darien_shield,0,0,0,0,0,0,1,-1,-1,-1,-1
-Darien_sweeping_strike,2,4,0,0,0,5,1.5,-1,-1,-1,-1
-Darien_loh,1,8,0,0,0,0,1,-1,-1,-1,-1
+Garyrager_basic_attack,1,10,0,0,0,5,1.5,-1,-1,FISTS,"Gary's fists, they hurt."
+Garyrager_block,0,0,0,0,0,0,1,-1,-1,BLOCK,Defend against attacks.
+Garyrager_stunning_strike,2,10,0,0,0,5,1.5,-1,-1,STUNNING STRIKE,Throw a powerful strike that stuns foes
+Garyrager_rager_toss,1,4,0,0,0,5,1.5,-1,-1,THROW RAGER,Throw Rager at an enemy to beat them to a pulp.
+Darien_basic_attack,2,4,0,0,0,5,1.5,-1,-1,GLAVE,"Darien's glave, it cuts foes to pieces."
+Darien_shield,0,0,0,0,0,0,1,-1,-1,TOWER SHIELD,Use Darien's tower shield to block attacks
+Darien_sweeping_strike,2,4,0,0,0,5,1.5,-1,-1,SWEEPING STRIKE,Make a large sweeping strike with Darien's Glave
+Darien_loh,1,8,0,0,0,0,1,-1,-1,LAY ON HANDS,Place Darien's hands on himself or someone else to heal.
