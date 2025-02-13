@@ -19,14 +19,14 @@ function scr_Garyrager_rager_toss()
 	// Throw Rager at an enemy
 	Garyrager_rager_toss = instance_create_layer(x, y, "Projectiles", obj_Rager_tossed); 
 	Garyrager_rager_toss.speed = 6;
-	Garyrager_rager_toss.direction = point_direction(x, y, mouse_x, mouse_y);
-	Garyrager_rager_toss.image_angle = Garyrager_rager_toss.direction + 90;
+	Garyrager_rager_toss.direction = point_direction(x, y, mouse_x, mouse_y)
+	Garyrager_rager_toss.image_xscale = image_xscale
 	
 	Garyrager_rager_toss.dmg_die_total = dmg_die_total;
 	Garyrager_rager_toss.dmg_die_sides = dmg_die_sides;
 	Garyrager_rager_toss.dmg_mod = dmg_mod;
 	
-	Garyrager_rager_toss.range = game_get_speed(gamespeed_fps) * 3
+	Garyrager_rager_toss.range = game_get_speed(gamespeed_fps) * 2
 	Garyrager_rager_toss.duration = game_get_speed(gamespeed_fps) * 2
 	Garyrager_rager_toss.cooldown = game_get_speed(gamespeed_fps) * 5;
 	

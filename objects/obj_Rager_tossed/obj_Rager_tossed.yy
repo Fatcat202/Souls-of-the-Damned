@@ -48,8 +48,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_placeholder",
-    "path":"sprites/spr_placeholder/spr_placeholder.yy",
+    "name":"spr_Rager_side",
+    "path":"sprites/spr_Rager_side/spr_Rager_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -14,13 +14,19 @@ switch (state)
 	
 	case "attacking":
 		
-		// Stop both self and enemy in place
-		speed = 0;
-		enemy.can_move = false;
+		if(!instance_exists(enemy))
+		{
+			state = "returning"
+		}else
+		{
+			// Stop both self and enemy in place
+			speed = 0;
+			enemy.can_move = false;
 		
-		// Place Rager onto enemy
-		x = enemy.x
-		y = enemy.y
+			// Place Rager onto enemy
+			x = enemy.x
+			y = enemy.y
+		}
 		
 		
 	break;
@@ -30,7 +36,7 @@ switch (state)
 		alarm[2] = 1;
 		
 		// Set object sprite
-		//object_set_sprite(object_index, spr_Rager)
+		object_set_sprite(object_index, spr_Rager_side)
 		
 	break;
 	

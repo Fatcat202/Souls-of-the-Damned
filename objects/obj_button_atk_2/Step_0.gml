@@ -55,7 +55,7 @@ switch (player_name)
 		
 	case "Seki":
 		
-		name = "ARCANE BLAST"
+		name = "FIREBALL"
 		
 		description = "Seki launches an explosive fireball, damaging all foes within range."
 	
