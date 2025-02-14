@@ -5,7 +5,7 @@ if(can_attack == true)
 {
 	if(active_power = 1 && cooldown_1 == true && !place_meeting(mouse_x, mouse_y, obj_gui_button_parent)) // ****
 	{
-		scr_Bronwin_basic_attack();
+		scr_Bronwin_basic_attack(mouse_x, mouse_y);
 		
 		// Checks if attack was used
 		if(used = true)

@@ -18,7 +18,7 @@ if(within_range != noone)
 {
 	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
 	{
-		scr_Brownin_basic_attack(target_pos_x, target_pos_y)
+		scr_Bronwin_basic_attack(target_pos_x, target_pos_y)
 		
 		// Attack Cooldown
 		alarm[0] = game_get_speed(gamespeed_fps) * global.player_stats[index].main_atk_spd;
