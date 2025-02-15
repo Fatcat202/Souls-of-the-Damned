@@ -430,7 +430,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function e_stats(_dice_hp_num = 0, _dice_hp_sides = 0, _dice_hp_mod = 0, _armor = 0, _move_spd = 0, _dice_melee_atk_num = 0, _dice_melee_atk_sides = 0, _dice_melee_atk_mod = 0, _kb_percent = 0, _dice_range_atk_num = 0, _dice_range_atk_sides = 0, _dice_range_atk_mod = 0, _knock_back_percent = 0, _is_flyer = 0) constructor {
+	function e_stats(_dice_hp_num = 0, _dice_hp_sides = 0, _dice_hp_mod = 0, _armor = 0, _move_spd = 0, _dice_melee_atk_num = 0, _dice_melee_atk_sides = 0, _dice_melee_atk_mod = 0, _kb_percent = 0, _dice_range_atk_num = 0, _dice_range_atk_sides = 0, _dice_range_atk_mod = 0, _knock_back_percent = 0, _is_flyer = 0, _gold = 0) constructor {
 		dice_hp_num = _dice_hp_num;
 	    dice_hp_sides = _dice_hp_sides;
 	    dice_hp_mod = _dice_hp_mod;
@@ -444,6 +444,7 @@ randomise()
 		dice_range_atk_mod = _dice_range_atk_mod;
 		kb_percent = _knock_back_percent;
 		is_flyer = _is_flyer;
+		gold = _gold;
 	}
 
 	// Create enemy_stats struct array. Add another line with another added enemy.
@@ -470,6 +471,7 @@ randomise()
 		global.enemy_stats[yy].dice_range_atk_mod = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 		global.enemy_stats[yy].kb_percent = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 		global.enemy_stats[yy].is_flyer = ds_grid_get(ds_enemy_stats_csv, xx, yy); xx++;
+		global.enemy_stats[yy].gold = real(ds_grid_get(ds_enemy_stats_csv, xx, yy)); xx++;
 
 	}
 
