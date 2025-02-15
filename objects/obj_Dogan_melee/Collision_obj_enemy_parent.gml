@@ -13,4 +13,4 @@ if sneak_attack == true
 	damage = scr_critical(damage, 50, 2)
 } scr_critical(damage, 10, 1.5)
 
-scr_damage(damage)
+if(other.can_damage) scr_damage(damage);

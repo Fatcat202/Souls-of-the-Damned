@@ -26,6 +26,7 @@ if(!global.game_death_paused && !global.show_inventory)
 	}
 }
 
+// Close inventory
 if(global.show_inventory)
 {
 	global.show_inventory = false;

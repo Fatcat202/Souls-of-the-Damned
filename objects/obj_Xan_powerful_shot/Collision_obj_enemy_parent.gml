@@ -2,7 +2,7 @@
 
 
 // Deals 1.5x normal damage
-scr_damage(damage * 1.5);
+if(other.can_damage) scr_damage(damage);
 
 // Stuns enemy for 120 frames
 scr_stun(game_get_speed(gamespeed_fps) * 2);

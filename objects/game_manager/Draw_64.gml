@@ -1,33 +1,30 @@
 /// @description HUD GUI
 
 
-	// ** VARIABLES **
+// ** VARIABLES **
 
-	// Half display width and height
-	var xx = display_get_gui_width() / 2;
-	var yy = display_get_gui_height() / 2;
+// Half display width and height
+var xx = display_get_gui_width() / 2;
+var yy = display_get_gui_height() / 2;
 
-	// Healthbars
-	var healthbar_thickness = 8;
-	var armor_healthbar_y_top = 320; // Top of healthbars
-	var healthbar_half_width = 100; // Half width of healthbars
-	var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
-	// Distance between healthbars
-	var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
-	var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
+// Healthbars
+var healthbar_thickness = 8;
+var armor_healthbar_y_top = 320; // Top of healthbars
+var healthbar_half_width = 100; // Half width of healthbars
+var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
+// Distance between healthbars
+var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
+var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
 
-	// Attacks
-	var attack_x = 620; // Starting x location
-	var attack_y = 20; // Starting y location
-	var attack_spacing = 36; // Space between cooldowns
+// Attacks
+var attack_x = 620; // Starting x location
+var attack_y = 20; // Starting y location
+var attack_spacing = 36; // Space between cooldowns
+// Set default font
+draw_set_font(fnt_default);
 	
-
-
-
-	// Set default font
-	draw_set_font(fnt_default);
-
 if(instance_exists(obj_inventory_shop)) return;
+
 
 // Check if ESC paused
 if(global.game_esc_paused == false)
