@@ -1,5 +1,5 @@
 ,dmg_die_num,dmg_die_sides,dmg_mod,cooldown,kb_length,crit_chance,crit_mod,scr,spr,title,desc
-Alok_basic_attack,1,8,0,0,0,5,1.5,-1,-1,WARHAMMER,"Alok's holy warhammer, it crushes foes."
+Alok_basic_attack,1,8,0,0,0,5,1.5,-1,spr_atk_warhammer,WARHAMMER,"Alok's holy warhammer, it crushes foes."
 Alok_channel,1,6,0,0,0,0,1,-1,-1,CHANNEL,"Alok channels divine power, healing all allies around him."
 Alok_javalin,1,8,0,0,0,0,1,-1,-1,HOLY JAVELIN,Alok conjures and throws a javelin made of divine light.
 Alok_shield,0,0,0,0,0,0,1,-1,-1,SHIELD,"Alok's shield, it protects against attacks when in use."

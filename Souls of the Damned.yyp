@@ -834,6 +834,7 @@
     {"id":{"name":"spr_atk_2","path":"sprites/spr_atk_2/spr_atk_2.yy",},},
     {"id":{"name":"spr_atk_3","path":"sprites/spr_atk_3/spr_atk_3.yy",},},
     {"id":{"name":"spr_atk_4","path":"sprites/spr_atk_4/spr_atk_4.yy",},},
+    {"id":{"name":"spr_atk_warhammer","path":"sprites/spr_atk_warhammer/spr_atk_warhammer.yy",},},
     {"id":{"name":"Spr_Ball_Of_Electricity","path":"sprites/Spr_Ball_Of_Electricity/Spr_Ball_Of_Electricity.yy",},},
     {"id":{"name":"Spr_BG_Shade_1","path":"sprites/Spr_BG_Shade_1/Spr_BG_Shade_1.yy",},},
     {"id":{"name":"spr_bomb","path":"sprites/spr_bomb/spr_bomb.yy",},},
