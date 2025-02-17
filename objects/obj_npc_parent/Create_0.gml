@@ -29,12 +29,10 @@ event_inherited()
 		
 		
 		// Placing player attacks into active DS grid
-		show_debug_message("Character: " + string(player_name))
 		var xx = i + 1;
 		for(var yy = 0; yy < ds_grid_height(global.player_attacks); yy++)
 		{
 			ds_grid_set(global.player_attacks_active, xx, yy, global.player_attacks[# index, yy])
-			show_debug_message("global.player_attacks_active: " + string(global.player_attacks_active[# xx, yy]))
 		}
 
 		
@@ -42,7 +40,6 @@ event_inherited()
 	{
 		// Find posision in active DS lists
 		var list_index = ds_list_find_index(global.active_pc_names_list, player_name)
-		show_debug_message("list_index: " + string(list_index));
 	
 		// Replace position in active DS lists
 		ds_list_replace(global.active_pc_list, list_index, object_name)
