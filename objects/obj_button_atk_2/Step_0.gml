@@ -22,10 +22,20 @@ if(global.game_combat_paused || global.show_inventory)
 }
 
 
-// Find title and description
+
 var attack = 2;
 var attack_name = global.player_attacks_active[# global.selected_char, attack]
 var attack_index = scr_find_attack_index(attack_name)
 
+// Find title and description
 name = global.attack_stats[attack_index].title
 description = global.attack_stats[attack_index].desc
+
+// Find Sprite
+if(global.attack_stats[attack_index].spr != -1)
+{
+	sprite_index = global.attack_stats[attack_index].spr
+}else
+{
+	sprite_index = spr_atk_2
+}
