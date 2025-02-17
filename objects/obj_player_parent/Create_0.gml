@@ -27,6 +27,18 @@ event_inherited()
 		global.active_pc_object_list[| i] = object_index;
 		global.selected_char = i + 1;
 		pc_index = i + 1;
+		
+		
+		// Placing player attacks into active DS grid
+		show_debug_message("Character: " + string(player_name))
+		var xx = i + 1;
+		for(var yy = 0; yy < ds_grid_height(global.player_attacks); yy++)
+		{
+			ds_grid_set(global.player_attacks_active, xx, yy, global.player_attacks[# pc_index, yy])
+			show_debug_message("global.player_attacks_active: " + string(global.player_attacks_active[# xx, yy]))
+		}
+		
+		
 
 	}else // If list is filled, replace object name instead
 	{

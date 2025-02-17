@@ -2,6 +2,48 @@
 // Randomise randomization seed
 randomise()
 
+
+#region Enums
+
+	enum dot_data // Data for Damage Over Time
+	{
+		dmg,
+		tick_rate,
+		duration,
+		can_kill
+	}
+		
+		
+	enum item_names // Positions of items in database array
+	{
+		empty,
+		health_potion_light,
+		health_potion_moderate,
+		health_potion_severe,
+		health_potion_critical,
+		armor_potion_light,
+		armor_potion_moderate,
+		armor_potion_severe,
+		armor_potion_critical
+	}
+		
+	enum player_index // Positions of players in database indexes
+	{
+		empty,
+		alok,
+		seki,
+		xan,
+		garyrager,
+		dogan,
+		darien,
+		bronwin,
+		nyx
+	}
+
+
+#endregion Enums
+
+
 #region Global Variables
 
 
@@ -57,9 +99,8 @@ randomise()
 				// Initialize enemy index arrays
 				global.arr_item_index_name[0] = "No valid item name";
 			
-		
-				// Assign players to array
-				#region
+				
+				#region Assign players to array
 					global.arr_players[1] = obj_player_Alok;
 					global.arr_players[2] = obj_player_Seki;
 					global.arr_players[3] = obj_player_Xan;
@@ -68,10 +109,10 @@ randomise()
 					global.arr_players[6] = obj_player_Darien;
 					global.arr_players[7] = obj_player_Bronwin;
 					global.arr_players[8] = obj_player_Nyx;
-				#endregion
+				#endregion Assign players to array
 
-				//	Assign npcs to array
-				#region
+				
+				#region Assign npcs to array
 					global.arr_npc[1] = obj_npc_Alok;
 					global.arr_npc[2] = obj_npc_Seki;
 					global.arr_npc[3] = obj_npc_Xan;
@@ -80,10 +121,10 @@ randomise()
 					global.arr_npc[6] = obj_npc_Darien;
 					global.arr_npc[7] = obj_npc_Bronwin;
 					global.arr_npc[8] = obj_npc_Nyx;
-				#endregion
+				#endregion Assign npcs to array
 			
-				// Assign combat pause objects to array
-				#region
+				
+				#region Assign combat pause objects to array
 					global.arr_combat_pause[1] = obj_com_pause_Alok;
 					global.arr_combat_pause[2] = obj_com_pause_Seki;
 					global.arr_combat_pause[3] = obj_com_pause_Xan;
@@ -92,10 +133,10 @@ randomise()
 					global.arr_combat_pause[6] = obj_com_pause_Darien;
 					global.arr_combat_pause[7] = obj_com_pause_Bronwin;
 					global.arr_combat_pause[8] = obj_com_pause_Nyx;
-				#endregion
+				#endregion Assign combat pause objects to array
 			
-				// Assign combat pause npc objects to array
-				#region
+				
+				#region Assign combat pause npc objects to array
 					global.arr_combat_pause_npc[1] = obj_com_pause_npc_Alok;
 					global.arr_combat_pause_npc[2] = obj_com_pause_npc_Seki;
 					global.arr_combat_pause_npc[3] = obj_com_pause_npc_Xan;
@@ -104,8 +145,85 @@ randomise()
 					global.arr_combat_pause_npc[6] = obj_com_pause_npc_Darien;
 					global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
 					global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
-				#endregion
-			
+				#endregion Assign combat pause npc objects to array
+				
+				
+				#region Attacks
+				
+					/*
+						 Intended use is:
+					
+						var attack_name = global.player_attacks_active[# global.selected_char, (attack 1-4)]
+						attack_index = scr_find_attack_index(attack_name)
+						global.attack_stats(attack_index).whatever stat is needed
+					
+						Doing this will allow for drawing attacks stats based on which attack is being used/accessed
+					*/
+				
+					// Holds all attacks in ds_grid for cross reference with attacks CSV
+					global.player_attacks = ds_grid_create(9, 5)
+					
+					// Holds active player attacks
+					global.player_attacks_active = ds_grid_create(5, 5)
+					
+					global.player_attacks_active[# 0, 0] = 0;
+					global.player_attacks_active[# 0, 1] = 0;
+					global.player_attacks_active[# 0, 2] = 0;
+					global.player_attacks_active[# 0, 3] = 0;
+					global.player_attacks_active[# 0, 4] = 0;
+					
+					
+					// Alok default attacks
+					global.player_attacks[# player_index.alok, 1] = "Alok_basic_attack"
+					global.player_attacks[# player_index.alok, 2] = "Alok_shield"
+					global.player_attacks[# player_index.alok, 3] = "Alok_javalin"
+					global.player_attacks[# player_index.alok, 4] = "Alok_channel"
+					
+					// Seki default attacks
+					global.player_attacks[# player_index.seki, 1] = "Seki_basic_attack"
+					global.player_attacks[# player_index.seki, 2] = "Seki_fireball"
+					global.player_attacks[# player_index.seki, 3] = "Seki_lightning"
+					global.player_attacks[# player_index.seki, 4] = "Seki_teleport"
+					
+					// Xan default attacks
+					global.player_attacks[# player_index.xan, 1] = "Xan_basic_attack"
+					global.player_attacks[# player_index.xan, 2] = "Xan_powerful_shot"
+					global.player_attacks[# player_index.xan, 3] = "Xan_quickdraw"
+					global.player_attacks[# player_index.xan, 4] = "Xan_fly"
+					
+					// Garyrager default attacks
+					global.player_attacks[# player_index.garyrager, 1] = "Garyrager_basic_attack"
+					global.player_attacks[# player_index.garyrager, 2] = "Garyrager_block"
+					global.player_attacks[# player_index.garyrager, 3] = "Garyrager_stunning_strike"
+					global.player_attacks[# player_index.garyrager, 4] = "Garyrager_rager_toss"
+					
+					// Dogan default attacks
+					global.player_attacks[# player_index.dogan, 1] = "Dogan_basic_attack"
+					global.player_attacks[# player_index.dogan, 2] = "Dogan_poison"
+					global.player_attacks[# player_index.dogan, 3] = "Dogan_bomb"
+					global.player_attacks[# player_index.dogan, 4] = "Dogan_sneak_attack"
+					
+					// Darien default attacks
+					global.player_attacks[# player_index.darien, 1] = "Darien_basic_attack"
+					global.player_attacks[# player_index.darien, 2] = "Darien_shield"
+					global.player_attacks[# player_index.darien, 3] = "Darien_sweeping_strike"
+					global.player_attacks[# player_index.darien, 4] = "Darien_loh"
+					
+					// Bronwin default attacks
+					global.player_attacks[# player_index.bronwin, 1] = ""
+					global.player_attacks[# player_index.bronwin, 2] = ""
+					global.player_attacks[# player_index.bronwin, 3] = ""
+					global.player_attacks[# player_index.bronwin, 4] = ""
+					
+					// Nyx default attacks
+					global.player_attacks[# player_index.nyx, 1] = ""
+					global.player_attacks[# player_index.nyx, 2] = ""
+					global.player_attacks[# player_index.nyx, 3] = ""
+					global.player_attacks[# player_index.nyx, 4] = ""
+
+					
+				#endregion Attacks
+				
 
 			#region Swapping Characters
 			
@@ -323,33 +441,7 @@ randomise()
 	#endregion Controls
 
 
-	#region Enums
-
-		
-		enum dot_data // Data for Damage Over Time
-		{
-			dmg,
-			tick_rate,
-			duration,
-			can_kill
-		}
-		
-		
-		enum item_names // Positions of items in database array
-		{
-			empty,
-			health_potion_light,
-			health_potion_moderate,
-			health_potion_severe,
-			health_potion_critical,
-			armor_potion_light,
-			armor_potion_moderate,
-			armor_potion_severe,
-			armor_potion_critical
-		}
-
-
-	#endregion Enums
+	
 	
 	
 #endregion Global Variables

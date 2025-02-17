@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_player_Alok",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":50,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_player_Alok",
   "overriddenProperties":[],
