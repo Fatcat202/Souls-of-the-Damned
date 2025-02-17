@@ -22,7 +22,7 @@ function scr_Garyrager_stunning_strike()
 	Garyrager_stunning_strike.pc_object = object_index;
 		
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * 4;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 
 	// States attack was used for cooldowns
 	used = true

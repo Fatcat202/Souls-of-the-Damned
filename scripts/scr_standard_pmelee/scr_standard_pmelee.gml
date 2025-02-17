@@ -28,8 +28,5 @@ function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, c
 		var damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		// Damage
 		melee_atk.damage = damage
-		
 
-	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * global.player_stats[global.selected_char].main_atk_spd;
 }

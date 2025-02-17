@@ -26,7 +26,7 @@ function scr_level_up()
 	}
 	
 	
-	// Increase attack damage per level
+	// Increase attack damage per level for all attacks
 	
 	for(var i = 1; i < global.attack_index_length + 1; i++)
 	{

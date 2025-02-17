@@ -1,5 +1,5 @@
 
-function scr_Seki_basic_attack(target_x, target_y)
+function scr_Seki_basic_attack(target_x = mouse_x, target_y = mouse_y)
 {
 	// Pull stats
 	var attack_index = scr_find_attack_index("Seki_basic_attack")
@@ -21,7 +21,7 @@ function scr_Seki_basic_attack(target_x, target_y)
 	seki_missile.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * .5;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 	// States attack was used for cooldowns
 	used = true

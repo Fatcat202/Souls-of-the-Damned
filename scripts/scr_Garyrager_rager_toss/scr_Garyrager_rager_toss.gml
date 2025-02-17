@@ -28,7 +28,7 @@ function scr_Garyrager_rager_toss()
 	
 	Garyrager_rager_toss.range = game_get_speed(gamespeed_fps) * 2
 	Garyrager_rager_toss.duration = game_get_speed(gamespeed_fps) * 2
-	Garyrager_rager_toss.cooldown = game_get_speed(gamespeed_fps) * 5;
+	Garyrager_rager_toss.cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 
 	// Swap sprite

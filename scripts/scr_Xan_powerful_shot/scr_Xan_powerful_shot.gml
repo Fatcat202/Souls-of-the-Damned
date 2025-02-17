@@ -26,7 +26,7 @@ function scr_Xan_powerful_shot(target_x, target_y){
 		Xan_powerful_shot.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 		// Cooldown and reloading
-		cooldown = game_get_speed(gamespeed_fps) * 5;
+		cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 		reload_timer = 0;
 		bullets -= 2;
 		

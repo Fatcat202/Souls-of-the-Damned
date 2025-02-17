@@ -1,5 +1,5 @@
 
-function scr_Xan_basic_attack(target_x, target_y)
+function scr_Xan_basic_attack(target_x = mouse_x, target_y = mouse_x)
 {
 	// Hit first enemy in a line and deal damage.
 	// Only so many shots, must reload through timer. Timer is reset when fireing again.
@@ -23,7 +23,7 @@ function scr_Xan_basic_attack(target_x, target_y)
 		Xan_bullet.image_angle = Xan_bullet.direction;
 		
 		// Cooldown and reloading
-		cooldown = game_get_speed(gamespeed_fps) / 4;
+		cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 		reload_timer = 0;
 		bullets--;
 		

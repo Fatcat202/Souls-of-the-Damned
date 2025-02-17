@@ -22,7 +22,7 @@ function scr_Seki_fireball()
 	seki_fireball.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * 3;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 	// States attack was used for cooldowns
 	used = true

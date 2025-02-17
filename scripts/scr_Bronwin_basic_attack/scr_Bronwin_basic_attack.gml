@@ -21,7 +21,7 @@ function scr_Bronwin_basic_attack(target_x, target_y)
 	Bronwin_arrow.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 	// Cooldown and reloading
-	cooldown = game_get_speed(gamespeed_fps) * global.player_stats[index].main_atk_spd;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 	// States attack was used for cooldowns
 	used = true

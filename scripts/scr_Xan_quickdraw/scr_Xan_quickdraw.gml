@@ -45,7 +45,7 @@ function scr_Xan_quickdraw()
 		// Cooldown
 		if(shots != 6)
 		{
-			cooldown = game_get_speed(gamespeed_fps) * 12;
+			cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 		} else cooldown = 0;
 		
 		// States attack was used for cooldowns

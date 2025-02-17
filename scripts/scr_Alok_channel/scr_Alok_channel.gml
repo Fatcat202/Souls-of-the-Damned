@@ -31,7 +31,7 @@ function scr_Alok_channel()
 		
 	
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * 6;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 	// States attack was used for cooldowns
 	used = true

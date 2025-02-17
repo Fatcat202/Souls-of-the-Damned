@@ -6,7 +6,7 @@ function scr_Xan_fly()
 	move_spd = move_spd * 1.33;
 	
 	// Set cooldown on ability
-	cooldown = game_get_speed(gamespeed_fps) * 6
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown
 	
 	// Set end of effect timer
 	Xan_fly_timer = 0;

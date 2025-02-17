@@ -1,19 +1,19 @@
 ,dmg_die_num,dmg_die_sides,dmg_mod,dmg_die_num_per_lvl,dmg_die_sides_per_lvl,dmg_mod_per_lvl,cooldown,duration,kb_length,crit_chance,crit_mod,scr,spr,title,desc
 Alok_basic_attack,1,8,0,0,0,0,1,0,0,5,1.5,scr_Alok_basic_attack,spr_atk_warhammer,WARHAMMER,"Alok's holy warhammer, it crushes foes."
-Alok_channel,1,6,0,0,0,0,10,0,0,0,1,scr_Alok_channel,-1,CHANNEL,"Alok channels divine power, healing all allies around him."
-Alok_javalin,1,8,0,0,0,0,-1,0,0,0,1,scr_Alok_javalin,-1,HOLY JAVELIN,Alok conjures and throws a javelin made of divine light.
-Alok_shield,0,0,0,0,0,0,1,0,0,0,1,scr_Alok_shield,-1,SHIELD,"Alok's shield, it protects against attacks when in use."
+Alok_channel,1,6,0,0.5,0,0,10,0,0,0,1,scr_Alok_channel,spr_atk_channel,CHANNEL,"Alok channels divine power, healing all allies around him."
+Alok_javalin,1,8,0,0,0,0,2,0,0,0,1,scr_Alok_javalin,spr_atk_holy_javalin,HOLY JAVELIN,Alok conjures and throws a javelin made of divine light.
+Alok_shield,0,0,0,0,0,0,-1,0,0,0,1,scr_Alok_shield,-1,SHIELD,"Alok's shield, it protects against attacks when in use."
 Dogan_basic_attack,1,6,0,0,0,0,4,0,0,15,1.5,scr_Dogan_basic_attack,-1,RAPIER,"Dogan's silver rapier, it puts holes in foes."
-Dogan_bomb,1,6,0,0,0,0,6,0,0,0,1,scr_Dogan_bomb,-1,BOMB,"Dogan lights and throws a bomb, exploding either within a short time or on impact."
-Dogan_sneak_attack,0,0,0,0,0,0,6,0,0,50,1.5,scr_Dogan_sneak_attack,-1,SNEAK ATTACK,As an expert in anatomy Dogan knows weak spots to aim for. Gain a 50% critical chance for a limited time.
-Dogan_poison,0,0,0,0,0,0,6,0,0,0,1,scr_Dogan_poison,-1,POISON,"Dogan poisons his blade, dealing damage over time to foes."
+Dogan_bomb,1,6,0,1,0,0,6,0,0,0,1,scr_Dogan_bomb,spr_atk_bomb,BOMB,"Dogan lights and throws a bomb, exploding either within a short time or on impact."
+Dogan_sneak_attack,0,0,0,0,0,0,6,0,0,50,1.5,scr_Dogan_sneak_attack,spr_atk_sneak_attack,SNEAK ATTACK,As an expert in anatomy Dogan knows weak spots to aim for. Gain a 50% critical chance for a limited time.
+Dogan_poison,0,0,0,0,0,0,6,0,0,0,1,scr_Dogan_poison,spr_atk_poison,POISON,"Dogan poisons his blade, dealing damage over time to foes."
 Seki_basic_attack,1,8,0,0,0,0,1,0,0,0,1,scr_Seki_basic_attack,-1,ARCANE BLAST,"A basic arcane blast, dealing damage with each hit and has a limited range. Colliding with other magic will destroy both this blast and the other magic."
-Seki_fireball,1,6,0,0,0,0,6,0,0,0,1,scr_Seki_fireball,-1,FIREBALL,"Seki launches an explosive fireball, damaging all foes within range."
-Seki_lightning,1,8,0,0,0,0,5,0,0,0,1,scr_Seki_lightning,-1,LIGHTNING BOLT,Seki throws a lightning bolt damaging all it passes through.
+Seki_fireball,1,6,0,1,0,0,6,0,0,0,1,scr_Seki_fireball,spr_atk_fireball,FIREBALL,"Seki launches an explosive fireball, damaging all foes within range."
+Seki_lightning,1,8,0,1,0,0,5,0,0,0,1,scr_Seki_lightning,-1,LIGHTNING BOLT,Seki throws a lightning bolt damaging all it passes through.
 Seki_teleport,0,0,0,0,0,0,5,0,0,0,1,scr_Seki_teleport,-1,TELEPORT,"Seki visualizes being elsewhere, teleporting him where he wishes."
 Xan_basic_attack,1,10,0,0,0,0,1,0,0,5,2,scr_Xan_basic_attack,-1,RIFLE,"Xan's custom rifle, it has 4 shots which must be reloaded after being fired."
 Xan_fly,0,0,0,0,0,0,10,0,0,0,1,scr_Xan_fly,-1,FLY,"Xan spreads his wings, launching himself into the air and giving himself a speed boost."
-Xan_powerful_shot,2,10,0,0,0,0,4,0,0,5,1.5,scr_Xan_powerful_attack,-1,POWERFUL SHOT,"Xan fires a combined shot, using 2 uses of ammo but providing more power. The shot will travel through foes and stun them, but also has extra recoil."
+Xan_powerful_shot,2,10,0,0,0,0,4,0,0,5,1.5,scr_Xan_powerful_shot,spr_atk_powerful_shot,POWERFUL SHOT,"Xan fires a combined shot, using 2 uses of ammo but providing more power. The shot will travel through foes and stun them, but also has extra recoil."
 Xan_quickdraw,1,6,0,0,0,0,6,0,0,5,1.5,scr_Xan_quickdraw,-1,QUICKDRAW,"Xan draws his revolver, shooting one shot at all within range."
 Garyrager_basic_attack,1,10,0,0,0,0,1,0,0,5,1.5,scr_Garyrager_basic_attack,-1,FISTS,"Gary's fists, they hurt."
 Garyrager_block,0,0,0,0,0,0,-1,0,0,0,1,scr_Garyrager_block,-1,BLOCK,Defend against attacks.
@@ -22,9 +22,13 @@ Garyrager_rager_toss,1,4,0,0,0,0,6,0,0,5,1.5,scr_Garyrager_rager_toss,-1,THROW R
 Darien_basic_attack,2,4,0,0,0,0,1,0,0,5,1.5,scr_Darien_basic_attack,-1,GLAVE,"Darien's glave, it cuts foes to pieces."
 Darien_shield,0,0,0,0,0,0,-1,0,0,0,1,scr_Darien_shield,-1,TOWER SHIELD,Use Darien's tower shield to block attacks
 Darien_sweeping_strike,2,4,0,0,0,0,4,0,0,5,1.5,scr_Darien_sweeping_strike,-1,SWEEPING STRIKE,Make a large sweeping strike with Darien's Glave
-Darien_loh,1,8,0,0,0,0,6,0,0,5,1,scr_Darien_loh,-1,LAY ON HANDS,Place Darien's hands on himself or someone else to heal.
+Darien_loh,1,8,0,0.5,0,0,6,0,0,5,1,scr_Darien_loh,-1,LAY ON HANDS,Place Darien's hands on himself or someone else to heal.
 Bronwin_basic_attack,1,8,0,0,0,0,1,0,0,0,1.5,scr_Bronwin_basic_attack,-1,BOW,"Bronwin's bow, it skewers foes."
 Bronwin_cone_shot,1,8,0,0,0,0,4,0,0,5,1.5,scr_Bronwin_cone_shot,-1,CONE SHOT,"Fire a cone of arrows, damaging all hit."
-Bronwin_imbue_arrow,1,6,1,0,0,0,10,0,0,0,1,scr_Bronwin_imbue_arrow,-1,IMBUE ARROWS,Bronwin calls upon her magical potential to imbue her arrows with magic.
+Bronwin_imbue_arrow,1,6,1,0.5,0,0,10,0,0,0,1,scr_Bronwin_imbue_arrow,-1,IMBUE ARROWS,Bronwin calls upon her magical potential to imbue her arrows with magic.
 Bronwin_,0,0,0,0,0,0,-1,0,0,0,1,-1,-1,-1,-1
 Nyx_basic_attack,1,8,0,0,0,0,1,0,0,5,1.5,scr_Nyx_basic_attack,-1,QUARTERSTAFF,"Nyx's quarterstaff, it bashes foes."
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
