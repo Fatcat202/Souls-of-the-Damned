@@ -22,11 +22,21 @@ if (non_lethal_tick mod non_lethal_tick_rate == 0)
 
 #region Death NEEDS WORK
 
+// Kill the player when out of health
 if(active_health <= 0)
 {
-	
 	if(is_dead == false) global.total_dead++;
 	
+	is_dead = true;
+}
+
+// Make sure PC does not spontaniously gain health when dead
+if(is_dead && active_health > 0) active_health = -1;
+
+// Set death conditions
+if(is_dead == true)
+{
+
 	// Set death conditions
 	can_attack = false;
 	can_control = false;
@@ -34,14 +44,14 @@ if(active_health <= 0)
 	can_move = false;
 	can_regain_armor = false;
 	can_heal = false;
-	is_dead = true;
 	
 	// Alter image to show death
 	image_angle = 90;
 	image_blend = c_red;
-	
 }
 
+
+// Activate death screen when all players are dead
 if(global.total_dead >= global.total_active_pcs)
 {
 	global.game_death_paused = true;
@@ -52,8 +62,6 @@ if(global.total_dead >= global.total_active_pcs)
 	instance_activate_object(obj_death_menu)
 }
 
-// Added check to make sure players do not spontaniously resurrect
-if(is_dead == true && active_health > 0) active_health = -1;
 
 
 #endregion Death

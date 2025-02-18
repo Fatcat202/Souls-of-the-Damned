@@ -1,5 +1,5 @@
 
-function scr_Xan_basic_attack(target_x = mouse_x, target_y = mouse_x)
+function scr_Xan_basic_attack(target_x = mouse_x, target_y = mouse_y)
 {
 	// Hit first enemy in a line and deal damage.
 	// Only so many shots, must reload through timer. Timer is reset when fireing again.

@@ -66,43 +66,42 @@ event_inherited()
 				}else image_xscale = 1;
 			}
 	
-	
 		
 			// Force objects outside of other objects if stuck or overlaping
-			if(place_meeting(x, y, obj_collision_parent) || place_meeting(x, y, obj_enemy_parent) || place_meeting(x, y, obj_player_parent) || place_meeting(x, y, obj_npc_parent))
+			if(place_meeting(x, y, obj_collision_parent) || place_meeting(x, y, obj_enemy_parent))
 			{
 				for(var i = 0; i < 1000; i++)
 				{
 					// Right
-					if(!place_meeting(x + i, y, obj_collision_parent) && !place_meeting(x + i, y, obj_enemy_parent) && !place_meeting(x + i, y, obj_player_parent) && !place_meeting(x + i, y, obj_npc_parent))
+					if(!place_meeting(x + i, y, obj_collision_parent) && !place_meeting(x + i, y, obj_enemy_parent))
 					{
 						x += i;
 						break;	
 					}
 
 					// Left
-					if(!place_meeting(x - i, y, obj_collision_parent) && !place_meeting(x - i, y, obj_enemy_parent) && !place_meeting(x - i, y, obj_player_parent) && !place_meeting(x - i, y, obj_npc_parent))
+					if(!place_meeting(x - i, y, obj_collision_parent) && !place_meeting(x - i, y, obj_enemy_parent))
 					{
 						x -= i;
 						break;	
 					}
 		
 					// Up
-					if(!place_meeting(x, y + i, obj_collision_parent) && !place_meeting(x, y + i, obj_enemy_parent) && !place_meeting(x, y + i, obj_player_parent) && !place_meeting(x, y + i, obj_npc_parent))
+					if(!place_meeting(x, y + i, obj_collision_parent) && !place_meeting(x, y + i, obj_enemy_parent))
 					{
 						y += i;
 						break;	
 					}
 		
 					// Down
-					if(!place_meeting(x, y - i, obj_collision_parent) && !place_meeting(x, y - i, obj_enemy_parent) && !place_meeting(x, y - i, obj_player_parent) && !place_meeting(x, y - i, obj_npc_parent))
+					if(!place_meeting(x, y - i, obj_collision_parent) && !place_meeting(x, y - i, obj_enemy_parent))
 					{
 						y -= i;
 						break;	
 					}
 		
 					// Top Right
-					if(!place_meeting(x + i, y + i, obj_collision_parent) && !place_meeting(x + i, y + i, obj_enemy_parent) && !place_meeting(x + i, y + i, obj_player_parent) && !place_meeting(x + i, y + i, obj_npc_parent))
+					if(!place_meeting(x + i, y + i, obj_collision_parent) && !place_meeting(x + i, y + i, obj_enemy_parent))
 					{
 						x += i;
 						y += i;
@@ -110,7 +109,7 @@ event_inherited()
 					}
 			
 					// Top Left
-					if(!place_meeting(x - i, y + i, obj_collision_parent) && !place_meeting(x - i, y + i, obj_enemy_parent) && !place_meeting(x - i, y + i, obj_player_parent) && !place_meeting(x - i, y + i, obj_npc_parent))
+					if(!place_meeting(x - i, y + i, obj_collision_parent) && !place_meeting(x - i, y + i, obj_enemy_parent))
 					{
 						x -= i;
 						y += i;
@@ -118,7 +117,7 @@ event_inherited()
 					}
 			
 					// Bottom Right
-					if(!place_meeting(x + i, y - i, obj_collision_parent) && !place_meeting(x + i, y - i, obj_enemy_parent) && !place_meeting(x + i, y - i, obj_player_parent) && !place_meeting(x + i, y - i, obj_npc_parent))
+					if(!place_meeting(x + i, y - i, obj_collision_parent) && !place_meeting(x + i, y - i, obj_enemy_parent))
 					{
 						x += i;
 						y -= i;
@@ -126,7 +125,7 @@ event_inherited()
 					}
 			
 					// Bottom Left
-					if(!place_meeting(x - i, y - i, obj_collision_parent) && !place_meeting(x - i, y - i, obj_enemy_parent) && !place_meeting(x - i, y - i, obj_player_parent) && !place_meeting(x - i, y - i, obj_npc_parent))
+					if(!place_meeting(x - i, y - i, obj_collision_parent) && !place_meeting(x - i, y - i, obj_enemy_parent))
 					{
 						x -= i;
 						y -= i;

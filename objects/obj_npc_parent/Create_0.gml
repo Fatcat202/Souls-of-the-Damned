@@ -67,6 +67,7 @@ event_inherited()
 	collision_speed = move_spd + global.collision_distance;
 	
 	
+	
 	// Pathfinding
 	
 		// Paths
