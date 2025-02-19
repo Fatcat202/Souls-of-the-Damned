@@ -6,7 +6,7 @@ scr_non_player_collision()
 
 // Move away from the player if the player comes close
 
-	if(collision_circle(x, y, 40, obj_player_parent, false, false))
+	if(collision_circle(x, y, 40, obj_player_parent, false, false) && can_move)
 	{
 		if(command_state != "defend_state")
 		{
