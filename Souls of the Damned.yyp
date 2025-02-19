@@ -524,6 +524,7 @@
     {"id":{"name":"scr_Garyrager_stunning_strike","path":"scripts/scr_Garyrager_stunning_strike/scr_Garyrager_stunning_strike.yy",},},
     {"id":{"name":"scr_heal","path":"scripts/scr_heal/scr_heal.yy",},},
     {"id":{"name":"scr_health_potion","path":"scripts/scr_health_potion/scr_health_potion.yy",},},
+    {"id":{"name":"scr_imbue_attack","path":"scripts/scr_imbue_attack/scr_imbue_attack.yy",},},
     {"id":{"name":"scr_increment_all_alarms","path":"scripts/scr_increment_all_alarms/scr_increment_all_alarms.yy",},},
     {"id":{"name":"scr_inventory_add","path":"scripts/scr_inventory_add/scr_inventory_add.yy",},},
     {"id":{"name":"scr_inventory_pause","path":"scripts/scr_inventory_pause/scr_inventory_pause.yy",},},

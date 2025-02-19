@@ -34,6 +34,7 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.is_flyer = send_from.is_flyer;
 	send_to.blocking = send_from.blocking;
 	send_to.poison_coating = send_from.poison_coating;
+	send_to.imbue_attack = send_from.imbue_attack;
 	send_to.knocked_back = send_from.knocked_back;
 	send_to.can_heal = send_from.can_heal;
 	send_to.index = send_from.index;
@@ -61,6 +62,8 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.knockback_cooldown_time = send_from.knockback_cooldown_time;
 	send_to.sneak_attack_time = send_from.sneak_attack_time;
 	send_to.sneak_attack_timer = send_from.sneak_attack_timer;
+	send_to.imbue_attack_cooldown_time = send_from.imbue_attack_cooldown_time;
+	send_to.imbue_attack_cooldown_timer = send_from.imbue_attack_cooldown_timer;
 
 
 	// Bullets

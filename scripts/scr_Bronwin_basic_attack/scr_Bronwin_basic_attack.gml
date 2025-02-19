@@ -16,6 +16,7 @@ function scr_Bronwin_basic_attack(target_x = mouse_x, target_y = mouse_y)
 	Bronwin_arrow.speed = 15;
 	Bronwin_arrow.direction = point_direction(x, y, target_x, target_y);
 	Bronwin_arrow.image_angle = Bronwin_arrow.direction;
+	Bronwin_arrow.imbue_attack = imbue_attack;
 	
 	// Damage
 	Bronwin_arrow.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)

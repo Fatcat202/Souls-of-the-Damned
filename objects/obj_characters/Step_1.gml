@@ -22,6 +22,22 @@ if(stunned == true)
 }
 
 
+// ** IMBUE ATTACK **
+// Check if imbue attack is active
+if(imbue_attack == true)
+{
+	// Increment cooldown each frame
+	imbue_attack_cooldown_timer++;
+	if(imbue_attack_cooldown_timer >= imbue_attack_cooldown_time) 
+	{
+		// Reset changed conditions
+		imbue_attack = false;
+		imbue_attack_cooldown_time = 0;
+		imbue_attack_cooldown_timer = 0;
+	}
+}
+
+
 // ** POISON COATING ATTACK **
 // Check if cooldown ticking
 if(poison_coating == true)
