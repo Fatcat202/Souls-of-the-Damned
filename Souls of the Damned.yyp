@@ -488,6 +488,7 @@
     {"id":{"name":"scr_armor_potion","path":"scripts/scr_armor_potion/scr_armor_potion.yy",},},
     {"id":{"name":"scr_attack","path":"scripts/scr_attack/scr_attack.yy",},},
     {"id":{"name":"scr_block","path":"scripts/scr_block/scr_block.yy",},},
+    {"id":{"name":"scr_Bronwin_","path":"scripts/scr_Bronwin_/scr_Bronwin_.yy",},},
     {"id":{"name":"scr_Bronwin_basic_attack","path":"scripts/scr_Bronwin_basic_attack/scr_Bronwin_basic_attack.yy",},},
     {"id":{"name":"scr_Bronwin_cone_shot","path":"scripts/scr_Bronwin_cone_shot/scr_Bronwin_cone_shot.yy",},},
     {"id":{"name":"scr_Bronwin_imbue_arrow","path":"scripts/scr_Bronwin_imbue_arrow/scr_Bronwin_imbue_arrow.yy",},},

@@ -210,10 +210,10 @@ randomise()
 					global.player_attacks[# player_index.darien, 4] = "Darien_loh"
 					
 					// Bronwin default attacks
-					global.player_attacks[# player_index.bronwin, 1] = ""
-					global.player_attacks[# player_index.bronwin, 2] = ""
-					global.player_attacks[# player_index.bronwin, 3] = ""
-					global.player_attacks[# player_index.bronwin, 4] = ""
+					global.player_attacks[# player_index.bronwin, 1] = "Bronwin_basic_attack"
+					global.player_attacks[# player_index.bronwin, 2] = "Bronwin_cone_shot"
+					global.player_attacks[# player_index.bronwin, 3] = "Bronwin_imbue_arrow"
+					global.player_attacks[# player_index.bronwin, 4] = "Bronwin_"
 					
 					// Nyx default attacks
 					global.player_attacks[# player_index.nyx, 1] = ""

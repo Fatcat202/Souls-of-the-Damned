@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_Bronwin_basic_attack(target_x, target_y)
+function scr_Bronwin_basic_attack(target_x = mouse_x, target_y = mouse_y)
 {
 	// Pull stats
 	var attack_index = scr_find_attack_index("Bronwin_basic_attack")
