@@ -44,6 +44,7 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.target_move_y = send_from.target_move_y;
 	send_to.sneak_attack = send_from.sneak_attack;
 	send_to.is_dead = send_from.is_dead;
+	send_to.is_mythic = send_from.is_mythic;
 		
 	
 	// Timers

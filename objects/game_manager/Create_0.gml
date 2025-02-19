@@ -332,6 +332,7 @@ randomise()
 		
 			// Total number of dead PCs
 			global.total_dead = 0;
+
 	
 	
 		#endregion Misc

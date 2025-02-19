@@ -68,7 +68,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	#region Targeting AI
 	
 	if(instance_exists(obj_enemy_parent))
-	{
+	{ 
 	
 		#region Set up Weights
 	

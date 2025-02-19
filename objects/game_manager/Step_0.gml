@@ -67,7 +67,23 @@
 					y = attack_y
 				}
 				attack_y += attack_spacing;
-		
+				
+				
+				if(obj_com_pause_parent.is_mythic)
+				{
+					if !instance_exists(obj_button_mythic)
+					{
+					    instance_create_layer(attack_x, attack_y, "HUD_Buttons", obj_button_mythic);
+					}
+					with(obj_button_mythic)
+					{
+						x = attack_x
+						y = attack_y
+					}
+					attack_y += attack_spacing;
+				}
+				
+				
 				// Command Buttons
 				if !instance_exists(obj_button_attack)
 				{
@@ -156,6 +172,21 @@
 				{
 					x = attack_x
 					y = attack_y
+				}
+				attack_y += attack_spacing;
+				
+				if(instance_exists(obj_player_parent)) if(obj_player_parent.is_mythic)
+				{
+					if !instance_exists(obj_button_mythic)
+					{
+					    instance_create_layer(attack_x, attack_y, "HUD_Buttons", obj_button_mythic);
+					}
+					with(obj_button_mythic)
+					{
+						x = attack_x
+						y = attack_y
+					}
+
 				}
 			}
 		}

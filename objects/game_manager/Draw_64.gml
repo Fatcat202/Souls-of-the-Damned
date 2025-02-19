@@ -137,6 +137,7 @@ if(global.game_esc_paused == false)
 				{
 					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
 				}
+				
 			
 			#endregion Attacks
 
