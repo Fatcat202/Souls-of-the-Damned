@@ -122,6 +122,7 @@
     {"name":"inst_5BC80EF7","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_56FAC9A2","path":"rooms/Testing/Testing.yy",},
     {"name":"inst_1B532471","path":"rooms/Testing/Testing.yy",},
+    {"name":"inst_72191270","path":"rooms/Testing/Testing.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -135,6 +136,7 @@
     {"$GMRInstanceLayer":"","%Name":"Combat_Paused","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Combat_Paused","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Players","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_1B532471","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1B532471","objectId":{"name":"obj_player_Alok","path":"objects/obj_player_Alok/obj_player_Alok.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":1152.0,},
+        {"$GMRInstance":"v1","%Name":"inst_72191270","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72191270","objectId":{"name":"obj_npc_Nyx","path":"objects/obj_npc_Nyx/obj_npc_Nyx.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":1216.0,},
       ],"layers":[],"name":"Players","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_56FAC9A2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_56FAC9A2","objectId":{"name":"obj_arena_spawn_testing","path":"objects/obj_arena_spawn_testing/obj_arena_spawn_testing.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":-96.0,"y":608.0,},

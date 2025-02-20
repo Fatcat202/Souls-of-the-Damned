@@ -41,7 +41,6 @@ function scr_take_dot()
 				active_health -= _dmg;
 				image_blend = c_red;
 				alarm[11] = game_get_speed(gamespeed_fps) / 10;
-				scr_test()
 				dot_tick = 0;
 			}
 		}

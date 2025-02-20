@@ -74,9 +74,7 @@ randomise()
 
 				// Initialize enemy index arrays
 				global.arr_enemy_index_name[0] = "No valid enemy name";
-				
-				// Initialize enemy name index arrays
-				global.arr_com_pause_enemy_index_name[0] = "No valid enemy name";
+
 			
 			
 				// **ATTACKS**
@@ -150,11 +148,13 @@ randomise()
 					global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 				#endregion Assign combat pause npc objects to array
 				
+				
 				#region Assign enemies to array
 					global.arr_enemy[1] = obj_enemy_Cacodaemon;
 					global.arr_enemy[2] = obj_enemy_Venedaemon;
 					global.arr_enemy[3] = obj_enemy_Vulnadaemon;
 				#endregion Assign enemies to array
+				
 				
 				#region Assign enemy com pause objects to array
 					global.arr_com_pause_enemy[1] = obj_com_pause_Cacodaemon;
@@ -231,10 +231,10 @@ randomise()
 					global.player_attacks[# player_index.bronwin, 4] = "Bronwin_"
 					
 					// Nyx default attacks
-					global.player_attacks[# player_index.nyx, 1] = ""
-					global.player_attacks[# player_index.nyx, 2] = ""
-					global.player_attacks[# player_index.nyx, 3] = ""
-					global.player_attacks[# player_index.nyx, 4] = ""
+					global.player_attacks[# player_index.nyx, 1] = "Nyx_basic_attack"
+					global.player_attacks[# player_index.nyx, 2] = "Nyx_dragons_breath"
+					global.player_attacks[# player_index.nyx, 3] = "Nyx_scales"
+					global.player_attacks[# player_index.nyx, 4] = "Nyx_"
 
 					
 				#endregion Attacks
@@ -660,6 +660,11 @@ randomise()
 		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
 		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
 		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+		global.attack_index_length++; global.attack_stats[global.attack_index_length] = new a_stats();
+
 
 	
 
