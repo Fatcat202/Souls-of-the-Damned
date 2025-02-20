@@ -42,7 +42,11 @@ var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
 var dmg_die_sides = global.enemy_stats[index].dice_melee_atk_sides
 var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
 
-var range = sprite_get_width(spr_standard_emelee);
+
+
+var range = sprite_get_width(spr_standard_emelee) + 20
+var distance_to_target = point_distance(x, y, target_pos_x, target_pos_y) + 20
+
 if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
 {
 	// Create attack object
@@ -53,9 +57,15 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= ran
 		melee.image_angle = melee.direction;
 		melee.index = index;
 		
+		
+		// Set the scale of the attack object based on the distance to the target
+	    melee.image_xscale = distance_to_target / sprite_get_width(spr_standard_emelee);
+
+		
 		// Send index to attack sprite for stats
 		melee.enemy_object = object_index;
-		
+
+	
 		// Damage
 		melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		

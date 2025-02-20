@@ -11,7 +11,9 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 {
 	if(can_move) scr_move_to_target(80)
 			
-	var m_range = sprite_get_width(spr_standard_emelee);
+
+	var distance_to_target = point_distance(x, y, target_pos_x, target_pos_y) + 20
+	var m_range = sprite_get_width(spr_standard_emelee) + 20;
 	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
 	{
 		var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
@@ -23,6 +25,9 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 			melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
 			melee.image_angle = melee.direction;
 			melee.index = index;
+			
+			// Set the scale of the attack object based on the distance to the target
+	    melee.image_xscale = distance_to_target / sprite_get_width(spr_standard_emelee);
 			
 			// Send index to attack sprite for stats
 			melee.enemy_object = object_index;
