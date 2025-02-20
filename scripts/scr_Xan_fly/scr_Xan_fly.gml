@@ -5,12 +5,16 @@ function scr_Xan_fly()
 	is_flyer = true;
 	move_spd = move_spd * 1.33;
 	
+	var attack_index = scr_find_attack_index("Xan_fly")
+
+	var duration = global.attack_stats[attack_index].duration
+	
 	// Set cooldown on ability
 	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown
 	
 	// Set end of effect timer
 	Xan_fly_timer = 0;
-	Xan_fly_end = cooldown / 2;
+	Xan_fly_end = game_get_speed(gamespeed_fps) * duration;
 	Xan_fly_active = true;
 	
 	// States attack was used for cooldowns
