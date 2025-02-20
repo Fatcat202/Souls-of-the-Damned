@@ -1,19 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_enemy_Venedaemon",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_com_pause_Venedaemon",
+  "eventList":[],
   "managed":true,
-  "name":"obj_enemy_Venedaemon",
+  "name":"obj_com_pause_Venedaemon",
   "overriddenProperties":[],
   "parent":{
     "name":"Venedaemon",
     "path":"folders/Objects/Characters/Enemies/Venedaemon.yy",
   },
   "parentObjectId":{
-    "name":"obj_enemy_parent",
-    "path":"objects/obj_enemy_parent/obj_enemy_parent.yy",
+    "name":"obj_enemy_com_pause_parent",
+    "path":"objects/obj_enemy_com_pause_parent/obj_enemy_com_pause_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -31,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_venedaemon",
     "path":"sprites/spr_venedaemon/spr_venedaemon.yy",

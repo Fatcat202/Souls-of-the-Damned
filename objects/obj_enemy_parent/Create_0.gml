@@ -18,7 +18,7 @@
 			}
 	}
 
-#endregion Assigning Character and Stats
+#endregion Determening Enemy for Stats
 
 
 #region Loading instance stats

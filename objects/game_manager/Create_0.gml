@@ -74,6 +74,9 @@ randomise()
 
 				// Initialize enemy index arrays
 				global.arr_enemy_index_name[0] = "No valid enemy name";
+				
+				// Initialize enemy name index arrays
+				global.arr_com_pause_enemy_index_name[0] = "No valid enemy name";
 			
 			
 				// **ATTACKS**
@@ -146,6 +149,18 @@ randomise()
 					global.arr_combat_pause_npc[7] = obj_com_pause_npc_Bronwin;
 					global.arr_combat_pause_npc[8] = obj_com_pause_npc_Nyx;
 				#endregion Assign combat pause npc objects to array
+				
+				#region Assign enemies to array
+					global.arr_enemy[1] = obj_enemy_Cacodaemon;
+					global.arr_enemy[2] = obj_enemy_Venedaemon;
+					global.arr_enemy[3] = obj_enemy_Vulnadaemon;
+				#endregion Assign enemies to array
+				
+				#region Assign enemy com pause objects to array
+					global.arr_com_pause_enemy[1] = obj_com_pause_Cacodaemon;
+					global.arr_com_pause_enemy[2] = obj_com_pause_Venedaemon;
+					global.arr_com_pause_enemy[3] = obj_com_pause_Vulnadaemon;
+				#endregion Assign enemy com pause objects to array
 				
 				
 				#region Attacks

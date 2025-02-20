@@ -54,6 +54,23 @@ function scr_inventory_pause()
 			}
 		}
 	}
+	
+	
+	// Swap enemies
+	with(obj_enemy_parent)
+	{
+		for(var i = 1; i <= global.enemy_index_length; i++)
+		{
+			if(object_get_name(global.arr_enemy[i]) == object_get_name(object_index))
+			{
+				var combat_pause_enemy = instance_create_layer(x, y, "Combat_Paused", global.arr_com_pause_enemy[i]);	
+			
+				// Transfer Stats
+				scr_enemy_transfer_variables(combat_pause_enemy, self)
+			}
+		}
+	}
+	
 
 	// Set pause image
 	scr_pause_image()
@@ -65,5 +82,6 @@ function scr_inventory_pause()
 	instance_activate_object(obj_inventory_parent)
 	instance_activate_object(obj_com_pause_parent);
 	instance_activate_object(obj_com_pause_npc_parent);
+	instance_activate_object(obj_enemy_com_pause_parent);
 	instance_activate_object(obj_gui_button_parent);
 }

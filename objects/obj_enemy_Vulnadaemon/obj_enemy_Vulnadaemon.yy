@@ -8,8 +8,8 @@
   "name":"obj_enemy_Vulnadaemon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Characters/Enemies.yy",
+    "name":"Vulnadaemon",
+    "path":"folders/Objects/Characters/Enemies/Vulnadaemon.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",

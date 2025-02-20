@@ -8,8 +8,8 @@
   "name":"obj_enemy_Cacodaemon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Characters/Enemies.yy",
+    "name":"Cacodaemon",
+    "path":"folders/Objects/Characters/Enemies/Cacodaemon.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",
