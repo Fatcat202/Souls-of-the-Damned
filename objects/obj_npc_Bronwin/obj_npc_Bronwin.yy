@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"scr_Bronwin_side",
     "path":"sprites/scr_Bronwin_side/scr_Bronwin_side.yy",

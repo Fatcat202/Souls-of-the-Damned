@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_collision_half_block",
     "path":"sprites/spr_collision_half_block/spr_collision_half_block.yy",

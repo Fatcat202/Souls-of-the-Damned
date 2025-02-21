@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_Dogan_side",
     "path":"sprites/spr_Dogan_side/spr_Dogan_side.yy",

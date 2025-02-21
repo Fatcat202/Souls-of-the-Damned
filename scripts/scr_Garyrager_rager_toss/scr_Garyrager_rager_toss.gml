@@ -6,11 +6,13 @@ function scr_Garyrager_rager_toss()
 	// Set speed and direction
 	// Change sprite to spr_Gary
 	
-	
 	// Pull stats
 	var attack_index = scr_find_attack_index("Garyrager_rager_toss")
-
+	var _cooldown = global.attack_stats[attack_index].cooldown;
 	
+	
+	// Destroy projectile if it already exists
+	if(instance_exists(obj_Rager_tossed)) instance_destroy(obj_Rager_tossed)
 	
 	// Throw Rager at an enemy
 	Garyrager_rager_toss = instance_create_layer(x, y, "Projectiles", obj_Rager_tossed); 
@@ -21,11 +23,12 @@ function scr_Garyrager_rager_toss()
 	
 	Garyrager_rager_toss.range = game_get_speed(gamespeed_fps) * 2
 	Garyrager_rager_toss.duration = game_get_speed(gamespeed_fps) * 2
-	Garyrager_rager_toss.cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
+	Garyrager_rager_toss.cooldown = game_get_speed(gamespeed_fps) * _cooldown;
 	
+	cooldown = game_get_speed(gamespeed_fps) * _cooldown;
 
 	// Swap sprite
-	object_set_sprite(object_index, spr_Gary_side)
+	sprite_index = spr_Gary_side
 	
 	// State attack has been used
 	used = true;

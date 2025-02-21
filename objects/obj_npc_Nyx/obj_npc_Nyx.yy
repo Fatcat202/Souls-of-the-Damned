@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"scr_Nyx_side",
     "path":"sprites/scr_Nyx_side/scr_Nyx_side.yy",

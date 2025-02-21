@@ -29,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_Garyrager_side",
     "path":"sprites/spr_Garyrager_side/spr_Garyrager_side.yy",

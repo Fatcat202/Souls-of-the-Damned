@@ -36,7 +36,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_cacodaemon",
     "path":"sprites/spr_cacodaemon/spr_cacodaemon.yy",

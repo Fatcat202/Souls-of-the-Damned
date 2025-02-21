@@ -1,5 +1,7 @@
 /// @description States
-
+// Pull stats
+var attack_index = scr_find_attack_index("Garyrager_rager_toss")
+var duration = global.attack_stats[attack_index].duration;
 
 switch (state)
 {
@@ -19,24 +21,36 @@ switch (state)
 			state = "returning"
 		}else
 		{
-			// Stop both self and enemy in place
-			speed = 0;
-			enemy.can_move = false;
-		
 			// Place Rager onto enemy
 			x = enemy.x
 			y = enemy.y
+			
+			// Stop both self and enemy in place
+			speed = 0;
+			with(enemy)
+			{
+				can_move = false;
+				can_attack = false;
+				stunned = true;
+				stun_cooldown_time = game_get_speed(gamespeed_fps) * duration
+				stun_cooldown_timer = 0
+
+			}
 		}
 		
 		
 	break;
 	
 	case "returning":
-		
+		// Return path
 		alarm[2] = 1;
 		
 		// Set object sprite
-		object_set_sprite(object_index, spr_Rager_side)
+		sprite_index = spr_Rager_side;
+		
+		// Set can attack cooldown
+		can_attack = false;
+		alarm[3] = (game_get_speed(gamespeed_fps) * duration) * 0.25
 		
 	break;
 	

@@ -1,6 +1,6 @@
 /// @description Range Limit
 
-if(state != "attacking")
+if(state == "thrown")
 {
 	// Return to Gary
 	state = "returning"
