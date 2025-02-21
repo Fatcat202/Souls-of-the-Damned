@@ -226,9 +226,9 @@ randomise()
 					
 					// Bronwin default attacks
 					global.player_attacks[# player_index.bronwin, 1] = "Bronwin_basic_attack"
-					global.player_attacks[# player_index.bronwin, 2] = "Bronwin_cone_shot"
-					global.player_attacks[# player_index.bronwin, 3] = "Bronwin_imbue_arrow"
-					global.player_attacks[# player_index.bronwin, 4] = "Bronwin_"
+					global.player_attacks[# player_index.bronwin, 2] = "Bronwin_ricochet_shot"
+					global.player_attacks[# player_index.bronwin, 3] = "Bronwin_cone_shot"
+					global.player_attacks[# player_index.bronwin, 4] = "Bronwin_imbue_arrow"
 					
 					// Nyx default attacks
 					global.player_attacks[# player_index.nyx, 1] = "Nyx_basic_attack"

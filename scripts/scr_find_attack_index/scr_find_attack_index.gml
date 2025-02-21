@@ -3,6 +3,8 @@ function scr_find_attack_index(attack_name)
 	// Locate position of attack in attack_stats array to assign stats with index
 	var attack_index = 0
 	
+	// Debug
+	//show_debug_message("attack_name: " + string(attack_name))
 	
 	for(var i = 1; i <= global.attack_index_length; i++)
 	{

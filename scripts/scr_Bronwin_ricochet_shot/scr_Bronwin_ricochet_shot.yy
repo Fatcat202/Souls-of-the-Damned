@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Bronwin_",
+  "%Name":"scr_Bronwin_ricochet_shot",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Bronwin_",
+  "name":"scr_Bronwin_ricochet_shot",
   "parent":{
     "name":"Bronwin Attacks",
     "path":"folders/Scripts/Attacks/Players/Bronwin Attacks.yy",

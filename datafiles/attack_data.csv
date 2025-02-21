@@ -26,7 +26,7 @@ Darien_loh,1,8,0,0.5,0,0,6,0,0,5,1,scr_Darien_loh,-1,LAY ON HANDS,Place Darien's
 Bronwin_basic_attack,1,8,0,0,0,0,0.5,0,0,0,1.5,scr_Bronwin_basic_attack,-1,BOW,"Bronwin's bow, it skewers foes."
 Bronwin_cone_shot,1,8,0,0,0,0,3,0,0,5,1.5,scr_Bronwin_cone_shot,-1,CONE SHOT,"Fire a cone of arrows, damaging all hit."
 Bronwin_imbue_arrow,1,6,1,0.5,0,0,10,5,0,0,1,scr_Bronwin_imbue_arrow,-1,IMBUE ARROWS,Bronwin calls upon her magical potential to imbue her arrows with magic.
-Bronwin_,0,0,0,0,0,0,-1,0,0,0,1,-1,-1,-1,-1
+Bronwin_ricochet_shot,1,8,0,0,0,0,1,0,0,5,1.5,scr_Bronwin_ricochet_shot,-1,-1,-1
 Nyx_basic_attack,1,8,0,0,0,0,1,0,0,5,1.5,scr_Nyx_basic_attack,-1,QUARTERSTAFF,"Nyx's quarterstaff, it bashes foes."
 Nyx_dragons_breath,1,6,1,0.5,0,1,8,0,0,5,1.5,scr_Nyx_dragons_breath,-1,DRAGON'S BREATH,-1
 Nyx_scales,1,4,1,0.5,0.25,0.34,20,10,0,0,0,scr_Nyx_scales,-1,SCALES,"Grant a target scales, increasing their armor for a limited time."
