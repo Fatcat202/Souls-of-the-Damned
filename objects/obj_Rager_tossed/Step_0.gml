@@ -29,12 +29,7 @@ switch (state)
 			speed = 0;
 			with(enemy)
 			{
-				can_move = false;
-				can_attack = false;
-				stunned = true;
-				stun_cooldown_time = game_get_speed(gamespeed_fps) * duration
-				stun_cooldown_timer = 0
-
+				scr_stun(game_get_speed(gamespeed_fps) * duration, self);
 			}
 		}
 		
