@@ -7,7 +7,9 @@ randomise()
 
 	enum dot_data // Data for Damage Over Time
 	{
-		dmg,
+		dmg_dice_num,
+		dmg_dice_sides,
+		dmg_mod,
 		tick_rate,
 		duration,
 		can_kill

@@ -21,7 +21,11 @@ function scr_take_dot()
 		// When tick rate is reached, apply damage
 		if(dot_tick >= _tick_rate) 
 		{
-			var _dmg = _debuff[dot_data.dmg];
+			var dmg_dice_num = _debuff[dot_data.dmg_dice_num]
+			var dmg_dice_sides = _debuff[dot_data.dmg_dice_sides]
+			var dmg_mod = _debuff[dot_data.dmg_mod]
+			
+			var _dmg = scr_roll_dice(dmg_dice_num, dmg_dice_sides) + dmg_mod
 			
 			// Check if DOT is about to reduce HP below 0
 			if(active_health - _dmg <= 0)
