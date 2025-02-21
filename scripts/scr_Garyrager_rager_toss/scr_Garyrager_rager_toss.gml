@@ -9,11 +9,7 @@ function scr_Garyrager_rager_toss()
 	
 	// Pull stats
 	var attack_index = scr_find_attack_index("Garyrager_rager_toss")
-	
-	// Pull variables
-	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
-	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
-	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+
 	
 	
 	// Throw Rager at an enemy
@@ -21,10 +17,7 @@ function scr_Garyrager_rager_toss()
 	Garyrager_rager_toss.speed = 6;
 	Garyrager_rager_toss.direction = point_direction(x, y, mouse_x, mouse_y)
 	Garyrager_rager_toss.image_xscale = image_xscale
-	
-	Garyrager_rager_toss.dmg_die_total = dmg_die_total;
-	Garyrager_rager_toss.dmg_die_sides = dmg_die_sides;
-	Garyrager_rager_toss.dmg_mod = dmg_mod;
+
 	
 	Garyrager_rager_toss.range = game_get_speed(gamespeed_fps) * 2
 	Garyrager_rager_toss.duration = game_get_speed(gamespeed_fps) * 2

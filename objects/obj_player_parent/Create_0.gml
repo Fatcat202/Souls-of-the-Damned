@@ -33,7 +33,7 @@ event_inherited()
 		var xx = i + 1;
 		for(var yy = 0; yy < ds_grid_height(global.player_attacks); yy++)
 		{
-			ds_grid_set(global.player_attacks_active, xx, yy, global.player_attacks[# pc_index, yy])
+			ds_grid_set(global.player_attacks_active, xx, yy, global.player_attacks[# index, yy])
 		}
 		
 		
