@@ -18,7 +18,7 @@
   "name":"Ps_Comet_Fire_3",
   "parent":{
     "name":"Comets",
-    "path":"folders/Particle Systems/Comets.yy",
+    "path":"folders/Particle Systems/Pack/Comets.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

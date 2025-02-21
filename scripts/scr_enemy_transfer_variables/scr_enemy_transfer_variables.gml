@@ -29,6 +29,7 @@ function scr_enemy_transfer_variables(send_to, send_from)
 	send_to.knocked_back = send_from.knocked_back;
 	send_to.can_heal = send_from.can_heal;
 	send_to.index = send_from.index;
+	send_to.bonus_armor = send_from.bonus_armor;
 	send_to.melee_player_tracked = send_from.melee_player_tracked;
 	send_to.target_pos_x = send_from.target_pos_x;
 	send_to.target_pos_y = send_from.target_pos_y;
@@ -51,6 +52,8 @@ function scr_enemy_transfer_variables(send_to, send_from)
 	send_to.sneak_attack_timer = send_from.sneak_attack_timer;
 	send_to.imbue_attack_cooldown_time = send_from.imbue_attack_cooldown_time;
 	send_to.imbue_attack_cooldown_timer = send_from.imbue_attack_cooldown_timer;
+	send_to.bonus_armor_duration_timer = send_from.bonus_armor_duration_timer;
+	send_to.bonus_armor_duration_time = send_from.bonus_armor_duration_time;
 	send_to.atk_tick_0 = send_from.atk_tick_0;
 	send_to.atk_tick_1 = send_from.atk_tick_1;
 

@@ -22,6 +22,23 @@ if(stunned == true)
 }
 
 
+// ** BONUS ARMOR **
+// Check character is stunned
+if(bonus_armor == true)
+{
+	// Increment cooldown each frame
+	bonus_armor_duration_timer++;
+	if(bonus_armor_duration_timer >= bonus_armor_duration_time) 
+	{
+		// Reset changed conditions
+		if (active_armor > max_armor) active_armor = max_armor
+		bonus_armor = false;
+		bonus_armor_duration_time = 0;
+		bonus_armor_duration_timer = 0;
+	}
+}
+
+
 // ** IMBUE ATTACK **
 // Check if imbue attack is active
 if(imbue_attack == true)

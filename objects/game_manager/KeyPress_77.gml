@@ -1,5 +1,4 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description Activate Mythic
 
 
 if(!obj_ply_npc_parent.is_mythic)

@@ -16,7 +16,7 @@
   "name":"Ps_Explosoin_Bubbles_Outward",
   "parent":{
     "name":"Explosions",
-    "path":"folders/Particle Systems/Explosions.yy",
+    "path":"folders/Particle Systems/Pack/Explosions.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

@@ -18,7 +18,7 @@
   "name":"Ps_Portal_Circle_Gold",
   "parent":{
     "name":"Portals",
-    "path":"folders/Particle Systems/Portals.yy",
+    "path":"folders/Particle Systems/Pack/Portals.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

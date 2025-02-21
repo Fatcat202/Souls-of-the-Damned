@@ -14,7 +14,7 @@
   "name":"Ps_Water_Arc",
   "parent":{
     "name":"Water",
-    "path":"folders/Particle Systems/Water.yy",
+    "path":"folders/Particle Systems/Pack/Water.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

@@ -23,7 +23,7 @@
   "name":"Ps_Portal_Whirlpool",
   "parent":{
     "name":"Portals",
-    "path":"folders/Particle Systems/Portals.yy",
+    "path":"folders/Particle Systems/Pack/Portals.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

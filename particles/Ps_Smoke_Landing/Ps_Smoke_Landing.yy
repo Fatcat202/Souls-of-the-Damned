@@ -17,7 +17,7 @@
   "name":"Ps_Smoke_Landing",
   "parent":{
     "name":"Smoke",
-    "path":"folders/Particle Systems/Smoke.yy",
+    "path":"folders/Particle Systems/Pack/Smoke.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

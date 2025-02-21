@@ -22,7 +22,7 @@
   "name":"PS_Muzzle_Flash_2",
   "parent":{
     "name":"Muzzle Flashes",
-    "path":"folders/Particle Systems/Muzzle Flashes.yy",
+    "path":"folders/Particle Systems/Pack/Muzzle Flashes.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

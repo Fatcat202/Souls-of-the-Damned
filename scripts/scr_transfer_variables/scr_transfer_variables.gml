@@ -46,6 +46,7 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.sneak_attack = send_from.sneak_attack;
 	send_to.is_dead = send_from.is_dead;
 	send_to.is_mythic = send_from.is_mythic;
+	send_to.bonus_armor = send_from.bonus_armor;
 		
 	
 	// Timers
@@ -64,6 +65,8 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.sneak_attack_timer = send_from.sneak_attack_timer;
 	send_to.imbue_attack_cooldown_time = send_from.imbue_attack_cooldown_time;
 	send_to.imbue_attack_cooldown_timer = send_from.imbue_attack_cooldown_timer;
+	send_to.bonus_armor_duration_timer = send_from.bonus_armor_duration_timer;
+	send_to.bonus_armor_duration_time = send_from.bonus_armor_duration_time;
 
 
 	// Bullets

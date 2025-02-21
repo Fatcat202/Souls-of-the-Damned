@@ -20,7 +20,7 @@
   "name":"Ps_Increase_Damage",
   "parent":{
     "name":"Celebrations",
-    "path":"folders/Particle Systems/Celebrations.yy",
+    "path":"folders/Particle Systems/Pack/Celebrations.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

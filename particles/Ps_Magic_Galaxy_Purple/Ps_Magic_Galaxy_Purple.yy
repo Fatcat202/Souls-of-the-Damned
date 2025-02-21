@@ -22,7 +22,7 @@
   "name":"Ps_Magic_Galaxy_Purple",
   "parent":{
     "name":"Magic",
-    "path":"folders/Particle Systems/Magic.yy",
+    "path":"folders/Particle Systems/Pack/Magic.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

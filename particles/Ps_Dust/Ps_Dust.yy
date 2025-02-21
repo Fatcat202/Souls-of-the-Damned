@@ -14,7 +14,7 @@
   "name":"Ps_Dust",
   "parent":{
     "name":"Weather",
-    "path":"folders/Particle Systems/Weather.yy",
+    "path":"folders/Particle Systems/Pack/Weather.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",
