@@ -124,20 +124,7 @@ if(cooldown_4 == false)
 	}
 }
 
-// Blocking timer to make sure it stays on when holding mouse down, but turns off immediatly after
-if(blocking == true)
-{
-	// Increment cooldown each frame
-	blocking_cooldown_timer++;
-	
-	// If ability length has been reached
-	if(blocking_cooldown_timer > 1)
-	{
-		// Reset changed variables
-		can_damage = true;
-		blocking = false;
-		blocking_cooldown_timer = 0;
-	}
-}
+
+
 
 #endregion Timers
