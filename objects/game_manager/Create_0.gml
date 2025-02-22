@@ -280,6 +280,7 @@ randomise()
 
 			#endregion Swapping Characters
 	
+	
 		#endregion Database
 	
 	
@@ -421,7 +422,7 @@ randomise()
 			global.end_inventory_pause = false;
 			
 			// Total party gold
-			global.party_gold = 1000;
+			global.party_gold = 0;
 
 
 
