@@ -9,7 +9,7 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 
 //Draw Text
-draw_text(x - 150, y - 20, help_text_left);
+draw_text(x - 150, y, help_text_left);
 
 // Set Location for right text
 draw_set_halign(fa_left);

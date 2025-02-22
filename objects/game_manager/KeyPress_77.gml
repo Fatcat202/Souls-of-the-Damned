@@ -1,5 +1,6 @@
 /// @description Activate Mythic
 
+/*
 
 if(!obj_ply_npc_parent.is_mythic)
 {

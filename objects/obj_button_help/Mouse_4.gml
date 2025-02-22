@@ -12,5 +12,5 @@ if !instance_exists(obj_help_screen)
 // Create new back object 1 layer above help screen obj
 if !instance_exists(obj_button_back)
 {
-	instance_create_layer(obj_help_screen.x, obj_help_screen.y + 120, "Menu_Buttons", obj_button_back);
+	instance_create_layer(obj_help_screen.x + 100, obj_help_screen.y + 120, "Menu_Buttons", obj_button_back);
 }
