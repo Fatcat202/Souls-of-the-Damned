@@ -23,11 +23,11 @@ Darien_basic_attack,2,4,0,0,0,0,0.67,0,0,5,1.5,scr_Darien_basic_attack,-1,GLAVE,
 Darien_shield,0,0,0,0,0,0,-1,0,0,0,1,scr_Darien_shield,-1,TOWER SHIELD,Use Darien's tower shield to block attacks
 Darien_sweeping_strike,2,4,0,0,0,0,4,0,0,5,1.5,scr_Darien_sweeping_strike,-1,SWEEPING STRIKE,Make a large sweeping strike with Darien's Glave
 Darien_loh,1,8,0,0.5,0,0,6,0,0,5,1,scr_Darien_loh,-1,LAY ON HANDS,Place Darien's hands on himself or someone else to heal.
-Bronwin_basic_attack,1,8,0,0,0,0,0.5,0,0,0,1.5,scr_Bronwin_basic_attack,-1,BOW,"Bronwin's bow, it skewers foes."
-Bronwin_cone_shot,1,8,0,0,0,0,3,0,0,5,1.5,scr_Bronwin_cone_shot,-1,CONE SHOT,"Fire a cone of arrows, damaging all hit."
-Bronwin_imbue_arrow,1,6,1,0.5,0,0,10,5,0,0,1,scr_Bronwin_imbue_arrow,-1,IMBUE ARROWS,Bronwin calls upon her magical potential to imbue her arrows with magic.
-Bronwin_ricochet_shot,1,8,0,0,0,0,1,0,0,5,1.5,scr_Bronwin_ricochet_shot,-1,-1,-1
+Bronwin_basic_attack,1,8,0,0,0,0,0.5,0,0,0,1.5,scr_Bronwin_basic_attack,spr_atk_bow,BOW,"Bronwin's bow, it skewers foes."
+Bronwin_cone_shot,1,8,0,0,0,0,3,0,0,5,1.5,scr_Bronwin_cone_shot,spr_atk_cone_shot,CONE SHOT,"Fire a cone of arrows, damaging all hit."
+Bronwin_imbue_arrow,1,6,1,0.5,0,0,10,5,0,0,1,scr_Bronwin_imbue_arrow,spr_atk_imbue_arrow,IMBUE ARROWS,Bronwin calls upon her magical potential to imbue her arrows with magic.
+Bronwin_ricochet_shot,1,8,0,0,0,0,1,0,0,5,1.5,scr_Bronwin_ricochet_shot,spr_atk_ricochet,RICOCHET,"Fire three arrows in sucession, ricocheting off walls. "
 Nyx_basic_attack,1,8,0,0,0,0,1,0,0,5,1.5,scr_Nyx_basic_attack,-1,QUARTERSTAFF,"Nyx's quarterstaff, it bashes foes."
-Nyx_dragons_breath,1,6,1,0.5,0,1,8,0,0,5,1.5,scr_Nyx_dragons_breath,-1,DRAGON'S BREATH,-1
+Nyx_dragons_breath,1,6,1,0.5,0,1,8,0,0,5,1.5,scr_Nyx_dragons_breath,-1,DRAGON'S BREATH,Breathe out a cone of fire.
 Nyx_scales,1,4,1,0.5,0.25,0.34,20,10,0,0,0,scr_Nyx_scales,-1,SCALES,"Grant a target scales, increasing their armor for a limited time."
-Nyx_leviathan,1,6,0,0.5,0,0,30,10,0,5,1.5,scr_Nyx_leviathan,-1,Leviathan,Summon Nyx's drake friend.
+Nyx_leviathan,1,6,0,0.5,0,0,30,10,0,5,1.5,scr_Nyx_leviathan,-1,LEVIATHAN,Summon Nyx's drake friend.
