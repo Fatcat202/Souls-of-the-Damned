@@ -1,3 +1,7 @@
 /// @description Start Game
 
-room_goto(rm_arena_1);
+
+if(ds_list_size(global.selected_pcs) > 0)
+{
+	room_goto(rm_arena_1);
+}

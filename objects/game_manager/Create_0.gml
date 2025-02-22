@@ -47,6 +47,7 @@ randomise()
 #endregion Enums
 
 
+
 #region Global Variables
 
 
@@ -273,7 +274,13 @@ randomise()
 				global.max_pcs = 4;
 			
 				// Total number of active PCs
-				global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
+				if(room != room_first) // Check if the game was started through the main menu
+				{
+					global.total_active_pcs = ds_list_size(global.selected_pcs)
+				}else
+				{
+					global.total_active_pcs = instance_number(obj_player_parent) + instance_number(obj_npc_parent);
+				}
 			
 				// Total number of active combat paused PCs
 				global.total_active_com_pause_pcs = 0;
@@ -465,6 +472,7 @@ randomise()
 	
 	
 #endregion Global Variables
+
 
 
 #region Player Stats
@@ -808,6 +816,45 @@ randomise()
 	surface_resize(application_surface, view_width * window_scale, view_height * window_scale);
 
 #endregion Camera
+
+
+
+#region Spawn Players
+	// Check if the game was started through character selection
+	if(room != room_first)
+	{
+		// Array holding spawn points for positions
+		var spawn_points = [obj_spawn_player_0, obj_spawn_player_1, obj_spawn_player_2, obj_spawn_player_3]
+		
+		// Determine starting character and place object
+		for(var i = 1; i <= global.player_index_length; i++)
+		{
+			if (global.selected_pcs[| 0] == string(global.arr_player_index_name[i]))
+			{
+				instance_create_layer(spawn_points[0].x, spawn_points[0].y, "Players", global.arr_players[i])
+			}
+		}
+		
+		// Create NPC objects
+		if(ds_list_size(global.selected_pcs > 1))
+		{
+			for(var n = 1; n < ds_list_size(global.selected_pcs); n++)
+			{
+				for(var i = 1; i <= global.player_index_length; i++)
+				{
+					if (global.selected_pcs[| n] == string(global.arr_player_index_name[i]))
+					{
+						instance_create_layer(spawn_points[n].x, spawn_points[n].y, "Players", global.arr_npc[i])
+					}
+				}
+			}
+
+	}
+		
+		
+	}
+	
+#endregion Spawn Players
 
 
 

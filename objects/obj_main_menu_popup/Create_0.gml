@@ -21,7 +21,7 @@ y_bottom = y + (height / 2);
 
 #region New Game
 	// DS list holding selected characters
-	selected_pcs = ds_list_create()
+	global.selected_pcs = ds_list_create()
 	
 	
 	
