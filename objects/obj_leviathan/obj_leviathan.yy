@@ -15,7 +15,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Leviathan",
-    "path":"folders/Objects/Characters/Leviathan.yy",
+    "path":"folders/Objects/Characters/Players/Leviathan.yy",
   },
   "parentObjectId":{
     "name":"obj_leviathan_parent",

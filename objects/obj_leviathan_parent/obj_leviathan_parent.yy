@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Leviathan",
-    "path":"folders/Objects/Characters/Leviathan.yy",
+    "path":"folders/Objects/Characters/Players/Leviathan.yy",
   },
   "parentObjectId":{
     "name":"obj_ply_npc_parent",

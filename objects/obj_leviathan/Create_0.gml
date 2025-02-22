@@ -68,6 +68,7 @@
 		// Paths
 		attack_path = path_add()
 		follow_path = path_add()
+		move_path = path_add()
 		
 		if(instance_exists(obj_player_Nyx))
 		{

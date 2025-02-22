@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_swap_com_pause",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_swap_com_pause",
+  "parent":{
+    "name":"Pause",
+    "path":"folders/Scripts/Pause.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

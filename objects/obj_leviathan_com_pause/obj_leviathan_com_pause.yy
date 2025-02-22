@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
   "%Name":"obj_leviathan_com_pause",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_leviathan_com_pause",
   "overriddenProperties":[],
   "parent":{
     "name":"Leviathan",
-    "path":"folders/Objects/Characters/Leviathan.yy",
+    "path":"folders/Objects/Characters/Players/Leviathan.yy",
   },
   "parentObjectId":{
     "name":"obj_leviathan_parent",

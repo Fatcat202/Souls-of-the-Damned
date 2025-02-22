@@ -34,6 +34,7 @@ function scr_combat_resume()
 	instance_destroy(obj_com_pause_parent);
 	instance_destroy(obj_com_pause_npc_parent);
 	instance_destroy(obj_enemy_com_pause_parent);
+	instance_destroy(obj_leviathan_com_pause);
 	
 	// Clear active_com_pause array
 	ds_list_clear(global.active_pc_com_pause_list)
