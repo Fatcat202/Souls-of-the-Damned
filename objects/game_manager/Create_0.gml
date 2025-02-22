@@ -39,7 +39,8 @@ randomise()
 		dogan,
 		darien,
 		bronwin,
-		nyx
+		nyx,
+		leviathan
 	}
 
 
@@ -236,7 +237,7 @@ randomise()
 					global.player_attacks[# player_index.nyx, 1] = "Nyx_basic_attack"
 					global.player_attacks[# player_index.nyx, 2] = "Nyx_dragons_breath"
 					global.player_attacks[# player_index.nyx, 3] = "Nyx_scales"
-					global.player_attacks[# player_index.nyx, 4] = "Nyx_"
+					global.player_attacks[# player_index.nyx, 4] = "Nyx_leviathan"
 
 					
 				#endregion Attacks
@@ -476,12 +477,11 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function p_stats(_dice_hp = 0, _hp_mod = 0, _dice_armor = 0, _move_spd = 0, _main_atk_spd = 0, _kb_percent = 0, _view_range = 0) constructor {
+	function p_stats(_dice_hp = 0, _hp_mod = 0, _dice_armor = 0, _move_spd = 0, _kb_percent = 0, _view_range = 0) constructor {
 		dice_hp = _dice_hp;
 		hp_mod = _hp_mod;
 		dice_armor = _dice_armor;
 		move_spd = _move_spd;
-		main_atk_spd = _main_atk_spd;
 		kb_percent = _kb_percent;
 		view_range = _view_range;
 	}
@@ -496,6 +496,7 @@ randomise()
 	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
+	global.player_index_length++; global.player_stats[global.player_index_length] = new p_stats();
 
 	// Assign all values from CSV file into stats database structs
 	for(var i = 0; i < global.player_index_length; i++)
@@ -507,7 +508,6 @@ randomise()
 		global.player_stats[yy].hp_mod = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 		global.player_stats[yy].dice_armor = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 		global.player_stats[yy].move_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
-		global.player_stats[yy].main_atk_spd = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++;
 		global.player_stats[yy].kb_percent = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++
 		global.player_stats[yy].view_range = real(ds_grid_get(ds_player_stats_csv, xx, yy)); xx++
 	

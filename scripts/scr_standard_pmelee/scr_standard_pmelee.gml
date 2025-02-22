@@ -17,7 +17,7 @@ function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, c
 		melee_atk.image_angle = melee_atk.direction;
 		
 		// Send index to attack sprite for stats
-		melee_atk.pc_object = object_index;
+		melee_atk.pc_object = id;
 		
 		
 		// Conditions

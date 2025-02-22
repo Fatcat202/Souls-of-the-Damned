@@ -30,4 +30,4 @@ Bronwin_ricochet_shot,1,8,0,0,0,0,1,0,0,5,1.5,scr_Bronwin_ricochet_shot,-1,-1,-1
 Nyx_basic_attack,1,8,0,0,0,0,1,0,0,5,1.5,scr_Nyx_basic_attack,-1,QUARTERSTAFF,"Nyx's quarterstaff, it bashes foes."
 Nyx_dragons_breath,1,6,1,0.5,0,1,8,0,0,5,1.5,scr_Nyx_dragons_breath,-1,DRAGON'S BREATH,-1
 Nyx_scales,1,4,1,0.5,0.25,0.34,20,10,0,0,0,scr_Nyx_scales,-1,SCALES,"Grant a target scales, increasing their armor for a limited time."
-Nyx_,0,0,0,0,0,0,0,0,0,0,0,scr_Nyx_,-1,-1,-1
+Nyx_leviathan,1,6,0,0.5,0,0,30,10,0,5,1.5,scr_Nyx_leviathan,-1,Leviathan,Summon Nyx's drake friend.

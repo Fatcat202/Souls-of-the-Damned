@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_Nyx_",
+  "%Name":"scr_Nyx_leviathan",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_Nyx_",
+  "name":"scr_Nyx_leviathan",
   "parent":{
     "name":"Nyx Attacks",
     "path":"folders/Scripts/Attacks/Players/Nyx Attacks.yy",
