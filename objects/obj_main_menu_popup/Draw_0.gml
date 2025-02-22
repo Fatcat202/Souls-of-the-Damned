@@ -1,40 +1,51 @@
-/// @description Insert description here
-// You can write your code in this editor
+/// @description State machine
 
 draw_self()
 
-// Positions
-var x_gap = 50
-var y_gap = 50
-		
-var x_start = x - 70
 
-var top_row = y - y_gap/2
-var bottom_row = y + y_gap/2
-
-var text_gap = 26
-			
-draw_set_color(c_black)
-draw_set_halign(fa_center)
-draw_set_valign(fa_middle)
 
 
 
 switch (state)
 {
 	case "new_game": // Start a new game
+	
+		// Positions
+		var x_gap = 50
+		var y_gap = 50
 		
-		// Create start button
-		if(!instance_exists(obj_button_start))
+		var x_start = x - 70
+		var x_pos = x_start;
+
+		
+
+		var text_gap = 26
+			
+		draw_set_color(c_black)
+		draw_set_halign(fa_center)
+		draw_set_valign(fa_middle)
+		
+		draw_set_font(fnt_menu)
+		draw_text(x, y_top + 20, "ARENA")
+		draw_set_font(fnt_default)
+		
+		// Selecting Map
+		draw_text(x, y_top + 60, "SELECT MAP")
+		
+		if(!instance_exists(obj_sel_arena_1))
 		{
-			var start = instance_create_layer(x, y_bottom - 30, "Popup_Instances", obj_button_start)
+			instance_create_layer(x_pos, y_top + 85, "Popup_Instances", obj_sel_arena_1)
 		}
+		x_pos += x_gap;
 		
 		
 		// Selecting Characters	
+		draw_text(x, y - 30, "SELECT CHARACTERS")
 		
+		var top_row = y + 20
+		var bottom_row = top_row + y_gap
 		// ** TOP ROW **
-		var x_pos = x_start;
+		x_pos = x_start;
 		draw_text(x_pos, top_row - text_gap, "Alok")
 		if(!instance_exists(obj_sel_Alok))
 		{
@@ -91,6 +102,14 @@ switch (state)
 		{
 			instance_create_layer(x_pos, bottom_row, "Popup_Instances", obj_sel_Darien)
 		}
+		
+		
+		// Create start button
+		if(!instance_exists(obj_button_start))
+		{
+			var start = instance_create_layer(x, y_bottom - 30, "Popup_Instances", obj_button_start)
+		}
+		
 		
 		// Reset text changes
 		draw_set_color(c_white)

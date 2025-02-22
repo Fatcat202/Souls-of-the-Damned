@@ -23,6 +23,9 @@ y_bottom = y + (height / 2);
 	// DS list holding selected characters
 	global.selected_pcs = ds_list_create()
 	
+	// Contains selected starting map
+	global.starting_map = -1;
+	
 	
 	
 #endregion New Game

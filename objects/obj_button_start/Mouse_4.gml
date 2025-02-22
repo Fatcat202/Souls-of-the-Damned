@@ -1,7 +1,7 @@
 /// @description Start Game
 
 
-if(ds_list_size(global.selected_pcs) > 0)
+if(ds_list_size(global.selected_pcs) > 0 && global.starting_map != -1)
 {
-	room_goto(rm_arena_1);
+	room_goto(global.starting_map);
 }

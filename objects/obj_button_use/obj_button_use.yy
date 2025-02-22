@@ -38,8 +38,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_menu_button_short",
-    "path":"sprites/spr_menu_button_short/spr_menu_button_short.yy",
+    "name":"spr_menu_button_short_0",
+    "path":"sprites/spr_menu_button_short_0/spr_menu_button_short_0.yy",
   },
   "spriteMaskId":null,
   "visible":true,

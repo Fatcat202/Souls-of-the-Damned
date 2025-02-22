@@ -10,6 +10,7 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.active_armor = send_from.active_armor;
 	send_to.max_armor = send_from.max_armor;
 	send_to.non_lethal = send_from.non_lethal;
+	send_to.move_spd = send_from.move_spd;
 	
 	// Cooldowns
 	send_to.cooldown_1 = send_from.cooldown_1;
