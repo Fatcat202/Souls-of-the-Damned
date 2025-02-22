@@ -41,7 +41,7 @@
 	if(global.player_level > 1)
 	{
 		//				Subtract 1 due to taking max on first die
-		max_hp = hp + scr_roll_dice(global.player_level - 1 , dice_hp)
+		max_hp = hp + scr_roll_dice(global.player_level - 1 , dice_hp) + (hp_mod * global.player_level - 1)
 	}else max_hp = hp;
 	// Set active HP
 	active_health = max_hp
