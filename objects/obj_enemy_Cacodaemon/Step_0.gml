@@ -1,6 +1,5 @@
 /// @description Behavior
 
-
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
@@ -28,20 +27,25 @@ if(can_move == true)
 
 // Standard melee attack
 
-// Check if attack cooldown is over and increment tick
-atk_tick_0++
-if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
-{
-	can_attack = true;
-	can_move = true;
-}
-
 // Closest player or npc
 
 var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
 var dmg_die_sides = global.enemy_stats[index].dice_melee_atk_sides
 var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
 
+
+if(atk_0_cooldown)
+{
+	atk_tick_0++
+	if(atk_tick_0 >= 15)
+	{
+		// End Cooldown
+		can_attack = true;
+		can_move = true;
+		atk_tick_0 = 0
+		atk_0_cooldown = false
+	}
+}
 
 
 var range = sprite_get_width(spr_standard_emelee) + 20
@@ -71,5 +75,7 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= ran
 		
 	can_attack = false;
 	can_move = false;
+	atk_0_cooldown = true
 	atk_tick_0 = 0;
+	atk_time_0 = game_get_speed(gamespeed_fps) / 4
 }

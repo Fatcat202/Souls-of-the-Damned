@@ -29,13 +29,17 @@ if(can_move == true)
 // Standard melee attack
 
 // Check if attack cooldown is over and increment tick
-atk_tick_0++
-if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
+if(atk_0_cooldown)
 {
-	// End Cooldown
-	can_attack = true;
-	can_move = true;
-	sprite_index = spr_vulna_passive;
+	atk_tick_0++
+	if(atk_tick_0 >= atk_time_0)
+	{
+		// End Cooldown
+		can_attack = true;
+		can_move = true;
+		sprite_index = spr_vulna_passive;
+		atk_0_cooldown = false
+	}
 }
 
 
@@ -71,5 +75,7 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_r
 	// Restart cooldown
 	can_attack = false;
 	can_move = false;
+	atk_0_cooldown = true;
 	atk_tick_0 = 0;
+	atk_time_0 = game_get_speed(gamespeed_fps) / 4
 }

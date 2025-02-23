@@ -14,6 +14,7 @@ function scr_enemy_transfer_variables(send_to, send_from)
 	
 	// Cooldowns
 	send_to.cooldown_1 = send_from.cooldown_1;
+	send_to.atk_0_cooldown = send_from.atk_0_cooldown;
 
 	
 	// Status
@@ -56,6 +57,7 @@ function scr_enemy_transfer_variables(send_to, send_from)
 	send_to.bonus_armor_duration_time = send_from.bonus_armor_duration_time;
 	send_to.atk_tick_0 = send_from.atk_tick_0;
 	send_to.atk_tick_1 = send_from.atk_tick_1;
+	send_to.atk_time_0 = send_from.atk_time_0;
 
 		
 	// Paths
