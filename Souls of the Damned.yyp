@@ -909,7 +909,7 @@
     {"id":{"name":"spr_atk_scales","path":"sprites/spr_atk_scales/spr_atk_scales.yy",},},
     {"id":{"name":"spr_atk_shield","path":"sprites/spr_atk_shield/spr_atk_shield.yy",},},
     {"id":{"name":"spr_atk_sneak_attack","path":"sprites/spr_atk_sneak_attack/spr_atk_sneak_attack.yy",},},
-    {"id":{"name":"spr_atk_stunning_stike","path":"sprites/spr_atk_stunning_stike/spr_atk_stunning_stike.yy",},},
+    {"id":{"name":"spr_atk_stunning_strike","path":"sprites/spr_atk_stunning_strike/spr_atk_stunning_strike.yy",},},
     {"id":{"name":"spr_atk_sweeping_strike","path":"sprites/spr_atk_sweeping_strike/spr_atk_sweeping_strike.yy",},},
     {"id":{"name":"spr_atk_teleport","path":"sprites/spr_atk_teleport/spr_atk_teleport.yy",},},
     {"id":{"name":"spr_atk_tower_shield","path":"sprites/spr_atk_tower_shield/spr_atk_tower_shield.yy",},},

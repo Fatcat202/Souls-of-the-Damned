@@ -29,7 +29,7 @@ switch (state)
 			speed = 0;
 			with(enemy)
 			{
-				scr_stun(game_get_speed(gamespeed_fps) * duration, self);
+				scr_stun(game_get_speed(gamespeed_fps) * duration);
 			}
 		}
 		

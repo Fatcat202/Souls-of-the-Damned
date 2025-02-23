@@ -3,9 +3,9 @@
 #region Determening Enemy for Stats
 
 	// Read name of object and assigns it to object_name
-	var object_name = object_get_name(object_index);
+	object_name = object_get_name(object_index);
 	// Isolates the character name from object_name
-	var enemy_name = string_delete(object_name, 0, 10);
+	enemy_name = string_delete(object_name, 0, 10);
 	// Initialise this_enemy to track instance data
 	index = 0;
 

@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_atk_stunning_stike",
+  "%Name":"spr_atk_stunning_strike",
   "bboxMode":0,
   "bbox_bottom":35,
   "bbox_left":0,
@@ -22,7 +22,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"f8e56e80-2b77-40e5-8f16-5dedbed1f429","blendMode":0,"displayName":"default","isLocked":false,"name":"f8e56e80-2b77-40e5-8f16-5dedbed1f429","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_atk_stunning_stike",
+  "name":"spr_atk_stunning_strike",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -34,7 +34,7 @@
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_atk_stunning_stike",
+    "%Name":"spr_atk_stunning_strike",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -58,7 +58,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_atk_stunning_stike",
+    "name":"spr_atk_stunning_strike",
     "playback":1,
     "playbackSpeed":30.0,
     "playbackSpeedType":0,
@@ -70,10 +70,10 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5ed59fe3-c950-42d1-b324-c945ae8fc70d","path":"sprites/spr_atk_stunning_stike/spr_atk_stunning_stike.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5ed59fe3-c950-42d1-b324-c945ae8fc70d","path":"sprites/spr_atk_stunning_strike/spr_atk_stunning_strike.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"35e0ff1c-073f-4f3d-93ec-1556fd0f9edb","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23dc4ee6-1f7e-4bbe-985e-05bf2dfe90df","path":"sprites/spr_atk_stunning_stike/spr_atk_stunning_stike.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"23dc4ee6-1f7e-4bbe-985e-05bf2dfe90df","path":"sprites/spr_atk_stunning_strike/spr_atk_stunning_strike.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"f98e821e-8fd0-427e-8b10-8a81b7b4ad99","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

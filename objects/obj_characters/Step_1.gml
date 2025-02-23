@@ -3,7 +3,6 @@
 
 // Characters are affected by Damage Over Time
 scr_take_dot();
-
 // ** STUN **
 // Check character is stunned
 if(stunned == true)

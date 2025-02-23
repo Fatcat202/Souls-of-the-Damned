@@ -5,7 +5,6 @@ function scr_block()
 	// Block damage
 	can_damage = false;
 	blocking = true;
-	scr_test()
 
 		
 	// Checks each frame to see if the mouse is held down

@@ -4,7 +4,7 @@
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
-
+if(!can_move && path_exists(attack_path)) path_delete(attack_path)
 
 // Movement
 var within_range = false;
