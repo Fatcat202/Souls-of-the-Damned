@@ -1,10 +1,9 @@
 /// @description Behavior
 
-
 // Inherit obj_enemy_parent Step event
 event_inherited()
 
-
+if(!can_move && path_exists(attack_path)) path_delete(attack_path)
 
 // Movement
 var within_range = false;
@@ -28,21 +27,30 @@ if(can_move == true)
 
 // Standard melee attack
 
-// Check if attack cooldown is over and increment tick
-atk_tick_0++
-if(atk_tick_0 >= game_get_speed(gamespeed_fps) / 4)
-{
-	can_attack = true;
-	can_move = true;
-}
-
 // Closest player or npc
 
-var dmg_die_total = 1
-var dmg_die_sides = 10
-var dmg_mod = 0;
+var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
+var dmg_die_sides = global.enemy_stats[index].dice_melee_atk_sides
+var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
 
-var range = sprite_get_width(spr_standard_emelee);
+
+if(atk_0_cooldown)
+{
+	atk_tick_0++
+	if(atk_tick_0 >= 15)
+	{
+		// End Cooldown
+		can_attack = true;
+		can_move = true;
+		atk_tick_0 = 0
+		atk_0_cooldown = false
+	}
+}
+
+
+var range = sprite_get_width(spr_standard_emelee) + 20
+var distance_to_target = point_distance(x, y, target_pos_x, target_pos_y) + 20
+
 if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= range)
 {
 	// Create attack object
@@ -53,13 +61,21 @@ if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= ran
 		melee.image_angle = melee.direction;
 		melee.index = index;
 		
+		
+		// Set the scale of the attack object based on the distance to the target
+	    melee.image_xscale = distance_to_target / sprite_get_width(spr_standard_emelee);
+
+		
 		// Send index to attack sprite for stats
 		melee.enemy_object = object_index;
-		
+
+	
 		// Damage
 		melee.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
 		
 	can_attack = false;
 	can_move = false;
+	atk_0_cooldown = true
 	atk_tick_0 = 0;
+	atk_time_0 = game_get_speed(gamespeed_fps) / 4
 }

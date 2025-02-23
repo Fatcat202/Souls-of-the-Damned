@@ -1,31 +1,29 @@
 /// @description HUD GUI
 
 
-	// ** VARIABLES **
+// ** VARIABLES **
 
-	// Half display width and height
-	var xx = display_get_gui_width() / 2;
-	var yy = display_get_gui_height() / 2;
+// Half display width and height
+var xx = display_get_gui_width() / 2;
+var yy = display_get_gui_height() / 2;
 
-	// Healthbars
-	var healthbar_thickness = 8;
-	var armor_healthbar_y_top = 320; // Top of healthbars
-	var healthbar_half_width = 100; // Half width of healthbars
-	var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
-	// Distance between healthbars
-	var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
-	var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
+// Healthbars
+var healthbar_thickness = 8;
+var armor_healthbar_y_top = 320; // Top of healthbars
+var healthbar_half_width = 100; // Half width of healthbars
+var armor_healthbar_y_bottom = armor_healthbar_y_top + healthbar_thickness
+// Distance between healthbars
+var hp_healthbar_y_top = armor_healthbar_y_bottom + healthbar_thickness / 2;
+var hp_healthbar_y_bottom = hp_healthbar_y_top + healthbar_thickness;
 
-	// Attacks
-	var attack_x = 620; // Starting x location
-	var attack_y = 20; // Starting y location
-	var attack_spacing = 36; // Space between cooldowns
+// Attacks
+var attack_x = 620; // Starting x location
+var attack_y = 20; // Starting y location
+var attack_spacing = 36; // Space between cooldowns
+// Set default font
+draw_set_font(fnt_default);
 	
-
-
-
-	// Set default font
-	draw_set_font(fnt_default);
+if(instance_exists(obj_inventory_shop)) return;
 
 
 // Check if ESC paused
@@ -34,7 +32,7 @@ if(global.game_esc_paused == false)
 
 	#region Combat Round
 	
-		with(obj_arena_spawner)
+		if !global.game_combat_paused && !global.show_inventory 
 		{
 			if(global.spawn_triggered == true)
 			{
@@ -53,7 +51,7 @@ if(global.game_esc_paused == false)
 	#region ** NOT COMBAT PAUSED **
 
 		// Check if combat paused
-		if(global.game_combat_paused == false)
+		if(global.game_combat_paused == false && !global.show_inventory)
 		{
 
 			#region HP Healthbar
@@ -139,6 +137,7 @@ if(global.game_esc_paused == false)
 				{
 					scr_draw_circ_healthbar(attack_x , attack_y, obj_player_parent.cooldown_timer_4, obj_player_parent.cooldown_time_4, c_black, 16, 0.5)
 				}
+				
 			
 			#endregion Attacks
 
@@ -308,7 +307,7 @@ if(global.game_esc_paused == false)
 	#region ** COMBAT PAUSED **
 
 		// Display if combat paused
-	} else if(global.game_combat_paused == true)
+	} else if(global.game_combat_paused || global.show_inventory)
 	{
 	
 		#region HP Healthbar
@@ -417,9 +416,13 @@ if(global.game_esc_paused == false)
 	
 		#region Combat Paused Text
 		
-			// Displays text stating player name
-			draw_set_halign(fa_center);
-			draw_text(xx, 100, "Combat Paused");
+			// Do not show if not combat paused
+			if(global.game_combat_paused)
+			{
+				// Displays text stating player name
+				draw_set_halign(fa_center);
+				draw_text(xx, 50, "Combat Paused");
+			}
 		
 			
 		#endregion Combat Paused Text

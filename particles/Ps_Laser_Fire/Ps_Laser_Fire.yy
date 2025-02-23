@@ -23,7 +23,7 @@
   "name":"Ps_Laser_Fire",
   "parent":{
     "name":"Lasers",
-    "path":"folders/Particle Systems/Lasers.yy",
+    "path":"folders/Particle Systems/Pack/Lasers.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

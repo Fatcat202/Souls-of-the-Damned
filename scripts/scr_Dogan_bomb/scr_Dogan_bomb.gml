@@ -2,11 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_Dogan_bomb()
 {
-	// Shoots fireball that explodes on impact and does damage in an area
+	// Throw bomb which deals damage in area on impact or after fuse
 	
-	var dmg_die_total = 1
-	var dmg_die_sides = 6
-	var dmg_mod = 0;
+	var attack_index = scr_find_attack_index("Dogan_bomb")
+	
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
+	var crit_mod = global.attack_stats[attack_index].crit_mod
+	
 		
 	Dogan_bomb = instance_create_layer(obj_player_parent.x, obj_player_parent.y, "Projectiles", obj_Dogan_bomb); 
 	Dogan_bomb.speed = 6;
@@ -14,10 +19,10 @@ function scr_Dogan_bomb()
 	Dogan_bomb.image_angle = Dogan_bomb.direction;
 	
 	// Damage
-	Dogan_bomb.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+	Dogan_bomb.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod , crit_chance, crit_mod)
 		
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * 3;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 	// States attack was used for cooldowns
 	used = true

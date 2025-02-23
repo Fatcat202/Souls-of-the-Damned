@@ -1,5 +1,8 @@
 function scr_Alok_channel()
 {
+	// Pull stats
+	var attack_index = scr_find_attack_index("Alok_channel")
+	
 	
 	var channel = instance_create_layer(x, y, "Projectiles", obj_Alok_channel)
 		channel.alarm[0] = 60
@@ -28,7 +31,7 @@ function scr_Alok_channel()
 		
 	
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * 6;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 	
 	// States attack was used for cooldowns
 	used = true

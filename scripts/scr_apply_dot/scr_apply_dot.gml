@@ -1,12 +1,14 @@
 
-function scr_apply_dot(dmg, tick_rate, duration, _can_kill)
+function scr_apply_dot(dmg_dice_num, dmg_dice_sides, dmg_mod, tick_rate, duration, _can_kill)
 {
 
 	// Create dot data packet
 	var dot_info = [];
 
 	// Damage applied per application
-	dot_info[dot_data.dmg] = dmg; 
+	dot_info[dot_data.dmg_dice_num] = dmg_dice_num;
+	dot_info[dot_data.dmg_dice_sides] = dmg_dice_sides; 
+	dot_info[dot_data.dmg_mod] = dmg_mod; 
 	// Frequency of dot in seconds
 	dot_info[dot_data.tick_rate] = game_get_speed(gamespeed_fps) * tick_rate; 
 	// Duration of dot in seconds

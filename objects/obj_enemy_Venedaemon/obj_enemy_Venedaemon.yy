@@ -8,8 +8,8 @@
   "name":"obj_enemy_Venedaemon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Characters/Enemies.yy",
+    "name":"Venedaemon",
+    "path":"folders/Objects/Characters/Enemies/Venedaemon.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",
@@ -31,7 +31,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_venedaemon",
     "path":"sprites/spr_venedaemon/spr_venedaemon.yy",

@@ -39,7 +39,7 @@
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_Xan_side",
     "path":"sprites/spr_Xan_side/spr_Xan_side.yy",

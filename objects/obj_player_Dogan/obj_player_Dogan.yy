@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_player_Dogan",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_player_Dogan",
   "overriddenProperties":[],
@@ -31,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_Dogan_side",
     "path":"sprites/spr_Dogan_side/spr_Dogan_side.yy",

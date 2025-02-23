@@ -21,7 +21,7 @@
   "name":"Ps_Firework_1",
   "parent":{
     "name":"Fireworks",
-    "path":"folders/Particle Systems/Fireworks.yy",
+    "path":"folders/Particle Systems/Pack/Fireworks.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

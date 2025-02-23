@@ -9,14 +9,8 @@ function scr_esc_resume()
 	
 	if(!global.game_combat_paused)
 	{
-		// Removing background sprite ** IN PROGRESS **
-		var background_pause_layer = layer_get_id("Pause")
-		var background_pause_id = layer_background_get_id(background_pause_layer);
-		layer_background_visible(background_pause_id, false)
-	
-		var background_layer = layer_get_id("Background")
-		var background_id = layer_background_get_id(background_layer);
-		layer_background_visible(background_id, true)
+		// Destroy pause image
+		layer_destroy("Pause_Sprites")
 	
 		// Reactivate regular objects
 		instance_activate_all();

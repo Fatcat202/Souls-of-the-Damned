@@ -1,10 +1,15 @@
 
 function scr_Seki_lightning()
 {
-	
-	var dmg_die_total = 1
-	var dmg_die_sides = 8
-	var dmg_mod = 0;
+	// Pull stats
+	var attack_index = scr_find_attack_index("Seki_lightning")
+
+	// Pull variables
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
+	var crit_mod = global.attack_stats[attack_index].crit_mod
 
 	// Shoots projectile that hurts all enemies it touches
 		
@@ -14,10 +19,10 @@ function scr_Seki_lightning()
 	seki_lightning.image_angle = seki_lightning.direction;
 	
 	// Damage
-	seki_lightning.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+	seki_lightning.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * 1.5;
+	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 		
 		
 	// States attack was used for cooldowns

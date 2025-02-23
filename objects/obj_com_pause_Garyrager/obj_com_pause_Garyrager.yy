@@ -29,10 +29,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_Garyrager",
-    "path":"sprites/spr_Garyrager/spr_Garyrager.yy",
+    "name":"spr_Garyrager_side",
+    "path":"sprites/spr_Garyrager_side/spr_Garyrager_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

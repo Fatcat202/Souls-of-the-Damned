@@ -100,7 +100,7 @@
 		
 		obj_button_defend.image_index = 1;
 	}
-	if(mouse_check_button_pressed(mb_right)) // Select position to move to
+	if(mouse_check_button_pressed(mb_right) && !global.show_inventory) // Select position to move to
 	{
 		if(global.command_all == true)
 		{

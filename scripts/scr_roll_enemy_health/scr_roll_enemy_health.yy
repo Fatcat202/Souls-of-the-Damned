@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_roll_enemy_health",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_roll_enemy_health",
+  "parent":{
+    "name":"Dice",
+    "path":"folders/Scripts/Dice.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

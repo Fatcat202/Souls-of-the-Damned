@@ -1,0 +1,18 @@
+
+** ITEMS **
+	
+	** CONSUMABLES **
+		 
+		 ** POTIONS **
+		- Health Potion
+		- Armor Potion
+		- Overheal
+		
+		** SCROLLS **
+		- Resurrection
+		- Fireball
+		- Cone of Cold
+		- 
+
+
+

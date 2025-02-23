@@ -18,7 +18,7 @@
   "name":"Ps_Magic_Lights_Shimmer",
   "parent":{
     "name":"Magic",
-    "path":"folders/Particle Systems/Magic.yy",
+    "path":"folders/Particle Systems/Pack/Magic.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

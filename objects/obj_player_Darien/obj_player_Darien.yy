@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_player_Darien",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_player_Darien",
   "overriddenProperties":[],
@@ -31,10 +29,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_Darien",
-    "path":"sprites/spr_Darien/spr_Darien.yy",
+    "name":"spr_Darien_side",
+    "path":"sprites/spr_Darien_side/spr_Darien_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,10 +1,10 @@
-function scr_critical(cooldown_time)
+function scr_critical(damage, chance, modifier)
 {
-	// Allows for poison debuff ability, applying DOT to attacks
-	
-	can_crit = true;
-	
-	cooldown = game_get_speed(gamespeed_fps) * cooldown_time;
-	critical_time = cooldown / 2;
-	critical_timer = 0;
+
+	var rand = irandom_range(0, 100);
+	if(rand <= chance)
+	{
+		show_debug_message("Critical Hit! " + string(floor(damage * modifier)));
+		return floor(damage * modifier);
+	} else return damage;
 }

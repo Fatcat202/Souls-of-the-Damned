@@ -28,8 +28,6 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"name","filters":[],"listItems":[],"multiselect":false,"name":"name","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"test","varType":2,},
     {"$GMObjectProperty":"v1","%Name":"description","filters":[],"listItems":[],"multiselect":false,"name":"description","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"hello","varType":2,},
-    {"$GMObjectProperty":"v1","%Name":"xx","filters":[],"listItems":[],"multiselect":false,"name":"xx","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"x","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"yy","filters":[],"listItems":[],"multiselect":false,"name":"yy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"y","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

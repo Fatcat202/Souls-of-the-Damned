@@ -3,16 +3,9 @@
 function scr_block()
 {
 	// Block damage
-	if mouse_check_button(mb_left)
-	{
-		can_damage = false;
-		blocking = true;
-	}else 
-	{
-		can_damage = true;
-		blocking = false;
-		blocking_cooldown_timer = 0;
-	}
+	can_damage = false;
+	blocking = true;
+
 		
 	// Checks each frame to see if the mouse is held down
 	cooldown = game_get_speed(gamespeed_fps) / 60;

@@ -1,7 +1,5 @@
 /// @description Insert description here
 
-
-
-scr_damage(damage);
+if(other.can_damage) scr_damage(damage);
 
 instance_destroy();

@@ -62,7 +62,7 @@
   "origin":9,
   "parent":{
     "name":"Attacks",
-    "path":"folders/Sprites/Attacks.yy",
+    "path":"folders/Sprites/Attacks/Attacks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

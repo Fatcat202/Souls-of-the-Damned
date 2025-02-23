@@ -27,12 +27,21 @@ event_inherited()
 		global.active_pc_object_list[| i] = object_index;
 		global.selected_char = i + 1;
 		pc_index = i + 1;
+		
+		
+		// Placing player attacks into active DS grid
+		var xx = i + 1;
+		for(var yy = 0; yy < ds_grid_height(global.player_attacks); yy++)
+		{
+			ds_grid_set(global.player_attacks_active, xx, yy, global.player_attacks[# index, yy])
+		}
+		
+		
 
 	}else // If list is filled, replace object name instead
 	{
 		// Find posision in active DS lists
 		var list_index = ds_list_find_index(global.active_pc_names_list, player_name)
-		show_debug_message("list_index: " + string(list_index));
 	
 		// Replace position in active DS lists
 		ds_list_replace(global.active_pc_list, list_index, object_name)
@@ -51,11 +60,11 @@ event_inherited()
 
 
 	// Health
-	max_hp = global.player_stats[index].hp;
+	max_hp = global.player_stats[index].dice_hp + global.player_stats[index].hp_mod;
 	active_health = max_hp;
 
 	// Armor
-	max_armor = global.player_stats[index].armor;
+	max_armor = global.player_stats[index].dice_armor;
 	active_armor = max_armor;
 
 	// Speed

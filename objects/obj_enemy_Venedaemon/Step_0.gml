@@ -6,26 +6,28 @@ event_inherited()
 
 // Attacks
 
-var dmg_die_total
-var dmg_die_sides
-var dmg_mod
 
 if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 {
 	if(can_move) scr_move_to_target(80)
 			
-	var m_range = sprite_get_width(spr_standard_emelee);
+
+	var distance_to_target = point_distance(x, y, target_pos_x, target_pos_y) + 20
+	var m_range = sprite_get_width(spr_standard_emelee) + 20;
 	if(can_attack == true && point_distance(x, y, target_pos_x, target_pos_y) <= m_range)
 	{
-		dmg_die_total = 1
-		dmg_die_sides = 10
-		dmg_mod = 0;
+		var dmg_die_total = global.enemy_stats[index].dice_melee_atk_num
+		var dmg_die_sides = global.enemy_stats[index].dice_melee_atk_sides
+		var dmg_mod = global.enemy_stats[index].dice_melee_atk_mod
 		
 		// Create melee object
 		melee = instance_create_layer(x, y, "Projectiles", obj_emelee_parent);
 			melee.direction = point_direction(x, y, target_pos_x, target_pos_y);
 			melee.image_angle = melee.direction;
 			melee.index = index;
+			
+			// Set the scale of the attack object based on the distance to the target
+	    melee.image_xscale = distance_to_target / sprite_get_width(spr_standard_emelee);
 			
 			// Send index to attack sprite for stats
 			melee.enemy_object = object_index;
@@ -44,9 +46,9 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 
 	if(can_attack)
 	{
-		dmg_die_total = 1
-		dmg_die_sides = 10
-		dmg_mod = 0;
+		var dmg_die_total = global.enemy_stats[index].dice_range_atk_num
+		var dmg_die_sides = global.enemy_stats.enemy_stats[index].dice_range_atk_sides
+		var dmg_mod = global.enemy_stats[index].dice_range_atk_mod
 		
 		// Create blast object
 		vene_blast = instance_create_layer(x, y, "Projectiles", obj_vene_blast);

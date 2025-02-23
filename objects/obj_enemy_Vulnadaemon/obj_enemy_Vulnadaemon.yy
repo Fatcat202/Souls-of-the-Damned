@@ -8,8 +8,8 @@
   "name":"obj_enemy_Vulnadaemon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Characters/Enemies.yy",
+    "name":"Vulnadaemon",
+    "path":"folders/Objects/Characters/Enemies/Vulnadaemon.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",
@@ -22,7 +22,7 @@
   "physicsGroup":1,
   "physicsKinematic":false,
   "physicsLinearDamping":0.1,
-  "physicsObject":true,
+  "physicsObject":false,
   "physicsRestitution":0.1,
   "physicsSensor":false,
   "physicsShape":1,
@@ -36,7 +36,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_vulna_passive",
     "path":"sprites/spr_vulna_passive/spr_vulna_passive.yy",

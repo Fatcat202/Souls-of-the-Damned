@@ -14,6 +14,10 @@ Attack 1 - 1
 Attack 2 - 2
 Attack 3 - 3
 Attack 4 - 4
+
+Items:
+Open Inventory - Tab
+Open Shop - I
 "
 
 

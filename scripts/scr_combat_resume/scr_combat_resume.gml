@@ -9,37 +9,32 @@ function scr_combat_resume()
 	// Resets end_combat_pause
 	global.end_combat_pause = false;
 	
+	// Exit inventory
+	if(global.show_inventory)
+	{
+		global.show_inventory = false;
+		instance_destroy(obj_inventory_parent)
+	}
+	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps);
 	
-	// Removing background sprite ** IN PROGRESS **
-	var background_pause_layer = layer_get_id("Pause")
-	var background_pause_id = layer_background_get_id(background_pause_layer);
-	layer_background_visible(background_pause_id, false)
-	
-	var background_layer = layer_get_id("Background")
-	var background_id = layer_background_get_id(background_layer);
-	layer_background_visible(background_id, true)
+	// Destroy pause image
+	layer_destroy("Pause_Sprites")
 
-
-
-	
-	//scr_com_resume_change_char(obj_player_parent.pc_index)
 
 	// Transfer command data to PCs
 	for(var i = 0; i < global.total_active_pcs; i++)
 	{
-		global.active_pc_object_list[| i].command_state = global.active_pc_com_pause_object_list[| i].command_state;
-		global.active_pc_object_list[| i].command_state_previous = global.active_pc_com_pause_object_list[| i].command_state_previous;
-		global.active_pc_object_list[| i].target_move_x = global.active_pc_com_pause_object_list[| i].target_move_x;
-		global.active_pc_object_list[| i].target_move_y = global.active_pc_com_pause_object_list[| i].target_move_y;
+		scr_transfer_variables(global.active_pc_object_list[| i], global.active_pc_com_pause_object_list[| i]);
 	}
 
-	
 	
 	// Destroy all combat pause objects
 	instance_destroy(obj_com_pause_parent);
 	instance_destroy(obj_com_pause_npc_parent);
+	instance_destroy(obj_enemy_com_pause_parent);
+	instance_destroy(obj_leviathan_com_pause);
 	
 	// Clear active_com_pause array
 	ds_list_clear(global.active_pc_com_pause_list)
@@ -48,6 +43,5 @@ function scr_combat_resume()
 	
 	// Automatically change char if there was an issue with being changed to the right char
 	if(global.selected_char != obj_player_parent.pc_index) scr_com_resume_change_char(global.selected_char)
-	
 	
 }

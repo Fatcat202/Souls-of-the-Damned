@@ -25,7 +25,7 @@
   "name":"Ps_Muzzle_Flash_Sci_Fi",
   "parent":{
     "name":"Muzzle Flashes",
-    "path":"folders/Particle Systems/Muzzle Flashes.yy",
+    "path":"folders/Particle Systems/Pack/Muzzle Flashes.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

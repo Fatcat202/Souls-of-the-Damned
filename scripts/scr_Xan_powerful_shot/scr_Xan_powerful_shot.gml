@@ -1,11 +1,17 @@
 
-function scr_Xan_powerful_shot(target_x, target_y){
+function scr_Xan_powerful_shot(){
 
 	// Fire a powerful shot that travels through enemies and staggers them
 	
-	var dmg_die_total = 1
-	var dmg_die_sides = 12
-	var dmg_mod = 0;
+	// Pull stats
+	attack_index = scr_find_attack_index("Xan_powerful_shot")
+
+	// Pull variables
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
+	var crit_mod = global.attack_stats[attack_index].crit_mod
 	
 	// Checks if Xan's gun has enough ammo
 	if(bullets >= 2)
@@ -13,14 +19,14 @@ function scr_Xan_powerful_shot(target_x, target_y){
 		
 		Xan_powerful_shot = instance_create_layer(x, y, "Projectiles", obj_Xan_powerful_shot); 
 		Xan_powerful_shot.speed = 20;
-		Xan_powerful_shot.direction = point_direction(x, y, target_x, target_y);
+		Xan_powerful_shot.direction = point_direction(x, y, mouse_x, mouse_y);
 		Xan_powerful_shot.image_angle = Xan_powerful_shot.direction;
 		
 		// Damage
-		Xan_powerful_shot.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+		Xan_powerful_shot.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 		
 		// Cooldown and reloading
-		cooldown = game_get_speed(gamespeed_fps) * 5;
+		cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 		reload_timer = 0;
 		bullets -= 2;
 		

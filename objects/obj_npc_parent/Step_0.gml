@@ -3,6 +3,28 @@ event_inherited()
 
 scr_non_player_collision()
 
+
+// Move away from the player if the player comes close
+
+	if(collision_circle(x, y, 40, obj_player_parent, false, false) && can_move)
+	{
+		if(command_state != "defend_state")
+		{
+	
+			direction = point_direction(x, y, obj_player_parent.x, obj_player_parent.y) * -1
+			if(direction < 90) direction -= 180
+			else direction += 180
+			
+			speed = move_spd
+		}
+
+	}else
+	{
+		speed = 0;
+	}
+
+
+
 // Activate the command state
 
 if(global.command_all == false) // If command_all is false affect only active character
@@ -46,7 +68,7 @@ if(global.command_all == false) // If command_all is false affect only active ch
 	#region Targeting AI
 	
 	if(instance_exists(obj_enemy_parent))
-	{
+	{ 
 	
 		#region Set up Weights
 	

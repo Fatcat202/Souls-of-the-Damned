@@ -3,7 +3,6 @@
 
 // Characters are affected by Damage Over Time
 scr_take_dot();
-
 // ** STUN **
 // Check character is stunned
 if(stunned == true)
@@ -22,6 +21,39 @@ if(stunned == true)
 }
 
 
+// ** BONUS ARMOR **
+// Check character is stunned
+if(bonus_armor == true)
+{
+	// Increment cooldown each frame
+	bonus_armor_duration_timer++;
+	if(bonus_armor_duration_timer >= bonus_armor_duration_time) 
+	{
+		// Reset changed conditions
+		if (active_armor > max_armor) active_armor = max_armor
+		bonus_armor = false;
+		bonus_armor_duration_time = 0;
+		bonus_armor_duration_timer = 0;
+	}
+}
+
+
+// ** IMBUE ATTACK **
+// Check if imbue attack is active
+if(imbue_attack == true)
+{
+	// Increment cooldown each frame
+	imbue_attack_cooldown_timer++;
+	if(imbue_attack_cooldown_timer >= imbue_attack_cooldown_time) 
+	{
+		// Reset changed conditions
+		imbue_attack = false;
+		imbue_attack_cooldown_time = 0;
+		imbue_attack_cooldown_timer = 0;
+	}
+}
+
+
 // ** POISON COATING ATTACK **
 // Check if cooldown ticking
 if(poison_coating == true)
@@ -36,17 +68,17 @@ if(poison_coating == true)
 	}
 }
 
-// ** CRITICAL ATTACK **
-// Check if cooldown ticking
-if(can_crit == true)
+// ** SNEAK ATTACK **
+// Check if sneak attack is active
+if(sneak_attack == true)
 {
 	// Increment cooldown each frame
-	critical_timer++;
-	if(critical_timer >= critical_time) 
+	sneak_attack_timer++;
+	if(sneak_attack_timer >= sneak_attack_time) 
 	{
 		// Reset changed conditions
-		can_crit = false;
-		critical_time = 0;
+		can_sneak_attack = false;
+		sneak_attack_time = 0;
 	}
 }
 

@@ -14,7 +14,7 @@
   "name":"Ps_Sparkle_Burst",
   "parent":{
     "name":"Fireworks",
-    "path":"folders/Particle Systems/Fireworks.yy",
+    "path":"folders/Particle Systems/Pack/Fireworks.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

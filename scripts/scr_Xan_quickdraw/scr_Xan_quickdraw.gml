@@ -1,14 +1,21 @@
 
 function scr_Xan_quickdraw()
 {
+	
+	// Pull stats
+	attack_index = scr_find_attack_index("Xan_quickdraw")
+	
 	// Set variables
 	var range = 150;
 	var within_range = collision_circle(x, y, range, obj_enemy_parent, 1, 1);
 	var shots = 6;
-	
-	var dmg_die_total = 1
-	var dmg_die_sides = 6
-	var dmg_mod = 0;
+
+	// Pull variables
+	var dmg_die_total = global.attack_stats[attack_index].dmg_die_num
+	var dmg_die_sides = global.attack_stats[attack_index].dmg_die_sides
+	var dmg_mod = global.attack_stats[attack_index].dmg_mod
+	var crit_chance = global.attack_stats[attack_index].crit_chance
+	var crit_mod = global.attack_stats[attack_index].crit_mod
 	
 	// Xan's x and y cords
 	var xx = x;
@@ -29,7 +36,7 @@ function scr_Xan_quickdraw()
 				Xan_bullet.image_angle = Xan_bullet.direction;
 				
 				// Damage
-				Xan_bullet.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
+				Xan_bullet.damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
 				
 				shots--;
 			}
@@ -38,7 +45,7 @@ function scr_Xan_quickdraw()
 		// Cooldown
 		if(shots != 6)
 		{
-			cooldown = game_get_speed(gamespeed_fps) * 12;
+			cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;
 		} else cooldown = 0;
 		
 		// States attack was used for cooldowns

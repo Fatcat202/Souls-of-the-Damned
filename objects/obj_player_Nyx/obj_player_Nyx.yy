@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_player_Nyx",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_player_Nyx",
   "overriddenProperties":[],
@@ -31,10 +29,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_Nyx",
-    "path":"sprites/spr_Nyx/spr_Nyx.yy",
+    "name":"scr_Nyx_side",
+    "path":"sprites/scr_Nyx_side/scr_Nyx_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

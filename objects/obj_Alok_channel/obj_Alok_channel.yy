@@ -12,7 +12,10 @@
     "name":"AOE",
     "path":"folders/Objects/Attacks/AOE.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_aoe_parent",
+    "path":"objects/obj_aoe_parent/obj_aoe_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

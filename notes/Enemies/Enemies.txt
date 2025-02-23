@@ -5,25 +5,28 @@
  
  
 Cacodaemon: IMPLEMENTED
-- Tracks player and attempts to melee
+	- Tracks player and attempts to melee
 
-- Attack in groups
+	- Attack in groups
 
 Venedaemon: IMPLEMENTED
-- Shoots missiles at range, attacks with melee if close
+	- Shoots missiles at range, attacks with melee if close
 
-- Target enemies that have ranged attacks
+	- Target enemies that have ranged attacks
 
 Vulnadaemon: IMPLEMENTED
-- Attacks fast, does more damage from behind, bleed
+	- Attacks fast, does more damage from behind, bleed
 
-- Target enemies with no/low armor
+	- Target enemies with no/low armor
 
 Lacridaemon
-- DOT, can stagger character in area (only one lacridaemon at a time)
+	- DOT, can stagger character in area (only one lacridaemon effect at a time)
 
 Humanoid:
 -
+
+Suspiridaemon
+	- Suffocation kill, stunning, aoe debuff
 
 
 
@@ -34,13 +37,16 @@ Humanoid:
 -
 
 Meladaemon
-- Non-lethal aura, damage over time, non-lethal damage
+	- Non-lethal aura, damage over time, non-lethal damage
 
 Sepsidaemon
--Take DOT if hurt in aura, lingering ground effect in trail, teleporting
+	-Take DOT if hurt in aura, lingering ground effect in trail, teleporting
 
 Leukodaemon
-- Ranged attacks, breath attack
+	- Ranged attacks, breath attack
+	
+Aniseydaemon
+	-AOE debuff, soul devouer
 
 
 
@@ -49,53 +55,53 @@ Leukodaemon
 
 
 Humanoid:
--
+	-
 
 Olethrodaemon
--Swallow whole while sucking life, breath weapon, special bonuses depending on horseman they follow
+	-Swallow whole while sucking life, breath weapon, special bonuses depending on horseman they follow
 
 Purrodaemon
-- Magic, massive attacks
+	- Magic, massive attacks
 
 Obcisidaemon
-- Massive attacks, cloak of souls buffs
+	- Massive attacks, cloak of souls buffs
 
 
 **Bosses**
 
 Alexi
--
+	-
 
 Dogan
--
+	-
 
 Alexi(Anisydaemon)
--
+	-
 
 Alarasis
--
+	-
 
 Lider Ulrich
--
+	-
 
 Johnny
--
+	-
 
 Braismois
--
+	-
 
 Apollyon
--
+	-
 
 Charon
--
+	-
 
 Szuriel
--
+	-
 
 Trelmarixian
--
+	-
 
 The Oinodaemon
--
+	-
 

@@ -134,6 +134,12 @@ event_inherited()
 						_weight = scr_player_default_weight(obj_player_Nyx, dis, view_range);
 			
 					break;
+					case obj_leviathan:
+			
+						// Set initial weight based on range
+						_weight = scr_player_default_weight(obj_leviathan, dis, view_range);
+			
+					break;
 				}
 
 				// Assign the weight to this PCs struct value

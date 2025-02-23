@@ -3,15 +3,16 @@
 function scr_stun(time)
 {
 	// Freeze target in place and prevent attacks
-	other.speed = 0;
-	other.can_move = 0;
-	other.can_attack = false;
+	speed = 0;
+	can_move = false;
+	can_attack = false;
 	
+	if(path_exists(attack_path)) path_delete(attack_path)
 	
 	// Set Stunned Timer
-	other.stunned = true;
-	other.stun_cooldown = 0;
-	other.stun_cooldown_time = time;
+	stunned = true;
+	stun_cooldown_timer = 0;
+	stun_cooldown_time = time;
 	
 	
 }

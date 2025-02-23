@@ -29,10 +29,10 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
-    "name":"spr_Darien",
-    "path":"sprites/spr_Darien/spr_Darien.yy",
+    "name":"spr_Darien_side",
+    "path":"sprites/spr_Darien_side/spr_Darien_side.yy",
   },
   "spriteMaskId":null,
   "visible":true,

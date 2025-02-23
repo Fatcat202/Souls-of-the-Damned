@@ -13,7 +13,10 @@
     "name":"Projectiles",
     "path":"folders/Objects/Attacks/Projectiles.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_attacks_parent",
+    "path":"objects/obj_attacks_parent/obj_attacks_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

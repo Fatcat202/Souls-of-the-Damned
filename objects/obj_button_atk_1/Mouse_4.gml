@@ -3,7 +3,7 @@
 event_inherited()
 
 // Check if combat paused
-if(global.game_combat_paused == true)
+if(global.game_combat_paused || global.show_inventory)
 {
 
 	obj_com_pause_parent.active_power = 1;

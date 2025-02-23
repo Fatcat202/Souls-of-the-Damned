@@ -1,5 +1,5 @@
 
-function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod)
+function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod)
 {
 	// Standard melee attack with checks for conditions
 
@@ -17,17 +17,16 @@ function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod)
 		melee_atk.image_angle = melee_atk.direction;
 		
 		// Send index to attack sprite for stats
-		melee_atk.pc_object = object_index;
+		melee_atk.pc_object = id;
 		
 		
 		// Conditions
 		melee_atk.poison_coating = poison_coating;
-		melee_atk.can_crit = can_crit;
+		melee_atk.sneak_attack = sneak_attack
 		
-		//damage
-		melee_atk.damage = scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod;
-		
+		// Crit chance
+		var damage = scr_critical(scr_roll_dice(dmg_die_total, dmg_die_sides) + dmg_mod, crit_chance, crit_mod)
+		// Damage
+		melee_atk.damage = damage
 
-	// Cooldown
-	cooldown = game_get_speed(gamespeed_fps) * global.player_stats[global.selected_char].main_atk_spd;
 }

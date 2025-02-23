@@ -16,7 +16,7 @@
   "name":"Ps_Flame_Flickering_yellow",
   "parent":{
     "name":"Fire",
-    "path":"folders/Particle Systems/Fire.yy",
+    "path":"folders/Particle Systems/Pack/Fire.yy",
   },
   "resourceType":"GMParticleSystem",
   "resourceVersion":"2.0",

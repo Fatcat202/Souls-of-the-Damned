@@ -8,8 +8,8 @@
   "name":"obj_enemy_Cacodaemon",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemies",
-    "path":"folders/Objects/Characters/Enemies.yy",
+    "name":"Cacodaemon",
+    "path":"folders/Objects/Characters/Enemies/Cacodaemon.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_parent",
@@ -36,7 +36,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_cacodaemon",
     "path":"sprites/spr_cacodaemon/spr_cacodaemon.yy",

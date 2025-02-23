@@ -8,8 +8,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_spawn_point_parent","path":"objects/obj_spawn_point_parent/obj_spawn_point_parent.yy",},"propertyId":{"name":"number","path":"objects/obj_spawn_point_parent/obj_spawn_point_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"9",},
   ],
   "parent":{
-    "name":"Spawn Points",
-    "path":"folders/Objects/Spawner/Spawn Points.yy",
+    "name":"Enemy Spawn Points",
+    "path":"folders/Objects/Spawner/Enemy Spawn Points.yy",
   },
   "parentObjectId":{
     "name":"obj_spawn_point_parent",

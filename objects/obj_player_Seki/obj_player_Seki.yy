@@ -1,9 +1,7 @@
 {
   "$GMObject":"",
   "%Name":"obj_player_Seki",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":53,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "eventList":[],
   "managed":true,
   "name":"obj_player_Seki",
   "overriddenProperties":[],
@@ -31,7 +29,7 @@
   "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
-  "solid":true,
+  "solid":false,
   "spriteId":{
     "name":"spr_Seki_side",
     "path":"sprites/spr_Seki_side/spr_Seki_side.yy",
