@@ -4,13 +4,14 @@
 // Pull stats
 var attack_index = scr_find_attack_index("Dogan_poison")
 	
-var dmg_dice_num = global.attack_stats[attack_index].dmg_dice_num
-var dmg_dice_sides = global.attack_stats[attack_index].dmg_dice_sides
+var dmg_dice_num = global.attack_stats[attack_index].dmg_die_num
+var dmg_dice_sides = global.attack_stats[attack_index].dmg_die_sides
 var dmg_mod = global.attack_stats[attack_index].dmg_mod
+var duration = global.attack_stats[attack_index].duration
 
 if(poison_coating == true)
 {
-	scr_apply_dot(dmg_dice_num, dmg_dice_sides, dmg_mod, 30, 2, 0);
+	scr_apply_dot(dmg_dice_num, dmg_dice_sides, dmg_mod, 0.5, duration, true, true);
 }
 
 if sneak_attack == true

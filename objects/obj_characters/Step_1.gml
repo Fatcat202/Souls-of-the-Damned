@@ -3,6 +3,8 @@
 
 // Characters are affected by Damage Over Time
 scr_take_dot();
+
+
 // ** STUN **
 // Check character is stunned
 if(stunned == true)
@@ -17,6 +19,21 @@ if(stunned == true)
 		can_attack = true;
 		stunned = false;
 		stun_cooldown_time = 0;
+	}
+}
+
+// ** POISON RESISTANCE **
+// Check character has poison resistance
+if(poison_resist_ticking == true)
+{
+	// Increment cooldown each frame
+	poison_resist_timer++;
+	if(poison_resist_timer >= poison_resist_time) 
+	{
+		// Reset changed conditions
+		poison_resist_ticking = false;
+		poison_resist = false;
+		poison_resist_time = 0;
 	}
 }
 

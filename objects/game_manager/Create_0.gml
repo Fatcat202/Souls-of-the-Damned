@@ -12,7 +12,8 @@ randomise()
 		dmg_mod,
 		tick_rate,
 		duration,
-		can_kill
+		can_kill,
+		resisted
 	}
 		
 		
@@ -26,7 +27,18 @@ randomise()
 		armor_potion_light,
 		armor_potion_moderate,
 		armor_potion_severe,
-		armor_potion_critical
+		armor_potion_critical,
+		overheal_potion_light,
+		overheal_potion_moderate,
+		overheal_potion_severe,
+		overheal_potion_critical,
+		cooldown_potion_light,
+		cooldown_potion_moderate,
+		cooldown_potion_severe,
+		cooldown_potion_critical,
+		poison_resist_potion,
+		resurrection_scroll
+
 	}
 		
 	enum player_index // Positions of players in database indexes
@@ -436,10 +448,9 @@ randomise()
 
 		#endregion Inventory
 
-		
-		
 	
 	#endregion Variables
+
 
 
 	#region Controls
@@ -468,8 +479,6 @@ randomise()
 	#endregion Controls
 
 
-	
-	
 	
 #endregion Global Variables
 
@@ -739,12 +748,13 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function i_stats(_spr = spr_placeholder, _scr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Empty", _description = "Empty") constructor {
+	function i_stats(_spr = spr_placeholder, _scr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _duration = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Empty", _description = "Empty") constructor {
 		spr = _spr;
 		scr = _scr
 		die_num = _die_num;
 		die_sides = _die_sides;
 		die_mod = _die_mod;
+		duration = _duration;
 		max_stack = _max_stack;
 		price = _price;
 		min_level = _min_level;
@@ -762,6 +772,17 @@ randomise()
 	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
 	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
 	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	global.item_index_length++; global.item_stats[global.item_index_length] = new i_stats();
+	
 
 
 	// Assign all values from CSV file into stats database structs
@@ -775,6 +796,7 @@ randomise()
 		global.item_stats[yy].die_num = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_sides = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].die_mod = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
+		global.item_stats[yy].duration = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].max_stack = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].price = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
 		global.item_stats[yy].min_level = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
@@ -856,18 +878,3 @@ randomise()
 	
 #endregion Spawn Players
 
-
-
-#region Save Game TODO
-
-
-
-#endregion Save Game TODO
-
-
-
-#region Load Game TODO
-
-
-
-#endregion Load Game
