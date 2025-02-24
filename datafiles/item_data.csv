@@ -7,10 +7,10 @@ armor_potion_light,spr_armor_potion_light,scr_armor_potion,1,8,1,0,10,25,1,Light
 armor_potion_moderate,spr_armor_potion_moderate,scr_armor_potion,2,8,3,0,10,50,1,Moderate Armor Potion,Repair 2d8 + 3 Armor.
 armor_potion_severe,spr_armor_potion_severe,scr_armor_potion,3,8,5,0,10,75,1,Severe Armor Potion,Repair 3d8 + 5 Armor.
 armor_potion_critical,spr_armor_potion_critical,scr_armor_potion,4,8,7,0,10,100,1,Critical Armor Potion,Repair 4d8 + 7 Armor.
-overheal_potion_light,-1,scr_overheal_potion,0,0,0,0,10,15,1,Light Overheal Potion,
-overheal_potion_moderate,-1,scr_overheal_potion,0,0,0,0,10,30,1,Moderate Overheal Potion,-1
-overheal_potion_severe,-1,scr_overheal_potion,0,0,0,0,10,45,1,Severe Overheal Potion,-1
-overheal_potion_critical,-1,scr_overheal_potion,0,0,0,0,10,60,1,Critical Overheal Potion,-1
+overheal_potion_light,spr_overheal_potion_light,scr_overheal_potion,0,0,0,0,10,15,1,Light Overheal Potion,-1
+overheal_potion_moderate,spr_overheal_potion_moderate,scr_overheal_potion,0,0,0,0,10,30,1,Moderate Overheal Potion,-1
+overheal_potion_severe,spr_overheal_potion_severe,scr_overheal_potion,0,0,0,0,10,45,1,Severe Overheal Potion,-1
+overheal_potion_critical,spr_overheal_potion_critical,scr_overheal_potion,0,0,0,0,10,60,1,Critical Overheal Potion,-1
 cooldown_potion_light,spr_cooldown_potion_light,scr_cooldown_potion,0,0,1,0,10,0,1,Light Cooldown Potion,Reduce cooldowns by 1 second.
 cooldown_potion_moderate,spr_cooldown_potion_moderate,scr_cooldown_potion,0,0,2.5,0,10,0,1,Moderate Cooldown Potion,Reduce cooldowns by 2.5 seconds.
 cooldown_potion_severe,spr_cooldown_potion_severe,scr_cooldown_potion,0,0,4,0,10,0,1,Severe Cooldown Potion,Reduce cooldowns by 4 seconds.
