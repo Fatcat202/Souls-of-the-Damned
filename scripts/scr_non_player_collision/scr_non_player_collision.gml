@@ -2,6 +2,9 @@ function scr_non_player_collision()
 {
 	var collision_speed = move_spd + global.collision_distance;
 	
+	// Deactivate collisions if combat paused
+	if(global.game_paused == false) return;
+	
 	// X direction
 	if(!place_free (x - collision_speed, y)) // Left
 	{
