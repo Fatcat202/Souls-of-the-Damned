@@ -11,9 +11,9 @@ overheal_potion_light,-1,scr_overheal_potion,0,0,0,0,10,0,1,Light Overheal Potio
 overheal_potion_moderate,-1,scr_overheal_potion,0,0,0,0,10,0,1,Moderate Overheal Potion,-1
 overheal_potion_severe,-1,scr_overheal_potion,0,0,0,0,10,0,1,Severe Overheal Potion,-1
 overheal_potion_critical,-1,scr_overheal_potion,0,0,0,0,10,0,1,Critical Overheal Potion,-1
-cooldown_potion_light,-1,scr_cooldown_potion,0,0,0,0,10,0,1,Light Cooldown Potion,-1
-cooldown_potion_moderate,-1,scr_cooldown_potion,0,0,0,0,10,0,1,Moderate Cooldown Potion,-1
-cooldown_potion_severe,-1,scr_cooldown_potion,0,0,0,0,10,0,1,Severe Cooldown Potion,-1
-cooldown_potion_critical,-1,scr_cooldown_potion,0,0,0,0,10,0,1,Critical Cooldown Potion,-1
+cooldown_potion_light,-1,scr_cooldown_potion,0,0,1,0,10,0,1,Light Cooldown Potion,-1
+cooldown_potion_moderate,-1,scr_cooldown_potion,0,0,2.5,0,10,0,1,Moderate Cooldown Potion,-1
+cooldown_potion_severe,-1,scr_cooldown_potion,0,0,4,0,10,0,1,Severe Cooldown Potion,-1
+cooldown_potion_critical,-1,scr_cooldown_potion,0,0,5.5,0,10,0,1,Critical Cooldown Potion,-1
 poison_resist_potion,-1,scr_poison_resist_potion,0,0,0,0,10,0,1,Poison Resistance Potion,-1
 resurrection_scroll,-1,scr_resurrection_scroll,5,8,10,0,10,0,1,Resurrection Scroll,Bring someone back from the dead.
