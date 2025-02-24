@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Items",
-    "path":"folders/Sprites/Inventory/Items.yy",
+    "name":"Cooldown Potion",
+    "path":"folders/Sprites/Inventory/Items/Cooldown Potion.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

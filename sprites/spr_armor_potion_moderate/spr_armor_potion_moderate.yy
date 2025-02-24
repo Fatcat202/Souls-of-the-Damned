@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Items",
-    "path":"folders/Sprites/Inventory/Items.yy",
+    "name":"Armor Potion",
+    "path":"folders/Sprites/Inventory/Items/Armor Potion.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Items",
-    "path":"folders/Sprites/Inventory/Items.yy",
+    "name":"Health Potion",
+    "path":"folders/Sprites/Inventory/Items/Health Potion.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
