@@ -1,5 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_resurrection_scroll(){
-
+function scr_resurrection_scroll()
+{
+	// Bring a player back from the dead
 }

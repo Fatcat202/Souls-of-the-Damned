@@ -9,7 +9,7 @@ function scr_poison_resist_potion()
 	{
 		poison_resist = true
 		
-		poison_resist_time = global.inventory[_item].duration;
+		poison_resist_time = game_get_speed(gamespeed_fps) * global.inventory[_item].duration;
 		poison_resist_timer = 0;
 		poison_resist_ticking = true;
 	}
