@@ -8,7 +8,7 @@ function scr_cooldown_potion()
 	with(obj_com_pause_parent)
 	{
 		// Gather reduction amount
-		var reduction = global.inventory[_item].die_mod
+		var reduction = game_get_speed(gamespeed_fps) * global.inventory[_item].die_mod
 		
 		// Reduce all attack timer durations by reduction amount
 		cooldown_timer_1 += reduction;
