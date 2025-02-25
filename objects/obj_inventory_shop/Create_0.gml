@@ -145,15 +145,14 @@ state_free = function()
 	global.inventory_shop[6] = global.item_stats[item_names.armor_potion_severe];
 	global.inventory_shop[7] = global.item_stats[item_names.armor_potion_critical];
 	
-	
 	// Row 3
-	global.inventory_shop[8] = -1
-	global.inventory_shop[9] = -1
-	global.inventory_shop[10] = -1
-	global.inventory_shop[11] = -1
+	global.inventory_shop[8] = global.item_stats[item_names.cooldown_potion_light];
+	global.inventory_shop[9] = global.item_stats[item_names.cooldown_potion_moderate];
+	global.inventory_shop[10] = global.item_stats[item_names.cooldown_potion_severe];
+	global.inventory_shop[11] = global.item_stats[item_names.cooldown_potion_critical];
 	
 	// Row 4
-	global.inventory_shop[12] = -1
+	global.inventory_shop[12] = global.item_stats[item_names.poison_resist_potion];
 	global.inventory_shop[13] = -1
 
 #endregion Shop Contents

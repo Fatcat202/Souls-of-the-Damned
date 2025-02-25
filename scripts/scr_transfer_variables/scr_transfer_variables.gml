@@ -48,6 +48,7 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.is_dead = send_from.is_dead;
 	send_to.is_mythic = send_from.is_mythic;
 	send_to.bonus_armor = send_from.bonus_armor;
+	send_to.poison_resist = send_from.poison_resist;
 		
 	
 	// Timers
@@ -68,6 +69,9 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.imbue_attack_cooldown_timer = send_from.imbue_attack_cooldown_timer;
 	send_to.bonus_armor_duration_timer = send_from.bonus_armor_duration_timer;
 	send_to.bonus_armor_duration_time = send_from.bonus_armor_duration_time;
+	send_to.poison_resist_time = send_from.poison_resist_time;
+	send_to.poison_resist_timer = send_from.poison_resist_timer;
+	send_to.poison_resist_ticking = send_from.poison_resist_ticking;
 
 
 	// Bullets

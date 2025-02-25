@@ -4,6 +4,7 @@ function scr_inventory_pause()
 	// Prevent obj_description from sticking around
 	if(instance_exists(obj_description)) instance_destroy(obj_description)
 	
+	
 	// Makes sure game speed is set to 60 to prevent issues
 	game_set_speed(60, gamespeed_fps)
 	

@@ -19,7 +19,7 @@ if(state != "attacking" && can_attack)
 	enemy = other.id
 
 	// Enact DOT
-	scr_apply_dot(dmg_die_num, dmg_die_sides, dmg_mod, duration / 4, duration, true)
+	scr_apply_dot(dmg_die_num, dmg_die_sides, dmg_mod, duration / 4, duration, true, true)
 
 	// Set object sprite
 	//sprite_index = spr_Rager_flurry

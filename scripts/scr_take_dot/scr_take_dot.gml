@@ -1,7 +1,8 @@
 
 function scr_take_dot()
 {
-	var _debuff, _tick_rate, _can_kill;
+	var _debuff, _tick_rate, _can_kill, _resisted;
+	
 	
 	// Tracks ticks each step
 	dot_tick++;
@@ -16,7 +17,11 @@ function scr_take_dot()
 		_debuff = debuffs[i];
 		_tick_rate = round(_debuff[dot_data.tick_rate]);
 		_can_kill = _debuff[dot_data.can_kill]
+		_resisted = _debuff[dot_data.resisted]
 	
+		
+		// End early if character has poison resistance active and if DOT can be affected by poison resist
+		if(poison_resist = true && _resisted = true) return;
 	  
 		// When tick rate is reached, apply damage
 		if(dot_tick >= _tick_rate) 
