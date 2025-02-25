@@ -152,7 +152,7 @@ state_free = function()
 	global.inventory_shop[11] = global.item_stats[item_names.cooldown_potion_critical];
 	
 	// Row 4
-	global.inventory_shop[12] = -1
+	global.inventory_shop[12] = global.item_stats[item_names.poison_resist_potion];
 	global.inventory_shop[13] = -1
 
 #endregion Shop Contents

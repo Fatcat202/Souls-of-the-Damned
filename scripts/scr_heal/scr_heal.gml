@@ -1,5 +1,5 @@
 
-function scr_heal(healing, overheal_amount)
+function scr_heal(healing, overheal_amount = 0)
 {
 	// healing asks for amount of healing
 	// overheal_amount asks for amount of overheal allowed
