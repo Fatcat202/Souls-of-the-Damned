@@ -7,7 +7,7 @@ spacer = 12;
 		
 // Width and height of inventory
 inv_width = 24 + inventory_row_length * 64;
-inv_height = 64 + (((global.inventory_slots - 1) div inventory_row_length) + 1) * 64;
+inv_height = 64 + (((shop_slots + pages - 1) div inventory_row_length) + 1) * 64;
 
 // Menu Pos
 x_pos = global.cam_target_x + (global.res_w) - ((global.res_w / 2) / 2) - (inv_width / 2) + (spacer * 2);
@@ -16,6 +16,9 @@ y_pos = global.cam_target_y + (global.res_h / 2) - (inv_height / 2) + (spacer * 
 // buy button pos
 x_pos_buy = 0;
 y_pos_buy = 0;
+
+// Array holding sprites for each button page
+arr_page_sprites = [spr_shop_page_1, spr_shop_page_2, spr_shop_page_3, spr_shop_page_4];
 
 
 // Inventory Controls
@@ -36,7 +39,7 @@ function mouse_over()
 	
 	
 	// Create mouse over boxes for inventory slots
-	for(var i = 0; i < global.inventory_slots; i++)
+	for(var i = 0; i < shop_slots; i++)
 	{
 		var xx = x_pos + (i mod inventory_row_length) * 64;
 		var yy = y_pos + (i div inventory_row_length) * 64 + 40;
@@ -71,7 +74,7 @@ state_free = function()
 	
 	
 	// Create control menu with right click
-	if(mouse_check_button(mb_right) && slot_hover != -1 && inventory_hover != -1 && global.inventory_shop[slot_hover] != -1)
+	if(mouse_check_button(mb_right) && slot_hover != -1 && inventory_hover != -1 && global.inventory_shop[active_page, slot_hover] != -1)
 	{
 		// Destroy control menu if active
 		if(instance_exists(obj_item_control_menu)) instance_destroy(obj_item_control_menu)
@@ -83,9 +86,10 @@ state_free = function()
 		
 		// Create control menu
 		var menu = instance_create_layer(xx, yy, "Menu_Buttons", obj_item_control_menu)
-			menu.title = global.inventory_shop[slot_hover].title;
-			menu.description = global.inventory_shop[slot_hover].description;
+			menu.title = global.inventory_shop[active_page, slot_hover].title;
+			menu.description = global.inventory_shop[active_page, slot_hover].description;
 			menu.item = slot_hover
+			menu.active_page = active_page
 
 			
 		// Set buy button pos
@@ -95,6 +99,7 @@ state_free = function()
 			
 		var buy = instance_create_layer(x_pos_buy, y_pos_buy, "Menu_Buttons", obj_button_buy)
 			buy.item = slot_hover;
+			buy.active_page = active_page;
 
 			
 		// Indicate mb_right is being held
@@ -132,28 +137,104 @@ state_free = function()
 
 
 #region Shop Contents
+	
+	var p = 0;
+	
+	#region Page 1
+	
+		p += 1;
+		
+		// Row 1
+		global.inventory_shop[p, 0] = global.item_stats[item_names.health_potion_light];
+		global.inventory_shop[p, 1] = global.item_stats[item_names.health_potion_moderate];
+		global.inventory_shop[p, 2] = global.item_stats[item_names.health_potion_severe];
+		global.inventory_shop[p, 3] = global.item_stats[item_names.health_potion_critical];
+	
+		// Row 2
+		global.inventory_shop[p, 4] = global.item_stats[item_names.armor_potion_light];
+		global.inventory_shop[p, 5] = global.item_stats[item_names.armor_potion_moderate];
+		global.inventory_shop[p, 6] = global.item_stats[item_names.armor_potion_severe];
+		global.inventory_shop[p, 7] = global.item_stats[item_names.armor_potion_critical];
+	
+		// Row 3
+		global.inventory_shop[p, 8] = -1;
+		global.inventory_shop[p, 9] = -1;
+		global.inventory_shop[p, 10] = -1;
+		global.inventory_shop[p, 11] = -1;
 
-	// Row 1
-	global.inventory_shop[0] = global.item_stats[item_names.health_potion_light];
-	global.inventory_shop[1] = global.item_stats[item_names.health_potion_moderate];
-	global.inventory_shop[2] = global.item_stats[item_names.health_potion_severe];
-	global.inventory_shop[3] = global.item_stats[item_names.health_potion_critical];
+	#region Page 1
 	
-	// Row 2
-	global.inventory_shop[4] = global.item_stats[item_names.armor_potion_light];
-	global.inventory_shop[5] = global.item_stats[item_names.armor_potion_moderate];
-	global.inventory_shop[6] = global.item_stats[item_names.armor_potion_severe];
-	global.inventory_shop[7] = global.item_stats[item_names.armor_potion_critical];
+	#region Page 2
 	
-	// Row 3
-	global.inventory_shop[8] = global.item_stats[item_names.cooldown_potion_light];
-	global.inventory_shop[9] = global.item_stats[item_names.cooldown_potion_moderate];
-	global.inventory_shop[10] = global.item_stats[item_names.cooldown_potion_severe];
-	global.inventory_shop[11] = global.item_stats[item_names.cooldown_potion_critical];
+		p += 1;
 	
-	// Row 4
-	global.inventory_shop[12] = global.item_stats[item_names.poison_resist_potion];
-	global.inventory_shop[13] = -1
+		// Row 1
+		global.inventory_shop[p, 0] = global.item_stats[item_names.cooldown_potion_light];
+		global.inventory_shop[p, 1] = global.item_stats[item_names.cooldown_potion_moderate];
+		global.inventory_shop[p, 2] = global.item_stats[item_names.cooldown_potion_severe];
+		global.inventory_shop[p, 3] = global.item_stats[item_names.cooldown_potion_critical];
+	
+		// Row 2
+		global.inventory_shop[p, 4] = global.item_stats[item_names.poison_resist_potion];
+		global.inventory_shop[p, 5] = -1;
+		global.inventory_shop[p, 6] = -1;
+		global.inventory_shop[p, 7] = -1;
+	
+		// Row 3
+		global.inventory_shop[p, 8] = -1;
+		global.inventory_shop[p, 9] = -1;
+		global.inventory_shop[p, 10] = -1;
+		global.inventory_shop[p, 11] = -1;
+
+	#region Page 2
+	
+	#region Page 3
+	
+		p += 1;
+	
+		// Row 1
+		global.inventory_shop[p, 0] = -1;
+		global.inventory_shop[p, 1] = -1;
+		global.inventory_shop[p, 2] = -1;
+		global.inventory_shop[p, 3] = -1;
+	
+		// Row 2
+		global.inventory_shop[p, 4] = -1;
+		global.inventory_shop[p, 5] = -1;
+		global.inventory_shop[p, 6] = -1;
+		global.inventory_shop[p, 7] = -1;
+	
+		// Row 3
+		global.inventory_shop[p, 8] = -1;
+		global.inventory_shop[p, 9] = -1;
+		global.inventory_shop[p, 10] = -1;
+		global.inventory_shop[p, 11] = -1;
+
+	#region Page 3
+	
+	#region Page 4
+	
+		p += 1;
+	
+		// Row 1
+		global.inventory_shop[p, 0] = -1;
+		global.inventory_shop[p, 1] = -1;
+		global.inventory_shop[p, 2] = -1;
+		global.inventory_shop[p, 3] = -1;
+	
+		// Row 2
+		global.inventory_shop[p, 4] = -1;
+		global.inventory_shop[p, 5] = -1;
+		global.inventory_shop[p, 6] = -1;
+		global.inventory_shop[p, 7] = -1;
+	
+		// Row 3
+		global.inventory_shop[p, 8] = -1;
+		global.inventory_shop[p, 9] = -1;
+		global.inventory_shop[p, 10] = -1;
+		global.inventory_shop[p, 11] = -1;
+
+	#region Page 4
 
 #endregion Shop Contents
 

@@ -434,8 +434,14 @@ randomise()
 			// Player inventory
 			global.inventory = array_create(global.inventory_slots, -1)
 	
-			// Shop inventory
-			global.inventory_shop = array_create(global.inventory_slots, -1)
+			// Shop inventory 2D array
+			for(var i = 0; i <= 4; i++)
+			{
+				for(var j = 0; j <= 12; j++)
+				{
+					global.inventory_shop[i][j] = -1;
+				}
+			}
 			
 			// End inventory pause state
 			global.end_inventory_pause = false;
