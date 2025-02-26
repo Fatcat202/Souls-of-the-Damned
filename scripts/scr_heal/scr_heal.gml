@@ -12,9 +12,12 @@ function scr_heal(healing, overheal_amount = 0)
 		non_lethal = non_lethal + healing;
 	
 		// Check for overheal if reaching max hp
-		if(active_health >= max_hp)
+		if(active_health > max_hp && overheal_amount != 0)
 		{
-			active_health = max_hp + overheal_amount;
-		}
+			if(active_health > max_hp + overheal_amount)
+			{
+				active_health = max_hp + overheal_amount
+			}
+		}else if(active_health > max_hp) active_health = max_hp;
 	}
 }

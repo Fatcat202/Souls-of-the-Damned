@@ -157,10 +157,10 @@ state_free = function()
 		global.inventory_shop[p, 7] = global.item_stats[item_names.armor_potion_critical];
 	
 		// Row 3
-		global.inventory_shop[p, 8] = -1;
-		global.inventory_shop[p, 9] = -1;
-		global.inventory_shop[p, 10] = -1;
-		global.inventory_shop[p, 11] = -1;
+		global.inventory_shop[p, 8] = global.item_stats[item_names.overheal_potion_light];
+		global.inventory_shop[p, 9] = global.item_stats[item_names.overheal_potion_moderate];
+		global.inventory_shop[p, 10] = global.item_stats[item_names.overheal_potion_severe];
+		global.inventory_shop[p, 11] = global.item_stats[item_names.overheal_potion_critical];
 
 	#region Page 1
 	

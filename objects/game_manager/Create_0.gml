@@ -447,7 +447,7 @@ randomise()
 			global.end_inventory_pause = false;
 			
 			// Total party gold
-			global.party_gold = 0;
+			global.party_gold = 1000;
 
 
 
