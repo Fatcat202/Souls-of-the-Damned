@@ -26,11 +26,19 @@ draw_set_font(fnt_default);
 if(instance_exists(obj_inventory_shop)) return;
 
 
+if(!instance_exists(obj_enemy_parent) && !instance_exists(obj_enemy_com_pause_parent) && !global.show_inventory && !global.game_esc_paused)
+{
+
+		draw_text(xx, 50, "Press I to open the shop")
+
+}
+
+
 // Check if ESC paused
 if(global.game_esc_paused == false)
 {
 
-	#region Combat Round
+	#region Combat Round and Shop Controls
 	
 		if !global.game_combat_paused && !global.show_inventory 
 		{
@@ -43,6 +51,8 @@ if(global.game_esc_paused == false)
 				// Displays text saying to press "J" to start the next round
 				draw_text(xx, 30, "Press J to start Combat Round " + string(global.combat_round));
 			}
+			
+			
 		}
 
 	#endregion Combat Round
@@ -421,7 +431,7 @@ if(global.game_esc_paused == false)
 			{
 				// Displays text stating player name
 				draw_set_halign(fa_center);
-				draw_text(xx, 50, "Combat Paused");
+				draw_text(xx, 30, "Combat Paused");
 			}
 		
 			
