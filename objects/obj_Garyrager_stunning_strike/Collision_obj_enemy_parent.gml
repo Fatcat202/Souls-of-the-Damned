@@ -14,4 +14,6 @@ if(other.can_damage)
 	{
 		scr_stun(game_get_speed(gamespeed_fps) * 2)
 	}
+	
+	scr_knockback(kb_percent)
 }

@@ -176,8 +176,9 @@ switch(command_state)
 				var crit_chance = global.attack_stats[attack_index].crit_chance
 				var crit_mod = global.attack_stats[attack_index].crit_mod
 				var duration = global.attack_stats[attack_index].duration
+				var kb_percent = global.attack_stats[attack_index].kb_percent
 				
-				scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod)
+				scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod, kb_percent)
 		
 				// Attack Cooldown
 				alarm[0] = (game_get_speed(gamespeed_fps) * duration) * 0.1

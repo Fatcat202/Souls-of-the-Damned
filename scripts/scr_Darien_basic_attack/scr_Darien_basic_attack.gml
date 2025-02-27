@@ -10,10 +10,11 @@ function scr_Darien_basic_attack()
 	var dmg_mod = global.attack_stats[attack_index].dmg_mod
 	var crit_chance = global.attack_stats[attack_index].crit_chance
 	var crit_mod = global.attack_stats[attack_index].crit_mod
+	var kb_percent = global.attack_stats[attack_index].kb_percent
 	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown
 	
 	// Melee attack that does damage
-	scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod);
+	scr_standard_pmelee(obj_pmelee_parent, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod, kb_percent);
 		
 	// States attack was used for cooldowns
 	used = true

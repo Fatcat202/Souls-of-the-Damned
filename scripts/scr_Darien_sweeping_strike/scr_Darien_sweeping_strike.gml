@@ -11,6 +11,7 @@ function scr_Darien_sweeping_strike()
 	var dmg_mod = global.attack_stats[attack_index].dmg_mod
 	var crit_chance = global.attack_stats[attack_index].crit_chance
 	var crit_mod = global.attack_stats[attack_index].crit_mod
+	var kb_percent = global.attack_stats[attack_index].kb_percent
 	
 	// Shoots a single magic blast dealing damage to the target it hits
 	Darien_sweeping_strike = instance_create_layer(x, y, "Projectiles", obj_Darien_sweeping_strike); 
@@ -21,6 +22,9 @@ function scr_Darien_sweeping_strike()
 	// Increase size of attack
 	Darien_sweeping_strike.image_xscale = 2.5
 	Darien_sweeping_strike.image_yscale = 2.5
+	
+	// Transfer kb_percent
+	Darien_sweeping_strike.kb_percent = kb_percent
 	
 	
 	// Send index to attack sprite for stats

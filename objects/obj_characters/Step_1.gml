@@ -112,7 +112,6 @@ if(!is_dead)
 		{
 			// Reset changed conditions
 			can_control = true;
-			can_damage = true;
 			can_move = true;
 			speed = 0;
 			direction = 0;

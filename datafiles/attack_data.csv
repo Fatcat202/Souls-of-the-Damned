@@ -1,9 +1,9 @@
 ,dmg_die_num,dmg_die_sides,dmg_mod,dmg_die_num_per_lvl,dmg_die_sides_per_lvl,dmg_mod_per_lvl,cooldown,duration,kb_length,crit_chance,crit_mod,scr,spr,title,desc
-Alok_basic_attack,1,8,0,0,0,0,0.5,0,0,5,1.5,scr_Alok_basic_attack,spr_atk_warhammer,WARHAMMER,"Alok's holy warhammer, it crushes foes."
+Alok_basic_attack,1,8,0,0,0,0,0.5,0,0.45,5,1.5,scr_Alok_basic_attack,spr_atk_warhammer,WARHAMMER,"Alok's holy warhammer, it crushes foes."
 Alok_channel,1,6,0,0.5,0,0,10,0,0,0,1,scr_Alok_channel,spr_atk_channel,CHANNEL,"Alok channels divine power, healing all allies around him."
 Alok_javalin,1,8,0,0,0,0,2,0,0,0,1,scr_Alok_javalin,spr_atk_holy_javalin,HOLY JAVELIN,Alok conjures and throws a javelin made of divine light.
 Alok_shield,0,0,0,0,0,0,-1,0,0,0,1,scr_Alok_shield,spr_atk_shield,SHIELD,"Alok's shield, it protects against attacks when in use."
-Dogan_basic_attack,1,6,0,0,0,0,0.34,0,0,15,1.5,scr_Dogan_basic_attack,spr_atk_rapier,RAPIER,"Dogan's silver rapier, it puts holes in foes."
+Dogan_basic_attack,1,6,0,0,0,0,0.34,0,0.45,15,1.5,scr_Dogan_basic_attack,spr_atk_rapier,RAPIER,"Dogan's silver rapier, it puts holes in foes."
 Dogan_bomb,1,6,0,1,0,0,6,0,0,0,1,scr_Dogan_bomb,spr_atk_bomb,BOMB,"Dogan lights and throws a bomb, exploding either within a short time or on impact."
 Dogan_sneak_attack,0,0,0,0,0,0,10,4,0,50,1.5,scr_Dogan_sneak_attack,spr_atk_sneak_attack,SNEAK ATTACK,As an expert in anatomy Dogan knows weak spots to aim for. Gain a 50% critical chance for a limited time.
 Dogan_poison,1,4,0,0.5,0.25,0.5,6,2,0,0,1,scr_Dogan_poison,spr_atk_poison,POISON,"Dogan poisons his blade, dealing damage over time to foes."
@@ -15,19 +15,19 @@ Xan_basic_attack,1,10,0,0,0,0,1,0,0,5,2,scr_Xan_basic_attack,spr_atk_rifle,RIFLE
 Xan_fly,0,0,0,0,0,0,10,4,0,0,1,scr_Xan_fly,spr_atk_fly,FLY,"Xan spreads his wings, launching himself into the air and giving himself a speed boost."
 Xan_powerful_shot,2,10,0,0,0,0,4,0,0,5,1.5,scr_Xan_powerful_shot,spr_atk_powerful_shot,POWERFUL SHOT,"Xan fires a combined shot, using 2 uses of ammo but providing more power. The shot will travel through foes and stun them, but also has extra recoil."
 Xan_quickdraw,1,6,0,0,0,0,6,0,0,5,1.5,scr_Xan_quickdraw,spr_atk_quickdraw,QUICKDRAW,"Xan draws his revolver, shooting one shot at all within range."
-Garyrager_basic_attack,1,10,0,0,0,0,1,0,0,5,1.5,scr_Garyrager_basic_attack,spr_atk_fists,FISTS,"Gary's fists, they hurt."
+Garyrager_basic_attack,1,10,0,0,0,0,1,0,0.45,5,1.5,scr_Garyrager_basic_attack,spr_atk_fists,FISTS,"Gary's fists, they hurt."
 Garyrager_block,0,0,0,0,0,0,-1,0,0,0,1,scr_Garyrager_block,spr_atk_block,BLOCK,Defend against attacks.
-Garyrager_stunning_strike,2,10,0,0,0,0,4,0,0,5,1.5,scr_Garyrager_stunning_strike,spr_atk_stunning_strike,STUNNING STRIKE,Throw a powerful strike that stuns foes
+Garyrager_stunning_strike,2,10,0,0,0,0,4,0,0.45,5,1.5,scr_Garyrager_stunning_strike,spr_atk_stunning_strike,STUNNING STRIKE,Throw a powerful strike that stuns foes
 Garyrager_rager_toss,1,4,0,0,0,0,10,2,0,5,1.5,scr_Garyrager_rager_toss,spr_atk_rager_toss,THROW RAGER,Throw Rager at an enemy to beat them to a pulp.
-Darien_basic_attack,2,4,0,0,0,0,0.67,0,0,5,1.5,scr_Darien_basic_attack,spr_atk_glave,GLAVE,"Darien's glave, it cuts foes to pieces."
+Darien_basic_attack,2,4,0,0,0,0,0.67,0,0.45,5,1.5,scr_Darien_basic_attack,spr_atk_glave,GLAVE,"Darien's glave, it cuts foes to pieces."
 Darien_shield,0,0,0,0,0,0,-1,0,0,0,1,scr_Darien_shield,spr_atk_tower_shield,TOWER SHIELD,Use Darien's tower shield to block attacks
-Darien_sweeping_strike,2,4,0,0,0,0,4,0,0,5,1.5,scr_Darien_sweeping_strike,spr_atk_sweeping_strike,SWEEPING STRIKE,Make a large sweeping strike with Darien's Glave
+Darien_sweeping_strike,2,4,0,0,0,0,4,0,0.45,5,1.5,scr_Darien_sweeping_strike,spr_atk_sweeping_strike,SWEEPING STRIKE,Make a large sweeping strike with Darien's Glave
 Darien_loh,1,8,0,0.5,0,0,6,0,0,5,1,scr_Darien_loh,spr_atk_loh,LAY ON HANDS,Place Darien's hands on himself or someone else to heal.
 Bronwin_basic_attack,1,8,0,0,0,0,0.34,0,0,0,1.5,scr_Bronwin_basic_attack,spr_atk_bow,BOW,"Bronwin's bow, it skewers foes."
 Bronwin_cone_shot,1,8,0,0,0,0,3,0,0,5,1.5,scr_Bronwin_cone_shot,spr_atk_cone_shot,CONE SHOT,"Fire a cone of arrows, damaging all hit."
 Bronwin_imbue_arrow,1,6,1,0.5,0,0,10,5,0,0,1,scr_Bronwin_imbue_arrow,spr_atk_imbue_arrow,IMBUE ARROWS,Bronwin calls upon her magical potential to imbue her arrows with magic.
 Bronwin_ricochet_shot,1,8,0,0,0,0,2,0,0,5,1.5,scr_Bronwin_ricochet_shot,spr_atk_ricochet,RICOCHET,"Fire three arrows in sucession, ricocheting off walls. "
-Nyx_basic_attack,1,8,0,0,0,0,0.5,0,0,5,1.5,scr_Nyx_basic_attack,spr_atk_quarterstaff,QUARTERSTAFF,"Nyx's quarterstaff, it bashes foes."
+Nyx_basic_attack,1,8,0,0,0,0,0.5,0,0.45,5,1.5,scr_Nyx_basic_attack,spr_atk_quarterstaff,QUARTERSTAFF,"Nyx's quarterstaff, it bashes foes."
 Nyx_dragons_breath,1,6,1,0.5,0,1,8,0,0,5,1.5,scr_Nyx_dragons_breath,spr_atk_dragons_breath,DRAGON'S BREATH,Breathe out a cone of fire.
 Nyx_scales,1,4,1,0.5,0.25,0.34,20,10,0,0,1,scr_Nyx_scales,spr_atk_scales,SCALES,"Grant a target scales, increasing their armor for a limited time."
 Nyx_leviathan,1,6,0,0.5,0,0,30,10,0,5,1.5,scr_Nyx_leviathan,spr_atk_leviathan,LEVIATHAN,Summon Nyx's drake friend.

@@ -11,6 +11,7 @@ function scr_Garyrager_stunning_strike()
 	var dmg_mod = global.attack_stats[attack_index].dmg_mod
 	var crit_chance = global.attack_stats[attack_index].crit_chance
 	var crit_mod = global.attack_stats[attack_index].crit_mod
+	var kb_percent = global.attack_stats[attack_index].kb_percent
 	
 	// Create melee object
 	Garyrager_stunning_strike = instance_create_layer(x, y, "Projectiles", obj_Garyrager_stunning_strike); 
@@ -20,6 +21,9 @@ function scr_Garyrager_stunning_strike()
 		
 	// Send index to attack sprite for stats
 	Garyrager_stunning_strike.pc_object = object_index;
+	
+	// Transfer kb_percent
+	Garyrager_stunning_strike.kb_percent = kb_percent;
 		
 	// Cooldown
 	cooldown = game_get_speed(gamespeed_fps) * global.attack_stats[attack_index].cooldown;

@@ -20,3 +20,5 @@ if sneak_attack == true
 } scr_critical(damage, 10, 1.5)
 
 if(other.can_damage) scr_damage(damage);
+
+scr_knockback(kb_percent)
