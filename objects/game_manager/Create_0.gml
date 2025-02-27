@@ -372,7 +372,7 @@ randomise()
 			global.total_dead = 0;
 			
 			// I Frames
-			global.i_frames = 20
+			global.i_frames = 25
 
 	
 	

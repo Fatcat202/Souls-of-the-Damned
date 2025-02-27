@@ -3,8 +3,8 @@ function scr_change_char(change_char)
 {
 	// **REPLACE CHARACTERS**
 
-	// Bypass if attempting to swap to active character
-	if(global.selected_char == change_char) return;
+	// Bypass if attempting to swap to active or dead character
+	if(global.selected_char == change_char || global.active_pc_object_list[| change_char - 1].is_dead) return;
 
 	scr_data_cross_reference(change_char - 1)
 	
