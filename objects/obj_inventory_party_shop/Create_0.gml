@@ -16,6 +16,9 @@ y_pos = global.cam_target_y + (global.res_h / 2) - (inv_height / 2) + (spacer * 
 // Use button pos
 x_pos_sell = 0;
 y_pos_sell = 0;
+// Use button pos
+x_pos_use = 0;
+y_pos_use = 0;
 
 
 // Inventory Controls
@@ -66,6 +69,7 @@ state_free = function()
 		{
 			instance_destroy(obj_item_control_menu);
 			if(instance_exists(obj_button_sell)) instance_destroy(obj_button_sell);
+			if(instance_exists(obj_button_use)) instance_destroy(obj_button_use);
 		}
 	}
 	
@@ -87,6 +91,7 @@ state_free = function()
 		// Destroy control menu if active
 		if(instance_exists(obj_item_control_menu)) instance_destroy(obj_item_control_menu)
 		if(instance_exists(obj_button_sell)) instance_destroy(obj_button_sell);
+		if(instance_exists(obj_button_use)) instance_destroy(obj_button_use);
 		
 		// Clamp pos
 		xx = clamp(mouse_x, global.cam_x, global.cam_x + global.res_w - (sprite_get_width(spr_item_control_menu)));
@@ -100,11 +105,18 @@ state_free = function()
 			
 		// Set use button pos
 		x_pos_sell = menu.x + (sprite_get_width(spr_item_control_menu) / 2)
-		y_pos_sell = menu.y + 40
+		y_pos_sell = menu.y + 55
+		
+		// Set use button pos
+		x_pos_use = menu.x + (sprite_get_width(spr_item_control_menu) / 2)
+		y_pos_use = menu.y + 20
 			
 			
 		var sell = instance_create_layer(x_pos_sell, y_pos_sell, "Menu_Buttons", obj_button_sell)
 			sell.item = slot_hover;
+			
+		var use = instance_create_layer(x_pos_use, y_pos_use, "Menu_Buttons", obj_button_use)
+			use.item = slot_hover;
 
 			
 		// Indicate mb_right is being held
