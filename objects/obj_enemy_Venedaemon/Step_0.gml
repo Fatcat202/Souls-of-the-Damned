@@ -47,7 +47,7 @@ if(point_distance(x, y, target_pos_x, target_pos_y) <= 80) // Melee Attack
 	if(can_attack)
 	{
 		var dmg_die_total = global.enemy_stats[index].dice_range_atk_num
-		var dmg_die_sides = global.enemy_stats.enemy_stats[index].dice_range_atk_sides
+		var dmg_die_sides = global.enemy_stats[index].dice_range_atk_sides
 		var dmg_mod = global.enemy_stats[index].dice_range_atk_mod
 		
 		// Create blast object

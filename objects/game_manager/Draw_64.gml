@@ -25,7 +25,7 @@ draw_set_font(fnt_default);
 	
 if(instance_exists(obj_inventory_shop)) return;
 
-
+// Shop controls when enemies are not around or in some pause states
 if(!instance_exists(obj_enemy_parent) && !instance_exists(obj_enemy_com_pause_parent) && !global.show_inventory && !global.game_esc_paused)
 {
 
