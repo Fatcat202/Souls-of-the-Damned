@@ -13,7 +13,7 @@ event_inherited();
 	var health_percent = (active_health / max_hp) * 100;
 
 	// Only show healthbar if damage has been taken
-	if(health_percent != 100)
+	if(health_percent != 100 && !is_dead)
 	{
 		draw_healthbar(
 		x - 25,  	//The x coordinate of the left of the healthbar
@@ -38,7 +38,7 @@ event_inherited();
 	var armor_percent = (active_armor / max_armor) * 100;
 
 	// Only show healthbar if damage has been taken
-	if(armor_percent != 100 && armor_percent > 0)
+	if(armor_percent != 100 && armor_percent > 0 && !is_dead)
 	{
 		draw_healthbar(
 		x - 25,  	//The x coordinate of the left of the healthbar

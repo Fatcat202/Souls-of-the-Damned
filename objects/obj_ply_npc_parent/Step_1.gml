@@ -28,15 +28,8 @@ if(active_health <= 0)
 	if(is_dead == false) global.total_dead++;
 	
 	is_dead = true;
-}
-
-// Make sure PC does not spontaniously gain health when dead
-if(is_dead && active_health > 0) active_health = -1;
-
-// Set death conditions
-if(is_dead == true)
-{
-
+	
+	
 	// Set death conditions
 	can_attack = false;
 	can_control = false;
@@ -48,7 +41,12 @@ if(is_dead == true)
 	// Alter image to show death
 	image_angle = 90;
 	image_blend = c_red;
+	
+	
 }
+
+// Make sure PC does not spontaniously gain health when dead
+if(is_dead && active_health > 0) active_health = -1;
 
 
 // Activate death screen when all players are dead
@@ -69,62 +67,65 @@ if(global.total_dead >= global.total_active_pcs)
 
 #region Timers
 
-// Timers for attacks 1-4 cooldowns
-
-// Check if cooldown ticking
-if(cooldown_1 == false)
+if(!is_dead)
 {
-	// Increment cooldown each frame
-	cooldown_timer_1++;
-	if(cooldown_timer_1 >= cooldown_time_1) 
+
+	// Timers for attacks 1-4 cooldowns
+
+	// Check if cooldown ticking
+	if(cooldown_1 == false)
 	{
-		// Reset cooldown once time has been reached
-		cooldown_1 = true;
-		cooldown_timer_1 = 0;
+		// Increment cooldown each frame
+		cooldown_timer_1++;
+		if(cooldown_timer_1 >= cooldown_time_1) 
+		{
+			// Reset cooldown once time has been reached
+			cooldown_1 = true;
+			cooldown_timer_1 = 0;
+		}
 	}
-}
 
-// Check if cooldown ticking
-if(cooldown_2 == false)
-{
-	// Increment cooldown each frame
-	cooldown_timer_2++;
-	if(cooldown_timer_2 >= cooldown_time_2) 
+	// Check if cooldown ticking
+	if(cooldown_2 == false)
 	{
-		// Reset cooldown once time has been reached
-		cooldown_2 = true;
-		cooldown_timer_2 = 0;
+		// Increment cooldown each frame
+		cooldown_timer_2++;
+		if(cooldown_timer_2 >= cooldown_time_2) 
+		{
+			// Reset cooldown once time has been reached
+			cooldown_2 = true;
+			cooldown_timer_2 = 0;
 
+		}
 	}
-}
 
-// Check if cooldown ticking
-if(cooldown_3 == false)
-{
-	// Increment cooldown each frame
-	cooldown_timer_3++;
-	if(cooldown_timer_3 >= cooldown_time_3) 
+	// Check if cooldown ticking
+	if(cooldown_3 == false)
 	{
-		// Reset cooldown once time has been reached
-		cooldown_3 = true;
-		cooldown_timer_3 = 0;
+		// Increment cooldown each frame
+		cooldown_timer_3++;
+		if(cooldown_timer_3 >= cooldown_time_3) 
+		{
+			// Reset cooldown once time has been reached
+			cooldown_3 = true;
+			cooldown_timer_3 = 0;
+		}
 	}
-}
 
-// Check if cooldown ticking
-if(cooldown_4 == false)
-{
-	// Increment cooldown each frame
-	cooldown_timer_4++;
-	if(cooldown_timer_4 >= cooldown_time_4) 
+	// Check if cooldown ticking
+	if(cooldown_4 == false)
 	{
-		// Reset cooldown once time has been reached
-		cooldown_4 = true;
-		cooldown_timer_4 = 0;
+		// Increment cooldown each frame
+		cooldown_timer_4++;
+		if(cooldown_timer_4 >= cooldown_time_4) 
+		{
+			// Reset cooldown once time has been reached
+			cooldown_4 = true;
+			cooldown_timer_4 = 0;
+		}
 	}
+
 }
-
-
 
 
 #endregion Timers
