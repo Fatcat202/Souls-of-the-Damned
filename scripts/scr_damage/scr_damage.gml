@@ -25,7 +25,7 @@ function scr_damage(dmg)
 		
 			// Tint sprite blue for 15 frames when damaged
 			other.image_blend = c_blue;
-			other.alarm[11] = game_get_speed(gamespeed_fps) / 4;
+			other.alarm[11] = global.i_frames;
 		
 			// Check if armor remains to determine how long it takes to start regaining armor
 			if(other.active_armor > 0)
@@ -43,7 +43,7 @@ function scr_damage(dmg)
 			other.active_health = other.active_health - dmg;
 			// Tint sprite red for 15 frames when damaged
 			other.image_blend = c_red;
-			other.alarm[11] = game_get_speed(gamespeed_fps) / 4;
+			other.alarm[11] = global.i_frames;
 		}
 	}
 }

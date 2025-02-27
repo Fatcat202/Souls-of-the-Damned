@@ -49,7 +49,7 @@ function scr_take_dot()
 				// Do damage normally if not about to kill
 				active_health -= _dmg;
 				image_blend = c_red;
-				alarm[11] = game_get_speed(gamespeed_fps) / 4;
+				alarm[11] = global.i_frames;
 				dot_tick = 0;
 				
 			}

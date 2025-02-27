@@ -6,6 +6,6 @@ function scr_non_lethal(dmg)
 		
 		// Tint sprite red for 6 frames when damaged
 		other.image_blend = c_red;
-		other.alarm[11] = game_get_speed(gamespeed_fps) / 10;
+		other.alarm[11] = global.i_frames;
 
 }

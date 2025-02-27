@@ -370,6 +370,9 @@ randomise()
 		
 			// Total number of dead PCs
 			global.total_dead = 0;
+			
+			// I Frames
+			global.i_frames = 20
 
 	
 	
