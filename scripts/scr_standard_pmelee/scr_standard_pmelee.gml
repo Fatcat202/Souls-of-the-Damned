@@ -1,5 +1,5 @@
 
-function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod)
+function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, crit_chance, crit_mod, kb_percent)
 {
 	// Standard melee attack with checks for conditions
 
@@ -18,6 +18,8 @@ function scr_standard_pmelee(obj_melee, dmg_die_total, dmg_die_sides, dmg_mod, c
 		
 		// Send index to attack sprite for stats
 		melee_atk.pc_object = id;
+		
+		melee_atk.kb_percent = kb_percent
 		
 		
 		// Conditions

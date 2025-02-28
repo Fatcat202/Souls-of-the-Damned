@@ -4,7 +4,7 @@ function scr_move_along_path(grid, path, target_x, target_y, alarm_num)
 	// to actually move along the path avoiding obstacles
 	
 	
-	if(path_exists(path))
+	if(path_exists(path) && can_move)
 	{
 		// Create path on grid
 		mp_grid_path(grid, path, x, y, target_x, target_y, true);
