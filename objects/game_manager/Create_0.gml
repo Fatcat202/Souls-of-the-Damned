@@ -373,6 +373,12 @@ randomise()
 			
 			// I Frames
 			global.i_frames = 25
+			
+			// Time between each overheal HP reduction in seconds
+			global.overheal_reduce_time = game_get_speed(gamespeed_fps) * 4
+			
+			// Time between fastheal ticks in frames
+			global.fastheal_speed = 10
 
 	
 	

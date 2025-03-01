@@ -3,8 +3,14 @@
 function scr_overheal_potion()
 {
 	var _item = item;
+
 	with(obj_com_pause_parent)
 	{
-		//time_source_create(time_source_game, 4, time_source_units_frames, scr_heal, [2, 5], 10, time_source_expire_after)
+		
+		
+		scr_activate_fastheal(global.fastheal_speed, global.inventory[_item].duration, global.inventory[_item].die_mod)
+		
+		
+		
 	}
 }

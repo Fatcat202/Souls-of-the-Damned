@@ -24,5 +24,5 @@ function scr_move_along_path(grid, path, target_x, target_y, alarm_num)
 
 		// Loop alarm 2x a second
 		alarm_set(alarm_num, 30)
-	}
+	} else if(path_exists(path)) path_delete(path);
 }

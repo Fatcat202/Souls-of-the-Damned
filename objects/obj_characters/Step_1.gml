@@ -6,7 +6,6 @@ if(!is_dead)
 	// Characters are affected by Damage Over Time
 	scr_take_dot();
 
-
 	// ** STUN **
 	// Check character is stunned
 	if(stunned == true)
@@ -23,6 +22,52 @@ if(!is_dead)
 			stun_cooldown_time = 0;
 		}
 	}
+	
+	// ** FASTHEAL **
+	// Check if fastheal is active
+	if(fastheal_active == true)
+	{
+		// Increment timer until healing is done
+		fastheal_timer++;
+		if(fastheal_timer >= fastheal_time) 
+		{
+			// Increment number of ticks
+			fastheal_ticks++
+			
+			// Reset fastheal timer
+			fastheal_timer = 0;
+			
+			// Heal total amount for tick
+			scr_heal(fastheal_healing, fastheal_healing + active_health)
+			
+			if(fastheal_ticks >= fastheal_max_ticks)
+			{
+				// Reset changed conditions
+				fastheal_active = false;
+				fastheal_timer = 0;
+				fastheal_ticks = 0;
+				fastheal_max_ticks = 0;
+				fastheal_time = 0;
+				fastheal_healing = 0;
+			}
+		}
+	}
+	
+	// ** REMOVE OVERHEAL **
+	// Check if character is overhealed and not fasthealing
+	if(active_health > max_hp && !fastheal_active)
+	{
+		// Increment cooldown each frame
+		overheal_timer++;
+		if(overheal_timer >= global.overheal_reduce_time) 
+		{
+			// Reduce health by 1
+			active_health--;
+			
+			// Reset overheal timer
+			overheal_timer = 0;
+		}
+	}else overheal_timer = 0;
 
 	// ** POISON RESISTANCE **
 	// Check character has poison resistance
@@ -118,7 +163,6 @@ if(!is_dead)
 			knocked_back = false;
 			knockback_cooldown_timer = 0;
 		}
-
 	}
 
 

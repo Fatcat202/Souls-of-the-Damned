@@ -49,6 +49,8 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.is_mythic = send_from.is_mythic;
 	send_to.bonus_armor = send_from.bonus_armor;
 	send_to.poison_resist = send_from.poison_resist;
+	send_to.fastheal_active = send_from.fastheal_active;
+	
 		
 	
 	// Timers
@@ -72,6 +74,12 @@ function scr_transfer_variables(send_to, send_from)
 	send_to.poison_resist_time = send_from.poison_resist_time;
 	send_to.poison_resist_timer = send_from.poison_resist_timer;
 	send_to.poison_resist_ticking = send_from.poison_resist_ticking;
+	send_to.fastheal_timer = send_from.fastheal_timer;
+	send_to.fastheal_time = send_from.fastheal_time;
+	send_to.fastheal_ticks = send_from.fastheal_ticks;
+	send_to.fastheal_max_ticks = send_from.fastheal_max_ticks;
+	send_to.fastheal_healing = send_from.fastheal_healing;
+	send_to.overheal_timer = send_from.overheal_timer;
 
 
 	// Bullets

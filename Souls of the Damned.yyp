@@ -531,6 +531,7 @@
     {"id":{"name":"rm_arena_1","path":"rooms/rm_arena_1/rm_arena_1.yy",},},
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"Testing","path":"rooms/Testing/Testing.yy",},},
+    {"id":{"name":"scr_activate_fastheal","path":"scripts/scr_activate_fastheal/scr_activate_fastheal.yy",},},
     {"id":{"name":"scr_Alok_basic_attack","path":"scripts/scr_Alok_basic_attack/scr_Alok_basic_attack.yy",},},
     {"id":{"name":"scr_Alok_channel","path":"scripts/scr_Alok_channel/scr_Alok_channel.yy",},},
     {"id":{"name":"scr_Alok_javalin","path":"scripts/scr_Alok_javalin/scr_Alok_javalin.yy",},},

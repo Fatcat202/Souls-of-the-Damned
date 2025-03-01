@@ -15,13 +15,9 @@ function scr_move_to_target(range)
 			if(!path_exists(attack_path)) attack_path = path_add()
 			
 			alarm[1] = 1;
-		} else
-		{
-			// Delete path if out of range
-			if(path_exists(attack_path)) path_delete(attack_path);
 		}
 	
-	}
+	}else if(path_exists(attack_path)) path_delete(attack_path);
 	
 	
 }
