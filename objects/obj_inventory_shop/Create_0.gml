@@ -181,7 +181,7 @@ state_free = function()
 		global.inventory_shop[p, 7] = -1;
 	
 		// Row 3
-		global.inventory_shop[p, 8] = -1;
+		global.inventory_shop[p, 8] = global.item_stats[item_names.resurrection_scroll];
 		global.inventory_shop[p, 9] = -1;
 		global.inventory_shop[p, 10] = -1;
 		global.inventory_shop[p, 11] = -1;

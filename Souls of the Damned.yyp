@@ -609,6 +609,8 @@
     {"id":{"name":"scr_resurrection_scroll","path":"scripts/scr_resurrection_scroll/scr_resurrection_scroll.yy",},},
     {"id":{"name":"scr_roll_dice","path":"scripts/scr_roll_dice/scr_roll_dice.yy",},},
     {"id":{"name":"scr_roll_enemy_health","path":"scripts/scr_roll_enemy_health/scr_roll_enemy_health.yy",},},
+    {"id":{"name":"scr_scroll_control_end","path":"scripts/scr_scroll_control_end/scr_scroll_control_end.yy",},},
+    {"id":{"name":"scr_scroll_control","path":"scripts/scr_scroll_control/scr_scroll_control.yy",},},
     {"id":{"name":"scr_Seki_basic_attack","path":"scripts/scr_Seki_basic_attack/scr_Seki_basic_attack.yy",},},
     {"id":{"name":"scr_Seki_fireball","path":"scripts/scr_Seki_fireball/scr_Seki_fireball.yy",},},
     {"id":{"name":"scr_Seki_lightning","path":"scripts/scr_Seki_lightning/scr_Seki_lightning.yy",},},

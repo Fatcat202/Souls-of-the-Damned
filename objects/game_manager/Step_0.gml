@@ -1,4 +1,4 @@
-/// @description HUD Buttons
+/// @description HUD Buttons/Scroll Controls
 
 
 #region HUD Buttons
@@ -194,3 +194,23 @@
 	
 
 #endregion HUD Buttons
+
+
+
+#region Scroll Controls
+	
+	if(global.scroll_control)
+	{
+		
+		// Place mouse controls for scroll here
+		// Activate script for specific magic item based on what item was selected when entering scroll control
+		
+		// Activate scroll script
+		script_execute(global.scroll_script)
+		
+		// Leave scroll control mode
+		if(mouse_check_button_pressed(mb_right) || keyboard_check_pressed(vk_escape)) scr_scroll_control_end();
+	}
+	
+	
+#endregion Scroll Controls

@@ -379,6 +379,15 @@ randomise()
 			
 			// Time between fastheal ticks in frames
 			global.fastheal_speed = 10
+			
+			// Determine if scroll controls are being used
+			global.scroll_control = false;
+			
+			// Used for saving scroll script when entering scroll control
+			global.scroll_script = -1;
+			
+			// Holds position of scroll in inventory when in use
+			global.scroll_place = -1;
 
 	
 	
@@ -763,7 +772,7 @@ randomise()
 	}
 
 	// Initialize stats dictionary constructor
-	function i_stats(_spr = spr_placeholder, _scr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _duration = 0, _max_stack = 0, _price = 0, _min_level = 0, _title = "Empty", _description = "Empty") constructor {
+	function i_stats(_spr = spr_placeholder, _scr = -1, _die_num = 0, _die_sides = 0, _die_mod = 0, _duration = 0, _max_stack = 0, _price = 0, _min_level = 0, _is_scroll = false, _title = "Empty", _description = "Empty") constructor {
 		spr = _spr;
 		scr = _scr
 		die_num = _die_num;
@@ -773,8 +782,9 @@ randomise()
 		max_stack = _max_stack;
 		price = _price;
 		min_level = _min_level;
-		title = _title
-		description = _description
+		is_scroll = _is_scroll;
+		title = _title;
+		description = _description;
 	}
 
 	// Create item_stats struct array
@@ -815,6 +825,7 @@ randomise()
 		global.item_stats[yy].max_stack = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++;
 		global.item_stats[yy].price = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
 		global.item_stats[yy].min_level = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
+		global.item_stats[yy].is_scroll = real(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
 		global.item_stats[yy].title = string(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
 		global.item_stats[yy].description = string(ds_grid_get(ds_item_stats_csv, xx, yy)); xx++
 	

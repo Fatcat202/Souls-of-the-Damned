@@ -27,7 +27,7 @@ if(!global.game_death_paused && !global.show_inventory)
 }
 
 // Close inventory
-if(global.show_inventory)
+if(global.show_inventory && !global.scroll_control)
 {
 	global.show_inventory = false;
 		
