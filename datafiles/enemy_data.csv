@@ -2,3 +2,7 @@ Name,dice_hp_num,dice_hp_sides,dice_hp_mod,armor,move_spd,dice_melee_atk_num,dic
 Cacodaemon,2,10,3,0,3,1,4,1,0,0,0,0.45,TRUE,8
 Venedaemon,6,10,18,0,2,1,6,0,4,6,0,0.45,FALSE,16
 Vulnadaemon,4,10,6,0,4,2,4,4,0,0,0,0.45,FALSE,12
+Doru,0,0,0,0,0,0,0,0,0,0,0,0,TRUE,0
+Lacridaemon,0,0,0,0,0,0,0,0,0,0,0,0,FALSE,0
+Meladaemon,0,0,0,0,0,0,0,0,0,0,0,0,FALSE,0
+Suspiridaemon,0,0,0,0,0,0,0,0,0,0,0,0,FALSE,0

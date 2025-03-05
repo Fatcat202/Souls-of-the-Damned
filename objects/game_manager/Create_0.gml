@@ -380,14 +380,7 @@ randomise()
 			// Time between fastheal ticks in frames
 			global.fastheal_speed = 10
 			
-			// Determine if scroll controls are being used
-			global.scroll_control = false;
 			
-			// Used for saving scroll script when entering scroll control
-			global.scroll_script = -1;
-			
-			// Holds position of scroll in inventory when in use
-			global.scroll_place = -1;
 
 	
 	
@@ -467,6 +460,14 @@ randomise()
 			// Total party gold
 			global.party_gold = 1000;
 
+			// Determine if scroll controls are being used
+			global.scroll_control = false;
+			
+			// Used for saving scroll script when entering scroll control
+			global.scroll_script = -1;
+			
+			// Holds position of scroll in inventory when in use
+			global.scroll_place = -1;
 
 
 
@@ -602,6 +603,10 @@ randomise()
 	// Create enemy_stats struct array. Add another line with another added enemy.
 	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
 	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats();
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats();
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
+	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
 	global.enemy_index_length++; global.enemy_stats[global.enemy_index_length] = new e_stats(); 
 
 	// Assign all values from CSV file into stats database structs

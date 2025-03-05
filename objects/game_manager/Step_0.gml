@@ -19,7 +19,7 @@
 	var attack_spacing = 36; // Space between cooldowns
 
 	#region Place Buttons
-		if(!global.game_esc_paused)
+		if(!global.game_esc_paused && !instance_exists(obj_inventory_shop))
 		{
 			if(global.game_combat_paused == true)
 			{

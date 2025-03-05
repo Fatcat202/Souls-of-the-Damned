@@ -46,5 +46,4 @@ function scr_inventory_pause()
 	instance_activate_object(obj_com_pause_npc_parent);
 	instance_activate_object(obj_enemy_com_pause_parent);
 	instance_activate_object(obj_leviathan_com_pause)
-	instance_activate_object(obj_gui_button_parent);
 }

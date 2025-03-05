@@ -34,7 +34,7 @@ function scr_resurrection_scroll()
 			// Reduce total number of characters dead
 			global.total_dead--
 			
-			// Heal the revived character
+			// Heal the revived character, add overheal
 			scr_heal(scr_roll_dice(die_num, die_sides) + die_mod, global.player_level * 2)
 			
 			// Remove item from inventory
